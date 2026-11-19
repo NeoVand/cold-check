@@ -1,4 +1,4 @@
-# Fig. 3 caption. File: out/fig3.pdf (183 x 196 mm). Script: fig3.py; data: data/puzzle_boards.json
+# Fig. 3 caption (FILE numbering: fig3.md is "Fig. 3", cross-references too; printed as Fig. 4). File: out/fig3.pdf (183 x 196 mm). Script: fig3.py; data: data/puzzle_boards.json
 # (data/puzzle_boards.py), data/released_boards.json (data/modal_released_boards.py), code/bench/final/summary.json,
 # code/ext/cram.txt (CRAM's Tables 2 and 8)
 

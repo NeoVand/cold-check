@@ -210,6 +210,15 @@ def clrs():
                        'primitives and comparison numbers from paper/gen/make_clrs_table.py (T, P; arXiv 2611.11937 v3, Supp. Table 4)')
 
 
+def shared():
+    """One check fitted on the pooled answers of five graph algorithms (clrs/final/shared.json, experiment C)."""
+    s = J('clrs/final/shared.json')['C_bfs_prim_paths_no_task_bit']
+    tasks = s['tasks']
+    return dict(tasks=tasks, fit_ms=s['fit_ms'], task_bit=s['task_bit'],
+                official64=min(s[t]['official64'] for t in tasks), fresh1024=min(s[t]['fresh1024'] for t in tasks),
+                source='clrs/final/shared.json, C_bfs_prim_paths_no_task_bit')
+
+
 OUT.write_text(json.dumps(dict(
     source=dict(ours='bench/final/sudoku_extreme.json; bench/final/mazes.json; bench/final/sudoku_ladder_local.json; bench/final/sudoku_ladder_25.json; walkthrough/completed_answer_bfs.json',
                 cram='ext/CRAM/results/ebr-comparison.json (cram block); ext/CRAM/results/op-counts.json; ext/CRAM/experiments/runs/table/*.json',
@@ -220,5 +229,5 @@ OUT.write_text(json.dumps(dict(
                         source="released/run_released_pcd_*.json, run_released_pab_*.json, run_released_loops_*.json"),
     bfs=dict(fit_ms=bfs['order']['fit_ms'], top_gate=bfs_rows, depth_at_answer_64=bfs['depth']['64']['at_answer'],
              order_top_no_gate_64=bfs['order']['64']['top']),
-    clrs=clrs()), indent=1))
+    clrs=clrs(), shared=shared()), indent=1))
 print('wrote', OUT)

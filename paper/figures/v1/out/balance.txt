@@ -1,4 +1,5 @@
 figure    rose mm2  cobalt mm2  rose share |  rose ink  cobalt ink  rose share | unclassified mm2
+fig_arch       124         528         19% |        96         448         18% |                4
 fig1          1390         965         59% |       449         598         43% |              153
 fig2           303         315         49% |       249         279         47% |                5
 fig3           986         656         60% |       488         219         69% |                8

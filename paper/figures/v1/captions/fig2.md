@@ -1,4 +1,4 @@
-# Fig. 2 caption. File: out/fig2.pdf (183 x 104 mm). Script: fig2.py; data: data/bfs_map.json, data/bfs_run.json,
+# Fig. 2 caption (FILE numbering: fig2.md is "Fig. 2", cross-references too; printed as Fig. 3). File: out/fig2.pdf (183 x 104 mm). Script: fig2.py; data: data/bfs_map.json, data/bfs_run.json,
 # code/walkthrough/completed_answer_bfs.json, code/walkthrough/fit_at_answer.json
 
 \textbf{Fig. 2 | A check is not yet a procedure.} Breadth-first search with queue-order parents (the textbook

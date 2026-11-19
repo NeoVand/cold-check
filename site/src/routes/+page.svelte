@@ -353,6 +353,10 @@
 				{secs(clrsStats.fitMax)} on one laptop core. For the other {clrsStats.ceil} we supply one piece, named in the table: an
 				arithmetic primitive (a sum, an orientation test, products and sums) or a piece of algorithmic structure (prefix sums, a
 				deletion closure, "open", two passes).
+				{#if R.shared}One check also serves five graph algorithms at once: fitted in {secs(R.shared.fit_ms)} on the pooled
+					answers of BFS, Prim, Bellman-Ford, Dijkstra and DAG shortest paths, with nothing telling it which task it is
+					running, it scores {pct(100 * Math.min(R.shared.official64, R.shared.fresh1024), 0)} on all five, at 64 and at
+					1,024 nodes.{/if}
 			</p>
 		</article>
 

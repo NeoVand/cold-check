@@ -38,7 +38,7 @@ size, and a search runs only where nothing is forced. One rule, fitted in about 
 412,786 Sudoku-Extreme puzzles and, unchanged, boards of $16\times16$ and $25\times25$. A maze rule that reads the cold run's own clock, in place of CRAM's hand-built distance layer, solves all 1,000
 Maze-Hard mazes. All thirty CLRS-30 algorithms are exact on the
 official test and on held-out inputs of up to 1,024 nodes, fifteen of them learned from comparisons and
-counts alone, each fitted in milliseconds to seconds on one CPU core. The fitted rules are small tables with no size in
+counts alone, each fitted in milliseconds to seconds on one CPU core, and one check serves five graph algorithms at once. The fitted rules are small tables with no size in
 them, so finite checks prove the puzzle rules, and the checks of several algorithms, correct at every size. In the language of logic programming, the kept condition
 turns an answer the check merely supports into the least model the check computes.
 \end{abstract}
@@ -66,7 +66,7 @@ exactly: a finished answer the rules accept is a supported model; what the rules
 model; and the two coincide when the support has a direction\cite{clark1978negation,fages1994consistency}.
 
 We give the check that direction, and it becomes the algorithm. We start from the cold layer of our earlier
-paper\cite{mohsenvand2026zero}. Its state lives on pairs of items. It judges each pair $(a,b)$ through every third item
+paper\cite{mohsenvand2026zero} (Fig.~\ref{fig:arch}). Its state lives on pairs of items. It judges each pair $(a,b)$ through every third item
 $k$, by the legs $(a,k)$ and $(k,b)$, and reads these witnesses at zero temperature: whether one exists, and how two
 counts compare. Its rules attach to relations, never to positions, so they have no size in them. We fit its check at
 finished answers, CRAM's way, in three steps.
@@ -95,6 +95,32 @@ and every maze we built on which CRAM's released model leaves the shortest path.
 no size in them, so finite checks prove the puzzle rules, and the checks of several algorithms, correct at every size
 (Fig.~\ref{fig:cost} sets cost against reach). Read the same way, CRAM's released weights show its hidden distance
 layer cooling, as it trains, towards the hard minimum that our cold layer reads.
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\linewidth]{figures/fig_arch.pdf}
+\caption[]{\figlabel{Fig. \thefigure}{The cold block, fitted at the answer.} One example throughout: the CLRS-30 breadth-first-search check,
+fitted at the completed answer and run on a ten-node input of the benchmark's generator. Cobalt: the block's bits,
+counts and pointers; rose: what it is set against, training through the loops (b) and the search (d). \textbf{a}, The
+block. Its state is one bit for every ordered pair of nodes, ``$u$ is the parent of $v$'' (row $u$, column $v$; shown at
+rest), beside a register completed from those bits, each node's depth (its number of ancestors). One loop of the block
+is the fitted check, the same in every loop. It reads the pair's own tests (four bit tables) and one witness test
+through every third node $k$: row $u$ of the first leg (``$k$ comes before $u$'') meets column $v$ of the second
+(``$k$ is a neighbour of $v$ nearer the source''), giving $N(u,v)$, the exact number of such $k$, and the bit $N=0$.
+Where all five hold, the check passes; the read at zero temperature keeps, for every $v$, the best-scoring $u$ that
+passes and the number that pass (here one for every node). The pointers are written, the depths recomputed from them,
+and the block runs again until nothing changes. Every table is computed by the fitted check on this input.
+\textbf{b}, The fit at the answer: one of the 100 training answers (seven nodes), completed from
+itself (each node's depth). Each pair bit is predicted from the rest, and the fit keeps every condition that held at
+every training parent; this is the check of a, its first condition the level condition. It takes 491~ms
+on one laptop core; our earlier paper's blocks, trained through their loops,
+took about an hour of GPU time for each task (the general block's median, 64 minutes). \textbf{c}, The check run cold from nothing on the input of a: the pair state after each loop. Each loop settles
+the nodes one step further from the source; the state stops changing at loop 7, where every parent is the answer's.
+\textbf{d}, Where bits stay open, a search: the Sudoku-Extreme puzzle of Fig.~\ref{fig:puzzles}a after the cold stage (navy, given;
+cobalt, set cold) and solved (rose, set by the search, which stops when the same check passes). Schematic: the
+layouts of the graphs (the ring order of a, the rows by depth in b).}
+\label{fig:arch}
+\end{figure}
 
 \begin{figure}[tbp]
 \centering
@@ -163,7 +189,7 @@ R(u,v) = \bigwedge_{\varphi \in C} \varphi(x, y^{+})(u,v), \qquad
 \pi(v) = \operatorname*{arg\,max}_{u \,:\, R(u,v)} s(u,v),
 \label{eq:check}
 \end{equation}
-where a score $s$ breaks ties among the candidates that pass. These are the reads of the cold layer: a witness test is
+where a score $s$ breaks ties among the candidates that pass. These are the reads of the cold layer (Fig.~\ref{fig:arch}): a witness test is
 its existence read, a count comparison one of its verdict bits\cite{mohsenvand2026zero}. Nothing in $\Phi$ names a
 position or a size, so a rule fitted on graphs of 16 nodes applies, unchanged, to graphs of a thousand.
 
@@ -281,9 +307,9 @@ nodes are still open, is never visible in a finished answer, where every node is
 \centering
 \includegraphics[width=\linewidth]{figures/fig2.pdf}
 \caption[]{\figlabel{Fig. \thefigure}{A check is not yet a procedure.} Breadth-first search with queue-order parents (the textbook
-labelling), as in Fig.~1. Cobalt: the check run with the level condition kept; rose: the check
+labelling), as in Fig.~\ref{fig:idea}. Cobalt: the check run with the level condition kept; rose: the check
 as fitted, and the fit with no completion; grey: checks read at the completed answer, not runs. \textbf{a}, The training
-graph of Fig.~1a run from nothing, loop by loop. A node is filled once it has a parent and the parent is right, a ring
+graph of Fig.~\ref{fig:idea}a run from nothing, loop by loop. A node is filled once it has a parent and the parent is right, a ring
 if the parent is wrong, white while unsettled; arrows are the parents named so far. As fitted, the check names parents
 for nodes two and three steps from the source in its first loop, before anything below them is placed, and three of
 them are wrong. With the level condition kept it settles one distance per loop, all right. \textbf{b}, Parents right on
@@ -291,7 +317,7 @@ them are wrong. With the level condition kept it settles one distance per loop, 
 completion, the check read at the answer gets 85.3\% (every parent it names is a valid shortest-path parent, but depth
 does not hold the order of discovery that breaks the label's ties); with the order of discovery it gets 100\% read at
 the answer, 38.3\% run from ``not yet'' as fitted, and 100\% run with the level condition kept (also at 256 and 1,024
-nodes). \textbf{c}, The 1,024-node graph of Fig.~1d,e: parents right after each loop, and the nodes the as-fitted run has
+nodes). \textbf{c}, The 1,024-node graph of Fig.~\ref{fig:idea}d,e: parents right after each loop, and the nodes the as-fitted run has
 settled. Kept, every parent is right by loop 9; as fitted, 776 nodes are settled in loop 1 and
 312 parents are right when the run stops at loop 52. \textbf{d}, Loops to rest against the number of levels in the answer (the distance of
 the farthest node) on all 220 test graphs of 16, 64 and 256 nodes and the three of 1,024 (disc area: number of graphs, key at right):
@@ -459,6 +485,32 @@ Topological sort & ``open'', finish order & 47.6 s & 257 & 100.00 & 256 & 100.00
 Strong components & two passes & 47.5 s & 257 & 100.00 & 256 & 90.61 & 90.07 \\
 \midrule
 Average (30 tasks) & & & & 100.00 & & 98.46 & 96.64 \\
+\bottomrule\end{tabular}
+\end{table}
+
+\textbf{One check for several algorithms.} The fitted check can be shared across tasks, as the looped block of our
+earlier paper was. One check, told nothing about which task it serves, fitted jointly on breadth-first search, Prim,
+Bellman--Ford, Dijkstra and shortest paths in an acyclic graph in 40~s, is exact on all five, on the
+official test and on fresh graphs of 1,024 nodes (Table~\ref{tab:shared}). One check serves the four sorts, fitted in
+0.6~s, and one the five selection tasks (activity selection, task scheduling, both convex hulls and
+articulation points), with or without a bit that names the task. Each task still reads its own completion and supplied
+quantity. Sharing has a limit: one check for all nine pointer tasks keeps the sorts and the shortest paths exact but
+falls to 32\% on breadth-first search and 36\% on Prim, with or without the task bit.
+
+\begin{table}[tbp]\centering\scriptsize
+\caption{\figlabel{Table 3}{One fitted check for several CLRS-30 tasks.} Each row is one check fitted jointly on the
+training answers of all its tasks. Task named: whether a bit naming the task is among the inputs. Fit: wall clock on one
+laptop core. Scores: the library's scorer on the official test and on fresh inputs of 1,024 nodes or items, per task.}
+\label{tab:shared}
+\begin{tabular}{lrlrp{0.2\linewidth}p{0.2\linewidth}}\toprule
+One check for & Tasks & Task named & Fit & Official 64 (\%) & Fresh 1,024 (\%) \\\midrule
+The four sorts & 4 & no & 0.6 s & all 100 & all 100 \\
+Three shortest-path algorithms & 3 & no & 26.5 s & all 100 & all 100 \\
+Five graph algorithms & 5 & no & 39.7 s & all 100 & all 100 \\
+Five selection tasks & 5 & no & 4.2 s & all 100 & all 100 \\
+Five selection tasks & 5 & yes & 3.8 s & all 100 & all 100 \\
+Nine pointer tasks & 9 & no & 42.1 s & breadth-first search 31.6; Prim 35.9; others 100 & breadth-first search 24.9; Prim 3.1; others 100 \\
+Nine pointer tasks & 9 & yes & 42.1 s & breadth-first search 31.6; Prim 35.9; others 100 & breadth-first search 24.9; Prim 3.1; others 100 \\
 \bottomrule\end{tabular}
 \end{table}
 

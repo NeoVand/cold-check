@@ -1,4 +1,4 @@
-# Fig. 4 caption. File: out/fig4.pdf (183 x 160 mm). Script: fig4.py (glyphs: tiles.py); data: code/clrs/final/
+# Fig. 4 caption (FILE numbering: fig4.md is "Fig. 4", cross-references too; printed as Fig. 5). File: out/fig4.pdf (183 x 160 mm). Script: fig4.py (glyphs: tiles.py); data: code/clrs/final/
 # (results.py), groups and comparators from paper/gen/make_clrs_table.py; glyph inputs data/glyphs/
 
 \textbf{Fig. 4 | CLRS-30, fitted at the answer.} Cobalt: our fitted checks; pale cobalt: our looped blocks of the

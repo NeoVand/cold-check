@@ -1,4 +1,4 @@
-# Fig. 5 caption. File: out/fig5.pdf (183 x 86 mm). Script: fig5.py; data: costdata.py (code/bench/final, code/clrs/final,
+# Fig. 5 caption (FILE numbering: fig5.md is "Fig. 5", cross-references too; printed as Fig. 6). File: out/fig5.pdf (183 x 86 mm). Script: fig5.py; data: costdata.py (code/bench/final, code/clrs/final,
 # code/ext/cram.txt)
 
 \textbf{Fig. 5 | Fitted in milliseconds, exact far beyond training.} Cobalt: ours (open: CLRS-30 tasks given a piece by

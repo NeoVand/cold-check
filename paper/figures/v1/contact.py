@@ -30,10 +30,11 @@ def sheet(items, out, cols=2, width=2200, note=None):
 
 O = HERE / "out"
 bal = (O / "balance.txt").read_text().splitlines()
-sheet([(f"Fig. {i}", O / f"fig{i}.png") for i in range(1, 6)], O / "contact_all.png", cols=2,
+sheet([("Fig. 1 (fig_arch)", O / "fig_arch.png")] + [(f"Fig. {i + 1} (fig{i})", O / f"fig{i}.png") for i in range(1, 6)], O / "contact_all.png", cols=2,
       note=["Rose and cobalt balance (check_balance.py, 300 dpi renders)"] + bal)
 C = HERE / "candidates"
 sheet([("Option 1: one plane, fit time against size (not chosen)", C / "fig5_option_scatter.png"),
        ("Option 2: two aligned row panels (chosen)", O / "fig5.png")], C / "contact_fig5.png", cols=2, width=2600)
+sheet([("Layout options for Fig. 1 (architecture): 1 chosen", C / "contact_arch.png")], C / "contact_arch_sheet.png", cols=1, width=1800)
 sheet([("Map options for Fig. 1d,e: radial tree (chosen), spring layout, area-even radial", C / "fig1_maps.png")],
       C / "contact_fig1.png", cols=1, width=1800)

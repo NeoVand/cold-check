@@ -1267,5 +1267,19 @@
    }
   },
   "source": "clrs/final/<task>.json (official test, val and held-out sizes, frozen code); fit times clrs/final/fit_times_m4.json; tiers, supplied primitives and comparison numbers from paper/gen/make_clrs_table.py (T, P; arXiv 2611.11937 v3, Supp. Table 4)"
+ },
+ "shared": {
+  "tasks": [
+   "bfs",
+   "mst_prim",
+   "bellman_ford",
+   "dijkstra",
+   "dag_shortest_paths"
+  ],
+  "fit_ms": 39720,
+  "task_bit": false,
+  "official64": 1.0,
+  "fresh1024": 1.0,
+  "source": "clrs/final/shared.json, C_bfs_prim_paths_no_task_bit"
  }
 }

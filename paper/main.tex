@@ -21,7 +21,7 @@
 \newcommand{\nm}[1]{\ifcsname nm@#1\endcsname\csname nm@#1\endcsname\else\textcolor{red}{\textbf{[#1]}}\fi}
 \newcommand{\pend}[1]{\textcolor{red}{[#1]}}
 \input{numbers.tex}
-\newcommand{\figat}[2]{\IfFileExists{figures/#1/out/#2.pdf}{\includegraphics[width=\linewidth]{figures/#1/out/#2.pdf}}{\fbox{\parbox[c][40mm][c]{0.95\linewidth}{\centering\color{red} figure #2 being built}}}}
+\newcommand{\figat}[2]{\IfFileExists{figures/#1/out/#2.pdf}{\includegraphics[width=\linewidth]{figures/#1/out/#2.pdf}}{\fbox{\parbox[c][40mm][c]{0.95\linewidth}{\centering\color{red} figure \detokenize{#2} being built}}}}
 \newcommand{\fig}[1]{\figat{v1}{#1}}
 \newcommand{\figw}[2]{\includegraphics[width=#1\linewidth]{figures/v1/out/#2.pdf}}
 \newcommand{\figlabel}[2]{\textbf{#1 $|$ #2}}
@@ -46,12 +46,19 @@ size, and a search runs only where nothing is forced. One rule, fitted in about 
 \nm{sudoku.ntest} Sudoku-Extreme puzzles and, unchanged, boards of $16\times16$ and $25\times25$. A maze rule that reads the cold run's own clock, in place of CRAM's hand-built distance layer, solves all \nm{hard.n}
 Maze-Hard mazes. All thirty CLRS-30 algorithms are exact on the
 official test and on held-out inputs of up to \nm{held.max.nodes} nodes, fifteen of them learned from comparisons and
-counts alone, each fitted in milliseconds to seconds on one CPU core. The fitted rules are small tables with no size in
+counts alone, each fitted in milliseconds to seconds on one CPU core, and one check serves five graph algorithms at once. The fitted rules are small tables with no size in
 them, so finite checks prove the puzzle rules, and the checks of several algorithms, correct at every size. In the language of logic programming, the kept condition
 turns an answer the check merely supports into the least model the check computes.
 \end{abstract}
 
 \input{sections/introduction.tex}
+
+\begin{figure}[tbp]
+\centering
+\fig{fig_arch}
+\caption[]{\input{sections/cap_fig_arch.tex}}
+\label{fig:arch}
+\end{figure}
 
 \begin{figure}[tbp]
 \centering

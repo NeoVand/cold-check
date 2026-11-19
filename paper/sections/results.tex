@@ -121,6 +121,23 @@ ceilings with the method and are not a like-for-like comparison.}\label{tab:clrs
 \input{gen/clrs_table.tex}
 \end{table}
 
+\textbf{One check for several algorithms.} The fitted check can be shared across tasks, as the looped block of our
+earlier paper was. One check, told nothing about which task it serves, fitted jointly on breadth-first search, Prim,
+Bellman--Ford, Dijkstra and shortest paths in an acyclic graph in \nm{shared.graph.fit}~s, is exact on all five, on the
+official test and on fresh graphs of 1,024 nodes (Table~\ref{tab:shared}). One check serves the four sorts, fitted in
+\nm{shared.sorts.fit}~s, and one the five selection tasks (activity selection, task scheduling, both convex hulls and
+articulation points), with or without a bit that names the task. Each task still reads its own completion and supplied
+quantity. Sharing has a limit: one check for all nine pointer tasks keeps the sorts and the shortest paths exact but
+falls to \nm{shared.nine.bfs}\% on breadth-first search and \nm{shared.nine.prim}\% on Prim, with or without the task bit.
+
+\begin{table}[tbp]\centering\scriptsize
+\caption{\figlabel{Table 3}{One fitted check for several CLRS-30 tasks.} Each row is one check fitted jointly on the
+training answers of all its tasks. Task named: whether a bit naming the task is among the inputs. Fit: wall clock on one
+laptop core. Scores: the library's scorer on the official test and on fresh inputs of 1,024 nodes or items, per task.}
+\label{tab:shared}
+\input{gen/shared_table.tex}
+\end{table}
+
 \subsection{Proofs at every size}\label{sec:proofs}
 
 The fitted rules are small tables in which no size appears, so their correctness at every size reduces to finite

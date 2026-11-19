@@ -43,6 +43,7 @@ for every puzzle:
 | CLRS-30 fit times, one core | `clrs/reproduce.sh times` | `clrs/final/fit_times_m4.json` |
 | The level ablation (the fitted check with and without its kept conditions) | `cd clrs && modal run modal_script.py --script ablation_level.py --out ablation_level.json` | `clrs/final/ablation_level.json` |
 | The CLRS-30 summary | `cd clrs && python final_summary.py` | `clrs/final/summary.json` |
+| One shared check fitted on the pooled answers of several tasks (e.g. BFS, Prim, Bellman-Ford, Dijkstra and DAG shortest paths in one rule) | `cd clrs && modal run modal_script.py --script shared.py --out shared.json` (or `python shared.py`) | `clrs/final/shared.json` |
 
 `bench/final/run_final.py` checks the engine files against `bench/final/ENGINE_SHA256.json` before it runs, and
 `clrs/final/MANIFEST.json` lists the frozen CLRS files. The copies here differ from the files that ran only in comments,

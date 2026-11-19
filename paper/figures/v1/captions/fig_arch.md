@@ -1,0 +1,24 @@
+# Architecture caption (file fig_arch, printed as Fig. 1; cross-references in FILE numbering: Fig.~3a is file fig3). File: out/fig_arch.pdf (183 x 136 mm). Script: fig_arch.py; data:
+# data/arch_bfs.json (data/arch_bfs.py: code/clrs/run.py and cold.py, unchanged), data/puzzle_boards.json,
+# code/clrs/final/ (fit time), paper/numbers.tex (zero.gen.minutes)
+
+\textbf{Fig. 1 | The cold block, fitted at the answer.} One example throughout: the CLRS-30 breadth-first-search check,
+fitted at the completed answer and run on a ten-node input of the benchmark's generator. Cobalt: the block's bits,
+counts and pointers; rose: what it is set against, training through the loops (b) and the search (d). \textbf{a}, The
+block. Its state is one bit for every ordered pair of nodes, ``$u$ is the parent of $v$'' (row $u$, column $v$; shown at
+rest), beside a register completed from those bits, each node's depth (its number of ancestors). One loop of the block
+is the fitted check, the same in every loop. It reads the pair's own tests (four bit tables) and one witness test
+through every third node $k$: row $u$ of the first leg (``$k$ comes before $u$'') meets column $v$ of the second
+(``$k$ is a neighbour of $v$ nearer the source''), giving $N(u,v)$, the exact number of such $k$, and the bit $N=0$.
+Where all five hold, the check passes; the read at zero temperature keeps, for every $v$, the best-scoring $u$ that
+passes and the number that pass (here one for every node). The pointers are written, the depths recomputed from them,
+and the block runs again until nothing changes. Every table is computed by the fitted check on this input.
+\textbf{b}, The fit at the answer: one of the \nm{clrs.train.inputs} training answers (seven nodes), completed from
+itself (each node's depth). Each pair bit is predicted from the rest, and the fit keeps every condition that held at
+every training parent; this is the check of a, its first condition the level condition. It takes \nm{bfs.clrs.fit}~ms
+on one laptop core; our earlier paper's blocks, trained through their loops,
+took about an hour of GPU time for each task (the general block's median, \nm{zero.gen.minutes} minutes). \textbf{c}, The check run cold from nothing on the input of a: the pair state after each loop. Each loop settles
+the nodes one step further from the source; the state stops changing at loop 7, where every parent is the answer's.
+\textbf{d}, Where bits stay open, a search: the Sudoku-Extreme puzzle of Fig.~3a after the cold stage (navy, given;
+cobalt, set cold) and solved (rose, set by the search, which stops when the same check passes). Schematic: the
+layouts of the graphs (the ring order of a, the rows by depth in b).

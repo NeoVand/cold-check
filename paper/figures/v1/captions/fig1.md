@@ -1,4 +1,4 @@
-# Fig. 1 caption. File: out/fig1.pdf (183 x 147 mm). Script: fig1.py; data: data/bfs_map.json (data/bfs_map.py)
+# Fig. 1 caption (FILE numbering: fig1.md is "Fig. 1", cross-references too; printed as Fig. 2). File: out/fig1.pdf (183 x 147 mm). Script: fig1.py; data: data/bfs_map.json (data/bfs_map.py)
 
 \textbf{Fig. 1 | The check is the algorithm.} Breadth-first search with queue-order parents (the textbook labelling), from one finished answer to a cold run on a graph 64
 times larger than the largest training graph (16 nodes). Cobalt: the fitted check run cold with the level condition kept; rose: the same check as
