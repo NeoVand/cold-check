@@ -63,7 +63,7 @@ pnpm test                                 # the page's engines against the Pytho
 ```bibtex
 @misc{mohsenvand2026check,
   title  = {When the Check Is the Algorithm},
-  author = {Mohsenvand, Mostafa},
+  author = {Mohsenvand, Mostafa and Jahangiri, Pouyan},
   year   = {2026},
   url    = {https://github.com/NeoVand/cold-check}
 }

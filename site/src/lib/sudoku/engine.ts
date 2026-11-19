@@ -1,12 +1,17 @@
 /**
- * The fitted Sudoku check, run cold and then warm: a line-for-line port of code/bench/engine.py and
- * code/bench/check.py, so that the page gives the same boards, moves and operation counts as the Python runs.
+ * The fitted Sudoku check, run cold and then warm: a line-for-line port of the final engine, code/bench/engine.py
+ * (solve2, as code/bench/final/run_final.py runs it) and code/bench/check.py, so that the page gives the same boards,
+ * moves and operation counts as the paper's runs.
  *
  * Cold derivation: bounds on the fitted count conditions ("there is one", "at most one") over every unit of the kept
- * relations, repeated until nothing changes. Warm search: the open cell with the fewest values, its values in a
- * random order (xorshift64, seeded as in Python), the cold derivation after each choice, undo on a contradiction.
+ * relations, and the unit-pair rule on overlapping units, repeated until nothing changes. Warm search: the open cell
+ * with the fewest values, its values in a random order (xorshift64, seeded as in Python), the cold derivation after
+ * each choice, undo on a contradiction, restarted from the cold board on Luby's schedule (base 10^4 moves).
  * The stop is the fitted check itself: the energy of the full board at or below tau.
  */
+
+/** the final run's settings (code/bench/final/run_final.py) */
+export const FINAL = { budget: 1e7, restartBase: 1e4, pairs: true } as const;
 
 export interface SudokuCheck {
 	types: number[]; // the 25 pair types seen on 9 x 9 (8-bit agreement patterns)
@@ -29,6 +34,15 @@ export interface Engine {
 	Wj: Int32Array;
 	Ww: Float64Array;
 	tau: number;
+	/** directed pairs of units sharing at least two cells, built on first use (engine.pairs_for) */
+	pairs?: Pairs;
+}
+
+export interface Pairs {
+	pa: Int32Array;
+	pb: Int32Array;
+	inb: Uint8Array[]; // inb[k][cell]: the cell is in unit pb[k]
+	bout: Int32Array[]; // the cells of pb[k] outside pa[k], ascending
 }
 
 /** the eight coordinate functions r, c, r//b, c//b, r%b, c%b, r-c, r+c of every cell */
@@ -235,6 +249,111 @@ export function propagate(
 	return true;
 }
 
+/** engine.pairs_for: directed pairs (a, b), a != b, of units that share at least two cells, a then b ascending */
+export function pairsFor(E: Engine): Pairs {
+	if (E.pairs) return E.pairs;
+	const sets = E.unitItems.map((u) => new Set(u));
+	const pa: number[] = [];
+	const pb: number[] = [];
+	const inb: Uint8Array[] = [];
+	const bout: Int32Array[] = [];
+	for (let a = 0; a < sets.length; a++)
+		for (let b = 0; b < sets.length; b++) {
+			if (a === b) continue;
+			let shared = 0;
+			for (const c of sets[a]) if (sets[b].has(c)) shared++;
+			if (shared < 2) continue;
+			pa.push(a);
+			pb.push(b);
+			const m = new Uint8Array(E.M);
+			for (const c of sets[b]) m[c] = 1;
+			inb.push(m);
+			bout.push(Int32Array.from([...sets[b]].filter((c) => !sets[a].has(c)).sort((x, y) => x - y)));
+		}
+	E.pairs = { pa: Int32Array.from(pa), pb: Int32Array.from(pb), inb, bout };
+	return E.pairs;
+}
+
+/**
+ * engine.unit_pairs_pass: if every cell of unit A where v is still possible lies in unit B, and A needs v once
+ * (n_v >= 1) while B allows it once (n_v <= 1), v leaves B outside A. Returns -1 on a contradiction, else the removals.
+ */
+export function unitPairsPass(dom: Int32Array, E: Engine, P: Pairs, st: Stats, onFix?: (cell: number) => void): number {
+	let removed = 0;
+	for (let k = 0; k < P.pa.length; k++) {
+		const A = P.pa[k];
+		if (!(E.ge1[A] && E.le1[P.pb[k]])) continue;
+		const items = E.unitItems[A];
+		const inb = P.inb[k];
+		const out = P.bout[k];
+		for (let v = 0; v < E.V; v++) {
+			const bit = 1 << v;
+			let anyin = false;
+			let inside = true;
+			for (let j = 0; j < items.length; j++) {
+				const it = items[j];
+				st.cmp++;
+				if (dom[it] & bit) {
+					anyin = true;
+					if (!inb[it]) {
+						inside = false;
+						break;
+					}
+				}
+			}
+			if (!anyin || !inside) continue;
+			for (let j = 0; j < out.length; j++) {
+				const it = out[j];
+				st.cmp++;
+				if (dom[it] & bit) {
+					dom[it] &= ~bit;
+					removed++;
+					if (dom[it] === 0) return -1;
+					if (onFix && (dom[it] & (dom[it] - 1)) === 0) onFix(it);
+				}
+			}
+		}
+	}
+	return removed;
+}
+
+/** engine.propagate2: the count bounds, then the unit-pair rule, until neither changes anything */
+export function propagate2(
+	dom: Int32Array,
+	E: Engine,
+	inq: Uint8Array,
+	queue: Int32Array,
+	st: Stats,
+	P: Pairs | null,
+	onFix?: (cell: number) => void
+): boolean {
+	for (;;) {
+		if (!propagate(dom, E, inq, queue, st, onFix)) return false;
+		if (!P) return true;
+		const snap = dom.slice();
+		const r = unitPairsPass(dom, E, P, st, onFix);
+		if (r < 0) return false;
+		if (r === 0) return true;
+		for (let i = 0; i < dom.length; i++)
+			if (dom[i] !== snap[i]) {
+				const us = E.itemUnits[i];
+				for (let j = 0; j < us.length; j++) inq[us[j]] = 1;
+			}
+	}
+}
+
+/** Luby's restart schedule, engine.luby (i >= 1): 1, 1, 2, 1, 1, 2, 4, ... */
+export function luby(i: number): number {
+	let k = 1;
+	while ((1 << k) - 1 < i) k++;
+	for (;;) {
+		if (i === (1 << k) - 1) return 1 << (k - 1);
+		i = i - (1 << (k - 1)) + 1;
+		k = 1;
+		while ((1 << k) - 1 < i) k++;
+	}
+}
+
 export function energy(dom: Int32Array, E: Engine, st: Stats): number {
 	let e = 0;
 	for (let p = 0; p < E.Wi.length; p++) {
@@ -250,8 +369,9 @@ export function energy(dom: Int32Array, E: Engine, st: Stats): number {
 export type Status = 1 | 0 | -1; // solved, out of budget, no solution
 
 /**
- * engine.solve as a resumable machine: cold() runs the first derivation, warm(pauseAt) advances the depth-first
- * search until `pauseAt` moves (a pause sits at the top of the loop, so resuming is exactly the uninterrupted run).
+ * engine.solve2 as a resumable machine: cold() runs the first derivation, warm(pauseAt) advances the restarted
+ * depth-first search until `pauseAt` moves (a pause sits at the top of the loop, so resuming is exactly the
+ * uninterrupted run).
  */
 export class Solver {
 	E: Engine;
@@ -261,41 +381,52 @@ export class Solver {
 	coldFixed: number[] = []; // cells the cold stage fixed, in order
 	st: Stats = { ops: 0, cmp: 0 };
 	moves = 0;
-	maxDepth = 0;
-	stopTests = 0;
-	rejected = 0;
 	status: Status | null = null; // null while running
 	coldOnly = false;
 	private inq: Uint8Array;
 	private queue: Int32Array;
 	private rng: XorShift;
 	private budget: number;
+	private restartBase: number;
+	private P: Pairs | null;
+	private root: Int32Array;
 	private stackDom: Int32Array[] = [];
 	private stackItem: Int32Array;
 	private stackLeft: Int32Array;
 	private depth = 0;
 	private domDepth = -1; // the search level at which `dom` was made (-1: the cold stage)
 	private started = false;
+	private run = 0; // runs begun (restarts + 1)
+	private inRun = false;
+	private limit = 0;
+	private runMoves = 0;
 
-	constructor(E: Engine, puzzleMasks: Int32Array, seed: number, budget = 1e6) {
+	constructor(E: Engine, puzzleMasks: Int32Array, seed: number, opts: { budget?: number; restartBase?: number; pairs?: boolean } = {}) {
 		this.E = E;
 		this.n = puzzleMasks.length;
 		this.given = puzzleMasks.slice();
 		this.dom = puzzleMasks.slice();
+		this.root = this.dom;
 		this.inq = new Uint8Array(E.unitItems.length).fill(1);
 		this.queue = new Int32Array(E.unitItems.length);
 		this.rng = new XorShift(seed);
-		this.budget = budget;
+		this.budget = opts.budget ?? FINAL.budget;
+		this.restartBase = opts.restartBase ?? FINAL.restartBase;
+		this.P = (opts.pairs ?? FINAL.pairs) ? pairsFor(E) : null;
 		this.stackItem = new Int32Array(this.n + 1);
 		this.stackLeft = new Int32Array(this.n + 1);
 	}
 
-	private best(dom: Int32Array, count: boolean): number {
+	/** restarts so far (engine out[6]) */
+	get restarts(): number {
+		return Math.max(0, this.run - 1);
+	}
+
+	private best(dom: Int32Array): number {
 		let best = -1;
 		let bc = 1 << 30;
 		for (let i = 0; i < this.n; i++) {
 			const c = popcount(dom[i]);
-			if (count) this.st.cmp++;
 			if (c > 1 && c < bc) {
 				bc = c;
 				best = i;
@@ -304,9 +435,14 @@ export class Solver {
 		return best;
 	}
 
+	/** numpy's index -1 is the last cell */
+	private at(i: number): number {
+		return i < 0 ? this.n + i : i;
+	}
+
 	/** the cold stage; returns true when the run is already over (solved by the cold stage, or no solution) */
 	cold(): boolean {
-		const ok = propagate(this.dom, this.E, this.inq, this.queue, this.st, (c) => this.coldFixed.push(c));
+		const ok = propagate2(this.dom, this.E, this.inq, this.queue, this.st, this.P, (c) => this.coldFixed.push(c));
 		if (!ok) {
 			this.status = -1;
 			return true;
@@ -317,20 +453,12 @@ export class Solver {
 				done = false;
 				break;
 			}
-		if (done) {
-			this.stopTests++;
-			if (energy(this.dom, this.E, this.st) <= this.E.tau) {
-				this.status = 1;
-				this.coldOnly = true;
-				return true;
-			}
-			this.rejected++;
+		if (done && energy(this.dom, this.E, this.st) <= this.E.tau) {
+			this.status = 1;
+			this.coldOnly = true;
+			return true;
 		}
-		const b = this.best(this.dom, true);
-		this.stackDom[0] = this.dom.slice();
-		this.stackItem[0] = b;
-		this.stackLeft[0] = this.dom[b];
-		this.depth = 0;
+		this.root = this.dom.slice();
 		this.started = true;
 		return false;
 	}
@@ -340,11 +468,30 @@ export class Solver {
 		if (this.status !== null) return true;
 		if (!this.started) throw new Error('cold() first');
 		const E = this.E;
-		while (this.depth >= 0) {
-			if (this.moves >= pauseAt) return false;
-			if (this.moves >= this.budget) {
-				this.status = 0;
+		for (;;) {
+			if (!this.inRun) {
+				if (this.moves >= this.budget) {
+					this.status = 0;
+					return true;
+				}
+				this.run++;
+				this.limit = this.restartBase <= 0 ? this.budget : this.restartBase * luby(this.run);
+				this.runMoves = 0;
+				const b = this.best(this.root);
+				this.depth = 0;
+				this.stackDom[0] = this.root.slice();
+				this.stackItem[0] = b;
+				this.stackLeft[0] = this.root[this.at(b)];
+				this.inRun = true;
+			}
+			if (this.depth < 0) {
+				this.status = -1; // the whole tree under the cold board was searched: no solution
 				return true;
+			}
+			if (this.moves >= pauseAt) return false;
+			if (this.moves >= this.budget || this.runMoves >= this.limit) {
+				this.inRun = false;
+				continue;
 			}
 			const depth = this.depth;
 			const left = this.stackLeft[depth];
@@ -359,45 +506,41 @@ export class Solver {
 			const bit = x & -x;
 			this.stackLeft[depth] = left & ~bit;
 			this.moves++;
+			this.runMoves++;
 			const dom = this.stackDom[depth].slice();
-			const it = this.stackItem[depth];
+			const it = this.at(this.stackItem[depth]);
 			dom[it] = bit;
 			const us = E.itemUnits[it];
 			for (let j = 0; j < us.length; j++) this.inq[us[j]] = 1;
-			const ok = propagate(dom, E, this.inq, this.queue, this.st);
+			const ok = propagate2(dom, E, this.inq, this.queue, this.st, this.P);
 			this.inq.fill(0);
 			this.dom = dom;
 			this.domDepth = depth;
 			if (!ok) continue;
-			const best = this.best(dom, true);
+			const best = this.best(dom);
 			if (best < 0) {
-				this.stopTests++;
 				if (energy(dom, E, this.st) <= E.tau) {
 					this.status = 1;
 					return true;
 				}
-				this.rejected++;
 				continue;
 			}
 			this.depth = depth + 1;
-			if (this.depth + 1 > this.maxDepth) this.maxDepth = this.depth + 1;
 			this.stackDom[this.depth] = dom;
 			this.stackItem[this.depth] = best;
 			this.stackLeft[this.depth] = dom[best];
 		}
-		this.status = -1;
-		return true;
 	}
 
 	/** the whole run at once (cold, then warm to the end) */
-	run(): this {
+	solve(): this {
 		if (!this.cold()) this.warm();
 		return this;
 	}
 
-	/** the cells whose values were guessed to make the current board (the branch of the search it lies on) */
+	/** the cells whose values were guessed to make the current board (the branch of the current run it lies on) */
 	branch(): number[] {
-		return Array.from(this.stackItem.subarray(0, this.domDepth + 1));
+		return Array.from(this.stackItem.subarray(0, this.domDepth + 1), (i) => this.at(i));
 	}
 
 	/** depth of the search stack (0 before the search) */

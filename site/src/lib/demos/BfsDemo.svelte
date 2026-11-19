@@ -2,6 +2,9 @@
 	import { onDestroy, onMount } from 'svelte';
 	import { bfs, fit, fromEdges, run, ugraph, type FitResult, type Graph, type LoopState } from '#lib/bfs/rule.ts';
 	import Play from '#lib/ui/Play.svelte';
+	import IconButton from '#lib/ui/IconButton.svelte';
+	import { DiceIcon } from '@hugeicons/core-free-icons';
+	import { whenVisible } from '#lib/ui/reveal.ts';
 	import { C, ease, fitCanvas, stopFrame } from '#lib/theme.ts';
 	import { int } from '#lib/format.ts';
 
@@ -12,10 +15,15 @@
 		train: { n: number; s: number; edges: [number, number][]; par: number[] }[];
 		record: { order: { fit_ms: number } };
 	};
-	let { data }: { data: BfsData } = $props();
+	let {
+		data,
+		initial = 4,
+		autoplay = false
+	}: { data: BfsData; /** index into the sizes 16 … 1,024 */ initial?: number; autoplay?: boolean } = $props();
 
 	const SIZES = [16, 32, 64, 128, 256, 512, 1024];
-	let sizeI = $state(4);
+	// svelte-ignore state_referenced_locally
+	let sizeI = $state(initial);
 	let seed = $state(7);
 	const n = $derived(SIZES[sizeI]);
 
@@ -195,7 +203,7 @@
 	const barMax = $derived(Math.max(1, ...bars.map((b) => b.newly)));
 </script>
 
-<div class="wrap">
+<div class="wrap" {@attach (el) => (autoplay ? whenVisible(el, () => setTimeout(play, 300)) : undefined)}>
 	<div class="stage" bind:clientWidth={box}>
 		<canvas {@attach paint} aria-label="A random graph of {n} nodes; the rule's parents drawn as they are found"></canvas>
 	</div>
@@ -219,7 +227,7 @@
 		</label>
 		<div class="play">
 			<Play {phase} onclick={play} />
-			<button class="pill small" onclick={() => ((seed += 1), reset())}>New graph</button>
+			<IconButton icon={DiceIcon} label="New graph" show onclick={() => ((seed += 1), reset())} />
 		</div>
 		<dl class="readout">
 			<dt>Loop</dt>

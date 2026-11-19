@@ -23,27 +23,39 @@ for (const [name, vp, dsf] of [
 	await page.goto(url, { waitUntil: 'networkidle' });
 	await sleep(7200); // the hero's boards filled
 	await page.screenshot({ path: `${out}${name}-01-top.png` });
-	const cards = page.locator('figure.card');
-	const run = async (k, choice, wait, file) => {
-		const card = cards.nth(k);
-		await card.scrollIntoViewIfNeeded();
-		if (choice) await card.getByRole('button', { name: choice, exact: true }).click();
-		const b = card.getByRole('button', { name: 'Play' });
-		if (await b.count()) await b.first().click();
+	// figures in order: 0 hero, 1 architecture, 2 Sudoku, 3 maze, 4 BFS figure, 5 BFS live, 6 ledger, 7 table 1, 8 table 2, 9 CLRS-30
+	const figs = page.locator('figure.fig');
+	const shot = async (k, file, choice = null, wait = 0) => {
+		const f = figs.nth(k);
+		await f.scrollIntoViewIfNeeded();
+		await sleep(900); // revealed; a live demo starts as it comes into view
+		if (choice) {
+			await f.getByRole('button', { name: choice, exact: true }).click();
+			await f.getByRole('button', { name: 'Run', exact: true }).click();
+		}
 		await sleep(wait);
-		await card.screenshot({ path: `${out}${name}-${file}.png` });
+		await f.screenshot({ path: `${out}${name}-${file}.png` });
 	};
-	await run(1, null, 9000, '02-sudoku-9');
-	await run(1, '16 × 16', 9000, '03-sudoku-16');
-	await run(1, '25 × 25', 11000, '04-sudoku-25');
-	await run(2, null, 5500, '05-maze-hard-106');
-	await run(2, 'Room', 5500, '06-maze-room');
-	await run(2, 'Edge', 5500, '07-maze-edge');
-	await run(3, null, 9000, '08-bfs');
-	await cards.nth(4).scrollIntoViewIfNeeded();
-	await cards.nth(4).screenshot({ path: `${out}${name}-09-results.png` });
-	await cards.nth(5).screenshot({ path: `${out}${name}-10-sizes.png` });
-	if ((await cards.count()) > 6) await cards.nth(6).screenshot({ path: `${out}${name}-11-clrs.png` });
+	await shot(1, '02-architecture');
+	await shot(2, '03-sudoku-9', null, 9000);
+	await shot(2, '04-sudoku-16', '16 × 16', 9000);
+	await shot(2, '05-sudoku-25', '25 × 25', 11000);
+	await shot(3, '06-maze-hard-106', null, 5500);
+	await shot(3, '07-maze-room', 'Room', 5500);
+	await shot(3, '08-maze-edge', 'Edge', 5500);
+	await shot(4, '09-bfs-figure');
+	await shot(5, '10-bfs', null, 9000);
+	const ledger = figs.nth(6);
+	await shot(6, '11-ledger-sudoku', null, 8000);
+	if (name === 'desktop') {
+		await ledger.getByRole('button', { name: /^Tree mazes, no ring/ }).click();
+		await sleep(6000);
+		await ledger.screenshot({ path: `${out}${name}-12-ledger-maze.png` });
+	}
+	await shot(7, '13-results');
+	await shot(8, '14-sizes');
+	if ((await figs.count()) > 9) await shot(9, '15-clrs');
+	await page.evaluate(() => window.scrollTo(0, 0));
 	await page.screenshot({ path: `${out}${name}-00-full.png`, fullPage: true });
 	console.log(name, errors.length ? errors : 'no page errors');
 	await page.close();

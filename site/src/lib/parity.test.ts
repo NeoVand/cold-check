@@ -14,51 +14,54 @@ const MZ = load('mazes.json');
 const B = load('bfs.json');
 const bits = (b: ArrayLike<number> | null) => (b ? Array.from(b, (x) => (x ? '1' : '0')).join('') : null);
 
-describe('sudoku: the fitted check, cold then warm', () => {
+describe('sudoku: the fitted check, cold then warm (the final engine: unit pairs, Luby restarts, budget 10^7)', () => {
 	const check = S.check as SudokuCheck;
-	const E9 = build(check, 3);
-	it('Sudoku-Extreme test puzzles: same board, moves and operation counts', () => {
+	type Row = { index: number; puzzle: number[]; seed: number; solution?: number[]; py: Record<string, unknown> & { board: number[] } };
+	const same = (s: Solver, p: Row) => {
+		expect({ i: p.index, status: s.status, moves: s.moves, ops: s.st.ops, cmp: s.st.cmp, cold: s.coldOnly, restarts: s.restarts, cold_fixed: s.coldFixed.length }).toEqual({
+			i: p.index,
+			status: p.py.status,
+			moves: p.py.moves,
+			ops: p.py.ops,
+			cmp: p.py.cmp,
+			cold: p.py.cold,
+			restarts: p.py.restarts,
+			cold_fixed: p.py.cold_fixed
+		});
+		expect(decode(s.dom)).toEqual(p.py.board);
+	};
+	it('Sudoku-Extreme test puzzles: same board, moves, restarts and operation counts', () => {
+		const E9 = build(check, 3);
 		expect(S.extreme.length).toBeGreaterThanOrEqual(20);
-		for (const p of S.extreme) {
-			const s = new Solver(E9, masks(p.puzzle, 9), p.seed).run();
-			expect({ i: p.index, status: s.status, moves: s.moves, ops: s.st.ops, cmp: s.st.cmp, cold: s.coldOnly, maxdepth: s.maxDepth }).toEqual({
-				i: p.index,
-				status: p.py.status,
-				moves: p.py.moves,
-				ops: p.py.ops,
-				cmp: p.py.cmp,
-				cold: p.py.cold,
-				maxdepth: p.py.maxdepth
-			});
-			expect(decode(s.dom)).toEqual(p.py.board);
+		for (const p of S.extreme as Row[]) {
+			const s = new Solver(E9, masks(p.puzzle, 9), p.seed).solve();
+			same(s, p);
 			expect(decode(s.dom)).toEqual(p.solution);
 		}
+	});
+	it('the watched puzzle is the one the paper draws: 246 moves', () => {
+		const p = (S.extreme as Row[]).find((x) => x.index === S.demo.watch)!;
+		expect(p.py.moves).toBe(246);
 	});
 	for (const side of ['4', '16']) {
 		it(`${side} x ${side} with the 9 x 9 fit`, () => {
 			const b = Math.round(Math.sqrt(Number(side)));
 			const E = build(check, b);
-			const rows = S.sizes[side];
+			const rows = S.sizes[side] as Row[];
 			expect(rows.length).toBeGreaterThanOrEqual(20);
-			for (const p of rows) {
-				const s = new Solver(E, masks(p.puzzle, b * b), p.seed).run();
-				expect([s.status, s.moves, s.st.ops, s.st.cmp, s.coldOnly]).toEqual([p.py.status, p.py.moves, p.py.ops, p.py.cmp, p.py.cold]);
-				expect(decode(s.dom)).toEqual(p.py.board);
-			}
+			for (const p of rows) same(new Solver(E, masks(p.puzzle, b * b), p.seed).solve(), p);
 		});
 	}
-	it('25 x 25 with the 9 x 9 fit: the recorded puzzles, move for move', () => {
+	it('25 x 25 with the 9 x 9 fit: puzzles of the final run, move for move (one with a restart)', () => {
 		const E = build(check, 5);
-		const rows = S.sizes['25'];
+		const rows = S.sizes['25'] as Row[];
 		expect(rows.length).toBeGreaterThan(0);
-		for (const p of rows) {
-			const s = new Solver(E, masks(p.puzzle, 25), p.seed).run();
-			expect([s.status, s.moves, s.st.ops, s.st.cmp]).toEqual([p.py.orig.status, p.py.orig.moves, p.py.orig.ops, p.py.orig.cmp]);
-			if (p.py.orig.board) expect(decode(s.dom)).toEqual(p.py.orig.board);
-		}
-	});
-	it('resuming the warm search in chunks gives the uninterrupted run', () => {
-		const p = S.extreme.find((x: { py: { moves: number } }) => x.py.moves > 50);
+		expect(rows.some((p) => (p.py.restarts as number) > 0)).toBe(true);
+		for (const p of rows) same(new Solver(E, masks(p.puzzle, 25), p.seed).solve(), p);
+	}, 120_000);
+	it('resuming the warm search in chunks gives the uninterrupted run, across a restart too', () => {
+		const E9 = build(check, 3);
+		const p = (S.extreme as Row[]).find((x) => (x.py.moves as number) > 50)!;
 		const s = new Solver(E9, masks(p.puzzle, 9), p.seed);
 		s.cold();
 		let k = 0;
@@ -66,6 +69,16 @@ describe('sudoku: the fitted check, cold then warm', () => {
 			/* step */
 		}
 		expect([s.moves, s.st.ops]).toEqual([p.py.moves, p.py.ops]);
+		// a tiny restart base forces many restarts; chunked and whole runs must agree
+		const whole = new Solver(E9, masks(p.puzzle, 9), p.seed, { restartBase: 3 }).solve();
+		const part = new Solver(E9, masks(p.puzzle, 9), p.seed, { restartBase: 3 });
+		part.cold();
+		k = 0;
+		while (!part.warm((k += 5))) {
+			/* step */
+		}
+		expect(whole.restarts).toBeGreaterThan(0);
+		expect([part.moves, part.restarts, part.st.ops, part.status]).toEqual([whole.moves, whole.restarts, whole.st.ops, whole.status]);
 	});
 });
 

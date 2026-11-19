@@ -3,10 +3,11 @@
 	import { build, masks, popcount, Solver, type Engine, type SudokuCheck } from '#lib/sudoku/engine.ts';
 	import Play from '#lib/ui/Play.svelte';
 	import { int } from '#lib/format.ts';
+	import { whenVisible } from '#lib/ui/reveal.ts';
 	import { C, stopFrame } from '#lib/theme.ts';
 
-	type Py = { status: number; moves: number; ops?: number; cold?: boolean };
-	type Puzzle = { index: number; puzzle: number[]; seed: number; rating?: number; solution?: number[]; py: Py & { orig?: Py } };
+	type Py = { status: number; moves: number; ops?: number; cold?: boolean; restarts?: number; cold_fixed?: number };
+	type Puzzle = { index: number; puzzle: number[]; seed: number; rating?: number; solution?: number[]; py: Py };
 	export type SudokuData = {
 		check: SudokuCheck;
 		demo: { watch: number; median: number; hardest: number };
@@ -20,10 +21,16 @@
 		};
 	};
 
-	let { data }: { data: SudokuData } = $props();
-
 	type Mode = 'watch' | 'median' | 'hardest' | '4' | '16' | '25';
-	let mode = $state<Mode>('watch');
+	let {
+		data,
+		initial = 'watch',
+		bare = false,
+		autoplay = false
+	}: { data: SudokuData; initial?: Mode; bare?: boolean; autoplay?: boolean } = $props();
+
+	// svelte-ignore state_referenced_locally
+	let mode = $state<Mode>(initial);
 	const pick = (m: Mode): Puzzle | null => {
 		if (m === 'watch' || m === 'median' || m === 'hardest') return data.extreme.find((p) => p.index === data.demo[m]) ?? null;
 		const list = data.sizes[m] ?? [];
@@ -36,7 +43,7 @@
 	const b = $derived(Math.round(Math.sqrt(side)));
 	const engines: Record<number, Engine> = {};
 	const engineFor = (bb: number) => (engines[bb] ??= build(data.check, bb));
-	const recorded = $derived(puzzle ? (puzzle.py.orig ?? puzzle.py) : null);
+	const recorded = $derived(puzzle ? puzzle.py : null);
 
 	// the board shown: value per cell and its kind (0 open, 1 clue, 2 forced cold, 3 set by search)
 	let values = $state.raw<number[]>([]);
@@ -44,6 +51,7 @@
 	let phase = $state<'idle' | 'running' | 'done'>('idle');
 	let paused = $state(false);
 	let moves = $state(0);
+	let restarts = $state(0);
 	let coldCount = $state(0);
 	let warmCount = $state(0); // guessed cells on the current branch
 	let derivedCount = $state(0); // cells the cold derivation fixed after those guesses
@@ -60,6 +68,7 @@
 		paused = false;
 		moves = 0;
 		coldCount = 0;
+		restarts = 0;
 		warmCount = 0;
 		derivedCount = 0;
 		computeMs = 0;
@@ -78,7 +87,8 @@
 		mode = m;
 		reset(pick(m));
 	}
-	reset(pick('watch'));
+	// svelte-ignore state_referenced_locally
+	reset(pick(initial));
 
 	const open = (dom: Int32Array) => {
 		let k = 0;
@@ -172,6 +182,8 @@
 			while (!done && solver.moves < limit && performance.now() - t1 < 14) done = solver.warm(Math.min(limit, solver.moves + 64));
 			computeMs += performance.now() - t1;
 			moves = solver.moves;
+		restarts = solver.restarts;
+			restarts = solver.restarts;
 			show(solver.dom, coldSet, clues, new Set(solver.branch()));
 			const o = open(solver.dom);
 			trace = trace.length > 900 ? [...trace.filter((_, i) => i % 2 === 0), [coldOrder.length + moves, o, 1]] : [...trace, [coldOrder.length + moves, o, 1]];
@@ -245,7 +257,7 @@
 	const has25 = $derived((data.sizes['25'] ?? []).length > 0);
 </script>
 
-<div class="wrap">
+<div class="wrap" {@attach (el) => (autoplay ? whenVisible(el, play) : undefined)}>
 	<div class="board">
 		<svg viewBox="-1 -1 {size + 2} {size + 2}" role="img" aria-label="Sudoku board {side} by {side}">
 			{#each values as v, i (i)}
@@ -270,7 +282,7 @@
 		</svg>
 	</div>
 	<div class="side">
-		<div class="controls">
+		{#if !bare}<div class="controls">
 			<div class="seg" role="group" aria-label="Puzzle">
 				<button aria-pressed={mode === 'watch'} onclick={() => choose('watch')}>Test #{data.demo.watch}</button>
 				<button aria-pressed={mode === 'median'} onclick={() => choose('median')}>Median</button>
@@ -282,7 +294,7 @@
 				<button aria-pressed={mode === '16'} onclick={() => choose('16')}>16 × 16</button>
 				<button aria-pressed={mode === '25'} disabled={!has25} onclick={() => choose('25')}>25 × 25</button>
 			</div>
-		</div>
+		</div>{/if}
 		<div class="play">
 			<Play phase={phase === 'running' && paused ? 'idle' : phase} onclick={play} />
 			<span class="note">
@@ -294,13 +306,15 @@
 			<dt>Clues</dt>
 			<dd>{puzzle ? int(puzzle.puzzle.filter((v) => v > 0).length) : ''} of {int(side * side)}</dd>
 			<dt><span class="key" style:background={C.cobalt}></span>Forced cold</dt>
-			<dd>{int(coldCount)}</dd>
+			<dd>{int(coldCount)}{#if recorded?.cold_fixed !== undefined}&nbsp;<span class="py">(Python {int(recorded.cold_fixed)})</span>{/if}</dd>
 			<dt><span class="key" style:background={C.rose}></span>Guessed by the search</dt>
 			<dd>{int(warmCount)}</dd>
 			<dt><span class="key" style:background={DERIVED}></span>Forced cold after a guess</dt>
 			<dd>{int(derivedCount)}</dd>
 			<dt>Search moves</dt>
 			<dd>{int(moves)}{#if recorded}&nbsp;<span class="py">(Python {int(recorded.moves)})</span>{/if}</dd>
+			<dt>Restarts</dt>
+			<dd>{int(restarts)}{#if recorded?.restarts !== undefined}&nbsp;<span class="py">(Python {int(recorded.restarts)})</span>{/if}</dd>
 			<dt>Solver time</dt>
 			<dd>{computeMs < 10 ? computeMs.toFixed(2) : int(computeMs)} ms</dd>
 		</dl>

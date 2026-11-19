@@ -8,6 +8,7 @@ Run (from anywhere; one heavy CPU job at a time on the laptop):
 Every number shown on the page comes from these files; each file carries a `source` block naming its inputs.
 """
 import json
+import os
 import sys
 import time
 from pathlib import Path
@@ -18,6 +19,8 @@ CODE = Path(__file__).resolve().parents[2] / 'code'
 BENCH = CODE / 'bench'
 RELEASED = CODE / 'released'   # CRAM's released models, run by released/modal_cram_check.py
 WALK = CODE / 'walkthrough'
+# final/run_final.py saves its per-puzzle Sudoku-Extreme record to bench/data/; FINAL_RECORDS points elsewhere if needed
+FINAL_RECORDS = Path(os.environ.get('FINAL_RECORDS', str(BENCH / 'data')))
 OUT = Path(__file__).resolve().parent.parent / 'static' / 'data'
 OUT.mkdir(parents=True, exist_ok=True)
 sys.path.insert(0, str(BENCH))
@@ -44,13 +47,36 @@ def final_sudoku_stats():
                 side16=loc['side16'], side25=s25)
 
 
-def side25_pairs(rows):
-    """The 25 x 25 card numbers from bench/sudoku25b.json, arm 'pairs' (the engine with unit pairs)."""
-    r = [x['pairs'] for x in rows]
-    mv = sorted(x['moves'] for x in r)
-    return dict(side=25, n=len(r), solved_valid=sum(x['good'] for x in r), equals_generated=sum(x['equals'] for x in r),
-                budget_misses=sum(x['status'] == 0 for x in r), wrong_stops=sum(x['status'] == 1 and not x['good'] for x in r),
-                moves_median=float(mv[len(mv) // 2]), moves_max=mv[-1], arm='pairs')
+BUDGET, RESTART = 10 ** 7, 10 ** 4   # the final run (bench/final/run_final.py): budget, Luby restart base, unit pairs on
+
+
+def final_engine_ok():
+    """The engine the page is checked against is the frozen final one (bench/final/ENGINE_SHA256.json)."""
+    import hashlib
+    want = json.loads((BENCH / 'final' / 'ENGINE_SHA256.json').read_text())
+    for f in ('check.py', 'engine.py'):
+        assert hashlib.sha256((BENCH / f).read_bytes()).hexdigest() == want[f], ('not the frozen final engine', f)
+
+
+def solve_final(engine, E, dom0, seed):
+    return engine.run2(E, dom0, seed=seed, budget=BUDGET, use_pairs=True, restart_base=RESTART)
+
+
+def cold_fixed(engine, E, dom0):
+    """Cells the first cold stage (count bounds + unit pairs) leaves with one value, clues excluded."""
+    pa, pb, inb, bout, bout_n = E['pairs']
+    dom = dom0.copy()
+    nu = len(E['unit_size'])
+    engine.propagate2(dom, E['unit_items'], E['unit_size'], E['item_units'], E['ge1'], E['le1'], E['V'],
+                      np.zeros(nu, np.int64), np.ones(nu, np.bool_), np.zeros(2, np.int64), pa, pb, inb, True, bout, bout_n)
+    single = lambda d: d != 0 and (d & (d - 1)) == 0
+    return int(sum(single(int(d)) for d in dom) - sum(single(int(d)) for d in dom0))
+
+
+def py_record(engine, E, dom0, dom, o, good):
+    x = engine.decode(dom)
+    return dict(status=int(o[0]), moves=int(o[1]), ops=int(o[2]), cmp=int(o[3]), cold=bool(o[4]), restarts=int(o[6]),
+                cold_fixed=cold_fixed(engine, E, dom0), board=ints(x), correct=bool(good(x)))
 
 
 def sudoku():
@@ -59,21 +85,21 @@ def sudoku():
     import engine
     import run_sudoku_sizes as R
 
+    final_engine_ok()
     check.vocabulary()
     sol9, _, _ = data_io.sudoku_split('train-s0')
-    ck, _ = check.fit(sol9.astype(np.int64), steps=4, lr=8.0)  # the train-s0 fit of run_sudoku.py (steps 4, lr 8)
-    summary = json.loads((BENCH / 'sudoku_extreme.json').read_text())
-    f0 = summary['fits'][0]
-    assert f0['split'] == 'train-s0' and f0['steps'] == 4
+    ck, _ = check.fit(sol9.astype(np.int64), steps=4, lr=8.0)  # the train-s0 fit of the final run (steps 4, lr 8)
+    f0 = json.loads((BENCH / 'final' / 'sudoku_extreme.json').read_text())['fits'][0]
+    assert f0['split'] == 'train-s0' and f0['steps'] == 4 and f0['lr'] == 8.0
     chk = dict(types=ints(ck['types']), w=[float(x) for x in ck['w']], relations=[list(fs) for fs in ck['relations']],
                relation_names=[[check.FNAMES[i] for i in fs] for fs in ck['relations']],
                conditions=[[bool(a), bool(b)] for a, b in ck['conditions']], tau=float(ck['tau']),
                kept=check.describe(ck))
     assert [[check.FNAMES[i] for i in fs] for fs in ck['relations']] == f0['relations']
 
-    # test puzzles: 24 spread over the 412,786 (parity), plus named demo puzzles chosen from the recorded per-puzzle run
+    # test puzzles: 24 spread over the 412,786 (parity), plus named demo puzzles chosen from the final per-puzzle run
     ts, tc, tr = data_io.sudoku_split('test')
-    rec = np.load(BENCH / 'data' / 'sudoku_extreme_s0.npz')
+    rec = np.load(FINAL_RECORDS / 'final_sudoku_extreme_s0.npz')
     n = len(ts)
     spread = [int(k * (n // 24)) for k in range(24)]
     mv = rec['moves']
@@ -84,18 +110,18 @@ def sudoku():
     watch_i = int(np.flatnonzero((mv >= 150) & (mv <= 400))[0])
     demo = dict(watch=watch_i, median=median_i, hardest=hard_i)
     E = engine.build(ck, 3)
-    engine.run(E, np.where(tc[0], ts[0], 0).astype(np.int64))  # compile
     rows = []
     for i in sorted(set(spread) | set(demo.values())):
         puz = np.where(tc[i], ts[i], 0).astype(np.int64)
-        dom, o = engine.run(E, puz, seed=i + 1000003 * 0, budget=10 ** 6)  # run_sudoku.py's seed for split 0
-        x = engine.decode(dom)
-        assert int(o[1]) == int(rec['moves'][i]) and int(o[2]) == int(rec['ops'][i]), ('not the recorded run', i)
+        dom0 = engine.masks(puz, 9)
+        dom, o = solve_final(engine, E, dom0, i + 1000003 * 0)  # run_final.py's seed for split 0
+        assert (int(o[1]), int(o[2]), int(o[6])) == (int(rec['moves'][i]), int(rec['ops'][i]), int(rec['restarts'][i])), ('not the final run', i)
         rows.append(dict(index=i, rating=int(tr[i]), puzzle=ints(puz), solution=ints(ts[i]), seed=i,
-                         py=dict(status=int(o[0]), moves=int(o[1]), ops=int(o[2]), cmp=int(o[3]), cold=bool(o[4]),
-                                 maxdepth=int(o[5]), board=ints(x), correct=bool((x == ts[i]).all()))))
+                         py=py_record(engine, E, dom0, dom, o, lambda x: (x == ts[i]).all())))
+        print('extreme', i, int(o[1]), flush=True)
 
-    # other sizes: the benchmark's own generator and seeds (run_sudoku_sizes.py), solved with the 9 x 9 fit
+    # other sizes: the benchmark's own generator and seeds (run_sudoku_sizes.py, as final/run_final.py ladder_one),
+    # solved with the 9 x 9 fit by the final engine
     sizes = {}
     for b, N in ((2, 20), (4, 20)):
         Eb = engine.build(ck, b)
@@ -103,49 +129,37 @@ def sudoku():
         for i in range(N):
             rng = np.random.default_rng([1000 + b, i])
             puz, solb = R.make_puzzle(Eb, b, rng, None)
-            dom, o = R.solve_masks(Eb, engine.masks(puz, b * b), 7 + i, 10 ** 6)
-            x = engine.decode(dom)
+            dom0 = engine.masks(puz, b * b)
+            dom, o = solve_final(engine, Eb, dom0, 7 + i)
             out.append(dict(index=i, puzzle=ints(puz), solution=ints(solb), seed=7 + i,
-                            py=dict(status=int(o[0]), moves=int(o[1]), ops=int(o[2]), cmp=int(o[3]), cold=bool(o[4]),
-                                    maxdepth=int(o[5]), board=ints(x), correct=bool(R.valid(x, b)))))
+                            py=py_record(engine, Eb, dom0, dom, o, lambda x: R.valid(x, b))))
             print('side', b * b, i, out[-1]['py']['moves'], flush=True)
         sizes[str(b * b)] = out
-    # 25 x 25: the puzzles of the S6b rerun (sudoku25b.json) if it has finished; their original-engine runs are the
-    # first arm and must match the original 100-puzzle run (sudoku_sizes.json side25_rows) move for move.
-    p25 = BENCH / 'sudoku25b.json'
+    # 25 x 25: puzzles of the 100 the final run solved (bench/sudoku25b.json keeps them; same generator and seeds),
+    # each solved again here and checked against final/sudoku_ladder_25.json move for move
+    E25 = engine.build(ck, 5)
+    fin = {r['i']: r for r in json.loads((BENCH / 'final' / 'sudoku_ladder_25.json').read_text())['rows']}
+    kept = {r['i']: r for r in json.loads((BENCH / 'sudoku25b.json').read_text())['rows']}
     s25 = []
-    if p25.exists():
-        d25 = json.loads(p25.read_text())
-        orig = {r['i']: r for r in json.loads((BENCH / 'sudoku_sizes.json').read_text())['side25_rows']}
-        for r in d25['rows']:
-            if r['orig']['good'] and r['i'] in orig:
-                assert r['orig']['moves'] == orig[r['i']]['moves']
-            s25.append(dict(index=r['i'], puzzle=r['puzzle'], seed=7 + r['i'],
-                            py=dict(orig=r['orig'], pairs=r['pairs'], pairs_restarts=r['pairs_restarts'])))
-    else:
-        # until the rerun lands: regenerate two of the original 100 (same generator and seed, so the same puzzles) and
-        # check the solve against the recorded row move for move
-        E25 = engine.build(ck, 5)
-        orig = {r['i']: r for r in json.loads((BENCH / 'sudoku_sizes.json').read_text())['side25_rows']}
-        for i in (5, 9):
-            rng = np.random.default_rng([1005, i])
-            puz, solb = R.make_puzzle(E25, 5, rng, 0.55)
-            dom, o = R.solve_masks(E25, engine.masks(puz, 25), 7 + i, 10 ** 6)
-            x = engine.decode(dom)
-            assert int(o[1]) == orig[i]['moves'], ('not the recorded 25 x 25 puzzle', i)
-            s25.append(dict(index=i, puzzle=ints(puz), solution=ints(solb), seed=7 + i,
-                            py=dict(orig=dict(status=int(o[0]), moves=int(o[1]), ops=int(o[2]), cmp=int(o[3]),
-                                              cold=bool(o[4]), board=ints(x), good=bool(R.valid(x, 5))))))
-            print('side 25', i, int(o[1]), flush=True)
+    for i in (5, 0, 14, 11, 2, 7, 1):   # 1: one restart in the final run
+        puz = np.array(kept[i]['puzzle'], np.int64)
+        dom0 = engine.masks(puz, 25)
+        dom, o = solve_final(engine, E25, dom0, 7 + i)
+        assert (int(o[1]), int(o[2]), int(o[6])) == (fin[i]['moves'], fin[i]['ops'], fin[i]['restarts']), ('not the final 25 x 25 run', i)
+        s25.append(dict(index=i, puzzle=ints(puz), seed=7 + i, py=py_record(engine, E25, dom0, dom, o, lambda x: R.valid(x, 5))))
+        print('side 25', i, int(o[1]), flush=True)
     sizes['25'] = s25
 
     # every number the Sudoku card shows
     stats = final_sudoku_stats()
     dump('sudoku.json', dict(
-        source=dict(check='bench/check.py fit(train-s0, steps=4, lr=8), as run_sudoku.py',
+        source=dict(check='bench/check.py fit(train-s0, steps=4, lr=8), as final/run_final.py',
                     test='Sudoku-Extreme test (412,786 puzzles), bench/data_io.sudoku_split("test")',
-                    runs='bench/engine.py run(seed = index); moves and ops asserted equal to bench/data/sudoku_extreme_s0.npz',
-                    sizes='bench/run_sudoku_sizes.py generator and seeds; 25 x 25 from bench/sudoku25b.json, or puzzles 5 and 9 regenerated until it lands',
+                    engine='bench/engine.py run2: unit pairs, Luby restarts base 10^4, budget 10^7 (final/run_final.py); '
+                           'engine.py and check.py hashes asserted against final/ENGINE_SHA256.json',
+                    runs='seed = index; moves, ops and restarts asserted equal to the final run (final_sudoku_extreme_s0.npz)',
+                    sizes='bench/run_sudoku_sizes.py generator and seeds 7 + i; 25 x 25 puzzles from bench/sudoku25b.json, '
+                          'asserted equal to final/sudoku_ladder_25.json',
                     stats='bench/final/sudoku_extreme.json, bench/final/sudoku_ladder_local.json, bench/final/sudoku_ladder_25.json (the final run)'),
         check=chk, demo=demo, extreme=rows, sizes=sizes, stats=stats))
 

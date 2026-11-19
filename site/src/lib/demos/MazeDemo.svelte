@@ -12,6 +12,7 @@
 		type MazeRule
 	} from '#lib/mazes/rules.ts';
 	import Play from '#lib/ui/Play.svelte';
+	import { whenVisible } from '#lib/ui/reveal.ts';
 	import { C, ease, fitCanvas, stopFrame } from '#lib/theme.ts';
 	import { int } from '#lib/format.ts';
 
@@ -36,10 +37,16 @@
 			unique_generated: Record<string, { side: number; ring: boolean; n: number; exact: number }>;
 		};
 	};
-	let { data }: { data: MazeData } = $props();
-
 	type Mode = 'hard' | 'room' | 'edge';
-	let mode = $state<Mode>('hard');
+	let {
+		data,
+		initial = 'hard',
+		bare = false,
+		autoplay = false
+	}: { data: MazeData; initial?: Mode; bare?: boolean; autoplay?: boolean } = $props();
+
+	// svelte-ignore state_referenced_locally
+	let mode = $state<Mode>(initial);
 	const ROOM_NS = [12, 16, 18, 20, 22, 24, 26];
 	let roomI = $state(5); // 24 x 24
 	let showCram = $state(true);
@@ -296,16 +303,16 @@
 	});
 </script>
 
-<div class="wrap">
+<div class="wrap" {@attach (el) => (autoplay ? whenVisible(el, () => setTimeout(play, 300)) : undefined)}>
 	<div class="stage" bind:clientWidth={box}>
 		<canvas {@attach paint} aria-label={scene.title}></canvas>
 	</div>
 	<div class="side">
-		<div class="seg" role="group" aria-label="Maze">
+		{#if !bare}<div class="seg" role="group" aria-label="Maze">
 			<button aria-pressed={mode === 'hard'} onclick={() => choose('hard')}>Maze-Hard #106</button>
 			<button aria-pressed={mode === 'room'} onclick={() => choose('room')}>Room</button>
 			<button aria-pressed={mode === 'edge'} onclick={() => choose('edge')}>Edge</button>
-		</div>
+		</div>{/if}
 		{#if mode === 'room'}
 			<label class="slider">
 				<span>Room side</span>

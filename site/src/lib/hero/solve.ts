@@ -1,16 +1,16 @@
-import { build, masks, propagate, Solver, type SudokuCheck } from '#lib/sudoku/engine.ts';
+import { build, masks, pairsFor, propagate2, Solver, type SudokuCheck } from '#lib/sudoku/engine.ts';
 
 /** cell kinds: 1 clue, 2 forced by the first cold stage, 3 guessed by the search, 4 derived cold after a guess */
 export type HeroBoard = { side: number; clue: number[]; seq: [number, number][]; moves: number; guesses: number };
 
 /**
  * Solve one board with the fitted check, then replay its final branch: the cold stage's cells in the order it fixed
- * them, then each guess on the branch that reached the answer followed by the cells the cold derivation fixed from it.
+ * them (the final engine: count bounds and unit pairs), then each guess on the branch that reached the answer followed by the cells the cold derivation fixed from it.
  */
 export function heroBoard(check: SudokuCheck, b: number, puzzle: number[], seed: number): HeroBoard {
 	const side = b * b;
 	const E = build(check, b);
-	const s = new Solver(E, masks(puzzle, side), seed).run();
+	const s = new Solver(E, masks(puzzle, side), seed).solve();
 	const clue: number[] = [];
 	puzzle.forEach((v, i) => v > 0 && clue.push(i));
 	const seq: [number, number][] = s.coldFixed.map((c) => [c, 2]);
@@ -26,7 +26,7 @@ export function heroBoard(check: SudokuCheck, b: number, puzzle: number[], seed:
 		dom[g] = s.dom[g];
 		seq.push([g, 3]);
 		for (const u of E.itemUnits[g]) inq[u] = 1;
-		propagate(dom, E, inq, queue, st, (c) => seq.push([c, 4]));
+		propagate2(dom, E, inq, queue, st, pairsFor(E), (c) => seq.push([c, 4]));
 		inq.fill(0);
 	}
 	return { side, clue, seq, moves: s.moves, guesses: guesses.length };

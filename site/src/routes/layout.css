@@ -60,116 +60,24 @@ input[type='range'] {
 }
 
 @layer components {
-	/* an article column: CRAM's measure, our type */
-	.prose-col {
-		width: min(620px, calc(100vw - 40px));
-		margin-inline: auto;
-	}
-	.prose-col p,
-	.prose-col li {
-		font-size: 17px;
-		line-height: 1.62;
-		text-align: justify;
-		hyphens: auto;
-		-webkit-hyphens: auto;
-	}
-	.prose-col p + p {
-		margin-top: 1em;
-	}
-	.prose-col h2 {
-		font-family: var(--font-serif);
-		font-size: 34px;
-		font-weight: 420;
-		letter-spacing: -0.01em;
-		line-height: 1.15;
-		margin: 2.2em 0 0.6em;
-		font-variation-settings: 'opsz' 48;
-	}
-	.prose-col h3 {
-		font-size: 17px;
-		font-weight: 600;
-		margin: 1.6em 0 0.4em;
-	}
-	/* a figure card: wider than the text, one hairline, rounded */
-	.card {
-		width: min(900px, calc(100vw - 24px));
-		margin: 2.4rem auto;
-		border: 1px solid var(--color-edge);
-		border-radius: 20px;
-		background: var(--color-paper);
-		padding: 22px 26px 22px;
-	}
-	@media (max-width: 640px) {
-		.card {
-			padding: 16px 14px 16px;
-			border-radius: 16px;
-		}
-	}
-	.caption {
-		margin-top: 16px;
-		font-size: 14px;
-		line-height: 1.5;
-		color: var(--color-ink-soft);
-	}
-	.caption b {
-		color: var(--color-ink);
-		font-weight: 600;
-	}
-	.pill {
-		display: inline-flex;
-		align-items: center;
-		gap: 7px;
-		height: 34px;
-		padding: 0 15px;
-		border: 1px solid var(--color-edge);
-		border-radius: 9999px;
-		background: var(--color-paper);
-		color: var(--color-ink);
-		font: inherit;
-		font-size: 14px;
-		text-decoration: none;
-		white-space: nowrap;
-		cursor: pointer;
-		transition:
-			background var(--hover) ease,
-			border-color var(--hover) ease;
-	}
-	.pill:hover {
-		background: var(--color-tint);
-		border-color: var(--color-mist);
-	}
-	.pill.solid {
-		background: var(--color-ink);
-		border-color: var(--color-ink);
-		color: var(--color-paper);
-	}
-	.pill.solid:hover {
-		background: #2b3858;
-	}
-	.pill.small {
-		height: 28px;
-		padding: 0 12px 0 10px;
-		font-size: 13px;
-	}
-	.pill:disabled {
-		color: var(--color-mist);
-		cursor: default;
-	}
-	/* a choice among a few options */
+	/* a choice among a few options: a bordered group, the chosen one filled in ink (the cold-attention page's control) */
 	.seg {
 		display: inline-flex;
 		flex-wrap: wrap;
 		gap: 2px;
 		padding: 2px;
 		border: 1px solid var(--color-edge);
-		border-radius: 9999px;
+		border-radius: 6px;
 		background: var(--color-paper);
 	}
 	.seg button {
-		height: 26px;
-		padding: 0 11px;
+		display: inline-flex;
+		align-items: center;
+		gap: 5px;
+		height: 24px;
+		padding: 0 9px;
 		border: 0;
-		border-radius: 9999px;
+		border-radius: 4px;
 		background: none;
 		color: var(--color-ink-soft);
 		font: inherit;
@@ -180,13 +88,104 @@ input[type='range'] {
 			background var(--hover) ease,
 			color var(--hover) ease;
 	}
-	.seg button:hover:not([aria-pressed='true']) {
+	.seg button:hover:not(:disabled):not([aria-pressed='true']) {
 		background: var(--color-tint);
 		color: var(--color-ink);
 	}
 	.seg button[aria-pressed='true'] {
 		background: var(--color-ink);
 		color: var(--color-paper);
+	}
+	.seg button:disabled {
+		color: var(--color-mist);
+		cursor: default;
+	}
+	/* an action: an outlined button with an icon (and sometimes a word) */
+	.ibtn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 6px;
+		height: 28px;
+		min-width: 28px;
+		padding: 0 9px 0 7px;
+		border: 1px solid var(--color-edge);
+		border-radius: 6px;
+		background: var(--color-paper);
+		color: var(--color-ink-soft);
+		font: inherit;
+		font-size: 13px;
+		white-space: nowrap;
+		cursor: pointer;
+		transition:
+			background var(--hover) ease,
+			color var(--hover) ease,
+			border-color var(--hover) ease;
+	}
+	.ibtn:hover:not(:disabled) {
+		background: var(--color-tint);
+		border-color: var(--color-mist);
+		color: var(--color-ink);
+	}
+	.ibtn.solid {
+		background: var(--color-ink);
+		border-color: var(--color-ink);
+		color: var(--color-paper);
+	}
+	.ibtn.solid:hover:not(:disabled) {
+		background: #2b3858;
+		color: var(--color-paper);
+	}
+	.ibtn:disabled {
+		color: var(--color-mist);
+		cursor: default;
+	}
+	/* a link with an icon */
+	.ilink {
+		display: inline-flex;
+		align-items: center;
+		gap: 5px;
+		color: var(--color-ink-soft);
+		text-decoration: none;
+		transition: color var(--hover) ease;
+	}
+	.ilink:hover {
+		color: var(--color-ink);
+		text-decoration: underline;
+		text-underline-offset: 3px;
+	}
+	/* a task in a side list */
+	.navitem {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		width: 100%;
+		padding: 3px 8px;
+		border: 0;
+		border-radius: 4px;
+		background: none;
+		color: var(--color-ink-soft);
+		font: inherit;
+		font-size: 13px;
+		text-align: left;
+		cursor: pointer;
+		transition:
+			background var(--hover) ease,
+			color var(--hover) ease;
+	}
+	.navitem:hover {
+		background: var(--color-tint);
+		color: var(--color-ink);
+	}
+	.navitem[aria-current='true'] {
+		background: var(--color-tint);
+		color: var(--color-ink);
+		font-weight: 600;
+		box-shadow: inset 2px 0 0 var(--color-ink);
+	}
+	.hint {
+		font-size: 12px;
+		color: var(--color-ink-soft);
 	}
 	.label {
 		font-size: 11px;
@@ -208,4 +207,17 @@ input[type='range'] {
 		text-align: right;
 		font-variant-numeric: tabular-nums;
 	}
+}
+
+/* reveal on scroll (see lib/ui/reveal.ts) */
+.rv {
+	opacity: 0;
+	transform: translateY(14px);
+	transition:
+		opacity 700ms var(--ease),
+		transform 700ms var(--ease);
+}
+.rv.rv-in {
+	opacity: 1;
+	transform: none;
 }
