@@ -15,6 +15,7 @@ Two kinds of number are not read from our files, and each is marked where it is 
 """
 import glob
 import json
+import re
 import math
 import os
 import statistics as st
@@ -133,6 +134,7 @@ for side in (4, 9, 16):
     put(f'size{side}.moves.median', comma(d['moves_median']))
 put('size25.n', sz25['n'])
 put('size25.final', sz25['solved_valid'])
+put('size25.blank', f"{100 * sz25['blank_frac_mean']:.0f}")
 put('size25.wrong', sz25['wrong'])
 put('size25.moves.median', comma(sz25['moves_median']))
 e = int(round(math.log10(sx['budget'])))
@@ -181,6 +183,7 @@ q = mu['queens']
 assert all(v['solved'] == v['n'] for v in q.values())
 put('queens.fit', ms(mu['queens_fit']['fit_ms_warm_median7']))
 put('queens.n', q['100_empty']['n'])
+put('queens.removed', 100 - 100 // 8)                      # the '7/8' start removes N - N // 8 queens (code/bench/run_multi.py)
 put('queens.cold80', q['80_k9']['cold_only'])
 put('queens.cold100', q['100_k9']['cold_only'])
 c = mu['colour']
@@ -267,6 +270,11 @@ for g in (1, 2, 3):
     put(f'clrs.g{g}.fit.hi', f'{max(f):.0f} ms' if max(f) < 1000 else f'{max(f) / 1000:.1f} s')
     put(f'clrs.g{g}.loops', max(SUM[t]['loops_max'] for t in ts))
 put('clrs.tasks', len(GROUP))
+SUPPLIED_G1 = ('task_scheduling', 'lcs_length')        # group one, but read a small supplied quantity (Table 2)
+assert all(GROUP[t] == 1 for t in SUPPLIED_G1)
+WORDS[13] = 'thirteen'
+put('clrs.g1.bare', len([t for t in GROUP if GROUP[t] == 1 and t not in SUPPLIED_G1]))
+put('clrs.g1.bare.w', WORDS[int(N['clrs.g1.bare'])])
 put('clrs.dfs.fit', f"{fit_ms('dfs') / 1000:.0f}")
 FT = jl(CF, 'fit_times_m4.json')['fits']
 put('bfs.clrs.fit', f"{FT['bfs']['best_ms']:.0f}")
@@ -379,14 +387,34 @@ put('rel.dir.down', '9.35')
 put('rel.dir.left', '1.69')
 put('rel.dir.right', '$-$1.93')
 put('rel.dir.up', '$-$9.37')
+from math import comb, log
+gap = float(N['rel.dir.down']) - float(N['rel.dir.left'])         # the learned gap between the corridor's and the room's direction
+put('rel.room.gap', f'{gap:.2f}')
+for n in (7, 8):
+    put(f'rel.room.routes{n}', comma(comb(2 * n - 2, n - 1)))         # corner-to-corner shortest routes through an n x n room
+    put(f'rel.room.ln{n}', f'{log(comb(2 * n - 2, n - 1)):.2f}')
+assert log(comb(12, 6)) < gap < log(comb(14, 7))                    # the flip falls at 8 x 8, as the settled runs show
 put('rel.neg.lo', 426)
 put('rel.neg.hi', 471)
-# RELEASED: printed by code/released/maze_unique_cert2.py on the three Maze-Unique checkpoints
-put('rel.cert.interior', 256)
-put('rel.cert.edge.bad', 12)
-put('rel.cert.edge', 32)
-put('rel.cert.corner.bad', 4)
-put('rel.cert.corner', 8)
+# RELEASED: the output of code/released/maze_unique_cert2.py on CRAM's three Maze-Unique checkpoints, saved to
+# gen/cram_maze_unique_cert.txt (rerun with CRAM's checkpoints fetched to regenerate it)
+CERT = open(os.path.join(HERE, 'cram_maze_unique_cert.txt')).read()
+rows = re.findall(r'(interior|edge:\w+|corner:[\w-]+)\s+patterns\s+(\d+) violations\s+(\d+)', CERT)
+assert len(rows) == 27, len(rows)                                   # 9 positions x 3 seeds
+
+
+def one(kind):
+    vals = {(int(p), int(v)) for k, p, v in rows if k.startswith(kind)}
+    assert len(vals) == 1, (kind, vals)                             # the same on every edge (corner) and every seed
+    return vals.pop()
+
+
+put('rel.cert.interior', one('interior')[0])
+assert one('interior')[1] == 0
+put('rel.cert.edge', one('edge')[0])
+put('rel.cert.edge.bad', one('edge')[1])
+put('rel.cert.corner', one('corner')[0])
+put('rel.cert.corner.bad', one('corner')[1])
 CRAMREPO = os.environ.get('CRAM_REPO')          # optional: CRAM's repository at commit 62bbe83, to check the above
 if CRAMREPO:
     for sd in range(3):

@@ -17,7 +17,7 @@ touch the edge); over all \nm{edge.n} such mazes ours is right on \nm{edge.exact
 Maze-Hard model returns a valid path two steps longer (rose band, 51 steps), the smallest room at which it leaves the
 shortest path in this orientation. \textbf{d}, N-Queens on a 100\,$\times$\,100 board from 12 given queens (navy), with
 the rule fitted on the 92 solutions of 8\,$\times$\,8: the cold stage forces none here and the search places the other
-88 (rose) in 81 moves. \textbf{e}, Operations per puzzle against puzzles solved on CRAM's test sets (CRAM's convention,
+88 (rose) in 81 moves (a move is one choice; the cells the cold stage forces after it are not counted). \textbf{e}, Operations per puzzle against puzzles solved on CRAM's test sets (CRAM's convention,
 comparisons free; open cobalt mark: every comparison counted too). Sudoku-Extreme: ours \nm{sudoku.ops}
 (\nm{sudoku.opscmp}) on all \nm{sudoku.ntest}; CRAM \nm{cram.sudoku.ops} at \nm{cram.sudoku.pct}\%; CRAM with hand-set
 weights \nm{cram.handset.ops}; seven looped models from CRAM's Table 2. Maze-Unique: ours \nm{unique.ops}, CRAM

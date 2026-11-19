@@ -28,10 +28,13 @@ proofs study, in distributed computing, which global properties have labels that
 check\cite{korman2010proof,korman2007distributed,goos2016locally}.
 
 Against this background, our contributions are four. The first is the cold pair read with comparisons of counts,
-fitted at the answer in one step with no search over rules. The second is the answer completed from itself, by
-closures and counts, as the training target. It links the hints of algorithmic reasoning to the labels of proof
-labelling schemes: a completion is a certificate computed from the answer instead of from the trace. The third is the
-level condition, kept as a safeguard, which turns a check fitted at a supported model into a procedure that computes it
-wherever the fit alone would drop it. The
-fourth is proofs from the fitted table at every size. Our searches, whose scope Methods describes, found none of these
-four in a learned system.
+fitted at the answer with no search over programs: one greedy pass over a fixed family of conditions. The second is
+the answer completed by closures and counts as the training target. It links the hints of algorithmic reasoning to the
+labels of proof labelling schemes: a completion is a certificate computed from the answer instead of from the trace.
+The third is the level condition. Keeping every condition that held on all positives is the most specific conjunction
+of inductive logic programming, the least general generalisation and its bottom clause\cite{plotkin1970note,muggleton1995inverse};
+what is new is to keep it because it carries Fages' level mapping, so that the answer the fitted check supports is the
+least model it computes. The fourth is proofs at every size from a table fitted at the answer, without a trace. Discrete
+neural algorithmic reasoning proves its executions correct on any input from hints\cite{rodionov2025discrete}, Nerem
+et al.\ prove a regularised network approximates Bellman--Ford at every size\cite{nerem2025graph}, and our earlier paper
+certified trained blocks by finite checks\cite{mohsenvand2026zero}; here the table comes from one fit at the answer.

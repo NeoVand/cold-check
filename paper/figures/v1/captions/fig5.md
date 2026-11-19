@@ -3,7 +3,8 @@
 
 \textbf{Fig. 5 | Fitted in milliseconds, exact far beyond training.} Cobalt: ours (open: CLRS-30 tasks given a piece by
 hand); rose: CRAM; pale rose: the looped models. Both axes are logarithmic. \textbf{a}, The time to fit one
-rule: ours on one laptop core (CRAM's benchmarks: the median of warm fits; CLRS-30: the best of three), CRAM and the looped models on one H200 GPU as CRAM reports them (its Tables~2 and~3; no fit times
+rule: ours on one laptop core, from the training answers to the fitted rule, completions and candidate conditions
+included (CRAM's benchmarks: the median of warm fits; CLRS-30: the best of three), CRAM and the looped models on one H200 GPU as CRAM reports them (its Tables~2 and~3; no fit times
 are reported for Maze-Hard, and N-Queens is CRAM's 8\,$\times$\,8 model). Within a row, marks that would overlap are
 stacked; only their horizontal position is data. \textbf{b}, The sizes, in nodes or cells, at which one fitted rule is
 exact: a line from our largest training size (tick) to the largest held-out size at which every test was exact (dot).

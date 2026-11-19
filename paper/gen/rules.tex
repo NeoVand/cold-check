@@ -157,13 +157,13 @@ score: +5.69\,[$\#\{k: k = i\} = \#\{k: \mathrm{key}_{k}  \leq  \mathrm{key}_{i}
 
 \paragraph{Graham scan.}
 \emph{item selected} (0 kept, 1 added; exact on the training answers):\\
-\quad $\text{ some } k: (\mathrm{noleft}(i, k)) \text{ and } (\mathrm{noleft}(i, k))$;
+\quad $\text{ some } k: (\mathrm{noleft}(i, k))$;
 
 \paragraph{Jarvis march.}
 \emph{item selected} (0 kept, 1 added; exact on the training answers):\\
-\quad $\text{ some } k: (\mathrm{noleft}(i, k)) \text{ and } (\mathrm{noleft}(i, k))$;
+\quad $\text{ some } k: (\mathrm{noleft}(i, k))$;
 
-\paragraph{Segment intersection.}
+\paragraph{Segments intersect.}
 \emph{every item passes (read-out: yes iff all pass)} (0 kept, 2 added; not exact on the training answers; the score decides):\\
 \quad $\#\{k: k = i\} = \#\{k: \mathrm{left}(i, k)\}$;\\
 \quad $\text{ not } \text{ some } k: (\mathrm{left}(i, k)) \text{ and } (\mathrm{left}(k, i))$;\\
@@ -176,7 +176,7 @@ score: +3.78\,[$\#\{k: k = i\} = \#\{k: \mathrm{left}(i, k)\}$]; +2.14\,[$\text{
 \quad $\mathrm{valid}(u, v)$;\\
 \quad $\text{ not } \text{ some } k: (\mathrm{pos}_{k} < \mathrm{pos}_{v}) \text{ and } \mathrm{N}(k, v) < \mathrm{N}(u, v)$;
 
-\paragraph{Optimal search tree.}
+\paragraph{Optimal BST.}
 \emph{pointer $u$ of $v$ ($u \neq v$)} (3 kept, 1 added; exact on the training answers):\\
 \quad $\mathrm{pos}_{u} < \mathrm{pos}_{v}$;\\
 \quad $\text{ not } \mathrm{pos}_{u}  \geq  \mathrm{pos}_{v}$;\\

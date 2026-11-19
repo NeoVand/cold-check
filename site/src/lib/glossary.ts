@@ -18,7 +18,7 @@ export const GLOSSARY: Record<string, { title: string; text: string }> = {
 	},
 	completion: {
 		title: 'Completed answer',
-		text: 'The answer plus quantities computed from the answer alone: closures (ancestor from parent) and counts (a node\'s place in the order of discovery). No step of the algorithm is used.'
+		text: 'The answer plus quantities computed with closures and counts, from the answer (a node\'s depth, its place in the order of discovery) or from the input (a bottleneck weight, the reach clock). No step of the algorithm is used.'
 	},
 	level: {
 		title: 'Level condition',

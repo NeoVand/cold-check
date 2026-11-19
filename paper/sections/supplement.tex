@@ -12,7 +12,7 @@ every completion register of those items equals its value in $y^{+}$. An item $v
 and items of level below $\lambda$, so it reads exactly what it reads at the completed answer, where its check is exact;
 it therefore takes its value in $y$ at loop $\lambda+1$. The registers of $v$ are computed from items of level at most
 $\lambda$, which now all hold their values in $y$, so they too equal their values in $y^{+}$. Induction on $\lambda$
-gives the claim, in $L+1$ loops.\hfill$\square$
+gives the claim: level $L$ is settled at loop $L+1$, and at loop $L$ when level $0$ is given by the input.\hfill$\square$
 
 \paragraph{Proposition~\ref{prop:finite}.} Let $(u,v)$ be a pair of an input $x$ of any size, and let $E_1,\ldots,E_W$ be
 the witness tests of the rule and of the definition. For each $E_j$ that holds at $(u,v)$, pick one witness $k_j$, and let
@@ -30,24 +30,70 @@ those at distance below $t$, with their depths right. A node $v$ at distance at 
 $\notyet$, which is later than every number; its candidates are its reached neighbours. If $v$ is at distance $t$, these
 are its neighbours at distance $t-1$ (a neighbour cannot be nearer than $t-1$), and the witness test leaves the
 lowest-numbered of them, which is the library's parent. If $v$ is at distance above $t$, it has no reached neighbour, so
-no candidate passes and nothing is written. A reached node $v$ at distance $d < t$ has candidates of depth below $d$ among
+no parent passes; its own rule, ``no neighbour below me'', may pass instead and write the self-pointer, ``none''. That
+leaves its depth at $\notyet$, since depths count from the source only, and gives way as soon as a reached neighbour
+appears, because the self-pointer's rule then fails. A reached node $v$ at distance $d < t$ has candidates of depth below $d$ among
 its neighbours, which lie at distance $d-1$, and the rule names the same parent as before. So after loop $t$ the reached
 nodes are those at distance at most $t$, and the run comes to rest one loop after the eccentricity of the source.
-The run reads every node at every loop; what keeps the far nodes from being written early is that they have no reached
-candidate, which is the kept condition ``$u$ reached'' together with the level condition.
+The run reads every node at every loop; what keeps the far nodes from being given a parent early is the level condition:
+$\mathrm{depth}_u < \mathrm{depth}_v$ is false whenever $u$ is unreached, which also makes ``$u$ reached'' redundant.
 
 \paragraph{The greedy tasks.} For activity selection and task scheduling the answer is read only downward along one
 order (finish time; weight), so the rule of item $i$ reads only items earlier in that order. The rule is then stratified
 by that order, item by item, and the synchronous run fixes the first $t$ items of the order by loop $t$; it settles at
 its unique fixed point, which is the greedy answer at the training answers and, by the same induction, at every input.
+The string matchers are read downward along the text in the same way.
 
-\paragraph{Sudoku: the kept types at every size.} A pair of cells has a type, the pattern of which of eight relations hold:
-same row, same column, same band $\lfloor r/b\rfloor$, same stack $\lfloor c/b\rfloor$, same offset in the band and in
-the stack, and the two diagonals. Each pattern that some board realises is realised within one box and one other box, by
-offsets of at most $b-1$, so the set of realised types is the same for every $b \geq 3$ (\nm{sudoku.types} types; $b=2$
-realises 23 of them). The kept types are exactly those with same row, same column, or same band and same stack, so on
-every board the kept pairs are the row, column and box pairs; the script checks this for $b$ from \nm{proof.b.lo} to
-\nm{proof.b.hi} on all three fits.
+\paragraph{Proposition~\ref{prop:bf}.} Write $d^t$ for the distances computed along the pointer $\pi^t$, with $d^t_v =
+\notyet$ for a node whose pointer chain does not reach the source; the source's distance is always $0$. \emph{(i) No
+cycles.} Every pointer that loop $t+1$ writes satisfies $d^t_u < d^t_v$, a strict order on the numbers and $\notyet$ (it
+is false between two $\notyet$), so a cycle in $\pi^{t+1}$ would need $d^t_{u_1} < \cdots < d^t_{u_1}$. \emph{(ii)
+Reached nodes stay reached.} Let $v$ be reached at loop $t$, with parent $p$. Then $d^t_p = d^t_v - w(p,v) < d^t_v$,
+since $w > 0$, so the set of in-neighbours $k$ with $d^t_k < d^t_v$ is not empty, and the one with the smallest
+$S(k,v)$ passes: no witness has a strictly smaller $S$. The self-pointer's rule, ``no in-neighbour below me'', fails. By
+induction along $d^t$, the new parent of $v$ is reached at loop $t+1$ and has a distance no larger than at loop $t$, so
+$d^{t+1}_v \leq d^{t}_v$. \emph{(iii) Relaxation.} The new parent minimises $d^t_k + w(k,v)$ over the in-neighbours
+below $v$, which loses no improving neighbour, since $d^t_k + w(k,v) < d^t_v$ implies $d^t_k < d^t_v$; and $d^{t+1}_v$
+is the new parent's own $d^{t+1}$ plus the weight, no larger. So $d^{t+1}_v \leq \min(d^t_v, \min_k d^t_k + w(k,v))$,
+and by induction $d^t_v$ is at most the length of the shortest path to $v$ with at most $t$ edges. Every $d^t_v$ is the
+length of a path, so it is never below the true distance. After $h$ loops every distance is exact; loop $h+1$ writes, for
+every $v$, the in-neighbour with the smallest $d_k + w(k,v)$, the shortest-path parent; and the next loop changes
+nothing. The library draws positive weights: at least about $0.03$ on undirected graphs, and uniform on $(0,1)$, positive
+almost surely, on directed ones. Floyd--Warshall runs this rule once per source.
+
+\paragraph{Other cold runs.} \emph{Prim} keeps only tree edges, those whose weight equals the bottleneck, and is
+breadth-first search on them from the root: loop $t$ places the nodes $t$ tree edges from the root. \emph{Depth-first
+search} is fitted at every prefix of the answer's preorder and is exact there; the run places one node per loop, so
+induction on the prefix gives the answer. \emph{Topological sort} reads the finish order of that run, and \emph{strong
+components} run it twice, as Kosaraju's algorithm does. For \emph{longest common subsequence}, \emph{matrix chain order}
+and \emph{optimal BST} the fitted rules are not stratified, and we rely on the runs: every one came to rest at the
+answer on every test input.
+
+\paragraph{The CLRS-30 certificates.} The script rebuilds each rule from its saved table and evaluates it with the code
+that ran it. \emph{Sorts and minimum:} every order of distinct keys on up to \nm{cert.sorts.items} items (minimum:
+\nm{cert.min.items}), against the library's labels; the library draws keys from a continuous distribution, so they are
+distinct almost surely. \emph{Kruskal:} the rule reads only the pair's own conditions, the edge and the weight $w$ against
+the bottleneck $B$. The axioms are that off an edge $w$ is missing, so every comparison with it is false, and that on an
+edge $B \leq w$; every value they allow is checked against the cycle property, which with distinct weights says an edge
+is in the tree exactly when $w = B$. Distinct weights are assumed, as continuous weights make them almost surely; the
+rule also agrees with the library's Kruskal, as our generator reproduces it, on \nm{cert.kruskal.graphs} random graphs.
+\emph{Breadth-first search:} the depth is given, constrained only by local axioms: at most one node at depth $0$ (the
+source), and an edge joins two unreached nodes or two reached nodes whose depths differ by at most one. All
+\nm{cert.bfs.cases} pair cases on up to \nm{cert.bfs.items} items with depths from 0 to 6 or $\notyet$ are checked against
+the library's definition stated per pair.
+
+\paragraph{Sudoku: the kept types at every size.} A pair of cells has a type, the pattern of which of eight relations
+hold: same row, same column, same band $\lfloor r/b\rfloor$, same stack $\lfloor c/b\rfloor$, same offset in the band and
+in the stack ($r \bmod b$, $c \bmod b$), and the two diagonals ($d_r = d_c$, $d_r = -d_c$, with $d_r, d_c$ the row and
+column differences). Along the rows a pair is in one of four states: the same row ($d_r=0$); the same offset in another
+band ($d_r$ a nonzero multiple of $b$); the same band at another offset ($0<|d_r|<b$); or neither. The columns are
+alike, and the type is the two states and the two diagonal bits. A diagonal bit can hold only between states whose
+differences can have equal size, and a pair with both states the same offset, or both the same band, can avoid both
+diagonals only if that state allows two different sizes of difference: multiples $b, 2b, \ldots, (b-1)b$, or sizes
+$1,\ldots,b-1$. Both need $b \geq 3$; every other combination is realised for every $b \geq 2$. So every $b \geq 3$
+realises the same \nm{sudoku.types} types, and $b=2$ realises 23, lacking exactly these two; the script confirms the
+counts for $b$ from \nm{proof.b.lo} to \nm{proof.b.hi}. The kept types are exactly those with same row, same column, or
+same band and same stack, so on every board the kept pairs are the row, column and box pairs, on all three fits.
 
 \paragraph{Sudoku: the stop is sound.} The energy of a full board is the sum of the kept costs over pairs of cells that
 hold the same value. Every kept cost is at least \nm{sudoku.wmin.lo}, and none is negative. The threshold is
@@ -65,8 +111,10 @@ enough moves, and a puzzle without one is reported as such when the search is ex
 even--even cells), the true answer meets every kept range: a path cell has two path side-neighbours, the start and the
 goal one; an off cell has at most one, since two would close a cycle; corner counts are at most two for corridors and
 zero for rooms. So no removal is wrong. From the start in which every open cell may be on the path, the cold stage removes
-a cell with fewer than two possible path neighbours until none is left. What remains is a subtree whose only leaves are
-the start and the goal, which is the path. No size and no edge term enters the argument, and counts run only over cells
+a cell with fewer than two possible path neighbours until none is left. By induction, every cell of the true path keeps
+two possible path neighbours (the start and the goal one), so none is removed. What remains is a subtree; any branch of
+it off the path ends in a leaf that is neither the start nor the goal, and that leaf is removed, so what remains at rest
+is the path. No size and no edge term enter the argument, and counts run only over cells
 that exist, so the edge needs no special case.
 
 \paragraph{Maze-Hard.} The reach clock assigns each open cell the loop at which the cold reach run from the goal first
@@ -74,9 +122,12 @@ arrives, which is its side-step distance to the goal, since each loop adds exact
 rule steps to an open neighbour whose clock is one less, the only ``nearer'' a grid allows, and breaks ties by the learned
 order of directions, which is the order the labels use. It therefore returns the label on every maze of any size or shape.
 
-\paragraph{CRAM's Sudoku stop.} A full board that is not a valid Sudoku has at least two clashing pairs: if exactly one
-pair of cells in one unit held the same digit, counting that digit by rows and by columns would give different totals.
-So a wrong board pays at least the sum of the two smallest conflict costs, at least \nm{rel.stop.pay.lo} on every seed.
+\paragraph{CRAM's Sudoku stop.} A full $n\times n$ board that is not a valid Sudoku has at least two clashing pairs,
+pairs of cells in one unit that hold the same digit. If some digit appears at least $n+1$ times, it repeats in some row
+and in some column, and these are two different pairs, since two cells cannot share both a row and a column. Otherwise
+every digit appears exactly $n$ times. The board is invalid, so some unit holds a digit $d$ twice. The units of that type
+partition the board, and $d$ appears $n$ times in all, so another unit of that type holds no $d$; its $n$ cells hold at
+most $n-1$ digits, so it repeats some digit $d'$, a second pair, disjoint from the first. So a wrong board pays at least the sum of the two smallest conflict costs, at least \nm{rel.stop.pay.lo} on every seed.
 Each cell holds one digit, so the most a board can collect from negative costs is half the sum over cells of the most
 one digit can collect at that cell, at most \nm{rel.stop.earn.hi}, and the input costs add less than 0.001. Every wrong
 board therefore has energy at least \nm{rel.stop.bound.lo}, above the stop threshold on all three seeds.
@@ -89,17 +140,27 @@ there are open cells off it. No board size enters.
 
 \section*{Supplementary Note 2: the fitted rules of all thirty tasks}
 
-Each rule is printed from its fitted table. For a pointer, $u$ is the candidate and $v$ the target; for an item mask,
-$i$; $k$ ranges over third items. ``Kept'' counts the own conditions kept because they held on every training positive,
-``added'' those added by the greedy conjunction. Values $\notyet$ compare false with each other. Registers: key, the
-input number; $\mathrm{pos}$, the item's index; depth, dist and $B$ (bottleneck), completions; $S$, the supplied sum;
-$\mathrm{sel}$, the item mask of the partial answer; $\mathrm{run}$, the closure of agreeing text; $U_c$ and $L_c$, the
-counts one cell up and one cell left; $N$, the supplied split cost; $\mathrm{sep}$ and $\mathrm{reach\_without}$, the
-supplied deletion closures; $M$, $m$ and $P'$, the supplied prefix quantities; d and f, discovery and finish times; open
-and unplaced, the supplied depth-first bits; left, right and noleft, the supplied orientation relations.
+Each rule is printed from its fitted table. In a pointer rule $u$ is the candidate and $v$ the target; in a
+self-pointer or item rule the item is $i$; $k$ ranges over third items, $k\notin\{u,v\}$ or $k \neq i$. ``Kept'' counts
+the own conditions kept because they held on every training positive, ``added'' those added by the greedy conjunction.
+A kept set may list a comparison beside its negated complement (``$\mathrm{key}_u<\mathrm{key}_v$'' and ``not
+$\mathrm{key}_u\geq\mathrm{key}_v$''), because the two differ on $\notyet$, which fails every comparison. The witness
+template fills both legs; a leg repeated in one test is printed once. Registers and relations: key, the input number;
+target, binary search's target; pos, the item's index; x and y, a point's coordinates; s and f, an activity's start and
+finish; d, a deadline (task scheduling) or a discovery time (depth-first search), and f also a finish time there; w and
+edge, the weights and edges; source; depth and dist, completions, with has\_depth and has\_dist for ``reached''; $B$, the
+bottleneck; $S$, the supplied sum; loop, Floyd--Warshall's self-loop weight; sel, the item mask of the partial answer;
+string (an item of the text), first (the pattern's first letter) and run (the closure of agreeing text); same\_key, Uc
+and Lc for longest common subsequence; $N$ and valid, the supplied split cost and ``a split inside the interval''; sep
+and reach\_without, the supplied deletion closures; $M$, $m$ and Pp ($=P'$), the supplied prefix quantities, and end,
+the chosen end item; open and unplaced, the supplied depth-first bits; left, right and noleft, the supplied orientation
+relations, and other, the other segment's points.
 
 {\small
 \input{gen/rules.tex}
+
+\medskip\noindent\textit{Shared checks (Table~\ref{tab:shared})}\par
+\input{gen/shared_rules.tex}
 }
 
 \section*{Supplementary Table S1: the held-out battery with frozen code}

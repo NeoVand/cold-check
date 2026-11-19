@@ -1,0 +1,30 @@
+seed 0  b = [-0.338  0.338]  gain of one neighbour (on minus off), by offset:
+    interior               patterns  256 violations    0 | tree-compatible  161 violations    0 | min margin where right 0.687 | largest violation None
+    edge:top               patterns   32 violations   12 | tree-compatible   25 violations   12 | min margin where right 3.890 | largest violation ({(1, -1): 1, (1, 0): 1, (1, 1): 1}, -0.338, 1)
+    edge:bottom            patterns   32 violations   12 | tree-compatible   25 violations   12 | min margin where right 3.890 | largest violation ({(-1, -1): 1, (-1, 0): 1, (-1, 1): 1}, -0.338, 1)
+    edge:left              patterns   32 violations   12 | tree-compatible   25 violations   12 | min margin where right 3.896 | largest violation ({(-1, 0): 1, (-1, 1): 1, (1, 1): 1}, -0.331, 1)
+    edge:right             patterns   32 violations   12 | tree-compatible   25 violations   12 | min margin where right 3.896 | largest violation ({(-1, -1): 1, (-1, 0): 1, (1, -1): 1}, -0.331, 1)
+    corner:top-left        patterns    8 violations    4 | tree-compatible    7 violations    4 | min margin where right 2.506 | largest violation ({(1, 0): 1, (1, 1): 1}, -1.721, 1)
+    corner:top-right       patterns    8 violations    4 | tree-compatible    7 violations    4 | min margin where right 2.485 | largest violation ({(1, -1): 1, (1, 0): 1}, -1.743, 1)
+    corner:bottom-left     patterns    8 violations    4 | tree-compatible    7 violations    4 | min margin where right 2.485 | largest violation ({(-1, 0): 1, (-1, 1): 1}, -1.743, 1)
+    corner:bottom-right    patterns    8 violations    4 | tree-compatible    7 violations    4 | min margin where right 2.506 | largest violation ({(-1, -1): 1, (-1, 0): 1}, -1.721, 1)
+seed 1  b = [-0.339  0.339]  gain of one neighbour (on minus off), by offset:
+    interior               patterns  256 violations    0 | tree-compatible  161 violations    0 | min margin where right 0.674 | largest violation None
+    edge:top               patterns   32 violations   12 | tree-compatible   25 violations   12 | min margin where right 3.896 | largest violation ({(0, 1): 1, (1, -1): 1, (1, 1): 1}, -0.342, 1)
+    edge:bottom            patterns   32 violations   12 | tree-compatible   25 violations   12 | min margin where right 3.896 | largest violation ({(-1, -1): 1, (-1, 1): 1, (0, 1): 1}, -0.342, 1)
+    edge:left              patterns   32 violations   12 | tree-compatible   25 violations   12 | min margin where right 3.891 | largest violation ({(-1, 1): 1, (0, 1): 1, (1, 1): 1}, -0.347, 1)
+    edge:right             patterns   32 violations   12 | tree-compatible   25 violations   12 | min margin where right 3.891 | largest violation ({(-1, -1): 1, (0, -1): 1, (1, -1): 1}, -0.347, 1)
+    corner:top-left        patterns    8 violations    4 | tree-compatible    7 violations    4 | min margin where right 2.487 | largest violation ({(0, 1): 1, (1, 1): 1}, -1.751, 1)
+    corner:top-right       patterns    8 violations    4 | tree-compatible    7 violations    4 | min margin where right 2.506 | largest violation ({(0, -1): 1, (1, -1): 1}, -1.732, 1)
+    corner:bottom-left     patterns    8 violations    4 | tree-compatible    7 violations    4 | min margin where right 2.506 | largest violation ({(-1, 1): 1, (0, 1): 1}, -1.732, 1)
+    corner:bottom-right    patterns    8 violations    4 | tree-compatible    7 violations    4 | min margin where right 2.487 | largest violation ({(-1, -1): 1, (0, -1): 1}, -1.751, 1)
+seed 2  b = [-0.338  0.338]  gain of one neighbour (on minus off), by offset:
+    interior               patterns  256 violations    0 | tree-compatible  161 violations    0 | min margin where right 0.728 | largest violation None
+    edge:top               patterns   32 violations   12 | tree-compatible   25 violations   12 | min margin where right 3.935 | largest violation ({(0, -1): 1, (1, -1): 1, (1, 1): 1}, -0.311, 1)
+    edge:bottom            patterns   32 violations   12 | tree-compatible   25 violations   12 | min margin where right 3.935 | largest violation ({(-1, -1): 1, (-1, 1): 1, (0, -1): 1}, -0.311, 1)
+    edge:left              patterns   32 violations   12 | tree-compatible   25 violations   12 | min margin where right 3.929 | largest violation ({(-1, 1): 1, (0, 1): 1, (1, 1): 1}, -0.317, 1)
+    edge:right             patterns   32 violations   12 | tree-compatible   25 violations   12 | min margin where right 3.929 | largest violation ({(-1, -1): 1, (0, -1): 1, (1, -1): 1}, -0.317, 1)
+    corner:top-left        patterns    8 violations    4 | tree-compatible    7 violations    4 | min margin where right 2.515 | largest violation ({(0, 1): 1, (1, 1): 1}, -1.731, 1)
+    corner:top-right       patterns    8 violations    4 | tree-compatible    7 violations    4 | min margin where right 2.524 | largest violation ({(0, -1): 1, (1, -1): 1}, -1.722, 1)
+    corner:bottom-left     patterns    8 violations    4 | tree-compatible    7 violations    4 | min margin where right 2.524 | largest violation ({(-1, 1): 1, (0, 1): 1}, -1.722, 1)
+    corner:bottom-right    patterns    8 violations    4 | tree-compatible    7 violations    4 | min margin where right 2.515 | largest violation ({(-1, -1): 1, (0, -1): 1}, -1.731, 1)

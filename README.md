@@ -19,7 +19,7 @@ from 4×4 to 25×25, on mazes, and on breadth-first search, at
 We fit the *check* of our cold attention layer ([Attention at Absolute Zero](https://github.com/NeoVand/cold-attention))
 at solved examples, the way CRAM fits its energy ([Hoover, Blayney and Whittington](https://github.com/Prefrontal-AI/CRAM)):
 each part of a solved answer is predicted from the rest, with no loop, in milliseconds. Before fitting, we complete each
-answer from itself with closures and counts, such as each node's place in the order a breadth-first search discovered
+answer with closures and counts, such as each node's place in the order a breadth-first search discovered
 it. We keep every condition that held on all training answers, including the one a finished answer cannot show: that
 every fact rests on earlier facts. Then we run the check cold, from nothing, and search only where it forces nothing.
 The check's weights attach to relations, not positions, so one fitted rule serves every size.
@@ -30,11 +30,11 @@ The check's weights attach to relations, not positions, so one fitted rule serve
 |---|---|
 | **Sudoku-Extreme** (412,786 test puzzles) | **all 412,786 solved** on each of three fits, no wrong answer; fit in 15–22 ms on one CPU core; 5.6×10⁴ operations per puzzle (CRAM: 99.996%, 2.0×10⁹); 13.9% solved by the cold stage alone |
 | **One 9×9 rule, every board size** | 4×4: 1,000/1,000 · 16×16: 1,000/1,000 · **25×25: 100/100** (CRAM needs one model per size) |
-| **Maze-Hard** (1,000) | **1,000/1,000** with no hand-built distance layer, including the maze CRAM misses on every seed; 136/136 room mazes; 300/300 looped mazes up to 121×121 |
+| **Maze-Hard** (1,000) | **1,000/1,000** on the run's own clock, in place of CRAM's hand-built distance layer, including the maze CRAM misses on every seed; 136/136 room mazes; 300/300 looped mazes up to 121×121 |
 | **Maze-Unique** (1,000) | **1,000/1,000** by the cold stage alone; 600/600 mazes with dead ends at the board's edge (CRAM's released model: 0/600) |
 | **N-Queens**, fitted on 8×8 | 600/600 boards at 80×80 and 100×100, from 9 queens missing to an empty board |
 | **3-colouring**, fitted on 10 vertices | 300/300 graphs of 100 vertices |
-| **CLRS-30** | **all 30 algorithms exact**: 159 of 159 test sets at 100% (official test, validation, held-out inputs up to 1,024 nodes, 4,096 items and 5,120 characters); fitted at the answer on one core, 18 ms to 4.1 s for the 15 that use comparisons and counts only; the other 15 get one supplied piece, named in the paper's table |
+| **CLRS-30** | **all 30 tasks exact**: 159 of 159 test sets at 100% (official test, validation, held-out inputs up to 1,024 nodes, 4,096 items and 5,120 characters); fifteen from comparisons and counts, thirteen with nothing supplied, each fitted at the answer in 18 ms to 4.1 s on one core; the other fifteen read one quantity we supply, named in the paper's table |
 
 Every number above is read from `code/bench/final/summary.json` and `code/clrs/final/summary.json` (frozen code, one
 budget, one run).

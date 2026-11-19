@@ -22,17 +22,39 @@ prefers fewer conditions can drop it. Kept, the condition does the work of the l
 
 \begin{proposition}[a stratified check produces the answer]\label{prop:stratified}
 Let $\ell$ be a level mapping on the items given by the completion, and suppose that the check of every item $v$ reads,
-besides the input, only items $u$ with $\ell(u) < \ell(v)$, and is exact at the completed answer. Then the cold run from
-$\notyet$, in which an item is settled once every item below it is, reproduces the answer in at most as many loops as
-there are levels.
+besides the input, only items $u$ with $\ell(u) < \ell(v)$, and is exact at the completed answer. Number the levels
+$0,\ldots,L$. Then the cold run from $\notyet$, in which an item is settled once every item below it is, settles level
+$\lambda$ by loop $\lambda+1$ and so reproduces the answer within $L+1$ loops, one per level; when the input fixes level
+$0$, as it fixes the source, $L$ loops suffice.
 \end{proposition}
 
-The proof is by induction on the level: once the items below level $L$ are settled correctly, an item at level $L$ reads
-exactly what it reads at the completed answer, where its check is exact. The level condition ``the support lies below'' is what
+The proof is by induction on the level: once the items below level $\lambda$ are settled correctly, an item at level
+$\lambda$ reads exactly what it reads at the completed answer, where its check is exact. The level condition ``the support lies below'' is what
 makes a fitted check of this kind, since it restricts each item's rule to lower levels; keeping every condition that held
-on all training positives guarantees that the rule contains it. In our runs every item is evaluated at every loop, so an item could
-in principle be written before its level. The check prevents this in the tasks we ran, because an item has no candidate
-that passes until its support is placed; Supplementary Note~1 argues it task by task.
+on all training positives guarantees that the rule contains it. Our runs evaluate every item at every loop. For breadth-first search, Prim and the
+greedy tasks no item is written before its level, because it has no candidate that passes until its support is placed
+(Supplementary Note~1). On weighted graphs the run does write provisional parents and replace them, and there the level
+condition does a different job.
+
+\begin{proposition}[the weighted cold run is Bellman--Ford's relaxation]\label{prop:bf}
+Let the edge weights be positive and the check of a parent be the fitted rule of the shortest-path tasks: $u$ is the
+parent of $v$ when $\mathrm{dist}_u < \mathrm{dist}_v$, an edge $u \to v$, $u$ is reached, $v$ is not the source, and no
+$k$ has $\mathrm{dist}_k < \mathrm{dist}_v$ and $S(k,v) < S(u,v)$, with $S(u,v) = \mathrm{dist}_u + w(u,v)$ and the
+distances recomputed along the pointer each loop. Then at every loop the pointer is a tree rooted at the source, a
+reached node stays reached and its distance never rises, and after loop $t$ every distance is at most the length of the
+shortest path of at most $t$ edges. With $h$ the largest number of edges on a shortest path, the run holds the true
+distances by loop $h$, holds the shortest-path tree by loop $h+1$ (unique when the shortest paths are, as continuous
+weights make them almost surely), and comes to rest at most one loop later.
+\end{proposition}
+
+The level condition is what keeps the pointer acyclic: a cycle in the new pointer would need a chain of strictly
+increasing distances that returns to its start. A reached node $v$ always keeps a passing candidate, since its current
+parent $p$ has $\mathrm{dist}_p < \mathrm{dist}_v$ (the weight is positive), and the in-neighbour below $v$ with the
+smallest $S$ passes; so every chain of pointers ends at the source, whose distance is $0$. Distances are path sums of the
+new tree, so they are never below the true ones, and by induction along the tree each is at most
+$\min_k \mathrm{dist}_k + w(k,v)$ of the loop before, Jacobi's form of the Bellman--Ford bound\cite{bellman1958routing}.
+Supplementary Note~1 gives the details; Floyd--Warshall runs the same rule once per source.
+
 
 \begin{proposition}[a finite certificate for every size]\label{prop:finite}
 Suppose a rule and the definition of the answer are both conjunctions of a pair's own comparisons and of witness tests
@@ -44,14 +66,20 @@ For a pair $(u,v)$ in any input, delete every item except $u$, $v$ and one witne
 test that holds still holds, and a test that fails still fails, since deleting items never creates a witness; the own
 comparisons do not change. So the pair keeps every truth value, and a disagreement at any size would already show on
 at most $2 + W$ items. This is the classical preservation of existential conditions under substructures, applied to a fitted table. Count
-comparisons are not preserved under deletion, so the certificate covers the rules that use none. Section~\ref{sec:proofs} applies it.
+comparisons are not preserved under deletion, so the certificate covers the rules that use none. For a rule that reads a
+completion that is a global closure, such as the depth or the bottleneck, the certificate works on the completed input
+$(x, y^{+})$, with the registers given and constrained only by local axioms; it does not recompute the closure on the
+smaller input. Section~\ref{sec:proofs} applies it.
 
 On breadth-first search the three parts of the method separate cleanly (Fig.~\ref{fig:theory}). Here we use the
 textbook's queue-order search, in which a node's parent is the neighbour that discovered it, and fit on 30 connected
 random graphs of 8 to 16 nodes. With the depth as the completion, the fitted rule always names a valid shortest-path
 parent, but it names the label's own parent only \nm{bfs.depth.64}\% of the time at 64 nodes. The label breaks ties by
 the order of discovery, which depth does not hold. With the place of each node in the order of discovery as the
-completion, computed from the parent tree alone, the rule is exact at the answer. Run cold from $\notyet$ as fitted, it
+completion, the rule is exact at the answer. The place is computed from the parent tree alone, and on a partial tree as
+well: the source has place 0, a node whose parent is not yet placed has place $\notyet$, and a placed node's place is the
+number of placed nodes before it, ordered by their parents' places and then by number. In the cold run a node keeps its
+parent once it has one. Run cold from $\notyet$ as fitted, it
 names only \nm{bfs.asfitted.64}\% of the parents right, because the fit dropped the condition that the parent is placed
 before the child. With that condition kept, it is exact at 64, 256 and 1,024 nodes and settles one level of the search
 per loop. The CLRS-30 library's breadth-first search, used in Section~\ref{sec:clrs}, labels each node differently, with

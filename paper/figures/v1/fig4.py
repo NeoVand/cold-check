@@ -1,15 +1,16 @@
 """Fig. 4, "CLRS-30, fitted at the answer": all thirty tasks, grouped by what is supplied by hand. 183 x H mm.
-Cobalt: our fitted checks (filled: comparisons and counts only; open: a piece supplied); pale cobalt: our looped blocks
+Cobalt: our fitted checks (filled: comparisons and counts; open: a piece supplied); pale cobalt: our looped blocks
 of the earlier paper; rose: FloydNet; navy: the answers in the glyphs; a pale band behind the tasks given a piece.
 
 a  Thirty glyphs in three groups (the paper's Table 3 groups, read from paper/gen/make_clrs_table.py, which is exec'd up
-   to its table loop and never run whole): comparisons and counts only (15), one arithmetic primitive supplied (9), a
+   to its table loop and never run whole): comparisons and counts (15; task scheduling's deadlines in the units
+   of positions and LCS's one-cell index shift marked "+ units", "+ shift"), one arithmetic primitive supplied (9), a
    piece of structure supplied (6). Each glyph (tiles.py) is a small input of the library's generator with its true
    answer. Under each: the task, its fit time on one laptop core and the largest held-out size at which every input
    was exact (results.py: code/clrs/final/; segments intersect has a fixed size of four points), and what is supplied.
 b  % right on the official 64-node test, per task: our fitted check (code/clrs/final/summary.json, 100 on all 30,
    asserted), our looped blocks (better of the general and cold blocks) and FloydNet's reported score (both
-   from arXiv 2611.11937 Supp. Table 4, as make_clrs_table.py's P). Left: comparisons and counts only; right: a piece
+   from arXiv 2611.11937 Supp. Table 4, as make_clrs_table.py's P). Left: comparisons and counts; right: a piece
    supplied.
     ./run.sh fig4.py
 """
@@ -40,6 +41,8 @@ import tiles as F5  # noqa: E402
 WC, HC = F5.WC, F5.HC
 
 
+NOTE1 = {"task_scheduling": "+ units", "lcs_length": "+ shift"}   # make_clrs_table: deadline / n; index shift
+assert sorted(t for t, v in INFO.items() if v["tier"] == 1 and v["sup"] != "--") == sorted(NOTE1)
 SUPPLIED = {"sum": "+ sum", "orientation": "+ orientation", "products, sums": "+ products, sums",
             "sums": "+ sums", "prefix sums": "+ prefix sums", "deletion closure": "+ closures",
             "``open''": "+ open bit", "``open'', finish order": "+ open bit", "two passes": "+ two passes"}
@@ -101,8 +104,8 @@ def block_x(tier):
 
 
 def panel_a(fig):
-    head(fig, 0, 4.4, "a", "Thirty algorithms, fitted at the answer")
-    hdr = {1: "comparisons and counts only", 2: "one arithmetic primitive supplied",
+    head(fig, 0, 4.4, "a", "Thirty CLRS-30 tasks, fitted at the answer")
+    hdr = {1: "comparisons and counts", 2: "one arithmetic primitive supplied",
            3: "a piece of structure supplied"}
     bg = kit.canvas(fig, 0, 0, W, YA + 3 * PY)
     for tier in (1, 2, 3):
@@ -134,6 +137,8 @@ def panel_a(fig):
             text(fig, cx, y, f"{fmt_ms(inf['fit_ms'])} · {to}", ha="center", color=COB)
             if tier > 1:
                 text(fig, cx, y + 3.0, SUPPLIED[inf["sup"]], ha="center", color=SOFT)
+            elif t in NOTE1:                                       # group one, with a small hand-set adjustment
+                text(fig, cx, y + 3.0, NOTE1[t], ha="center", color=SOFT)
 
 
 # ------------------------------------------------------------------------------------------------- panel b

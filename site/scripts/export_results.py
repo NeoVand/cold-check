@@ -136,7 +136,7 @@ for h in (15, 30, 60):
 # paper's .tex). The rules below are that script's: results from results_extra_heldout/ first, then results/; fit times
 # from fit_times_m4*.json (one laptop core), else the run's own fit_ms (marked); "exact to" = the largest held-out size
 # at which every held-out set of the task is exact.
-TIERS = {1: 'Comparisons and counts only', 2: 'One arithmetic primitive supplied',
+TIERS = {1: 'Comparisons and counts', 2: 'One arithmetic primitive supplied',
          3: 'Algorithmic structure supplied'}
 
 

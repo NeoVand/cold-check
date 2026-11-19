@@ -51,6 +51,7 @@
 			n: clrs.length,
 			allExact: clrs.every((r) => r.test64 === 100) && R.clrs.heldout.first.all_exact && R.clrs.heldout.other.all_exact,
 			method: method.length,
+			bare: method.filter((r) => !r.supplied).length,
 			ceil: clrs.filter((r) => r.tier !== 1).length,
 			fitMin: Math.min(...fits),
 			fitMax: Math.max(...fits),
@@ -124,7 +125,7 @@
 				computes, such as a distance.
 			</p>
 			<p>
-				We put the two together. We complete each answer from itself, fit our layer's check at the
+				We put the two together. We complete each answer with closures and counts, fit our layer's check at the
 				<Gloss term="completion">completed answer</Gloss> in milliseconds, keep the one condition the answer cannot show, and run the
 				check cold from nothing. Where the cold run leaves something open we search, and the same check says when to stop.
 			</p>
@@ -160,7 +161,7 @@
 			<h2><span class="sn">2</span>The recipe</h2>
 			<ol class="steps">
 				<li>
-					<b>Complete the answer from itself.</b> Add what the label depends on but does not show, computed from the label alone: for BFS,
+					<b>Complete the answer with closures and counts.</b> Add what the label depends on but does not show, read from the answer or the input: for BFS,
 					each node's place in the order of discovery; for mazes, the loop at which a cold reach from the goal first touches each cell.
 				</li>
 				<li>
@@ -218,12 +219,11 @@
 
 	<div class="grid">
 		<div class="main">
-			<h2><span class="sn">4</span>Mazes without a hand-built layer</h2>
+			<h2><span class="sn">4</span>Mazes on the run's own clock</h2>
 			<p>
 				For mazes the fit keeps side and corner neighbours with ranges of counts; an open cell on the path has exactly two path neighbours.
 				Run cold from "every open cell might be on the path", that is dead-end filling, derived rather than written. Maze-Hard has loops,
-				so its label is one shortest path picked by a tie-break. CRAM added a hand-built layer to hold distances. We use a cold reach from
-				the goal instead: the loop at which a cell is first reached is its distance. The path rule fitted at the labels reads: step to a
+				so its label is one shortest path picked by a tie-break. CRAM added a hand-built layer to hold distances. We use the run's own clock instead: the loop at which a cold reach from the goal first touches a cell is its distance. The path rule fitted at the labels reads: step to a
 				neighbour that is nearer the goal, and among those prefer {mz.hard_fit.direction_order.join(', ')}, which is the benchmark's own
 				tie-break, found by the fit.
 			</p>
@@ -261,7 +261,7 @@
 		</div>
 		<aside class="margin notes">
 			<p>
-				<b>The completion</b> is the part of the answer the label leaves out, computed from the label itself. It gives the check a
+				<b>The completion</b> is the part of the answer the label leaves out, computed with closures and counts of the answer or the input. It gives the check a
 				direction: the run from nothing can only grow outwards.
 			</p>
 		</aside>
@@ -360,9 +360,8 @@
 				<h2><span class="sn">7</span>CLRS-30, fitted at the answer</h2>
 				<p>
 					Fitted the same way, at the finished answer and with no loop, {clrsStats.allExact ? 'all' : ''} {clrsStats.n}
-					<Gloss term="clrs">CLRS-30</Gloss> algorithms are exact on the official 64-node test and on every held-out set we ran, with the
-					code frozen. For {clrsStats.method}, the check uses only comparisons and counts, and each fit takes {secs(clrsStats.fitMin)} to
-					{secs(clrsStats.fitMax)} on one laptop core. For the other {clrsStats.ceil} we supply one piece, named in the table: an arithmetic
+					<Gloss term="clrs">CLRS-30</Gloss> tasks are exact on the official 64-node test and on every held-out set we ran, with the
+					code frozen. Of these, {clrsStats.method} are learned from comparisons and counts, {clrsStats.bare} of them with nothing supplied at all, each fitted in {secs(clrsStats.fitMin)} to {secs(clrsStats.fitMax)} on one laptop core. For the other {clrsStats.ceil} we supply one piece, named in the table: an arithmetic
 					primitive (a sum, an orientation test, products and sums) or a piece of algorithmic structure (prefix sums, a deletion closure,
 					"open", two passes).
 					{#if R.shared}One check also serves five graph algorithms at once: fitted in {secs(R.shared.fit_ms)} on the pooled answers of BFS,
@@ -371,7 +370,7 @@
 				</p>
 			</div>
 			<aside class="margin nums">
-				<div><b>{clrsStats.n} / {clrsStats.n}</b><span>CLRS-30 algorithms exact</span></div>
+				<div><b>{clrsStats.n} / {clrsStats.n}</b><span>CLRS-30 tasks exact</span></div>
 				<div><b>{clrsStats.avg.test64.toFixed(2)}%</b><span>average; FloydNet {clrsStats.avg.floydnet.toFixed(2)}%</span></div>
 			</aside>
 		</div>
@@ -380,7 +379,7 @@
 			<div class="flabel"><span>Table 3</span><span class="ft">All {clrsStats.n} exact</span></div>
 			<ClrsTable rows={clrs} avg={clrsStats.avg} />
 			<figcaption>
-				Our fitted checks in cobalt where they use comparisons and counts only, muted where a primitive or structure was supplied. The best
+				Our fitted checks in cobalt where they are fitted from comparisons and counts, muted where a primitive or structure was supplied. The best
 				of our earlier paper's looped blocks (arXiv 2611.11937, cold or general, trained through their loops) in rose where it missed;
 				FloydNet as reported. The first {clrsStats.held.first.tasks} tasks passed {clrsStats.held.first.sets} held-out sets and the other
 				{clrsStats.held.other.tasks} passed {clrsStats.held.other.sets}, all with frozen code. Exact to: the largest held-out size at which

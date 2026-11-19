@@ -32,7 +32,7 @@ Sudoku-Extreme (\nm{sudoku.ntest}) & TRMP, looped & \nm{trmp.pct}\% & \nm{trmp.o
 Maze-Unique (\nm{unique.n}) & CRAM & 100\% & \nm{cram.unique.ops} & \nm{cram.unique.fit} ms \\
  & \textbf{ours} & \textbf{100\%} & \nm{unique.ops} (\nm{unique.opscmp}) & \nm{unique.fit} ms \\\midrule
 Maze-Hard (\nm{hard.n}) & CRAM, hand-built distance layer & \nm{cram.hard.pct}\% & \nm{cram.hard.ops} & \nm{cram.hard.fit} \\
- & \textbf{ours}, no hand-built layer & \textbf{100\%} & \nm{hard.ops} (\nm{hard.opscmp}) & \nm{hard.fit} ms \\\bottomrule
+ & \textbf{ours}, the run's own clock & \textbf{100\%} & \nm{hard.ops} (\nm{hard.opscmp}) & \nm{hard.fit} ms \\\bottomrule
 \end{tabular}
 \end{table}
 
@@ -68,31 +68,42 @@ validation split, fresh inputs at 64 nodes, and fresh graphs of 256 and \nm{held
 draws them and sparse with about four neighbours a node; arrays and strings go to \nm{held.max.arrays} and
 \nm{held.max.items} items. That is \nm{held.sets} held-out sets with no miss (Fig.~\ref{fig:clrs}).
 
-Fifteen tasks need nothing but comparisons, counts and the completion of the answer: the four sorts, minimum, binary
-search, quickselect, activity selection, task scheduling, breadth-first search, the minimum spanning trees of Kruskal
-and Prim, longest common subsequence and the naive and Knuth--Morris--Pratt string matchers. Their completions are the
-depth along the answer's pointer, the bottleneck closure of the weights and the closure of agreeing runs of text. Each
-is fitted in \nm{clrs.g1.fit.lo} to \nm{clrs.g1.fit.hi} on one laptop core and runs cold in at most
-\nm{clrs.g1.loops} loops at 64 nodes. The other fifteen read one quantity we supply, named in the table: the sum of a
-distance and an edge weight for the shortest-path algorithms, the orientation of three points for the geometry tasks,
-the cost of a split for the two dynamic programmes, prefix sums for the maximum subarray, closures of the graph with a
-node or an edge removed for articulation points and bridges, and the open nodes of a search for the depth-first family.
+Fifteen tasks are learned from comparisons, counts and the completion, \nm{clrs.g1.bare.w} of them with nothing
+supplied at all: the four sorts, minimum, binary search, quickselect, activity selection, breadth-first search, the
+minimum spanning trees of Kruskal and Prim, and the naive and Knuth--Morris--Pratt string matchers. Task scheduling reads
+its deadlines in the units of positions, and longest common subsequence reads each cell's count one cell up and one cell
+left. Their completions are the depth along the answer's pointer, the bottleneck closure of the input's weights and the
+closure of agreeing runs of text. With distinct weights, which the library's continuous weights make almost sure, an edge
+is in the minimum spanning tree exactly when its weight equals the bottleneck (the cycle property), and the fit finds that
+test; Prim's rule then walks that tree from the root, one level per loop. Each rule is fitted in \nm{clrs.g1.fit.lo} to
+\nm{clrs.g1.fit.hi} on one laptop core and runs cold in at most \nm{clrs.g1.loops} loops at 64 nodes. The other fifteen
+read one quantity we supply, named in the table: the sum of a distance and an edge weight for the shortest-path
+algorithms, the orientation of three points for the geometry tasks, the cost of a split for the two dynamic programmes,
+prefix sums for the maximum subarray, closures of the graph with a node or an edge removed for articulation points and
+bridges, and, for the depth-first family, an ``open'' bit with a check fitted at every prefix of the answer's own
+preorder, the one family that sees more than the finished answer.
 
 The fitted rules are conjunctions of one to seven conditions, chosen by the fit from thousands of candidates, and they
-read like the textbook (Box~1); for binary search and segment intersection, a learned score also decides among the
-candidates that pass. With 10 training inputs instead of 100, \nm{few.exact} of the \nm{few.tasks} tasks we tried
-stay exact, fitted in \nm{few.fit.lo} to \nm{few.fit.hi} milliseconds. Against the looped blocks of our earlier paper,
-which trained for about an hour on a GPU per task\cite{mohsenvand2026zero}, the gain is in cost and in reach, and on
-longest common subsequence, both string matchers, activity selection, task scheduling and Prim, in exactness.
+read like the library's own definitions (Box~1). Task scheduling's count rule is exactly the library's greedy, which
+accepts a task while fewer tasks are chosen than its deadline, and the matchers return the first match, as the library
+labels it. For binary search and segments intersect, a learned score also decides among the candidates that pass. What
+the check learns is what the answer is, so tasks that share an answer share a rule: the four sorts learn one, the two
+matchers one, the two hulls one, and Bellman--Ford and Dijkstra one, and the cold run is the procedure that
+computes it, one loop for the sorts and Bellman--Ford's relaxation for the paths (Proposition~\ref{prop:bf}). With 10
+training inputs instead of 100, \nm{few.exact} of the \nm{few.tasks} tasks we tried stay exact, fitted in
+\nm{few.fit.lo} to \nm{few.fit.hi} milliseconds. Against the looped blocks of our earlier paper, which trained for about
+an hour on a GPU per task\cite{mohsenvand2026zero}, the gain is in cost and in reach, and on longest common subsequence,
+both string matchers, activity selection, task scheduling and Prim, in exactness.
 
 \begin{figure}[tbp]\small
 \fbox{\parbox{0.97\linewidth}{\textbf{Box 1 $|$ Six rules as fitted}, written out from the fitted tables; $k$ ranges over
-third items, and $\notyet$ marks an item the partial answer has not reached.\\[0.4em]
+third items ($k\neq u,v$), $u\to v$ is the ordered pair, and $\notyet$ marks an item the partial answer has not
+reached.\\[0.4em]
 \textbf{Insertion sort}, $u$ comes just before $v$: \ $\mathrm{key}_u<\mathrm{key}_v$, and no $k$ with
 $\mathrm{key}_u<\mathrm{key}_k<\mathrm{key}_v$.\\[0.25em]
 \textbf{Quickselect}, $i$ is the median: \ not $\#\{k:\mathrm{key}_k<\mathrm{key}_i\} < \#\{k:\mathrm{key}_k>\mathrm{key}_i\}$,
 and not $\#\{k:\mathrm{key}_k\geq\mathrm{key}_i\} < \#\{k:\mathrm{key}_k<\mathrm{key}_i\}$.\\[0.25em]
-\textbf{Kruskal}, $(u,v)$ is in the tree: \ an edge $u$--$v$ whose weight equals the bottleneck between $u$ and $v$, the
+\textbf{Kruskal}, $(u,v)$ is in the tree: \ an edge between $u$ and $v$ whose weight equals the bottleneck between $u$ and $v$, the
 least possible largest weight on a path joining them (the cycle property).\\[0.25em]
 \textbf{Activity selection}, $i$ is chosen: \ no chosen $k$ that finishes before $i$ finishes and after $i$ starts, the
 answer read only downward along finish times.\\[0.25em]
@@ -111,8 +122,9 @@ Note~2.}}
 
 \begin{table}[tbp]\centering\scriptsize
 \caption{\figlabel{Table 2}{All thirty CLRS-30 tasks fitted at the answer and run cold,} grouped by what we supply by
-hand. Supplied: the quantity given by hand; results that rely on one are ceilings for the fitted check. Fit: wall clock on one laptop core. Loops: the most the cold run took on any
-test input. Official 64: the library's score on the
+hand. Supplied: the quantity given by hand; results that rely on one are ceilings for the fitted check. Fit: wall clock on one laptop core, from loading the training inputs to the fitted rule; strong components reuse
+the depth-first check, with no fit of their own, so their time is the depth-first fit. Loops: the most the cold run took
+on any test input. Official 64: the library's score on the
 official test. Exact to: the largest held-out size, in nodes or items, at which every held-out input was exact, with the
 code frozen. Ours, looped: the better of the general and the cold looped blocks of our earlier paper; FloydNet: its
 reported score\cite{yu2026floydnet}; both from Supplementary Table~4 of ref.~\cite{mohsenvand2026zero}. The averages mix
@@ -127,8 +139,12 @@ Bellman--Ford, Dijkstra and shortest paths in an acyclic graph in \nm{shared.gra
 official test and on fresh graphs of 1,024 nodes (Table~\ref{tab:shared}). One check serves the four sorts, fitted in
 \nm{shared.sorts.fit}~s, and one the five selection tasks (activity selection, task scheduling, both convex hulls and
 articulation points), with or without a bit that names the task. Each task still reads its own completion and supplied
-quantity. Sharing has a limit: one check for all nine pointer tasks keeps the sorts and the shortest paths exact but
+quantity; registers are matched by name across the pooled tasks, so a breadth-first state has no distance and every
+comparison on one is false. The graph check is a conjunction of five conditions with the learned score deciding among the
+candidates that pass (Supplementary Note~2). Sharing has a limit: one check for all nine pointer tasks keeps the sorts and the shortest paths exact but
 falls to \nm{shared.nine.bfs}\% on breadth-first search and \nm{shared.nine.prim}\% on Prim, with or without the task bit.
+A single conjunction keeps only the conditions that hold for every pooled task, and with no disjunction a task bit
+cannot switch a condition on for one task alone.
 
 \begin{table}[tbp]\centering\scriptsize
 \caption{\figlabel{Table 3}{One fitted check for several CLRS-30 tasks.} Each row is one check fitted jointly on the
@@ -160,12 +176,14 @@ the goal, and the fitted rule takes the neighbour one step nearer and breaks tie
 returns the label on every maze of any size.
 
 \emph{CLRS-30.} Proposition~\ref{prop:finite} applies to the sorts, minimum, Kruskal and breadth-first search, whose
-rules use only own comparisons and witness tests. For the four sorts we checked every order of keys on up to
-\nm{cert.sorts.items} items (\nm{cert.sorts.pairs} pairs each), and for minimum up to \nm{cert.min.items}. Kruskal's rule
-uses only the pair's own conditions, and we checked every value its axioms allow against the cycle property. For
-breadth-first search we took the depth as given, constrained only by the pairwise properties of a breadth-first depth,
-and checked all \nm{cert.bfs.cases} pair cases on up to \nm{cert.bfs.items} items. These certify the check at the
-answer at every size. That the cold run reaches the answer we argue, level by level, but have not machine-checked.
+rules use only own comparisons and witness tests. For the four sorts we checked every order of distinct keys, as the
+library draws them, on up to \nm{cert.sorts.items} items (\nm{cert.sorts.pairs} pairs each), and for minimum up to
+\nm{cert.min.items}. Kruskal's and breadth-first search's rules read a completion, the bottleneck or the depth, so their
+certificates work on the completed input, with the register given and constrained only by local axioms (Supplementary
+Note~1). For Kruskal we checked every value the axioms allow against the cycle property, with distinct weights; for
+breadth-first search, all \nm{cert.bfs.cases} pair cases on up to \nm{cert.bfs.items} items. These certify the check at
+the answer at every size. That the cold run reaches the answer is Proposition~\ref{prop:bf} for the shortest-path tasks,
+and the level-by-level argument of Supplementary Note~1 for breadth-first search, Prim and the greedy tasks.
 
 \subsection{What CRAM's released weights show}\label{sec:cramweights}
 
@@ -189,11 +207,16 @@ limit\cite{francoisse2017bag}. Read cold, the distance and the tie count are sep
 number tied with it in our earlier paper. Read warm, they are added, and a cell with many shortest routes looks nearer
 than it is. The model's pointer adds learned scores for the four directions, \nm{rel.dir.down} for down, \nm{rel.dir.left}
 for left, \nm{rel.dir.right} for right and \nm{rel.dir.up} for up, exactly the benchmark's tie-break order, so a large
-enough room of equally short routes outweighs the gap between two directions. From the released numbers this predicts
-the room size at which the model abandons the label's corridor for the room. We built \nm{rel.rooms.n} mazes of rooms
+enough room of equally short routes outweighs the gap between two directions. With $\psi$ approximately $c$ times the
+distance minus the log of the number of shortest routes, $c$ the cost of a step, the pointer leaves a corridor for a
+room of equal length once the log of the room's route count exceeds the gap between their two direction scores. For the
+corridor down and the room to the left that gap is \nm{rel.room.gap}: a room of $7\times7$ cells has \nm{rel.room.routes7}
+corner-to-corner routes ($\ln = \nm{rel.room.ln7}$), and one of $8\times8$ has \nm{rel.room.routes8} ($\ln =
+\nm{rel.room.ln8}$). Settling the released hidden layer on each maze and reading its pointer gives the same switch.
+We built \nm{rel.rooms.n} mazes of rooms
 and corridors to test it and ran the full released models. On every seed,
 \nm{rel.rooms.wrong} of the mazes are not given the label's path, from rooms of \nm{rel.rooms.first} by
-\nm{rel.rooms.first} cells, as the law predicts, and \nm{rel.rooms.longer.lo} to \nm{rel.rooms.longer.hi} of those are given
+\nm{rel.rooms.first} cells, and \nm{rel.rooms.longer.lo} to \nm{rel.rooms.longer.hi} of those are given
 a path two steps longer than the shortest (and one, on one seed, a set of cells that is not a path). Our rule, which
 keeps the clock and the direction apart, is right on all of them.
 

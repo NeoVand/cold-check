@@ -3,7 +3,8 @@
 Neural networks that apply one block again and again, in a loop, have learned to solve Sudoku, mazes and the textbook
 algorithms of the CLRS-30 benchmark\cite{wang2025hrm,jolicoeur2025trm,velickovic2022clrs,bansal2022end}. They are
 trained through their loops, and that is slow. On Sudoku-Extreme the strongest of them train for \nm{looped.fit.lo} to
-\nm{looped.fit.hi} hours on a GPU\cite{hoover2026classical}. The looped attention blocks of our earlier paper needed
+\nm{looped.fit.hi} hours on a GPU in CRAM's reproductions\cite{hoover2026classical}, from HRM to
+TRMP\cite{wang2025hrm,jolicoeur2025trm,salvatori2026tiny,chen2026energy}. The looped attention blocks of our earlier paper needed
 about an hour of GPU time for each CLRS-30 task\cite{mohsenvand2026zero}.
 
 Hoover, Blayney and Whittington showed that much of this cost can be avoided\cite{hoover2026classical}. Their model,
@@ -36,15 +37,16 @@ drop it.
 Where nothing is forced, as on hard puzzles, a search uses the check as its stop.
 \end{itemize}
 
-The check then trains like CRAM and runs like our looped layer (Fig.~\ref{fig:idea}). All thirty CLRS-30 algorithms are
-exact on the official test and on every held-out input, up to \nm{held.max.nodes} nodes and \nm{held.max.items} items.
-Fifteen of them, among them breadth-first search, the minimum spanning trees of Kruskal and Prim, longest common
-subsequence and both string matchers, are learned from their final answers with comparisons and counts alone, each
-fitted in \nm{clrs.g1.fit.lo} to \nm{clrs.g1.fit.hi} on one laptop core; the other fifteen read one quantity we supply,
+The check then trains like CRAM and runs like our looped layer (Fig.~\ref{fig:idea}). All thirty CLRS-30 tasks are
+exact on the official test and on every held-out input, up to \nm{held.max.nodes} nodes and \nm{held.max.items} items,
+the largest size per task in Table~\ref{tab:clrs}. Fifteen of them, among them breadth-first search, the minimum spanning
+trees of Kruskal and Prim, longest common subsequence and both string matchers, are learned from their final answers
+with comparisons and counts, \nm{clrs.g1.bare.w} with nothing supplied at all, each fitted in \nm{clrs.g1.fit.lo} to \nm{clrs.g1.fit.hi} on one laptop core; the other fifteen read one quantity we supply,
 such as the sum of a distance and an edge weight. The fitted rules read like the textbook: a node's breadth-first parent
 is its lowest-numbered neighbour one level up. On CRAM's benchmarks, one rule fitted in about 20 milliseconds keeps
 exactly the row, column and box relations of Sudoku. It solves all \nm{sudoku.ntest} Sudoku-Extreme puzzles with no
-wrong answer, with \nm{sudoku.ops.ratio} times fewer operations than CRAM, and solves larger boards unchanged. A maze
+wrong answer, with \nm{sudoku.ops.ratio} times fewer operations than CRAM (\nm{sudoku.opscmp.ratio} times with every comparison
+counted), and solves larger boards unchanged. A maze
 rule that reads the cold run's own clock, in place of a distance layer built for the task, solves every Maze-Hard maze,
 and every maze we built on which CRAM's released model leaves the shortest path. The fitted rules are small tables with
 no size in them, so finite checks prove the puzzle rules, and the checks of several algorithms, correct at every size
