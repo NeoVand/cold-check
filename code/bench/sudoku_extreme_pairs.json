@@ -1,0 +1,12 @@
+{
+ "n": 412786,
+ "solved": 412786,
+ "cold_only": 57207,
+ "cold_only_frac": 0.13858754899633224,
+ "moves_mean": 92.9700668142815,
+ "moves_median": 45.0,
+ "moves_max": 7279,
+ "ops_mean": 55558.7106927076,
+ "ops_plus_cmp_mean": 848850.7792996855,
+ "wall_ms_mean": 1.1311919988008052
+}

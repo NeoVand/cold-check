@@ -1,0 +1,190 @@
+{
+ "note": "one M4 core, one BLAS thread, best of 3 (Floyd-Warshall and the DFS family: 1 run)",
+ "fits": {
+  "insertion_sort": {
+   "best_ms": 35.7,
+   "runs_ms": [
+    40.2,
+    35.8,
+    35.7
+   ]
+  },
+  "bubble_sort": {
+   "best_ms": 34.6,
+   "runs_ms": [
+    37.3,
+    39.3,
+    34.6
+   ]
+  },
+  "heapsort": {
+   "best_ms": 34.5,
+   "runs_ms": [
+    36.8,
+    34.5,
+    34.7
+   ]
+  },
+  "quicksort": {
+   "best_ms": 33.7,
+   "runs_ms": [
+    36.1,
+    33.7,
+    34.0
+   ]
+  },
+  "minimum": {
+   "best_ms": 17.7,
+   "runs_ms": [
+    19.6,
+    17.8,
+    17.7
+   ]
+  },
+  "binary_search": {
+   "best_ms": 215.6,
+   "runs_ms": [
+    218.1,
+    216.3,
+    215.6
+   ]
+  },
+  "quickselect": {
+   "best_ms": 18.5,
+   "runs_ms": [
+    21.1,
+    18.5,
+    18.5
+   ]
+  },
+  "activity_selector": {
+   "best_ms": 350.6,
+   "runs_ms": [
+    360.0,
+    358.4,
+    350.6
+   ]
+  },
+  "task_scheduling": {
+   "best_ms": 478.7,
+   "runs_ms": [
+    483.4,
+    478.7,
+    480.6
+   ]
+  },
+  "bfs": {
+   "best_ms": 491.1,
+   "runs_ms": [
+    536.0,
+    502.9,
+    491.1
+   ]
+  },
+  "mst_kruskal": {
+   "best_ms": 94.0,
+   "runs_ms": [
+    103.5,
+    94.2,
+    94.0
+   ]
+  },
+  "mst_prim": {
+   "best_ms": 4082.0,
+   "runs_ms": [
+    4161.1,
+    4170.0,
+    4082.0
+   ]
+  },
+  "bellman_ford": {
+   "best_ms": 3865.3,
+   "runs_ms": [
+    4105.9,
+    3865.3,
+    3963.9
+   ]
+  },
+  "dijkstra": {
+   "best_ms": 4123.8,
+   "runs_ms": [
+    4304.3,
+    4123.8,
+    4178.2
+   ]
+  },
+  "dag_shortest_paths": {
+   "best_ms": 4182.8,
+   "runs_ms": [
+    4435.6,
+    4182.8,
+    4327.7
+   ]
+  },
+  "floyd_warshall": {
+   "best_ms": 43330.8,
+   "runs_ms": [
+    43330.8
+   ]
+  },
+  "lcs_length": {
+   "best_ms": 86.3,
+   "runs_ms": [
+    92.3,
+    86.3,
+    87.4
+   ]
+  },
+  "naive_string_matcher": {
+   "best_ms": 211.8,
+   "runs_ms": [
+    225.1,
+    214.5,
+    211.8
+   ]
+  },
+  "kmp_matcher": {
+   "best_ms": 206.6,
+   "runs_ms": [
+    211.9,
+    208.3,
+    206.6
+   ]
+  },
+  "graham_scan": {
+   "best_ms": 41.6
+  },
+  "jarvis_march": {
+   "best_ms": 42.5
+  },
+  "segments_intersect": {
+   "best_ms": 45.4
+  },
+  "find_maximum_subarray_kadane": {
+   "best_ms": 458.4
+  },
+  "articulation_points": {
+   "best_ms": 23.3
+  },
+  "bridges": {
+   "best_ms": 25.6
+  },
+  "matrix_chain_order": {
+   "best_ms": 60.8
+  },
+  "optimal_bst": {
+   "best_ms": 77.7
+  },
+  "dfs": {
+   "best_ms": 47508.4
+  },
+  "strongly_connected_components": {
+   "best_ms": 47508.4,
+   "note": "the DFS fit only"
+  },
+  "topological_sort": {
+   "best_ms": 47566.3,
+   "note": "the DFS fit + its read-out fit"
+  }
+ }
+}

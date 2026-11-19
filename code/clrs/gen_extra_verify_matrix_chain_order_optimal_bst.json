@@ -1,0 +1,79 @@
+{
+ "matrix_chain_order": {
+  "test_reproduced": {
+   "n": true,
+   "x_pos": true,
+   "x_p": true,
+   "s": true
+  },
+  "relabel_wrong_of": {
+   "test": [
+    0,
+    131072
+   ],
+   "train_L11": [
+    0,
+    48400
+   ],
+   "train_L13": [
+    0,
+    67600
+   ],
+   "train_L16": [
+    0,
+    102400
+   ],
+   "train_L4": [
+    0,
+    6400
+   ],
+   "train_L7": [
+    0,
+    19600
+   ],
+   "val": [
+    0,
+    8192
+   ]
+  }
+ },
+ "optimal_bst": {
+  "test_reproduced": {
+   "n": true,
+   "x_pos": true,
+   "x_p": true,
+   "x_q": true,
+   "root": true
+  },
+  "relabel_wrong_of": {
+   "test": [
+    0,
+    135200
+   ],
+   "train_L11": [
+    0,
+    57600
+   ],
+   "train_L13": [
+    0,
+    78400
+   ],
+   "train_L16": [
+    0,
+    115600
+   ],
+   "train_L4": [
+    0,
+    10000
+   ],
+   "train_L7": [
+    0,
+    25600
+   ],
+   "val": [
+    0,
+    9248
+   ]
+  }
+ }
+}

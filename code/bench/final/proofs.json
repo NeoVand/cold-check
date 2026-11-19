@@ -1,0 +1,67 @@
+{
+ "P1_types_per_b": {
+  "2": 23,
+  "3": 25,
+  "4": 25,
+  "5": 25,
+  "6": 25,
+  "7": 25,
+  "8": 25
+ },
+ "P1_same_for_all_b_ge3": true,
+ "P1_b2_subset": true,
+ "P2_P3_fits": [
+  {
+   "split": 0,
+   "kept_equals_row_col_box": true,
+   "n_kept": 9,
+   "wmin": 1.3791977167129517,
+   "tau": 0.001,
+   "stop_sound": true,
+   "b2_kept_pairs_are_rcb": true,
+   "b3_kept_pairs_are_rcb": true,
+   "b4_kept_pairs_are_rcb": true,
+   "b5_kept_pairs_are_rcb": true,
+   "b6_kept_pairs_are_rcb": true,
+   "b7_kept_pairs_are_rcb": true,
+   "b8_kept_pairs_are_rcb": true
+  },
+  {
+   "split": 1,
+   "kept_equals_row_col_box": true,
+   "n_kept": 9,
+   "wmin": 1.8169941902160645,
+   "tau": 0.001,
+   "stop_sound": true,
+   "b2_kept_pairs_are_rcb": true,
+   "b3_kept_pairs_are_rcb": true,
+   "b4_kept_pairs_are_rcb": true,
+   "b5_kept_pairs_are_rcb": true,
+   "b6_kept_pairs_are_rcb": true,
+   "b7_kept_pairs_are_rcb": true,
+   "b8_kept_pairs_are_rcb": true
+  },
+  {
+   "split": 2,
+   "kept_equals_row_col_box": true,
+   "n_kept": 9,
+   "wmin": 1.8169951438903809,
+   "tau": 0.001,
+   "stop_sound": true,
+   "b2_kept_pairs_are_rcb": true,
+   "b3_kept_pairs_are_rcb": true,
+   "b4_kept_pairs_are_rcb": true,
+   "b5_kept_pairs_are_rcb": true,
+   "b6_kept_pairs_are_rcb": true,
+   "b7_kept_pairs_are_rcb": true,
+   "b8_kept_pairs_are_rcb": true
+  }
+ ],
+ "P4_mazes_checked": 108084,
+ "P4_range_violations": 0,
+ "P4_cold_exact": 108084,
+ "kept": [
+  "side",
+  "corner"
+ ]
+}

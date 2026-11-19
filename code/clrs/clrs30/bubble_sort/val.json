@@ -1,0 +1,1 @@
+{"seed": 2, "num": 32, "length": 16, "task": "bubble_sort", "split": "val", "sha256": "3a07da5204f0cc0904df7ef85870eb91b47f94b2fb04b193146055c848d3b24c", "shapes": {"n": [32], "x_pos": [32, 16], "x_key": [32, 16], "pred": [32, 16]}, "seconds": 3.0, "clrs_version": "2.0.3", "numpy": "2.5.4"}

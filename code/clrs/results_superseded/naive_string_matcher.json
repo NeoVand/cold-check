@@ -1,0 +1,116 @@
+{
+ "task": "naive_string_matcher",
+ "kind": "mask_one",
+ "train_inputs": 100,
+ "fit_ms": 217.7,
+ "rules": {
+  "mask": {
+   "info": {
+    "features": 2823,
+    "distinct": 495,
+    "rows": 2000,
+    "positives": 100,
+    "gate": 1,
+    "gate_lets_through_negatives": 1447,
+    "score_features": 16,
+    "train_wrong_score": 0,
+    "train_wrong_rule": 0,
+    "level": [
+     "pos",
+     "lt"
+    ]
+   },
+   "exact_gate": false,
+   "gate": [
+    "not ('bitA', ('bit', 'string'))"
+   ],
+   "gate_size": 1,
+   "score": [
+    [
+     "('cnt', (('cmp', 'pos', 'pos', 'lt'), ('bit', 'sel')), (('rel', 'run', 1), ('bit', 'first')), 'lt')",
+     3.705
+    ],
+    [
+     "('cnt', (('cmp', 'pos', 'pos', 'gt'), ('bit', 'first')), (('rel', 'run', 1), ('bit', 'first')), 'eq')",
+     -1.246
+    ],
+    [
+     "('wit', (('cmp', 'pos', 'pos', 'ge'), None), (('rel', 'run', 1), ('bit', 'first')))",
+     1.244
+    ],
+    [
+     "('cnt', (('cmp', 'pos', 'pos', 'lt'), ('bit', 'sel')), (('rel', 'run', 1), None), 'lt')",
+     0.977
+    ],
+    [
+     "('cnt', (('rel', 'run', 0), ('bit', 'first')), (('rel', 'run', 1), ('bit', 'first')), 'eq')",
+     -0.912
+    ],
+    [
+     "('cnt', (('rel', 'run', 1), ('bit', 'first')), (('cmp', 'pos', 'pos', 'lt'), ('bit', 'sel')), 'eq')",
+     -0.875
+    ],
+    [
+     "('cnt', (('rel', 'run', 0), None), (('cmp', 'pos', 'pos', 'lt'), ('bit', 'sel')), 'eq')",
+     0.464
+    ],
+    [
+     "('wit', (('cmp', 'pos', 'pos', 'ge'), None), (('rel', 'run', 1), None))",
+     0.406
+    ],
+    [
+     "('wit', (('cmp', 'pos', 'pos', 'ge'), None), (('cmp', 'pos', 'pos', 'lt'), ('bit', 'sel')))",
+     -0.357
+    ],
+    [
+     "('cnt', (('cmp', 'pos', 'pos', 'gt'), ('bit', 'first')), (('cmp', 'pos', 'pos', 'lt'), ('bit', 'sel')), 'eq')",
+     0.347
+    ],
+    [
+     "('cnt', (('cmp', 'pos', 'pos', 'lt'), ('bit', 'sel')), (('rel', 'same_key', 0), ('bit', 'first')), 'lt')",
+     0.293
+    ],
+    [
+     "('cnt', (('rel', 'run', 0), ('bit', 'first')), (('cmp', 'pos', 'pos', 'lt'), ('bit', 'sel')), 'eq')",
+     0.189
+    ]
+   ]
+  },
+  "levels": {
+   "pos_lt": {
+    "train_wrong": 0,
+    "gate": 1,
+    "score": 16
+   },
+   "pos_gt": {
+    "train_wrong": 15,
+    "gate": 1,
+    "score": 41
+   }
+  }
+ },
+ "start": 0,
+ "test64": {
+  "score": 1.0,
+  "loops_max": 2,
+  "not_at_rest": 0,
+  "eval_s": 1.01
+ },
+ "gen320": {
+  "score": 1.0,
+  "num": 64,
+  "loops_max": 2,
+  "not_at_rest": 0,
+  "eval_s": 0.23
+ },
+ "gen1280": {
+  "score": 1.0,
+  "num": 16,
+  "loops_max": 2,
+  "not_at_rest": 0,
+  "eval_s": 0.85
+ },
+ "paper": {
+  "floydnet": 100.0
+ }
+}

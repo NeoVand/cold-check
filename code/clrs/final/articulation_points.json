@@ -1,0 +1,116 @@
+{
+ "task": "articulation_points",
+ "fit_ms": 98.4,
+ "train_inputs": 100,
+ "rules": {
+  "mask": {
+   "info": {
+    "features": 280,
+    "distinct": 77,
+    "rows": 1020,
+    "positives": 106,
+    "gate": 1,
+    "greedy": 1,
+    "gate_lets_through_negatives": 0,
+    "score_features": 12,
+    "train_wrong_score": 0,
+    "train_wrong_rule": 0
+   },
+   "exact_gate": true,
+   "gate": [
+    "('wit', (('rel', 'edge', 0), None), (('rel', 'sep', 1), None))"
+   ],
+   "gate_size": 1,
+   "score": [
+    [
+     "('cnt', (('rel', 'sep', 1), None), (('id',), None), 'lt')",
+     -2.378
+    ],
+    [
+     "('wit', (('rel', 'edge', 0), None), (('rel', 'sep', 1), None))",
+     2.375
+    ],
+    [
+     "('cnt', (('rel', 'edge', 0), None), (('rel', 'sep', 1), None), 'lt')",
+     1.734
+    ],
+    [
+     "('cnt', (('rel', 'sep', 1), None), (('cmp', 'pos', 'pos', 'gt'), None), 'lt')",
+     -0.974
+    ],
+    [
+     "('cnt', (('rel', 'sep', 1), None), (('cmp', 'pos', 'pos', 'lt'), None), 'lt')",
+     -0.967
+    ],
+    [
+     "('cnt', (('id',), None), (('rel', 'edge', 0), None), 'lt')",
+     0.783
+    ],
+    [
+     "('cnt', (('rel', 'sep', 1), None), (('cmp', 'pos', 'pos', 'ge'), None), 'lt')",
+     -0.613
+    ],
+    [
+     "('wit', (('cmp', 'pos', 'pos', 'ge'), None), (('rel', 'sep', 1), None))",
+     0.61
+    ],
+    [
+     "('cnt', (('rel', 'sep', 1), None), (('cmp', 'pos', 'pos', 'le'), None), 'lt')",
+     -0.447
+    ],
+    [
+     "('wit', (('cmp', 'pos', 'pos', 'lt'), None), (('rel', 'sep', 1), None))",
+     0.444
+    ],
+    [
+     "('wit', (('rel', 'sep', 0), None), (('rel', 'sep', 0), None))",
+     0.142
+    ],
+    [
+     "('cnt', (('cmp', 'pos', 'pos', 'ge'), None), (('rel', 'sep', 1), None), 'lt')",
+     0.057
+    ]
+   ]
+  }
+ },
+ "test64": {
+  "score": 1.0,
+  "loops_max": 1,
+  "not_at_rest": 0,
+  "eval_s": 0.26
+ },
+ "val": {
+  "score": 1.0,
+  "eval_s": 0.01
+ },
+ "gen64": {
+  "score": 1.0,
+  "num": 32,
+  "loops_max": 1,
+  "not_at_rest": 0,
+  "eval_s": 0.26
+ },
+ "gen256": {
+  "score": 1.0,
+  "num": 16,
+  "loops_max": 1,
+  "not_at_rest": 0,
+  "eval_s": 3.28
+ },
+ "gen1024": {
+  "score": 1.0,
+  "num": 4,
+  "loops_max": 1,
+  "not_at_rest": 0,
+  "eval_s": 42.54
+ },
+ "log": [
+  "{\"task\": \"articulation_points\", \"fit_ms\": 98.4, \"mask\": {\"exact\": true, \"features\": 280, \"distinct\": 77, \"rows\": 1020, \"positives\": 106, \"gate\": 1, \"greedy\": 1, \"gate_lets_through_negatives\": 0, \"score_features\": 12, \"train_wrong_score\": 0, \"train_wrong_rule\": 0}}",
+  "official test: {'score': 1.0, 'loops_max': 1, 'not_at_rest': 0, 'eval_s': 0.26}",
+  "val: {'score': 1.0, 'eval_s': 0.01}",
+  "generated 64: {'score': 1.0, 'num': 32, 'loops_max': 1, 'not_at_rest': 0, 'eval_s': 0.26}",
+  "generated 256: {'score': 1.0, 'num': 16, 'loops_max': 1, 'not_at_rest': 0, 'eval_s': 3.28}",
+  "generated 1024: {'score': 1.0, 'num': 4, 'loops_max': 1, 'not_at_rest': 0, 'eval_s': 42.54}"
+ ],
+ "where": "modal cpu=2, one BLAS thread"
+}

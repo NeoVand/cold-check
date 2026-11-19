@@ -1,0 +1,1 @@
+{"seed": 2, "num": 32, "length": 16, "task": "optimal_bst", "split": "val", "sha256": "592d4fd4d1d02afc6468292ddecccc11a9d0e855f8e51bb3d65b7471cb5b363f", "shapes": {"n": [32], "x_pos": [32, 17], "x_p": [32, 17], "x_q": [32, 17], "root": [32, 17, 17]}, "seconds": 3.0, "clrs_version": "2.0.3", "numpy": "2.5.4"}

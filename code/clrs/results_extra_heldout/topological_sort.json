@@ -1,0 +1,159 @@
+{
+ "task": "topological_sort",
+ "fit_ms": 99503.2,
+ "rules": {
+  "off": {
+   "info": {
+    "features": 132,
+    "distinct": 20,
+    "rows": 11200,
+    "positives": 920,
+    "gate": 3,
+    "greedy": 1,
+    "gate_lets_through_negatives": 0,
+    "score_features": 4,
+    "train_wrong_score": 0,
+    "train_wrong_rule": 0
+   },
+   "exact_gate": true,
+   "gate": [
+    "('own', ('cmp', 'f', 'f', 'lt'))",
+    "not ('own', ('cmp', 'f', 'f', 'ge'))",
+    "not ('wit', (('cmp', 'f', 'f', 'lt'), None), (('cmp', 'f', 'f', 'lt'), None))"
+   ],
+   "gate_size": 3,
+   "score": [
+    [
+     "('wit', (('cmp', 'f', 'f', 'lt'), None), (('cmp', 'f', 'f', 'lt'), None))",
+     -7.955
+    ],
+    [
+     "('own', ('cmp', 'f', 'f', 'lt'))",
+     3.904
+    ],
+    [
+     "('own', ('cmp', 'f', 'f', 'ge'))",
+     -3.9
+    ],
+    [
+     "('wit', (('cmp', 'f', 'f', 'ge'), None), (('cmp', 'f', 'f', 'ge'), None))",
+     -0.936
+    ]
+   ]
+  },
+  "diag": {
+   "info": {
+    "features": 341,
+    "distinct": 56,
+    "rows": 1020,
+    "positives": 100,
+    "gate": 1,
+    "greedy": 1,
+    "gate_lets_through_negatives": 0,
+    "score_features": 5,
+    "train_wrong_score": 0,
+    "train_wrong_rule": 0
+   },
+   "exact_gate": true,
+   "gate": [
+    "not ('wit', (('cmp', 'f', 'f', 'ge'), None), (('cmp', 'f', 'f', 'lt'), None))"
+   ],
+   "gate_size": 1,
+   "score": [
+    [
+     "('wit', (('cmp', 'f', 'f', 'ge'), None), (('cmp', 'f', 'f', 'lt'), None))",
+     -4.101
+    ],
+    [
+     "('cnt', (('id',), None), (('cmp', 'f', 'f', 'le'), None), 'eq')",
+     4.029
+    ],
+    [
+     "('wit', (('cmp', 'pos', 'pos', 'ge'), None), (('cmp', 'f', 'f', 'lt'), None))",
+     -1.124
+    ],
+    [
+     "('cnt', (('id',), None), (('cmp', 'f', 'f', 'lt'), None), 'lt')",
+     -0.953
+    ],
+    [
+     "('wit', (('cmp', 'pos', 'pos', 'lt'), None), (('cmp', 'f', 'f', 'lt'), None))",
+     -0.642
+    ]
+   ]
+  },
+  "head": {
+   "info": {
+    "features": 341,
+    "distinct": 56,
+    "rows": 1020,
+    "positives": 100,
+    "gate": 1,
+    "greedy": 1,
+    "gate_lets_through_negatives": 0,
+    "score_features": 5,
+    "train_wrong_score": 0,
+    "train_wrong_rule": 0
+   },
+   "exact_gate": true,
+   "gate": [
+    "not ('wit', (('cmp', 'f', 'f', 'lt'), None), (('cmp', 'f', 'f', 'ge'), None))"
+   ],
+   "gate_size": 1,
+   "score": [
+    [
+     "('wit', (('cmp', 'f', 'f', 'lt'), None), (('cmp', 'f', 'f', 'ge'), None))",
+     -4.158
+    ],
+    [
+     "('cnt', (('id',), None), (('cmp', 'f', 'f', 'ge'), None), 'eq')",
+     4.069
+    ],
+    [
+     "('wit', (('cmp', 'pos', 'pos', 'lt'), None), (('cmp', 'f', 'f', 'ge'), None))",
+     -1.107
+    ],
+    [
+     "('cnt', (('id',), None), (('cmp', 'f', 'f', 'gt'), None), 'lt')",
+     -1.076
+    ],
+    [
+     "('wit', (('cmp', 'pos', 'pos', 'ge'), None), (('cmp', 'f', 'f', 'ge'), None))",
+     -0.388
+    ]
+   ]
+  }
+ },
+ "test64": {
+  "score": 1.0,
+  "loops_max": 65,
+  "not_at_rest": 0
+ },
+ "val": {
+  "score": 1.0,
+  "loops_max": 17
+ },
+ "gen64": {
+  "score": 1.0,
+  "num": 32,
+  "loops_max": 65,
+  "not_at_rest": 0
+ },
+ "gen256": {
+  "score": 1.0,
+  "num": 4,
+  "loops_max": 257,
+  "not_at_rest": 0
+ },
+ "log": [
+  "topological_sort official test: {'score': 1.0, 'loops_max': 65, 'not_at_rest': 0}",
+  "topological_sort val: {'score': 1.0, 'loops_max': 17}",
+  "topological_sort generated 64: {'score': 1.0, 'num': 32, 'loops_max': 65, 'not_at_rest': 0}",
+  "topological_sort generated 256: {'score': 1.0, 'num': 4, 'loops_max': 257, 'not_at_rest': 0}",
+  "strongly_connected_components official test: {'score': 1.0, 'loops_max': 65, 'not_at_rest': 0}",
+  "strongly_connected_components val: {'score': 1.0, 'loops_max': 17}",
+  "strongly_connected_components generated 64: {'score': 1.0, 'num': 32, 'loops_max': 65, 'not_at_rest': 0}",
+  "strongly_connected_components generated 256: {'score': 1.0, 'num': 4, 'loops_max': 257, 'not_at_rest': 0}"
+ ],
+ "where": "modal cpu=2, one BLAS thread"
+}

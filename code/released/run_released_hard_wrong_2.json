@@ -1,0 +1,71 @@
+{
+ "kind": "hard_wrong",
+ "args": [
+  2
+ ],
+ "seconds": 0.635427713394165,
+ "result": {
+  "seed": 2,
+  "idx": 106,
+  "stopped": true,
+  "diff": [
+   {
+    "cell": [
+     29,
+     0
+    ],
+    "pred": 1,
+    "edge": true,
+    "open_side_nb": 2
+   },
+   {
+    "cell": [
+     29,
+     1
+    ],
+    "pred": 1,
+    "edge": true,
+    "open_side_nb": 3
+   },
+   {
+    "cell": [
+     29,
+     2
+    ],
+    "pred": 1,
+    "edge": true,
+    "open_side_nb": 3
+   },
+   {
+    "cell": [
+     29,
+     3
+    ],
+    "pred": 1,
+    "edge": true,
+    "open_side_nb": 3
+   },
+   {
+    "cell": [
+     29,
+     4
+    ],
+    "pred": 1,
+    "edge": true,
+    "open_side_nb": 3
+   },
+   {
+    "cell": [
+     29,
+     5
+    ],
+    "pred": 1,
+    "edge": true,
+    "open_side_nb": 3
+   }
+  ],
+  "edge_open_cells": 76,
+  "edge_tips": 14
+ },
+ "error": null
+}

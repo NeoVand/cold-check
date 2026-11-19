@@ -1,0 +1,99 @@
+{
+ "task": "matrix_chain_order",
+ "fit_ms": 264.5,
+ "train_states": 164,
+ "rules": {
+  "off": {
+   "info": {
+    "features": 290,
+    "distinct": 14,
+    "rows": 11664,
+    "positives": 936,
+    "gate": 4,
+    "greedy": 1,
+    "gate_lets_through_negatives": 0,
+    "score_features": 9,
+    "train_wrong_score": 0,
+    "train_wrong_rule": 0
+   },
+   "exact_gate": true,
+   "gate": [
+    "('own', ('cmp', 'pos', 'pos', 'lt'))",
+    "not ('own', ('cmp', 'pos', 'pos', 'ge'))",
+    "('own', ('rel', 'valid', 0))",
+    "not ('tri', (('cmp', 'pos', 'pos', 'lt'), None), 'N', 'N', 'lt')"
+   ],
+   "gate_size": 4,
+   "score": [
+    [
+     "('tri', (('cmp', 'pos', 'pos', 'lt'), None), 'N', 'N', 'lt')",
+     -7.342
+    ],
+    [
+     "('own', ('rel', 'valid', 0))",
+     6.208
+    ],
+    [
+     "('tri', (('cmp', 'pos', 'pos', 'lt'), None), 'N', 'N', 'gt')",
+     1.266
+    ],
+    [
+     "('bitA', ('bit', 'source'))",
+     0.833
+    ],
+    [
+     "('wit', (('cmp', 'pos', 'pos', 'lt'), None), (('cmp', 'pos', 'pos', 'lt'), ('bit', 'source')))",
+     -0.772
+    ],
+    [
+     "('own', ('cmp', 'pos', 'pos', 'ge'))",
+     -0.439
+    ],
+    [
+     "('own', ('cmp', 'pos', 'pos', 'lt'))",
+     0.429
+    ],
+    [
+     "('wit', (('cmp', 'pos', 'pos', 'lt'), None), (('cmp', 'pos', 'pos', 'lt'), None))",
+     -0.179
+    ],
+    [
+     "('wit', (('rel', 'valid', 0), None), (('cmp', 'pos', 'pos', 'ge'), None))",
+     0.128
+    ]
+   ]
+  }
+ },
+ "test64": {
+  "score": 1.0,
+  "loops_max": 16,
+  "not_at_rest": 0,
+  "eval_s": 15.74
+ },
+ "val": {
+  "score": 1.0,
+  "loops_max": 9
+ },
+ "gen64": {
+  "score": 1.0,
+  "num": 32,
+  "loops_max": 15,
+  "not_at_rest": 0,
+  "eval_s": 15.46
+ },
+ "gen128": {
+  "score": 1.0,
+  "num": 4,
+  "loops_max": 20,
+  "not_at_rest": 0,
+  "eval_s": 14.77
+ },
+ "log": [
+  "{\"task\": \"matrix_chain_order\", \"fit_ms\": 264.5, \"exact\": true, \"features\": 290, \"distinct\": 14, \"rows\": 11664, \"positives\": 936, \"gate\": 4, \"greedy\": 1, \"gate_lets_through_negatives\": 0, \"score_features\": 9, \"train_wrong_score\": 0, \"train_wrong_rule\": 0}",
+  "official test: {'score': 1.0, 'loops_max': 16, 'not_at_rest': 0, 'eval_s': 15.74}",
+  "val: {'score': 1.0, 'loops_max': 9}",
+  "generated 64: {'score': 1.0, 'num': 32, 'loops_max': 15, 'not_at_rest': 0, 'eval_s': 15.46}",
+  "generated 128: {'score': 1.0, 'num': 4, 'loops_max': 20, 'not_at_rest': 0, 'eval_s': 14.77}"
+ ],
+ "where": "modal cpu=2, one BLAS thread"
+}

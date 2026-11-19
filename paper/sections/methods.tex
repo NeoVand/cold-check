@@ -1,0 +1,119 @@
+\section*{Methods}
+
+\paragraph{Benchmarks and protocol.} CRAM's benchmarks are read from the files at the revisions CRAM pins
+(Sudoku-Extreme, Maze-Hard and Maze-Unique), with CRAM's own split index; the Sudoku-Extreme test set rebuilt from the
+official file matches the hash that CRAM records. Sudoku-Extreme follows CRAM's protocol: three fits, one on each of its
+training splits of \nm{sudoku.trainboards} boards, each scored once on all \nm{sudoku.ntest} test puzzles. A puzzle
+counts as solved when the board returned equals the dataset's solution. Operations follow CRAM's convention (its
+Appendix~C.2: additions count, comparisons and mask logic do not); we also report the count with every comparison
+included, which is the fairer number for a search like ours. CLRS-30 inputs, answers and scores come from the
+benchmark's library\cite{velickovic2022clrs}. Our generator reproduces the official test split of every task, and
+relabels every stored training, validation and test split with no wrong label. Held-out inputs are drawn at seed
+$9000 + n$, never used during development, with the official test's numbers of inputs at 64 nodes, and are scored with
+the code frozen.
+
+\paragraph{Completion.} The completions of CLRS-30 are computed from the final answer or from an input relation, by
+closure and counting, never from a step of the algorithm. Depth is the number of ancestors along the answer's pointer
+(Eq.~\ref{eq:completion}); its weighted form, the sum of edge weights along the pointer, is used only by the four
+shortest-path tasks. Both are computed by pointer doubling, so a node the pointer does not join to a root keeps
+$\notyet$. The bottleneck closure of the weights is the closure of the edge weights in the (min, max) semiring. The run
+closure of the string matchers marks a pair (text position $t$, pattern position $p$) when the two letters agree and
+either $p$ is the pattern's last letter or $(t+1, p+1)$ is marked. For longest common subsequence the completion is the
+number of match arrows along the answer's arrows from each cell, and each cell reads that count one cell up and one cell
+to the left; this shift is supplied by hand. On puzzles nothing is completed: Sudoku shows every cell, and the maze
+clock is the cold reach run's loop of first arrival.
+
+\paragraph{Conditions.} For every task the family $\Phi$ is built from the input types alone. Own conditions compare the
+item registers of $u$ and $v$ ($<$, $=$, $>$, with $\notyet$ later than every number and incomparable with itself) and
+read the pair's input relations and the items' bits. Witness tests read $\exists k: A(u,k)\wedge B(k,v)$, where a leg
+test is an input relation, a comparison of $k$ with $u$ or $v$, a bit of $k$, or the conjunction of an edge with one of
+these. Count conditions compare $\#\{k : A(i,k)\}$ with $\#\{k : B(i,k)\}$ for two leg tests. Pair numbers, such as edge
+weights or the supplied sums, are compared through a third item, as in ``some $k$ with an edge into $v$ and
+$S(k,v) < S(u,v)$''. Numbers never enter except through comparisons, and no condition names a position or a size.
+
+\paragraph{Fitting.} Each output (a pointer off the diagonal, a pointer to itself, an item mask, a pair mask) is fitted
+on the rows of the completed training answers: every candidate pair or item, labelled by the answer. First, every own
+condition that held on all training positives, and failed on at least $\max(10, 0.5\%)$ of the rows, is kept
+(Eq.~\ref{eq:kept}). Second, conditions true on every positive are added greedily, each time the one that rejects the
+most negatives still passing, until no training negative passes\cite{haussler1988quantifying}. Third, a logistic
+regression with an $\ell_1$ penalty over all conditions scores the candidates; it only breaks ties between candidates
+that pass, except for binary search and segment intersection, where no conjunction is exact on the training answers and
+the score decides. Where an output feeds back into the check as item bits (the greedy tasks and the string matchers),
+the answer is read only downward along one order, and the fit tries each register and direction and keeps the one
+whose rule is exact at the training answers; this order is Fages' level mapping chosen by the data (finish time for
+activity selection, weight for task scheduling, position for the matchers). A target's own completion value is read only
+as ``the other item is below me''.
+
+\paragraph{The cold run.} The run starts with no pointer, no selection and no arrow, and every register at $\notyet$.
+Each loop recomputes the completion from the current partial answer by the same code as at the answer, and writes an
+answer bit only where the check passes; until then the pointer stays unset. The run stops when a loop changes nothing,
+and every run we report came to rest.
+
+\paragraph{Puzzles.} Cells carry coordinates, and a pair of cells is described only by which coordinate functions agree:
+for a grid of side $n=b^2$, the row, the column, $\lfloor r/b\rfloor$, $\lfloor c/b\rfloor$, $r \bmod b$, $c \bmod b$,
+$r-c$ and $r+c$. Because overlapping relations such as a row and its band predict a solved board equally well, the fit
+is made on the disjoint pair types, the full pattern of agreements, with costs kept non-negative, and the kept relations
+are read off the kept types. Values are compared only as the same or different. The pseudolikelihood fit with an
+$\ell_1$ penalty takes two to four full-batch steps on the \nm{sudoku.trainboards} training boards. For every kept
+relation, the range of ``how many related cells hold value $v$'', given whether the cell holds $v$, is recorded over all
+training answers; on mazes these counts run only over cells on the path, so that a missing neighbour beyond the board's
+edge counts as nothing. The cold stage keeps a set of possible values for each cell, bounds each kept count from below
+by the cells fixed to $v$ and from above by the cells that may still take $v$, removes a value when a range can no
+longer be met, and repeats until nothing changes. It also reasons over pairs of overlapping units, a consequence of
+two fitted count conditions: if all the places of $v$ in a unit $A$ lie inside a unit $B$ that allows $v$ once, then $v$
+leaves the rest of $B$. The search picks the open cell with the fewest possible values, tries them in a random order, runs
+the cold stage after each choice and undoes on a contradiction, restarting on the Luby schedule\cite{luby1993optimal}
+with a base of \nm{restart.base} moves, within a budget of \nm{budget} moves. On Maze-Hard the
+path rule is fitted on the \nm{hard.steps} consecutive steps of the training labels, over three kinds of feature: the
+neighbour is open, its clock compared with the cell's, and the direction of the step. For N-Queens we fitted on the 92
+solutions of $8\times8$ and tested on 100 random solutions each of $80\times80$ and $100\times100$, generated by
+min-conflicts, completed from three starts: nine queens removed, seven eighths removed, and the empty board. For colouring
+we fitted on 1,000 planted 3-colourable graphs of 10 vertices and tested on 100 planted graphs of 100 vertices at each
+average degree.
+
+\paragraph{Supplied by hand.} Group one: deadlines divided by the number of tasks (task scheduling) and the one-cell
+shift of longest common subsequence. Group two: the sum $S(u,v) = \mathrm{dist}_u + w(u,v)$ for Bellman--Ford, Dijkstra,
+shortest paths in an acyclic graph and Floyd--Warshall, which we read as one single-source problem per source, with the
+weight of a self-loop as an item number for its diagonal; the sign of the orientation of three points for Graham scan,
+Jarvis march and segment intersection, with the read-out ``every point passes'' for the last; and, for matrix chain order
+and optimal search trees, the cost of splitting an interval at each point, on a cost table completed from the answer's
+own table of splits by its recursion. Group three: for the maximum subarray, prefix sums, their running minimum and the
+best sum ending at each item; for articulation points and bridges, the components of the graph with one node, or one
+edge, removed; for depth-first search, the bit ``placed and with an out-neighbour not yet placed'' on each node, the check
+fitted at every prefix of the answer's own preorder (\nm{dfs.prefix.fit}~s, the one slow fit) and the run placing one
+node per loop, which a P-complete problem such as lexicographic depth-first search\cite{anderson1987parallelism} leads
+us to expect; for
+topological sort, the finish order read from the cold depth-first search; and for strongly connected components, two
+passes of the same check, the second on the reversed graph in order of decreasing finish time, and a closure that names
+each tree by its root.
+
+\paragraph{Proofs.} The finite checks are scripts that rebuild each fitted rule from its saved table and evaluate it with
+the code that ran it: on every Sudoku pair type at block sizes 2 to 8; on every spanning-tree maze of the $2\times2$,
+$2\times3$ and $3\times3$ room lattices, with and without a ring of wall, for every start and goal; and on every input
+of the CLRS-30 certificates' sizes. The arguments are in Supplementary Note~1. None is yet in Lean.
+
+\paragraph{CRAM's released models.} We read the authors' released checkpoints and ran their own code, unchanged, on CPU.
+The runs first reproduce the recorded scores (\nm{cram.hard.pct}\% of Maze-Hard, with one wrong stop on test maze 106 on
+every seed, and all of Maze-Unique). The room mazes put the start and the goal on two sides of a room of $s\times s$ open
+cells, with a corridor around it, in all eight symmetries: rooms of 3 to 14 cells whose routes are as short as the
+corridor, and rooms of 12 to 26 whose routes are two steps longer. The tree mazes are spanning trees of the room
+lattice at 31, 61 and 121 cells a side, with a ring of wall, and the same mazes with the ring removed. 
+
+\paragraph{Prior-art search.} Before writing we searched for each claim of novelty, by its idea and not only by its
+name: Markov logic and relational dependency networks, inductive logic programming and answer set programming,
+constraint acquisition, proof labelling schemes and locally checkable proofs, hints and their alternatives in
+algorithmic reasoning, lifted inference and size transfer, walk distances, energies for reasoning, and certified
+learned solvers. Works we could read only as abstracts are cited for what their abstracts state.
+
+\paragraph{Compute.} Every fit and every CLRS-30 timing ran on one core of an Apple M4 laptop with one BLAS thread. The
+held-out batteries, the $25\times25$ boards and the runs of CRAM's released models ran on cloud CPUs. No GPU was used.
+
+\paragraph{Use of AI systems.} AI systems were used extensively. The idea, the research direction, the experiment design
+and the choice of problems are the author's. The code, the proofs and drafts of the text were produced by AI systems
+under the author's direction. Every reported number is generated by script from the saved output of its run, except
+the numbers quoted from other papers, which are marked where they appear.
+
+\paragraph{Data and code availability.} The code, the result files that every number of this paper is generated from,
+and the scripts that generate them are at \url{https://github.com/NeoVand/cold-check}, with a browser demonstration at
+\url{https://neovand.github.io/cold-check}. CRAM's code, checkpoints and data are not redistributed; the scripts download
+them at the revisions CRAM pins. CLRS-30 is public\cite{velickovic2022clrs}.

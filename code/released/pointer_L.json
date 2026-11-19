@@ -1,0 +1,7298 @@
+[
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 0,
+  "n": 3,
+  "grid": [
+   7,
+   7
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 8,
+  "shortest": 8,
+  "margin": 5.868958018107151,
+  "ln_paths_room": 1.791759469228055
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 0,
+  "n": 4,
+  "grid": [
+   8,
+   8
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 10,
+  "shortest": 10,
+  "margin": 4.664985213781222,
+  "ln_paths_room": 2.995732273553991
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 0,
+  "n": 5,
+  "grid": [
+   9,
+   9
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 12,
+  "shortest": 12,
+  "margin": 3.4122222452858466,
+  "ln_paths_room": 4.248495242049359
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 0,
+  "n": 6,
+  "grid": [
+   10,
+   10
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 14,
+  "shortest": 14,
+  "margin": 2.131288399823802,
+  "ln_paths_room": 5.529429087511423
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 0,
+  "n": 7,
+  "grid": [
+   11,
+   11
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 16,
+  "shortest": 16,
+  "margin": 0.8320054156935157,
+  "ln_paths_room": 6.828712071641684
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 0,
+  "n": 8,
+  "grid": [
+   12,
+   12
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "left",
+  "same": false,
+  "pointer_len": 18,
+  "shortest": 18,
+  "margin": -0.4801809732726383,
+  "ln_paths_room": 8.140898460607852
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 0,
+  "n": 9,
+  "grid": [
+   13,
+   13
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "left",
+  "same": false,
+  "pointer_len": 20,
+  "shortest": 20,
+  "margin": -1.8019368132548834,
+  "ln_paths_room": 9.462654300590172
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 0,
+  "n": 10,
+  "grid": [
+   14,
+   14
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "left",
+  "same": false,
+  "pointer_len": 22,
+  "shortest": 22,
+  "margin": -3.1310727605346074,
+  "ln_paths_room": 10.791790247870114
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 0,
+  "n": 12,
+  "grid": [
+   16,
+   16
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "left",
+  "same": false,
+  "pointer_len": 26,
+  "shortest": 26,
+  "margin": -5.805848172747233,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 1,
+  "n": 3,
+  "grid": [
+   7,
+   7
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 8,
+  "shortest": 8,
+  "margin": -13.069119908528592,
+  "ln_paths_room": 1.791759469228055
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 1,
+  "n": 4,
+  "grid": [
+   8,
+   8
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 10,
+  "shortest": 10,
+  "margin": -14.27309271285452,
+  "ln_paths_room": 2.995732273553991
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 1,
+  "n": 5,
+  "grid": [
+   9,
+   9
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 12,
+  "shortest": 12,
+  "margin": -15.525855681349896,
+  "ln_paths_room": 4.248495242049359
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 1,
+  "n": 6,
+  "grid": [
+   10,
+   10
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 14,
+  "shortest": 14,
+  "margin": -16.80678952681194,
+  "ln_paths_room": 5.529429087511423
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 1,
+  "n": 7,
+  "grid": [
+   11,
+   11
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 16,
+  "shortest": 16,
+  "margin": -18.106072510942226,
+  "ln_paths_room": 6.828712071641684
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 1,
+  "n": 8,
+  "grid": [
+   12,
+   12
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 18,
+  "shortest": 18,
+  "margin": -19.41825889990838,
+  "ln_paths_room": 8.140898460607852
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 1,
+  "n": 9,
+  "grid": [
+   13,
+   13
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 20,
+  "shortest": 20,
+  "margin": -20.740014739890626,
+  "ln_paths_room": 9.462654300590172
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 1,
+  "n": 10,
+  "grid": [
+   14,
+   14
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 22,
+  "shortest": 22,
+  "margin": -22.06915068717035,
+  "ln_paths_room": 10.791790247870114
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 1,
+  "n": 12,
+  "grid": [
+   16,
+   16
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 26,
+  "shortest": 26,
+  "margin": -24.743926099382975,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 2,
+  "n": 3,
+  "grid": [
+   7,
+   7
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 8,
+  "shortest": 8,
+  "margin": -9.233531453328396,
+  "ln_paths_room": 1.791759469228055
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 2,
+  "n": 4,
+  "grid": [
+   8,
+   8
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 10,
+  "shortest": 10,
+  "margin": -10.437504257654325,
+  "ln_paths_room": 2.995732273553991
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 2,
+  "n": 5,
+  "grid": [
+   9,
+   9
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 12,
+  "shortest": 12,
+  "margin": -11.6902672261497,
+  "ln_paths_room": 4.248495242049359
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 2,
+  "n": 6,
+  "grid": [
+   10,
+   10
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 14,
+  "shortest": 14,
+  "margin": -12.971201071611745,
+  "ln_paths_room": 5.529429087511423
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 2,
+  "n": 7,
+  "grid": [
+   11,
+   11
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 16,
+  "shortest": 16,
+  "margin": -14.270484055742031,
+  "ln_paths_room": 6.828712071641684
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 2,
+  "n": 8,
+  "grid": [
+   12,
+   12
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 18,
+  "shortest": 18,
+  "margin": -15.582670444708185,
+  "ln_paths_room": 8.140898460607852
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 2,
+  "n": 9,
+  "grid": [
+   13,
+   13
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 20,
+  "shortest": 20,
+  "margin": -16.90442628469043,
+  "ln_paths_room": 9.462654300590172
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 2,
+  "n": 10,
+  "grid": [
+   14,
+   14
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 22,
+  "shortest": 22,
+  "margin": -18.233562231970154,
+  "ln_paths_room": 10.791790247870114
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 2,
+  "n": 12,
+  "grid": [
+   16,
+   16
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 26,
+  "shortest": 26,
+  "margin": -20.90833764418278,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 3,
+  "n": 3,
+  "grid": [
+   7,
+   7
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 8,
+  "shortest": 8,
+  "margin": 9.26665546683762,
+  "ln_paths_room": 1.791759469228055
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 3,
+  "n": 4,
+  "grid": [
+   8,
+   8
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 10,
+  "shortest": 10,
+  "margin": 8.06268266251169,
+  "ln_paths_room": 2.995732273553991
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 3,
+  "n": 5,
+  "grid": [
+   9,
+   9
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 12,
+  "shortest": 12,
+  "margin": 6.809919694016315,
+  "ln_paths_room": 4.248495242049359
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 3,
+  "n": 6,
+  "grid": [
+   10,
+   10
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 14,
+  "shortest": 14,
+  "margin": 5.528985848554271,
+  "ln_paths_room": 5.529429087511423
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 3,
+  "n": 7,
+  "grid": [
+   11,
+   11
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 16,
+  "shortest": 16,
+  "margin": 4.2297028644239845,
+  "ln_paths_room": 6.828712071641684
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 3,
+  "n": 8,
+  "grid": [
+   12,
+   12
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 18,
+  "shortest": 18,
+  "margin": 2.9175164754578304,
+  "ln_paths_room": 8.140898460607852
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 3,
+  "n": 9,
+  "grid": [
+   13,
+   13
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 20,
+  "shortest": 20,
+  "margin": 1.5957606354755853,
+  "ln_paths_room": 9.462654300590172
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 3,
+  "n": 10,
+  "grid": [
+   14,
+   14
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 22,
+  "shortest": 22,
+  "margin": 0.2666246881958614,
+  "ln_paths_room": 10.791790247870114
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 3,
+  "n": 12,
+  "grid": [
+   16,
+   16
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "up",
+  "same": false,
+  "pointer_len": 26,
+  "shortest": 26,
+  "margin": -2.408150724016764,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 4,
+  "n": 3,
+  "grid": [
+   7,
+   7
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 8,
+  "shortest": 8,
+  "margin": 5.650012514872287,
+  "ln_paths_room": 1.791759469228055
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 4,
+  "n": 4,
+  "grid": [
+   8,
+   8
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 10,
+  "shortest": 10,
+  "margin": 4.4460397105463585,
+  "ln_paths_room": 2.995732273553991
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 4,
+  "n": 5,
+  "grid": [
+   9,
+   9
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 12,
+  "shortest": 12,
+  "margin": 3.1932767420509833,
+  "ln_paths_room": 4.248495242049359
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 4,
+  "n": 6,
+  "grid": [
+   10,
+   10
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 14,
+  "shortest": 14,
+  "margin": 1.9123428965889389,
+  "ln_paths_room": 5.529429087511423
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 4,
+  "n": 7,
+  "grid": [
+   11,
+   11
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 16,
+  "shortest": 16,
+  "margin": 0.6130599124586524,
+  "ln_paths_room": 6.828712071641684
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 4,
+  "n": 8,
+  "grid": [
+   12,
+   12
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "up",
+  "same": false,
+  "pointer_len": 18,
+  "shortest": 18,
+  "margin": -0.6991264765075016,
+  "ln_paths_room": 8.140898460607852
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 4,
+  "n": 9,
+  "grid": [
+   13,
+   13
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "up",
+  "same": false,
+  "pointer_len": 20,
+  "shortest": 20,
+  "margin": -2.0208823164897467,
+  "ln_paths_room": 9.462654300590172
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 4,
+  "n": 10,
+  "grid": [
+   14,
+   14
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "up",
+  "same": false,
+  "pointer_len": 22,
+  "shortest": 22,
+  "margin": -3.3500182637694707,
+  "ln_paths_room": 10.791790247870114
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 4,
+  "n": 12,
+  "grid": [
+   16,
+   16
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "up",
+  "same": false,
+  "pointer_len": 26,
+  "shortest": 26,
+  "margin": -6.024793675982096,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 5,
+  "n": 3,
+  "grid": [
+   7,
+   7
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 8,
+  "shortest": 8,
+  "margin": 9.485600970072483,
+  "ln_paths_room": 1.791759469228055
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 5,
+  "n": 4,
+  "grid": [
+   8,
+   8
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 10,
+  "shortest": 10,
+  "margin": 8.281628165746554,
+  "ln_paths_room": 2.995732273553991
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 5,
+  "n": 5,
+  "grid": [
+   9,
+   9
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 12,
+  "shortest": 12,
+  "margin": 7.028865197251179,
+  "ln_paths_room": 4.248495242049359
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 5,
+  "n": 6,
+  "grid": [
+   10,
+   10
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 14,
+  "shortest": 14,
+  "margin": 5.747931351789134,
+  "ln_paths_room": 5.529429087511423
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 5,
+  "n": 7,
+  "grid": [
+   11,
+   11
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 16,
+  "shortest": 16,
+  "margin": 4.448648367658848,
+  "ln_paths_room": 6.828712071641684
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 5,
+  "n": 8,
+  "grid": [
+   12,
+   12
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 18,
+  "shortest": 18,
+  "margin": 3.1364619786926937,
+  "ln_paths_room": 8.140898460607852
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 5,
+  "n": 9,
+  "grid": [
+   13,
+   13
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 20,
+  "shortest": 20,
+  "margin": 1.8147061387104486,
+  "ln_paths_room": 9.462654300590172
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 5,
+  "n": 10,
+  "grid": [
+   14,
+   14
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 22,
+  "shortest": 22,
+  "margin": 0.48557019143072466,
+  "ln_paths_room": 10.791790247870114
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 5,
+  "n": 12,
+  "grid": [
+   16,
+   16
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "right",
+  "same": false,
+  "pointer_len": 26,
+  "shortest": 26,
+  "margin": -2.1892052207819006,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 6,
+  "n": 3,
+  "grid": [
+   7,
+   7
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 8,
+  "shortest": 8,
+  "margin": -9.45247695656326,
+  "ln_paths_room": 1.791759469228055
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 6,
+  "n": 4,
+  "grid": [
+   8,
+   8
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 10,
+  "shortest": 10,
+  "margin": -10.656449760889188,
+  "ln_paths_room": 2.995732273553991
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 6,
+  "n": 5,
+  "grid": [
+   9,
+   9
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 12,
+  "shortest": 12,
+  "margin": -11.909212729384564,
+  "ln_paths_room": 4.248495242049359
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 6,
+  "n": 6,
+  "grid": [
+   10,
+   10
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 14,
+  "shortest": 14,
+  "margin": -13.190146574846608,
+  "ln_paths_room": 5.529429087511423
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 6,
+  "n": 7,
+  "grid": [
+   11,
+   11
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 16,
+  "shortest": 16,
+  "margin": -14.489429558976894,
+  "ln_paths_room": 6.828712071641684
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 6,
+  "n": 8,
+  "grid": [
+   12,
+   12
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 18,
+  "shortest": 18,
+  "margin": -15.801615947943048,
+  "ln_paths_room": 8.140898460607852
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 6,
+  "n": 9,
+  "grid": [
+   13,
+   13
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 20,
+  "shortest": 20,
+  "margin": -17.123371787925294,
+  "ln_paths_room": 9.462654300590172
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 6,
+  "n": 10,
+  "grid": [
+   14,
+   14
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 22,
+  "shortest": 22,
+  "margin": -18.452507735205018,
+  "ln_paths_room": 10.791790247870114
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 6,
+  "n": 12,
+  "grid": [
+   16,
+   16
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 26,
+  "shortest": 26,
+  "margin": -21.127283147417643,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 7,
+  "n": 3,
+  "grid": [
+   7,
+   7
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 8,
+  "shortest": 8,
+  "margin": -12.850174405293728,
+  "ln_paths_room": 1.791759469228055
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 7,
+  "n": 4,
+  "grid": [
+   8,
+   8
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 10,
+  "shortest": 10,
+  "margin": -14.054147209619657,
+  "ln_paths_room": 2.995732273553991
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 7,
+  "n": 5,
+  "grid": [
+   9,
+   9
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 12,
+  "shortest": 12,
+  "margin": -15.306910178115032,
+  "ln_paths_room": 4.248495242049359
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 7,
+  "n": 6,
+  "grid": [
+   10,
+   10
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 14,
+  "shortest": 14,
+  "margin": -16.587844023577077,
+  "ln_paths_room": 5.529429087511423
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 7,
+  "n": 7,
+  "grid": [
+   11,
+   11
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 16,
+  "shortest": 16,
+  "margin": -17.887127007707363,
+  "ln_paths_room": 6.828712071641684
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 7,
+  "n": 8,
+  "grid": [
+   12,
+   12
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 18,
+  "shortest": 18,
+  "margin": -19.199313396673517,
+  "ln_paths_room": 8.140898460607852
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 7,
+  "n": 9,
+  "grid": [
+   13,
+   13
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 20,
+  "shortest": 20,
+  "margin": -20.521069236655762,
+  "ln_paths_room": 9.462654300590172
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 7,
+  "n": 10,
+  "grid": [
+   14,
+   14
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 22,
+  "shortest": 22,
+  "margin": -21.850205183935486,
+  "ln_paths_room": 10.791790247870114
+ },
+ {
+  "seed": 0,
+  "extra": 0,
+  "sym": 7,
+  "n": 12,
+  "grid": [
+   16,
+   16
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 26,
+  "shortest": 26,
+  "margin": -24.52498059614811,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 0,
+  "n": 12,
+  "grid": [
+   16,
+   17
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 25,
+  "shortest": 25,
+  "margin": 33.67263919028119,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 0,
+  "n": 16,
+  "grid": [
+   20,
+   21
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 33,
+  "shortest": 33,
+  "margin": 28.279512680343714,
+  "ln_paths_room": 18.85969358114838
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 0,
+  "n": 18,
+  "grid": [
+   22,
+   23
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 37,
+  "shortest": 37,
+  "margin": 25.568525625586403,
+  "ln_paths_room": 21.5706806419239
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 0,
+  "n": 20,
+  "grid": [
+   24,
+   25
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 41,
+  "shortest": 41,
+  "margin": 22.850776027795746,
+  "ln_paths_room": 24.288430240114824
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 0,
+  "n": 22,
+  "grid": [
+   26,
+   27
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 45,
+  "shortest": 45,
+  "margin": 20.1276026651459,
+  "ln_paths_room": 27.011603602791254
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 0,
+  "n": 24,
+  "grid": [
+   28,
+   29
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 49,
+  "shortest": 49,
+  "margin": 17.399982367851408,
+  "ln_paths_room": 29.739223900087563
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 0,
+  "n": 26,
+  "grid": [
+   30,
+   31
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 53,
+  "shortest": 53,
+  "margin": 14.668649762127188,
+  "ln_paths_room": 32.47055650581199
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 1,
+  "n": 12,
+  "grid": [
+   17,
+   16
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 25,
+  "shortest": 25,
+  "margin": 14.734561263645446,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 1,
+  "n": 16,
+  "grid": [
+   21,
+   20
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 33,
+  "shortest": 33,
+  "margin": 9.341434753707972,
+  "ln_paths_room": 18.85969358114838
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 1,
+  "n": 18,
+  "grid": [
+   23,
+   22
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 37,
+  "shortest": 37,
+  "margin": 6.630447698950661,
+  "ln_paths_room": 21.5706806419239
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 1,
+  "n": 20,
+  "grid": [
+   25,
+   24
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 41,
+  "shortest": 41,
+  "margin": 3.9126981011600037,
+  "ln_paths_room": 24.288430240114824
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 1,
+  "n": 22,
+  "grid": [
+   27,
+   26
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 45,
+  "shortest": 45,
+  "margin": 1.1895247385101584,
+  "ln_paths_room": 27.011603602791254
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 1,
+  "n": 24,
+  "grid": [
+   29,
+   28
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "right",
+  "pointer_first": "down",
+  "same": false,
+  "pointer_len": 51,
+  "shortest": 49,
+  "margin": -1.5380955587843346,
+  "ln_paths_room": 29.739223900087563
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 1,
+  "n": 26,
+  "grid": [
+   31,
+   30
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "right",
+  "pointer_first": "down",
+  "same": false,
+  "pointer_len": 55,
+  "shortest": 53,
+  "margin": -4.269428164508554,
+  "ln_paths_room": 32.47055650581199
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 2,
+  "n": 12,
+  "grid": [
+   16,
+   17
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "up",
+  "pointer_first": "up",
+  "same": true,
+  "pointer_len": 25,
+  "shortest": 25,
+  "margin": 18.57014971884564,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 2,
+  "n": 16,
+  "grid": [
+   20,
+   21
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "up",
+  "pointer_first": "up",
+  "same": true,
+  "pointer_len": 33,
+  "shortest": 33,
+  "margin": 13.177023208908167,
+  "ln_paths_room": 18.85969358114838
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 2,
+  "n": 18,
+  "grid": [
+   22,
+   23
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "up",
+  "pointer_first": "up",
+  "same": true,
+  "pointer_len": 37,
+  "shortest": 37,
+  "margin": 10.466036154150856,
+  "ln_paths_room": 21.5706806419239
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 2,
+  "n": 20,
+  "grid": [
+   24,
+   25
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "up",
+  "pointer_first": "up",
+  "same": true,
+  "pointer_len": 41,
+  "shortest": 41,
+  "margin": 7.748286556360199,
+  "ln_paths_room": 24.288430240114824
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 2,
+  "n": 22,
+  "grid": [
+   26,
+   27
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "up",
+  "pointer_first": "up",
+  "same": true,
+  "pointer_len": 45,
+  "shortest": 45,
+  "margin": 5.025113193710354,
+  "ln_paths_room": 27.011603602791254
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 2,
+  "n": 24,
+  "grid": [
+   28,
+   29
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "up",
+  "pointer_first": "up",
+  "same": true,
+  "pointer_len": 49,
+  "shortest": 49,
+  "margin": 2.2974928964158607,
+  "ln_paths_room": 29.739223900087563
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 2,
+  "n": 26,
+  "grid": [
+   30,
+   31
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "up",
+  "pointer_first": "right",
+  "same": false,
+  "pointer_len": 55,
+  "shortest": 53,
+  "margin": -0.4338397093083586,
+  "ln_paths_room": 32.47055650581199
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 3,
+  "n": 12,
+  "grid": [
+   17,
+   16
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 25,
+  "shortest": 25,
+  "margin": 37.07033663901166,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 3,
+  "n": 16,
+  "grid": [
+   21,
+   20
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 33,
+  "shortest": 33,
+  "margin": 31.677210129074183,
+  "ln_paths_room": 18.85969358114838
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 3,
+  "n": 18,
+  "grid": [
+   23,
+   22
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 37,
+  "shortest": 37,
+  "margin": 28.966223074316872,
+  "ln_paths_room": 21.5706806419239
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 3,
+  "n": 20,
+  "grid": [
+   25,
+   24
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 41,
+  "shortest": 41,
+  "margin": 26.248473476526215,
+  "ln_paths_room": 24.288430240114824
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 3,
+  "n": 22,
+  "grid": [
+   27,
+   26
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 45,
+  "shortest": 45,
+  "margin": 23.52530011387637,
+  "ln_paths_room": 27.011603602791254
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 3,
+  "n": 24,
+  "grid": [
+   29,
+   28
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 49,
+  "shortest": 49,
+  "margin": 20.797679816581876,
+  "ln_paths_room": 29.739223900087563
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 3,
+  "n": 26,
+  "grid": [
+   31,
+   30
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 53,
+  "shortest": 53,
+  "margin": 18.066347210857657,
+  "ln_paths_room": 32.47055650581199
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 4,
+  "n": 12,
+  "grid": [
+   17,
+   16
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 25,
+  "shortest": 25,
+  "margin": 33.453693687046325,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 4,
+  "n": 16,
+  "grid": [
+   21,
+   20
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 33,
+  "shortest": 33,
+  "margin": 28.06056717710885,
+  "ln_paths_room": 18.85969358114838
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 4,
+  "n": 18,
+  "grid": [
+   23,
+   22
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 37,
+  "shortest": 37,
+  "margin": 25.34958012235154,
+  "ln_paths_room": 21.5706806419239
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 4,
+  "n": 20,
+  "grid": [
+   25,
+   24
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 41,
+  "shortest": 41,
+  "margin": 22.631830524560883,
+  "ln_paths_room": 24.288430240114824
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 4,
+  "n": 22,
+  "grid": [
+   27,
+   26
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 45,
+  "shortest": 45,
+  "margin": 19.908657161911037,
+  "ln_paths_room": 27.011603602791254
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 4,
+  "n": 24,
+  "grid": [
+   29,
+   28
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 49,
+  "shortest": 49,
+  "margin": 17.181036864616544,
+  "ln_paths_room": 29.739223900087563
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 4,
+  "n": 26,
+  "grid": [
+   31,
+   30
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 53,
+  "shortest": 53,
+  "margin": 14.449704258892325,
+  "ln_paths_room": 32.47055650581199
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 5,
+  "n": 12,
+  "grid": [
+   16,
+   17
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 25,
+  "shortest": 25,
+  "margin": 37.28928214224652,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 5,
+  "n": 16,
+  "grid": [
+   20,
+   21
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 33,
+  "shortest": 33,
+  "margin": 31.896155632309046,
+  "ln_paths_room": 18.85969358114838
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 5,
+  "n": 18,
+  "grid": [
+   22,
+   23
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 37,
+  "shortest": 37,
+  "margin": 29.185168577551735,
+  "ln_paths_room": 21.5706806419239
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 5,
+  "n": 20,
+  "grid": [
+   24,
+   25
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 41,
+  "shortest": 41,
+  "margin": 26.467418979761078,
+  "ln_paths_room": 24.288430240114824
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 5,
+  "n": 22,
+  "grid": [
+   26,
+   27
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 45,
+  "shortest": 45,
+  "margin": 23.744245617111233,
+  "ln_paths_room": 27.011603602791254
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 5,
+  "n": 24,
+  "grid": [
+   28,
+   29
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 49,
+  "shortest": 49,
+  "margin": 21.01662531981674,
+  "ln_paths_room": 29.739223900087563
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 5,
+  "n": 26,
+  "grid": [
+   30,
+   31
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 53,
+  "shortest": 53,
+  "margin": 18.28529271409252,
+  "ln_paths_room": 32.47055650581199
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 6,
+  "n": 12,
+  "grid": [
+   17,
+   16
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 25,
+  "shortest": 25,
+  "margin": 18.351204215610778,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 6,
+  "n": 16,
+  "grid": [
+   21,
+   20
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 33,
+  "shortest": 33,
+  "margin": 12.958077705673304,
+  "ln_paths_room": 18.85969358114838
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 6,
+  "n": 18,
+  "grid": [
+   23,
+   22
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 37,
+  "shortest": 37,
+  "margin": 10.247090650915993,
+  "ln_paths_room": 21.5706806419239
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 6,
+  "n": 20,
+  "grid": [
+   25,
+   24
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 41,
+  "shortest": 41,
+  "margin": 7.529341053125336,
+  "ln_paths_room": 24.288430240114824
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 6,
+  "n": 22,
+  "grid": [
+   27,
+   26
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 45,
+  "shortest": 45,
+  "margin": 4.80616769047549,
+  "ln_paths_room": 27.011603602791254
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 6,
+  "n": 24,
+  "grid": [
+   29,
+   28
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 49,
+  "shortest": 49,
+  "margin": 2.0785473931809975,
+  "ln_paths_room": 29.739223900087563
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 6,
+  "n": 26,
+  "grid": [
+   31,
+   30
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "left",
+  "pointer_first": "down",
+  "same": false,
+  "pointer_len": 55,
+  "shortest": 53,
+  "margin": -0.6527852125432219,
+  "ln_paths_room": 32.47055650581199
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 7,
+  "n": 12,
+  "grid": [
+   16,
+   17
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "up",
+  "pointer_first": "up",
+  "same": true,
+  "pointer_len": 25,
+  "shortest": 25,
+  "margin": 14.95350676688031,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 7,
+  "n": 16,
+  "grid": [
+   20,
+   21
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "up",
+  "pointer_first": "up",
+  "same": true,
+  "pointer_len": 33,
+  "shortest": 33,
+  "margin": 9.560380256942835,
+  "ln_paths_room": 18.85969358114838
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 7,
+  "n": 18,
+  "grid": [
+   22,
+   23
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "up",
+  "pointer_first": "up",
+  "same": true,
+  "pointer_len": 37,
+  "shortest": 37,
+  "margin": 6.849393202185524,
+  "ln_paths_room": 21.5706806419239
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 7,
+  "n": 20,
+  "grid": [
+   24,
+   25
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "up",
+  "pointer_first": "up",
+  "same": true,
+  "pointer_len": 41,
+  "shortest": 41,
+  "margin": 4.131643604394867,
+  "ln_paths_room": 24.288430240114824
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 7,
+  "n": 22,
+  "grid": [
+   26,
+   27
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "up",
+  "pointer_first": "up",
+  "same": true,
+  "pointer_len": 45,
+  "shortest": 45,
+  "margin": 1.4084702417450217,
+  "ln_paths_room": 27.011603602791254
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 7,
+  "n": 24,
+  "grid": [
+   28,
+   29
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "up",
+  "pointer_first": "left",
+  "same": false,
+  "pointer_len": 51,
+  "shortest": 49,
+  "margin": -1.3191500555494713,
+  "ln_paths_room": 29.739223900087563
+ },
+ {
+  "seed": 0,
+  "extra": 2,
+  "sym": 7,
+  "n": 26,
+  "grid": [
+   30,
+   31
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "up",
+  "pointer_first": "left",
+  "same": false,
+  "pointer_len": 55,
+  "shortest": 53,
+  "margin": -4.050482661273691,
+  "ln_paths_room": 32.47055650581199
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 0,
+  "n": 3,
+  "grid": [
+   7,
+   7
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 8,
+  "shortest": 8,
+  "margin": 5.879974148554538,
+  "ln_paths_room": 1.791759469228055
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 0,
+  "n": 4,
+  "grid": [
+   8,
+   8
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 10,
+  "shortest": 10,
+  "margin": 4.6760013442286095,
+  "ln_paths_room": 2.995732273553991
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 0,
+  "n": 5,
+  "grid": [
+   9,
+   9
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 12,
+  "shortest": 12,
+  "margin": 3.4232383757332343,
+  "ln_paths_room": 4.248495242049359
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 0,
+  "n": 6,
+  "grid": [
+   10,
+   10
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 14,
+  "shortest": 14,
+  "margin": 2.14230453027119,
+  "ln_paths_room": 5.529429087511423
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 0,
+  "n": 7,
+  "grid": [
+   11,
+   11
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 16,
+  "shortest": 16,
+  "margin": 0.8430215461409034,
+  "ln_paths_room": 6.828712071641684
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 0,
+  "n": 8,
+  "grid": [
+   12,
+   12
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "left",
+  "same": false,
+  "pointer_len": 18,
+  "shortest": 18,
+  "margin": -0.4691648428252506,
+  "ln_paths_room": 8.140898460607852
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 0,
+  "n": 9,
+  "grid": [
+   13,
+   13
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "left",
+  "same": false,
+  "pointer_len": 20,
+  "shortest": 20,
+  "margin": -1.7909206828075526,
+  "ln_paths_room": 9.462654300590172
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 0,
+  "n": 10,
+  "grid": [
+   14,
+   14
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "left",
+  "same": false,
+  "pointer_len": 22,
+  "shortest": 22,
+  "margin": -3.1200566300872765,
+  "ln_paths_room": 10.791790247870114
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 0,
+  "n": 12,
+  "grid": [
+   16,
+   16
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "left",
+  "same": false,
+  "pointer_len": 26,
+  "shortest": 26,
+  "margin": -5.79483204230047,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 1,
+  "n": 3,
+  "grid": [
+   7,
+   7
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 8,
+  "shortest": 8,
+  "margin": -13.06244883747604,
+  "ln_paths_room": 1.791759469228055
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 1,
+  "n": 4,
+  "grid": [
+   8,
+   8
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 10,
+  "shortest": 10,
+  "margin": -14.26642164180197,
+  "ln_paths_room": 2.995732273553991
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 1,
+  "n": 5,
+  "grid": [
+   9,
+   9
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 12,
+  "shortest": 12,
+  "margin": -15.519184610297344,
+  "ln_paths_room": 4.248495242049359
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 1,
+  "n": 6,
+  "grid": [
+   10,
+   10
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 14,
+  "shortest": 14,
+  "margin": -16.80011845575939,
+  "ln_paths_room": 5.529429087511423
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 1,
+  "n": 7,
+  "grid": [
+   11,
+   11
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 16,
+  "shortest": 16,
+  "margin": -18.099401439889675,
+  "ln_paths_room": 6.828712071641684
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 1,
+  "n": 8,
+  "grid": [
+   12,
+   12
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 18,
+  "shortest": 18,
+  "margin": -19.41158782885583,
+  "ln_paths_room": 8.140898460607852
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 1,
+  "n": 9,
+  "grid": [
+   13,
+   13
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 20,
+  "shortest": 20,
+  "margin": -20.73334366883813,
+  "ln_paths_room": 9.462654300590172
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 1,
+  "n": 10,
+  "grid": [
+   14,
+   14
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 22,
+  "shortest": 22,
+  "margin": -22.062479616117855,
+  "ln_paths_room": 10.791790247870114
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 1,
+  "n": 12,
+  "grid": [
+   16,
+   16
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 26,
+  "shortest": 26,
+  "margin": -24.73725502833105,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 2,
+  "n": 3,
+  "grid": [
+   7,
+   7
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 8,
+  "shortest": 8,
+  "margin": -9.237825014310147,
+  "ln_paths_room": 1.791759469228055
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 2,
+  "n": 4,
+  "grid": [
+   8,
+   8
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 10,
+  "shortest": 10,
+  "margin": -10.441797818636076,
+  "ln_paths_room": 2.995732273553991
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 2,
+  "n": 5,
+  "grid": [
+   9,
+   9
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 12,
+  "shortest": 12,
+  "margin": -11.69456078713145,
+  "ln_paths_room": 4.248495242049359
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 2,
+  "n": 6,
+  "grid": [
+   10,
+   10
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 14,
+  "shortest": 14,
+  "margin": -12.975494632593495,
+  "ln_paths_room": 5.529429087511423
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 2,
+  "n": 7,
+  "grid": [
+   11,
+   11
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 16,
+  "shortest": 16,
+  "margin": -14.274777616723782,
+  "ln_paths_room": 6.828712071641684
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 2,
+  "n": 8,
+  "grid": [
+   12,
+   12
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 18,
+  "shortest": 18,
+  "margin": -15.586964005689936,
+  "ln_paths_room": 8.140898460607852
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 2,
+  "n": 9,
+  "grid": [
+   13,
+   13
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 20,
+  "shortest": 20,
+  "margin": -16.908719845672238,
+  "ln_paths_room": 9.462654300590172
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 2,
+  "n": 10,
+  "grid": [
+   14,
+   14
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 22,
+  "shortest": 22,
+  "margin": -18.23785579295196,
+  "ln_paths_room": 10.791790247870114
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 2,
+  "n": 12,
+  "grid": [
+   16,
+   16
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 26,
+  "shortest": 26,
+  "margin": -20.912631205165155,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 3,
+  "n": 3,
+  "grid": [
+   7,
+   7
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 8,
+  "shortest": 8,
+  "margin": 9.25326182631943,
+  "ln_paths_room": 1.791759469228055
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 3,
+  "n": 4,
+  "grid": [
+   8,
+   8
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 10,
+  "shortest": 10,
+  "margin": 8.049289021993502,
+  "ln_paths_room": 2.995732273553991
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 3,
+  "n": 5,
+  "grid": [
+   9,
+   9
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 12,
+  "shortest": 12,
+  "margin": 6.796526053498127,
+  "ln_paths_room": 4.248495242049359
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 3,
+  "n": 6,
+  "grid": [
+   10,
+   10
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 14,
+  "shortest": 14,
+  "margin": 5.515592208036082,
+  "ln_paths_room": 5.529429087511423
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 3,
+  "n": 7,
+  "grid": [
+   11,
+   11
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 16,
+  "shortest": 16,
+  "margin": 4.216309223905796,
+  "ln_paths_room": 6.828712071641684
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 3,
+  "n": 8,
+  "grid": [
+   12,
+   12
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 18,
+  "shortest": 18,
+  "margin": 2.904122834939642,
+  "ln_paths_room": 8.140898460607852
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 3,
+  "n": 9,
+  "grid": [
+   13,
+   13
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 20,
+  "shortest": 20,
+  "margin": 1.58236699495734,
+  "ln_paths_room": 9.462654300590172
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 3,
+  "n": 10,
+  "grid": [
+   14,
+   14
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 22,
+  "shortest": 22,
+  "margin": 0.25323104767761606,
+  "ln_paths_room": 10.791790247870114
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 3,
+  "n": 12,
+  "grid": [
+   16,
+   16
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "up",
+  "same": false,
+  "pointer_len": 26,
+  "shortest": 26,
+  "margin": -2.4215443645355776,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 4,
+  "n": 3,
+  "grid": [
+   7,
+   7
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 8,
+  "shortest": 8,
+  "margin": 5.654306075854038,
+  "ln_paths_room": 1.791759469228055
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 4,
+  "n": 4,
+  "grid": [
+   8,
+   8
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 10,
+  "shortest": 10,
+  "margin": 4.450333271528109,
+  "ln_paths_room": 2.995732273553991
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 4,
+  "n": 5,
+  "grid": [
+   9,
+   9
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 12,
+  "shortest": 12,
+  "margin": 3.197570303032734,
+  "ln_paths_room": 4.248495242049359
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 4,
+  "n": 6,
+  "grid": [
+   10,
+   10
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 14,
+  "shortest": 14,
+  "margin": 1.9166364575706893,
+  "ln_paths_room": 5.529429087511423
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 4,
+  "n": 7,
+  "grid": [
+   11,
+   11
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 16,
+  "shortest": 16,
+  "margin": 0.6173534734404029,
+  "ln_paths_room": 6.828712071641684
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 4,
+  "n": 8,
+  "grid": [
+   12,
+   12
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "up",
+  "same": false,
+  "pointer_len": 18,
+  "shortest": 18,
+  "margin": -0.6948329155257511,
+  "ln_paths_room": 8.140898460607852
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 4,
+  "n": 9,
+  "grid": [
+   13,
+   13
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "up",
+  "same": false,
+  "pointer_len": 20,
+  "shortest": 20,
+  "margin": -2.016588755508053,
+  "ln_paths_room": 9.462654300590172
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 4,
+  "n": 10,
+  "grid": [
+   14,
+   14
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "up",
+  "same": false,
+  "pointer_len": 22,
+  "shortest": 22,
+  "margin": -3.345724702787777,
+  "ln_paths_room": 10.791790247870114
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 4,
+  "n": 12,
+  "grid": [
+   16,
+   16
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "up",
+  "same": false,
+  "pointer_len": 26,
+  "shortest": 26,
+  "margin": -6.020500115000971,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 5,
+  "n": 3,
+  "grid": [
+   7,
+   7
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 8,
+  "shortest": 8,
+  "margin": 9.478929899019931,
+  "ln_paths_room": 1.791759469228055
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 5,
+  "n": 4,
+  "grid": [
+   8,
+   8
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 10,
+  "shortest": 10,
+  "margin": 8.274957094694003,
+  "ln_paths_room": 2.995732273553991
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 5,
+  "n": 5,
+  "grid": [
+   9,
+   9
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 12,
+  "shortest": 12,
+  "margin": 7.022194126198627,
+  "ln_paths_room": 4.248495242049359
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 5,
+  "n": 6,
+  "grid": [
+   10,
+   10
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 14,
+  "shortest": 14,
+  "margin": 5.741260280736583,
+  "ln_paths_room": 5.529429087511423
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 5,
+  "n": 7,
+  "grid": [
+   11,
+   11
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 16,
+  "shortest": 16,
+  "margin": 4.4419772966062965,
+  "ln_paths_room": 6.828712071641684
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 5,
+  "n": 8,
+  "grid": [
+   12,
+   12
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 18,
+  "shortest": 18,
+  "margin": 3.1297909076401424,
+  "ln_paths_room": 8.140898460607852
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 5,
+  "n": 9,
+  "grid": [
+   13,
+   13
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 20,
+  "shortest": 20,
+  "margin": 1.8080350676578405,
+  "ln_paths_room": 9.462654300590172
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 5,
+  "n": 10,
+  "grid": [
+   14,
+   14
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 22,
+  "shortest": 22,
+  "margin": 0.47889912037811655,
+  "ln_paths_room": 10.791790247870114
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 5,
+  "n": 12,
+  "grid": [
+   16,
+   16
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "right",
+  "same": false,
+  "pointer_len": 26,
+  "shortest": 26,
+  "margin": -2.195876291835077,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 6,
+  "n": 3,
+  "grid": [
+   7,
+   7
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 8,
+  "shortest": 8,
+  "margin": -9.463493087010647,
+  "ln_paths_room": 1.791759469228055
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 6,
+  "n": 4,
+  "grid": [
+   8,
+   8
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 10,
+  "shortest": 10,
+  "margin": -10.667465891336576,
+  "ln_paths_room": 2.995732273553991
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 6,
+  "n": 5,
+  "grid": [
+   9,
+   9
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 12,
+  "shortest": 12,
+  "margin": -11.920228859831951,
+  "ln_paths_room": 4.248495242049359
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 6,
+  "n": 6,
+  "grid": [
+   10,
+   10
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 14,
+  "shortest": 14,
+  "margin": -13.201162705293996,
+  "ln_paths_room": 5.529429087511423
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 6,
+  "n": 7,
+  "grid": [
+   11,
+   11
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 16,
+  "shortest": 16,
+  "margin": -14.500445689424282,
+  "ln_paths_room": 6.828712071641684
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 6,
+  "n": 8,
+  "grid": [
+   12,
+   12
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 18,
+  "shortest": 18,
+  "margin": -15.812632078390436,
+  "ln_paths_room": 8.140898460607852
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 6,
+  "n": 9,
+  "grid": [
+   13,
+   13
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 20,
+  "shortest": 20,
+  "margin": -17.134387918372738,
+  "ln_paths_room": 9.462654300590172
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 6,
+  "n": 10,
+  "grid": [
+   14,
+   14
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 22,
+  "shortest": 22,
+  "margin": -18.463523865652462,
+  "ln_paths_room": 10.791790247870114
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 6,
+  "n": 12,
+  "grid": [
+   16,
+   16
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 26,
+  "shortest": 26,
+  "margin": -21.138299277865656,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 7,
+  "n": 3,
+  "grid": [
+   7,
+   7
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 8,
+  "shortest": 8,
+  "margin": -12.83678076477554,
+  "ln_paths_room": 1.791759469228055
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 7,
+  "n": 4,
+  "grid": [
+   8,
+   8
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 10,
+  "shortest": 10,
+  "margin": -14.040753569101469,
+  "ln_paths_room": 2.995732273553991
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 7,
+  "n": 5,
+  "grid": [
+   9,
+   9
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 12,
+  "shortest": 12,
+  "margin": -15.293516537596844,
+  "ln_paths_room": 4.248495242049359
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 7,
+  "n": 6,
+  "grid": [
+   10,
+   10
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 14,
+  "shortest": 14,
+  "margin": -16.57445038305889,
+  "ln_paths_room": 5.529429087511423
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 7,
+  "n": 7,
+  "grid": [
+   11,
+   11
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 16,
+  "shortest": 16,
+  "margin": -17.873733367189175,
+  "ln_paths_room": 6.828712071641684
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 7,
+  "n": 8,
+  "grid": [
+   12,
+   12
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 18,
+  "shortest": 18,
+  "margin": -19.18591975615533,
+  "ln_paths_room": 8.140898460607852
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 7,
+  "n": 9,
+  "grid": [
+   13,
+   13
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 20,
+  "shortest": 20,
+  "margin": -20.50767559613763,
+  "ln_paths_room": 9.462654300590172
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 7,
+  "n": 10,
+  "grid": [
+   14,
+   14
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 22,
+  "shortest": 22,
+  "margin": -21.836811543417355,
+  "ln_paths_room": 10.791790247870114
+ },
+ {
+  "seed": 1,
+  "extra": 0,
+  "sym": 7,
+  "n": 12,
+  "grid": [
+   16,
+   16
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 26,
+  "shortest": 26,
+  "margin": -24.51158695563055,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 0,
+  "n": 12,
+  "grid": [
+   16,
+   17
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 25,
+  "shortest": 25,
+  "margin": 33.81234419633023,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 0,
+  "n": 16,
+  "grid": [
+   20,
+   21
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 33,
+  "shortest": 33,
+  "margin": 28.419217686392585,
+  "ln_paths_room": 18.85969358114838
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 0,
+  "n": 18,
+  "grid": [
+   22,
+   23
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 37,
+  "shortest": 37,
+  "margin": 25.70823063163516,
+  "ln_paths_room": 21.5706806419239
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 0,
+  "n": 20,
+  "grid": [
+   24,
+   25
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 41,
+  "shortest": 41,
+  "margin": 22.990481033844162,
+  "ln_paths_room": 24.288430240114824
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 0,
+  "n": 22,
+  "grid": [
+   26,
+   27
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 45,
+  "shortest": 45,
+  "margin": 20.26730767119443,
+  "ln_paths_room": 27.011603602791254
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 0,
+  "n": 24,
+  "grid": [
+   28,
+   29
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 49,
+  "shortest": 49,
+  "margin": 17.53968737389937,
+  "ln_paths_room": 29.739223900087563
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 0,
+  "n": 26,
+  "grid": [
+   30,
+   31
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 53,
+  "shortest": 53,
+  "margin": 14.80835476817515,
+  "ln_paths_room": 32.47055650581199
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 1,
+  "n": 12,
+  "grid": [
+   17,
+   16
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 25,
+  "shortest": 25,
+  "margin": 14.869921210299651,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 1,
+  "n": 16,
+  "grid": [
+   21,
+   20
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 33,
+  "shortest": 33,
+  "margin": 9.476794700362007,
+  "ln_paths_room": 18.85969358114838
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 1,
+  "n": 18,
+  "grid": [
+   23,
+   22
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 37,
+  "shortest": 37,
+  "margin": 6.765807645604582,
+  "ln_paths_room": 21.5706806419239
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 1,
+  "n": 20,
+  "grid": [
+   25,
+   24
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 41,
+  "shortest": 41,
+  "margin": 4.0480580478135835,
+  "ln_paths_room": 24.288430240114824
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 1,
+  "n": 22,
+  "grid": [
+   27,
+   26
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 45,
+  "shortest": 45,
+  "margin": 1.3248846851638518,
+  "ln_paths_room": 27.011603602791254
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 1,
+  "n": 24,
+  "grid": [
+   29,
+   28
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "right",
+  "pointer_first": "down",
+  "same": false,
+  "pointer_len": 51,
+  "shortest": 49,
+  "margin": -1.4027356121312096,
+  "ln_paths_room": 29.739223900087563
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 1,
+  "n": 26,
+  "grid": [
+   31,
+   30
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "right",
+  "pointer_first": "down",
+  "same": false,
+  "pointer_len": 55,
+  "shortest": 53,
+  "margin": -4.134068217855429,
+  "ln_paths_room": 32.47055650581199
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 2,
+  "n": 12,
+  "grid": [
+   16,
+   17
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "up",
+  "pointer_first": "up",
+  "same": true,
+  "pointer_len": 25,
+  "shortest": 25,
+  "margin": 18.694545033465545,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 2,
+  "n": 16,
+  "grid": [
+   20,
+   21
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "up",
+  "pointer_first": "up",
+  "same": true,
+  "pointer_len": 33,
+  "shortest": 33,
+  "margin": 13.3014185235279,
+  "ln_paths_room": 18.85969358114838
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 2,
+  "n": 18,
+  "grid": [
+   22,
+   23
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "up",
+  "pointer_first": "up",
+  "same": true,
+  "pointer_len": 37,
+  "shortest": 37,
+  "margin": 10.590431468770475,
+  "ln_paths_room": 21.5706806419239
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 2,
+  "n": 20,
+  "grid": [
+   24,
+   25
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "up",
+  "pointer_first": "up",
+  "same": true,
+  "pointer_len": 41,
+  "shortest": 41,
+  "margin": 7.872681870979477,
+  "ln_paths_room": 24.288430240114824
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 2,
+  "n": 22,
+  "grid": [
+   26,
+   27
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "up",
+  "pointer_first": "up",
+  "same": true,
+  "pointer_len": 45,
+  "shortest": 45,
+  "margin": 5.149508508329745,
+  "ln_paths_room": 27.011603602791254
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 2,
+  "n": 24,
+  "grid": [
+   28,
+   29
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "up",
+  "pointer_first": "up",
+  "same": true,
+  "pointer_len": 49,
+  "shortest": 49,
+  "margin": 2.421888211034684,
+  "ln_paths_room": 29.739223900087563
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 2,
+  "n": 26,
+  "grid": [
+   30,
+   31
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "up",
+  "pointer_first": "right",
+  "same": false,
+  "pointer_len": 55,
+  "shortest": 53,
+  "margin": -0.30944439468953533,
+  "ln_paths_room": 32.47055650581199
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 3,
+  "n": 12,
+  "grid": [
+   17,
+   16
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 25,
+  "shortest": 25,
+  "margin": 37.18563187409512,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 3,
+  "n": 16,
+  "grid": [
+   21,
+   20
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 33,
+  "shortest": 33,
+  "margin": 31.792505364157478,
+  "ln_paths_room": 18.85969358114838
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 3,
+  "n": 18,
+  "grid": [
+   23,
+   22
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 37,
+  "shortest": 37,
+  "margin": 29.081518309400053,
+  "ln_paths_room": 21.5706806419239
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 3,
+  "n": 20,
+  "grid": [
+   25,
+   24
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 41,
+  "shortest": 41,
+  "margin": 26.363768711609055,
+  "ln_paths_room": 24.288430240114824
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 3,
+  "n": 22,
+  "grid": [
+   27,
+   26
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 45,
+  "shortest": 45,
+  "margin": 23.640595348959323,
+  "ln_paths_room": 27.011603602791254
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 3,
+  "n": 24,
+  "grid": [
+   29,
+   28
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 49,
+  "shortest": 49,
+  "margin": 20.91297505166426,
+  "ln_paths_room": 29.739223900087563
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 3,
+  "n": 26,
+  "grid": [
+   31,
+   30
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 53,
+  "shortest": 53,
+  "margin": 18.181642445940042,
+  "ln_paths_room": 32.47055650581199
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 4,
+  "n": 12,
+  "grid": [
+   17,
+   16
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 25,
+  "shortest": 25,
+  "margin": 33.58667612362973,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 4,
+  "n": 16,
+  "grid": [
+   21,
+   20
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 33,
+  "shortest": 33,
+  "margin": 28.193549613692085,
+  "ln_paths_room": 18.85969358114838
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 4,
+  "n": 18,
+  "grid": [
+   23,
+   22
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 37,
+  "shortest": 37,
+  "margin": 25.48256255893466,
+  "ln_paths_room": 21.5706806419239
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 4,
+  "n": 20,
+  "grid": [
+   25,
+   24
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 41,
+  "shortest": 41,
+  "margin": 22.76481296114366,
+  "ln_paths_room": 24.288430240114824
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 4,
+  "n": 22,
+  "grid": [
+   27,
+   26
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 45,
+  "shortest": 45,
+  "margin": 20.04163959849393,
+  "ln_paths_room": 27.011603602791254
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 4,
+  "n": 24,
+  "grid": [
+   29,
+   28
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 49,
+  "shortest": 49,
+  "margin": 17.31401930119887,
+  "ln_paths_room": 29.739223900087563
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 4,
+  "n": 26,
+  "grid": [
+   31,
+   30
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 53,
+  "shortest": 53,
+  "margin": 14.58268669547465,
+  "ln_paths_room": 32.47055650581199
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 5,
+  "n": 12,
+  "grid": [
+   16,
+   17
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 25,
+  "shortest": 25,
+  "margin": 37.41129994679562,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 5,
+  "n": 16,
+  "grid": [
+   20,
+   21
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 33,
+  "shortest": 33,
+  "margin": 32.01817343685798,
+  "ln_paths_room": 18.85969358114838
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 5,
+  "n": 18,
+  "grid": [
+   22,
+   23
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 37,
+  "shortest": 37,
+  "margin": 29.307186382100554,
+  "ln_paths_room": 21.5706806419239
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 5,
+  "n": 20,
+  "grid": [
+   24,
+   25
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 41,
+  "shortest": 41,
+  "margin": 26.589436784309555,
+  "ln_paths_room": 24.288430240114824
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 5,
+  "n": 22,
+  "grid": [
+   26,
+   27
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 45,
+  "shortest": 45,
+  "margin": 23.866263421659824,
+  "ln_paths_room": 27.011603602791254
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 5,
+  "n": 24,
+  "grid": [
+   28,
+   29
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 49,
+  "shortest": 49,
+  "margin": 21.138643124364762,
+  "ln_paths_room": 29.739223900087563
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 5,
+  "n": 26,
+  "grid": [
+   30,
+   31
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 53,
+  "shortest": 53,
+  "margin": 18.407310518640543,
+  "ln_paths_room": 32.47055650581199
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 6,
+  "n": 12,
+  "grid": [
+   17,
+   16
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 25,
+  "shortest": 25,
+  "margin": 18.468876960765044,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 6,
+  "n": 16,
+  "grid": [
+   21,
+   20
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 33,
+  "shortest": 33,
+  "margin": 13.0757504508274,
+  "ln_paths_room": 18.85969358114838
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 6,
+  "n": 18,
+  "grid": [
+   23,
+   22
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 37,
+  "shortest": 37,
+  "margin": 10.364763396069975,
+  "ln_paths_room": 21.5706806419239
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 6,
+  "n": 20,
+  "grid": [
+   25,
+   24
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 41,
+  "shortest": 41,
+  "margin": 7.6470137982789765,
+  "ln_paths_room": 24.288430240114824
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 6,
+  "n": 22,
+  "grid": [
+   27,
+   26
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 45,
+  "shortest": 45,
+  "margin": 4.923840435629245,
+  "ln_paths_room": 27.011603602791254
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 6,
+  "n": 24,
+  "grid": [
+   29,
+   28
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 49,
+  "shortest": 49,
+  "margin": 2.1962201383341835,
+  "ln_paths_room": 29.739223900087563
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 6,
+  "n": 26,
+  "grid": [
+   31,
+   30
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "left",
+  "pointer_first": "down",
+  "same": false,
+  "pointer_len": 55,
+  "shortest": 53,
+  "margin": -0.5351124673900358,
+  "ln_paths_room": 32.47055650581199
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 7,
+  "n": 12,
+  "grid": [
+   16,
+   17
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "up",
+  "pointer_first": "up",
+  "same": true,
+  "pointer_len": 25,
+  "shortest": 25,
+  "margin": 15.095589283000152,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 7,
+  "n": 16,
+  "grid": [
+   20,
+   21
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "up",
+  "pointer_first": "up",
+  "same": true,
+  "pointer_len": 33,
+  "shortest": 33,
+  "margin": 9.702462773062507,
+  "ln_paths_room": 18.85969358114838
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 7,
+  "n": 18,
+  "grid": [
+   22,
+   23
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "up",
+  "pointer_first": "up",
+  "same": true,
+  "pointer_len": 37,
+  "shortest": 37,
+  "margin": 6.991475718305082,
+  "ln_paths_room": 21.5706806419239
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 7,
+  "n": 20,
+  "grid": [
+   24,
+   25
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "up",
+  "pointer_first": "up",
+  "same": true,
+  "pointer_len": 41,
+  "shortest": 41,
+  "margin": 4.273726120514084,
+  "ln_paths_room": 24.288430240114824
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 7,
+  "n": 22,
+  "grid": [
+   26,
+   27
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "up",
+  "pointer_first": "up",
+  "same": true,
+  "pointer_len": 45,
+  "shortest": 45,
+  "margin": 1.5505527578643523,
+  "ln_paths_room": 27.011603602791254
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 7,
+  "n": 24,
+  "grid": [
+   28,
+   29
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "up",
+  "pointer_first": "left",
+  "same": false,
+  "pointer_len": 51,
+  "shortest": 49,
+  "margin": -1.177067539430709,
+  "ln_paths_room": 29.739223900087563
+ },
+ {
+  "seed": 1,
+  "extra": 2,
+  "sym": 7,
+  "n": 26,
+  "grid": [
+   30,
+   31
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "up",
+  "pointer_first": "left",
+  "same": false,
+  "pointer_len": 55,
+  "shortest": 53,
+  "margin": -3.9084001451549284,
+  "ln_paths_room": 32.47055650581199
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 0,
+  "n": 3,
+  "grid": [
+   7,
+   7
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 8,
+  "shortest": 8,
+  "margin": 5.888015649599765,
+  "ln_paths_room": 1.791759469228055
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 0,
+  "n": 4,
+  "grid": [
+   8,
+   8
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 10,
+  "shortest": 10,
+  "margin": 4.6840428452738365,
+  "ln_paths_room": 2.995732273553991
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 0,
+  "n": 5,
+  "grid": [
+   9,
+   9
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 12,
+  "shortest": 12,
+  "margin": 3.4312798767784614,
+  "ln_paths_room": 4.248495242049359
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 0,
+  "n": 6,
+  "grid": [
+   10,
+   10
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 14,
+  "shortest": 14,
+  "margin": 2.15034603131636,
+  "ln_paths_room": 5.529429087511423
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 0,
+  "n": 7,
+  "grid": [
+   11,
+   11
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 16,
+  "shortest": 16,
+  "margin": 0.8510630471861305,
+  "ln_paths_room": 6.828712071641684
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 0,
+  "n": 8,
+  "grid": [
+   12,
+   12
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "left",
+  "same": false,
+  "pointer_len": 18,
+  "shortest": 18,
+  "margin": -0.4611233417799667,
+  "ln_paths_room": 8.140898460607852
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 0,
+  "n": 9,
+  "grid": [
+   13,
+   13
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "left",
+  "same": false,
+  "pointer_len": 20,
+  "shortest": 20,
+  "margin": -1.7828791817622687,
+  "ln_paths_room": 9.462654300590172
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 0,
+  "n": 10,
+  "grid": [
+   14,
+   14
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "left",
+  "same": false,
+  "pointer_len": 22,
+  "shortest": 22,
+  "margin": -3.112015129041936,
+  "ln_paths_room": 10.791790247870114
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 0,
+  "n": 12,
+  "grid": [
+   16,
+   16
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "left",
+  "same": false,
+  "pointer_len": 26,
+  "shortest": 26,
+  "margin": -5.786790541253822,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 1,
+  "n": 3,
+  "grid": [
+   7,
+   7
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 8,
+  "shortest": 8,
+  "margin": -12.998415329175259,
+  "ln_paths_room": 1.791759469228055
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 1,
+  "n": 4,
+  "grid": [
+   8,
+   8
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 10,
+  "shortest": 10,
+  "margin": -14.202388133501188,
+  "ln_paths_room": 2.995732273553991
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 1,
+  "n": 5,
+  "grid": [
+   9,
+   9
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 12,
+  "shortest": 12,
+  "margin": -15.455151101996563,
+  "ln_paths_room": 4.248495242049359
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 1,
+  "n": 6,
+  "grid": [
+   10,
+   10
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 14,
+  "shortest": 14,
+  "margin": -16.736084947458664,
+  "ln_paths_room": 5.529429087511423
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 1,
+  "n": 7,
+  "grid": [
+   11,
+   11
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 16,
+  "shortest": 16,
+  "margin": -18.035367931588894,
+  "ln_paths_room": 6.828712071641684
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 1,
+  "n": 8,
+  "grid": [
+   12,
+   12
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 18,
+  "shortest": 18,
+  "margin": -19.34755432055499,
+  "ln_paths_room": 8.140898460607852
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 1,
+  "n": 9,
+  "grid": [
+   13,
+   13
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 20,
+  "shortest": 20,
+  "margin": -20.669310160537293,
+  "ln_paths_room": 9.462654300590172
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 1,
+  "n": 10,
+  "grid": [
+   14,
+   14
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 22,
+  "shortest": 22,
+  "margin": -21.99844610781696,
+  "ln_paths_room": 10.791790247870114
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 1,
+  "n": 12,
+  "grid": [
+   16,
+   16
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 26,
+  "shortest": 26,
+  "margin": -24.673221520028846,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 2,
+  "n": 3,
+  "grid": [
+   7,
+   7
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 8,
+  "shortest": 8,
+  "margin": -9.271712877469326,
+  "ln_paths_room": 1.791759469228055
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 2,
+  "n": 4,
+  "grid": [
+   8,
+   8
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 10,
+  "shortest": 10,
+  "margin": -10.475685681795255,
+  "ln_paths_room": 2.995732273553991
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 2,
+  "n": 5,
+  "grid": [
+   9,
+   9
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 12,
+  "shortest": 12,
+  "margin": -11.72844865029063,
+  "ln_paths_room": 4.248495242049359
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 2,
+  "n": 6,
+  "grid": [
+   10,
+   10
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 14,
+  "shortest": 14,
+  "margin": -13.009382495752732,
+  "ln_paths_room": 5.529429087511423
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 2,
+  "n": 7,
+  "grid": [
+   11,
+   11
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 16,
+  "shortest": 16,
+  "margin": -14.308665479882961,
+  "ln_paths_room": 6.828712071641684
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 2,
+  "n": 8,
+  "grid": [
+   12,
+   12
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 18,
+  "shortest": 18,
+  "margin": -15.620851868849059,
+  "ln_paths_room": 8.140898460607852
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 2,
+  "n": 9,
+  "grid": [
+   13,
+   13
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 20,
+  "shortest": 20,
+  "margin": -16.94260770883136,
+  "ln_paths_room": 9.462654300590172
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 2,
+  "n": 10,
+  "grid": [
+   14,
+   14
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 22,
+  "shortest": 22,
+  "margin": -18.271743656111028,
+  "ln_paths_room": 10.791790247870114
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 2,
+  "n": 12,
+  "grid": [
+   16,
+   16
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 26,
+  "shortest": 26,
+  "margin": -20.946519068322914,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 3,
+  "n": 3,
+  "grid": [
+   7,
+   7
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 8,
+  "shortest": 8,
+  "margin": 9.215074680132602,
+  "ln_paths_room": 1.791759469228055
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 3,
+  "n": 4,
+  "grid": [
+   8,
+   8
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 10,
+  "shortest": 10,
+  "margin": 8.011101875806673,
+  "ln_paths_room": 2.995732273553991
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 3,
+  "n": 5,
+  "grid": [
+   9,
+   9
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 12,
+  "shortest": 12,
+  "margin": 6.758338907311298,
+  "ln_paths_room": 4.248495242049359
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 3,
+  "n": 6,
+  "grid": [
+   10,
+   10
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 14,
+  "shortest": 14,
+  "margin": 5.477405061849197,
+  "ln_paths_room": 5.529429087511423
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 3,
+  "n": 7,
+  "grid": [
+   11,
+   11
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 16,
+  "shortest": 16,
+  "margin": 4.178122077718967,
+  "ln_paths_room": 6.828712071641684
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 3,
+  "n": 8,
+  "grid": [
+   12,
+   12
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 18,
+  "shortest": 18,
+  "margin": 2.86593568875287,
+  "ln_paths_room": 8.140898460607852
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 3,
+  "n": 9,
+  "grid": [
+   13,
+   13
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 20,
+  "shortest": 20,
+  "margin": 1.5441798487705682,
+  "ln_paths_room": 9.462654300590172
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 3,
+  "n": 10,
+  "grid": [
+   14,
+   14
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 22,
+  "shortest": 22,
+  "margin": 0.21504390149090113,
+  "ln_paths_room": 10.791790247870114
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 3,
+  "n": 12,
+  "grid": [
+   16,
+   16
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "up",
+  "same": false,
+  "pointer_len": 26,
+  "shortest": 26,
+  "margin": -2.459731510720985,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 4,
+  "n": 3,
+  "grid": [
+   7,
+   7
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 8,
+  "shortest": 8,
+  "margin": 5.6881939390132175,
+  "ln_paths_room": 1.791759469228055
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 4,
+  "n": 4,
+  "grid": [
+   8,
+   8
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 10,
+  "shortest": 10,
+  "margin": 4.484221134687289,
+  "ln_paths_room": 2.995732273553991
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 4,
+  "n": 5,
+  "grid": [
+   9,
+   9
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 12,
+  "shortest": 12,
+  "margin": 3.2314581661919135,
+  "ln_paths_room": 4.248495242049359
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 4,
+  "n": 6,
+  "grid": [
+   10,
+   10
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 14,
+  "shortest": 14,
+  "margin": 1.9505243207298122,
+  "ln_paths_room": 5.529429087511423
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 4,
+  "n": 7,
+  "grid": [
+   11,
+   11
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 16,
+  "shortest": 16,
+  "margin": 0.6512413365995826,
+  "ln_paths_room": 6.828712071641684
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 4,
+  "n": 8,
+  "grid": [
+   12,
+   12
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "up",
+  "same": false,
+  "pointer_len": 18,
+  "shortest": 18,
+  "margin": -0.6609450523665146,
+  "ln_paths_room": 8.140898460607852
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 4,
+  "n": 9,
+  "grid": [
+   13,
+   13
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "up",
+  "same": false,
+  "pointer_len": 20,
+  "shortest": 20,
+  "margin": -1.9827008923488165,
+  "ln_paths_room": 9.462654300590172
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 4,
+  "n": 10,
+  "grid": [
+   14,
+   14
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "up",
+  "same": false,
+  "pointer_len": 22,
+  "shortest": 22,
+  "margin": -3.3118368396284836,
+  "ln_paths_room": 10.791790247870114
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 4,
+  "n": 12,
+  "grid": [
+   16,
+   16
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "up",
+  "same": false,
+  "pointer_len": 26,
+  "shortest": 26,
+  "margin": -5.98661225184037,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 5,
+  "n": 3,
+  "grid": [
+   7,
+   7
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 8,
+  "shortest": 8,
+  "margin": 9.41489639071915,
+  "ln_paths_room": 1.791759469228055
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 5,
+  "n": 4,
+  "grid": [
+   8,
+   8
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 10,
+  "shortest": 10,
+  "margin": 8.210923586393221,
+  "ln_paths_room": 2.995732273553991
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 5,
+  "n": 5,
+  "grid": [
+   9,
+   9
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 12,
+  "shortest": 12,
+  "margin": 6.958160617897846,
+  "ln_paths_room": 4.248495242049359
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 5,
+  "n": 6,
+  "grid": [
+   10,
+   10
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 14,
+  "shortest": 14,
+  "margin": 5.677226772435745,
+  "ln_paths_room": 5.529429087511423
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 5,
+  "n": 7,
+  "grid": [
+   11,
+   11
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 16,
+  "shortest": 16,
+  "margin": 4.377943788305515,
+  "ln_paths_room": 6.828712071641684
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 5,
+  "n": 8,
+  "grid": [
+   12,
+   12
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 18,
+  "shortest": 18,
+  "margin": 3.065757399339418,
+  "ln_paths_room": 8.140898460607852
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 5,
+  "n": 9,
+  "grid": [
+   13,
+   13
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 20,
+  "shortest": 20,
+  "margin": 1.744001559357116,
+  "ln_paths_room": 9.462654300590172
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 5,
+  "n": 10,
+  "grid": [
+   14,
+   14
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 22,
+  "shortest": 22,
+  "margin": 0.414865612077449,
+  "ln_paths_room": 10.791790247870114
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 5,
+  "n": 12,
+  "grid": [
+   16,
+   16
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "right",
+  "same": false,
+  "pointer_len": 26,
+  "shortest": 26,
+  "margin": -2.2599098001344373,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 6,
+  "n": 3,
+  "grid": [
+   7,
+   7
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 8,
+  "shortest": 8,
+  "margin": -9.471534588055874,
+  "ln_paths_room": 1.791759469228055
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 6,
+  "n": 4,
+  "grid": [
+   8,
+   8
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 10,
+  "shortest": 10,
+  "margin": -10.675507392381803,
+  "ln_paths_room": 2.995732273553991
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 6,
+  "n": 5,
+  "grid": [
+   9,
+   9
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 12,
+  "shortest": 12,
+  "margin": -11.928270360877178,
+  "ln_paths_room": 4.248495242049359
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 6,
+  "n": 6,
+  "grid": [
+   10,
+   10
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 14,
+  "shortest": 14,
+  "margin": -13.20920420633928,
+  "ln_paths_room": 5.529429087511423
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 6,
+  "n": 7,
+  "grid": [
+   11,
+   11
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 16,
+  "shortest": 16,
+  "margin": -14.50848719046951,
+  "ln_paths_room": 6.828712071641684
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 6,
+  "n": 8,
+  "grid": [
+   12,
+   12
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 18,
+  "shortest": 18,
+  "margin": -15.820673579435606,
+  "ln_paths_room": 8.140898460607852
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 6,
+  "n": 9,
+  "grid": [
+   13,
+   13
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 20,
+  "shortest": 20,
+  "margin": -17.14242941941791,
+  "ln_paths_room": 9.462654300590172
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 6,
+  "n": 10,
+  "grid": [
+   14,
+   14
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 22,
+  "shortest": 22,
+  "margin": -18.471565366697575,
+  "ln_paths_room": 10.791790247870114
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 6,
+  "n": 12,
+  "grid": [
+   16,
+   16
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 26,
+  "shortest": 26,
+  "margin": -21.14634077890946,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 7,
+  "n": 3,
+  "grid": [
+   7,
+   7
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 8,
+  "shortest": 8,
+  "margin": -12.798593618588711,
+  "ln_paths_room": 1.791759469228055
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 7,
+  "n": 4,
+  "grid": [
+   8,
+   8
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 10,
+  "shortest": 10,
+  "margin": -14.00256642291464,
+  "ln_paths_room": 2.995732273553991
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 7,
+  "n": 5,
+  "grid": [
+   9,
+   9
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 12,
+  "shortest": 12,
+  "margin": -15.255329391410015,
+  "ln_paths_room": 4.248495242049359
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 7,
+  "n": 6,
+  "grid": [
+   10,
+   10
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 14,
+  "shortest": 14,
+  "margin": -16.536263236872117,
+  "ln_paths_room": 5.529429087511423
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 7,
+  "n": 7,
+  "grid": [
+   11,
+   11
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 16,
+  "shortest": 16,
+  "margin": -17.835546221002346,
+  "ln_paths_room": 6.828712071641684
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 7,
+  "n": 8,
+  "grid": [
+   12,
+   12
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 18,
+  "shortest": 18,
+  "margin": -19.147732609968443,
+  "ln_paths_room": 8.140898460607852
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 7,
+  "n": 9,
+  "grid": [
+   13,
+   13
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 20,
+  "shortest": 20,
+  "margin": -20.469488449950745,
+  "ln_paths_room": 9.462654300590172
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 7,
+  "n": 10,
+  "grid": [
+   14,
+   14
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 22,
+  "shortest": 22,
+  "margin": -21.798624397230412,
+  "ln_paths_room": 10.791790247870114
+ },
+ {
+  "seed": 2,
+  "extra": 0,
+  "sym": 7,
+  "n": 12,
+  "grid": [
+   16,
+   16
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 26,
+  "shortest": 26,
+  "margin": -24.4733998094423,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 0,
+  "n": 12,
+  "grid": [
+   16,
+   17
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 25,
+  "shortest": 25,
+  "margin": 33.54037564121228,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 0,
+  "n": 16,
+  "grid": [
+   20,
+   21
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 33,
+  "shortest": 33,
+  "margin": 28.14724913127486,
+  "ln_paths_room": 18.85969358114838
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 0,
+  "n": 18,
+  "grid": [
+   22,
+   23
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 37,
+  "shortest": 37,
+  "margin": 25.43626207651755,
+  "ln_paths_room": 21.5706806419239
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 0,
+  "n": 20,
+  "grid": [
+   24,
+   25
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 41,
+  "shortest": 41,
+  "margin": 22.718512478726893,
+  "ln_paths_room": 24.288430240114824
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 0,
+  "n": 22,
+  "grid": [
+   26,
+   27
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 45,
+  "shortest": 45,
+  "margin": 19.995339116077048,
+  "ln_paths_room": 27.011603602791254
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 0,
+  "n": 24,
+  "grid": [
+   28,
+   29
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 49,
+  "shortest": 49,
+  "margin": 17.267718818782555,
+  "ln_paths_room": 29.739223900087563
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 0,
+  "n": 26,
+  "grid": [
+   30,
+   31
+  ],
+  "corridor": "down",
+  "room": "left",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 53,
+  "shortest": 53,
+  "margin": 14.536386213057995,
+  "ln_paths_room": 32.47055650581199
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 1,
+  "n": 12,
+  "grid": [
+   17,
+   16
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 25,
+  "shortest": 25,
+  "margin": 14.653944662437254,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 1,
+  "n": 16,
+  "grid": [
+   21,
+   20
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 33,
+  "shortest": 33,
+  "margin": 9.260818152499837,
+  "ln_paths_room": 18.85969358114838
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 1,
+  "n": 18,
+  "grid": [
+   23,
+   22
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 37,
+  "shortest": 37,
+  "margin": 6.549831097742526,
+  "ln_paths_room": 21.5706806419239
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 1,
+  "n": 20,
+  "grid": [
+   25,
+   24
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 41,
+  "shortest": 41,
+  "margin": 3.832081499951869,
+  "ln_paths_room": 24.288430240114824
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 1,
+  "n": 22,
+  "grid": [
+   27,
+   26
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 45,
+  "shortest": 45,
+  "margin": 1.1089081373020235,
+  "ln_paths_room": 27.011603602791254
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 1,
+  "n": 24,
+  "grid": [
+   29,
+   28
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "right",
+  "pointer_first": "down",
+  "same": false,
+  "pointer_len": 51,
+  "shortest": 49,
+  "margin": -1.6187121599924694,
+  "ln_paths_room": 29.739223900087563
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 1,
+  "n": 26,
+  "grid": [
+   31,
+   30
+  ],
+  "corridor": "right",
+  "room": "down",
+  "label_first": "right",
+  "pointer_first": "down",
+  "same": false,
+  "pointer_len": 55,
+  "shortest": 53,
+  "margin": -4.35004476571703,
+  "ln_paths_room": 32.47055650581199
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 2,
+  "n": 12,
+  "grid": [
+   16,
+   17
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "up",
+  "pointer_first": "up",
+  "same": true,
+  "pointer_len": 25,
+  "shortest": 25,
+  "margin": 18.380647114143187,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 2,
+  "n": 16,
+  "grid": [
+   20,
+   21
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "up",
+  "pointer_first": "up",
+  "same": true,
+  "pointer_len": 33,
+  "shortest": 33,
+  "margin": 12.98752060420577,
+  "ln_paths_room": 18.85969358114838
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 2,
+  "n": 18,
+  "grid": [
+   22,
+   23
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "up",
+  "pointer_first": "up",
+  "same": true,
+  "pointer_len": 37,
+  "shortest": 37,
+  "margin": 10.276533549448459,
+  "ln_paths_room": 21.5706806419239
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 2,
+  "n": 20,
+  "grid": [
+   24,
+   25
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "up",
+  "pointer_first": "up",
+  "same": true,
+  "pointer_len": 41,
+  "shortest": 41,
+  "margin": 7.5587839516578015,
+  "ln_paths_room": 24.288430240114824
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 2,
+  "n": 22,
+  "grid": [
+   26,
+   27
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "up",
+  "pointer_first": "up",
+  "same": true,
+  "pointer_len": 45,
+  "shortest": 45,
+  "margin": 4.835610589007956,
+  "ln_paths_room": 27.011603602791254
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 2,
+  "n": 24,
+  "grid": [
+   28,
+   29
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "up",
+  "pointer_first": "up",
+  "same": true,
+  "pointer_len": 49,
+  "shortest": 49,
+  "margin": 2.107990291713463,
+  "ln_paths_room": 29.739223900087563
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 2,
+  "n": 26,
+  "grid": [
+   30,
+   31
+  ],
+  "corridor": "up",
+  "room": "right",
+  "label_first": "up",
+  "pointer_first": "right",
+  "same": false,
+  "pointer_len": 55,
+  "shortest": 53,
+  "margin": -0.6233423140110972,
+  "ln_paths_room": 32.47055650581199
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 3,
+  "n": 12,
+  "grid": [
+   17,
+   16
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 25,
+  "shortest": 25,
+  "margin": 36.867434671745116,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 3,
+  "n": 16,
+  "grid": [
+   21,
+   20
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 33,
+  "shortest": 33,
+  "margin": 31.4743081618077,
+  "ln_paths_room": 18.85969358114838
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 3,
+  "n": 18,
+  "grid": [
+   23,
+   22
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 37,
+  "shortest": 37,
+  "margin": 28.763321107050388,
+  "ln_paths_room": 21.5706806419239
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 3,
+  "n": 20,
+  "grid": [
+   25,
+   24
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 41,
+  "shortest": 41,
+  "margin": 26.04557150925973,
+  "ln_paths_room": 24.288430240114824
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 3,
+  "n": 22,
+  "grid": [
+   27,
+   26
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 45,
+  "shortest": 45,
+  "margin": 23.322398146609885,
+  "ln_paths_room": 27.011603602791254
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 3,
+  "n": 24,
+  "grid": [
+   29,
+   28
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 49,
+  "shortest": 49,
+  "margin": 20.594777849315392,
+  "ln_paths_room": 29.739223900087563
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 3,
+  "n": 26,
+  "grid": [
+   31,
+   30
+  ],
+  "corridor": "left",
+  "room": "up",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 53,
+  "shortest": 53,
+  "margin": 17.86344524359083,
+  "ln_paths_room": 32.47055650581199
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 4,
+  "n": 12,
+  "grid": [
+   17,
+   16
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 25,
+  "shortest": 25,
+  "margin": 33.34055393062573,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 4,
+  "n": 16,
+  "grid": [
+   21,
+   20
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 33,
+  "shortest": 33,
+  "margin": 27.947427420688314,
+  "ln_paths_room": 18.85969358114838
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 4,
+  "n": 18,
+  "grid": [
+   23,
+   22
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 37,
+  "shortest": 37,
+  "margin": 25.236440365931003,
+  "ln_paths_room": 21.5706806419239
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 4,
+  "n": 20,
+  "grid": [
+   25,
+   24
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 41,
+  "shortest": 41,
+  "margin": 22.518690768140345,
+  "ln_paths_room": 24.288430240114824
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 4,
+  "n": 22,
+  "grid": [
+   27,
+   26
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 45,
+  "shortest": 45,
+  "margin": 19.7955174054905,
+  "ln_paths_room": 27.011603602791254
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 4,
+  "n": 24,
+  "grid": [
+   29,
+   28
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 49,
+  "shortest": 49,
+  "margin": 17.067897108196007,
+  "ln_paths_room": 29.739223900087563
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 4,
+  "n": 26,
+  "grid": [
+   31,
+   30
+  ],
+  "corridor": "right",
+  "room": "up",
+  "label_first": "right",
+  "pointer_first": "right",
+  "same": true,
+  "pointer_len": 53,
+  "shortest": 53,
+  "margin": 14.336564502471447,
+  "ln_paths_room": 32.47055650581199
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 5,
+  "n": 12,
+  "grid": [
+   16,
+   17
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 25,
+  "shortest": 25,
+  "margin": 37.067256382331664,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 5,
+  "n": 16,
+  "grid": [
+   20,
+   21
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 33,
+  "shortest": 33,
+  "margin": 31.674129872394246,
+  "ln_paths_room": 18.85969358114838
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 5,
+  "n": 18,
+  "grid": [
+   22,
+   23
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 37,
+  "shortest": 37,
+  "margin": 28.963142817636935,
+  "ln_paths_room": 21.5706806419239
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 5,
+  "n": 20,
+  "grid": [
+   24,
+   25
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 41,
+  "shortest": 41,
+  "margin": 26.245393219846278,
+  "ln_paths_room": 24.288430240114824
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 5,
+  "n": 22,
+  "grid": [
+   26,
+   27
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 45,
+  "shortest": 45,
+  "margin": 23.522219857196433,
+  "ln_paths_room": 27.011603602791254
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 5,
+  "n": 24,
+  "grid": [
+   28,
+   29
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 49,
+  "shortest": 49,
+  "margin": 20.79459955990194,
+  "ln_paths_room": 29.739223900087563
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 5,
+  "n": 26,
+  "grid": [
+   30,
+   31
+  ],
+  "corridor": "down",
+  "room": "right",
+  "label_first": "down",
+  "pointer_first": "down",
+  "same": true,
+  "pointer_len": 53,
+  "shortest": 53,
+  "margin": 18.06326695417738,
+  "ln_paths_room": 32.47055650581199
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 6,
+  "n": 12,
+  "grid": [
+   17,
+   16
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 25,
+  "shortest": 25,
+  "margin": 18.18082540355664,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 6,
+  "n": 16,
+  "grid": [
+   21,
+   20
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 33,
+  "shortest": 33,
+  "margin": 12.787698893619222,
+  "ln_paths_room": 18.85969358114838
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 6,
+  "n": 18,
+  "grid": [
+   23,
+   22
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 37,
+  "shortest": 37,
+  "margin": 10.076711838861911,
+  "ln_paths_room": 21.5706806419239
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 6,
+  "n": 20,
+  "grid": [
+   25,
+   24
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 41,
+  "shortest": 41,
+  "margin": 7.358962241071254,
+  "ln_paths_room": 24.288430240114824
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 6,
+  "n": 22,
+  "grid": [
+   27,
+   26
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 45,
+  "shortest": 45,
+  "margin": 4.635788878421408,
+  "ln_paths_room": 27.011603602791254
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 6,
+  "n": 24,
+  "grid": [
+   29,
+   28
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "left",
+  "pointer_first": "left",
+  "same": true,
+  "pointer_len": 49,
+  "shortest": 49,
+  "margin": 1.9081685811269153,
+  "ln_paths_room": 29.739223900087563
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 6,
+  "n": 26,
+  "grid": [
+   31,
+   30
+  ],
+  "corridor": "left",
+  "room": "down",
+  "label_first": "left",
+  "pointer_first": "down",
+  "same": false,
+  "pointer_len": 55,
+  "shortest": 53,
+  "margin": -0.823164024597645,
+  "ln_paths_room": 32.47055650581199
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 7,
+  "n": 12,
+  "grid": [
+   16,
+   17
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "up",
+  "pointer_first": "up",
+  "same": true,
+  "pointer_len": 25,
+  "shortest": 25,
+  "margin": 14.853766373023802,
+  "ln_paths_room": 13.466565660087452
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 7,
+  "n": 16,
+  "grid": [
+   20,
+   21
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "up",
+  "pointer_first": "up",
+  "same": true,
+  "pointer_len": 33,
+  "shortest": 33,
+  "margin": 9.460639863086385,
+  "ln_paths_room": 18.85969358114838
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 7,
+  "n": 18,
+  "grid": [
+   22,
+   23
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "up",
+  "pointer_first": "up",
+  "same": true,
+  "pointer_len": 37,
+  "shortest": 37,
+  "margin": 6.749652808329074,
+  "ln_paths_room": 21.5706806419239
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 7,
+  "n": 20,
+  "grid": [
+   24,
+   25
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "up",
+  "pointer_first": "up",
+  "same": true,
+  "pointer_len": 41,
+  "shortest": 41,
+  "margin": 4.031903210538417,
+  "ln_paths_room": 24.288430240114824
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 7,
+  "n": 22,
+  "grid": [
+   26,
+   27
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "up",
+  "pointer_first": "up",
+  "same": true,
+  "pointer_len": 45,
+  "shortest": 45,
+  "margin": 1.3087298478885714,
+  "ln_paths_room": 27.011603602791254
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 7,
+  "n": 24,
+  "grid": [
+   28,
+   29
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "up",
+  "pointer_first": "left",
+  "same": false,
+  "pointer_len": 51,
+  "shortest": 49,
+  "margin": -1.4188904494059216,
+  "ln_paths_room": 29.739223900087563
+ },
+ {
+  "seed": 2,
+  "extra": 2,
+  "sym": 7,
+  "n": 26,
+  "grid": [
+   30,
+   31
+  ],
+  "corridor": "up",
+  "room": "left",
+  "label_first": "up",
+  "pointer_first": "left",
+  "same": false,
+  "pointer_len": 55,
+  "shortest": 53,
+  "margin": -4.150223055130482,
+  "ln_paths_room": 32.47055650581199
+ }
+]

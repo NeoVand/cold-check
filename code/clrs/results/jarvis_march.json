@@ -1,0 +1,89 @@
+{
+ "task": "jarvis_march",
+ "fit_ms": 45.9,
+ "train_inputs": 100,
+ "rules": {
+  "mask": {
+   "info": {
+    "features": 1160,
+    "distinct": 147,
+    "rows": 1020,
+    "positives": 598,
+    "gate": 1,
+    "greedy": 1,
+    "gate_lets_through_negatives": 0,
+    "score_features": 14,
+    "train_wrong_score": 0,
+    "train_wrong_rule": 0
+   },
+   "exact_gate": true,
+   "gate": [
+    "('wit', (('rel', 'noleft', 0), None), (('rel', 'noleft', 1), None))"
+   ],
+   "gate_size": 1,
+   "score": [
+    [
+     "('wit', (('rel', 'noleft', 0), None), (('rel', 'noleft', 1), None))",
+     5.196
+    ],
+    [
+     "('cnt', (('rel', 'noleft', 0), None), (('id',), None), 'lt')",
+     -5.193
+    ],
+    [
+     "('wit', (('cmp', 'pos', 'pos', 'lt'), None), (('rel', 'noleft', 0), None))",
+     0.137
+    ],
+    [
+     "('wit', (('cmp', 'pos', 'pos', 'ge'), None), (('rel', 'noleft', 1), None))",
+     0.133
+    ],
+    [
+     "('wit', (('cmp', 'y', 'y', 'ge'), None), (('rel', 'noleft', 0), None))",
+     0.117
+    ],
+    [
+     "('wit', (('cmp', 'x', 'x', 'ge'), None), (('rel', 'noleft', 1), None))",
+     0.114
+    ],
+    [
+     "('wit', (('cmp', 'y', 'y', 'lt'), None), (('rel', 'noleft', 1), None))",
+     0.113
+    ],
+    [
+     "('wit', (('cmp', 'x', 'x', 'ge'), None), (('rel', 'noleft', 0), None))",
+     0.1
+    ],
+    [
+     "('wit', (('cmp', 'x', 'x', 'lt'), None), (('rel', 'noleft', 0), None))",
+     0.093
+    ],
+    [
+     "('wit', (('cmp', 'y', 'y', 'ge'), None), (('rel', 'noleft', 1), None))",
+     0.079
+    ],
+    [
+     "('wit', (('cmp', 'x', 'x', 'lt'), None), (('rel', 'noleft', 1), None))",
+     0.078
+    ],
+    [
+     "('wit', (('cmp', 'y', 'y', 'lt'), None), (('rel', 'noleft', 0), None))",
+     0.075
+    ]
+   ]
+  }
+ },
+ "test64": {
+  "score": 1.0,
+  "loops_max": 1,
+  "not_at_rest": 0,
+  "eval_s": 0.02
+ },
+ "gen256": {
+  "score": 1.0,
+  "num": 4,
+  "loops_max": 1,
+  "not_at_rest": 0,
+  "eval_s": 0.1
+ }
+}

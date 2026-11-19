@@ -1,0 +1,85 @@
+{
+ "task": "minimum",
+ "kind": "one",
+ "train_inputs": 100,
+ "fit_ms": 50.6,
+ "rules": {
+  "one": {
+   "info": {
+    "features": 341,
+    "distinct": 56,
+    "rows": 1020,
+    "positives": 100,
+    "gate": 0,
+    "gate_lets_through_negatives": 920,
+    "score_features": 5,
+    "train_wrong_score": 0,
+    "train_wrong_rule": 0
+   },
+   "exact_gate": false,
+   "gate": [],
+   "gate_size": 0,
+   "score": [
+    [
+     "('wit', (('cmp', 'key', 'key', 'ge'), None), (('cmp', 'key', 'key', 'lt'), None))",
+     -4.105
+    ],
+    [
+     "('cnt', (('id',), None), (('cmp', 'key', 'key', 'le'), None), 'eq')",
+     4.032
+    ],
+    [
+     "('cnt', (('id',), None), (('cmp', 'key', 'key', 'lt'), None), 'lt')",
+     -0.949
+    ],
+    [
+     "('wit', (('cmp', 'pos', 'pos', 'lt'), None), (('cmp', 'key', 'key', 'lt'), None))",
+     -0.918
+    ],
+    [
+     "('wit', (('cmp', 'pos', 'pos', 'ge'), None), (('cmp', 'key', 'key', 'lt'), None))",
+     -0.87
+    ]
+   ]
+  }
+ },
+ "start": 0,
+ "test64": {
+  "score": 1.0,
+  "loops_max": 1,
+  "not_at_rest": 0,
+  "eval_s": 0.51
+ },
+ "gen256": {
+  "score": 1.0,
+  "num": 256,
+  "loops_max": 1,
+  "not_at_rest": 0,
+  "eval_s": 0.46
+ },
+ "gen1024": {
+  "score": 1.0,
+  "num": 256,
+  "loops_max": 1,
+  "not_at_rest": 0,
+  "eval_s": 19.03
+ },
+ "gen4096": {
+  "score": 1.0,
+  "num": 64,
+  "loops_max": 1,
+  "not_at_rest": 0,
+  "eval_s": 83.2
+ },
+ "paper": {
+  "floydnet": 100.0
+ },
+ "log": [
+  "{\"task\": \"minimum\", \"fit_ms\": 50.6, \"train_inputs\": 100, \"one\": {\"exact_gate\": false, \"features\": 341, \"distinct\": 56, \"rows\": 1020, \"positives\": 100, \"gate\": 0, \"gate_lets_through_negatives\": 920, \"score_features\": 5, \"train_wrong_score\": 0, \"train_wrong_rule\": 0}}",
+  "official test 64: {'score': 1.0, 'loops_max': 1, 'not_at_rest': 0, 'eval_s': 0.51}",
+  "generated gen256: {'score': 1.0, 'num': 256, 'loops_max': 1, 'not_at_rest': 0, 'eval_s': 0.46}",
+  "generated gen1024: {'score': 1.0, 'num': 256, 'loops_max': 1, 'not_at_rest': 0, 'eval_s': 19.03}",
+  "generated gen4096: {'score': 1.0, 'num': 64, 'loops_max': 1, 'not_at_rest': 0, 'eval_s': 83.2}"
+ ],
+ "where": "modal cpu=2, one BLAS thread"
+}

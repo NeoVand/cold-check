@@ -1,0 +1,1271 @@
+{
+ "source": {
+  "ours": "bench/final/sudoku_extreme.json; bench/final/mazes.json; bench/final/sudoku_ladder_local.json; bench/final/sudoku_ladder_25.json; walkthrough/completed_answer_bfs.json",
+  "cram": "ext/CRAM/results/ebr-comparison.json (cram block); ext/CRAM/results/op-counts.json; ext/CRAM/experiments/runs/table/*.json",
+  "looped": "CRAM paper (arXiv 2611.17309) Table 2 and Table 8, parsed from the text of the paper",
+  "conventions": "ours: one CPU core, warm median of 7 fits; operations counted as CRAM counts them (arithmetic 1, comparisons free); ops_cmp counts every comparison too. CRAM: H200 GPU warm fit times; op-counts.json convention."
+ },
+ "table2": [
+  {
+   "name": "HRM",
+   "line": 271,
+   "sudoku": {
+    "solved": 54.62,
+    "sd": 4.18,
+    "published": false,
+    "params": 27000000.0,
+    "flops": 220000000000.0,
+    "fit_s": 4320.0
+   },
+   "unique": {
+    "solved": 39.97,
+    "sd": 33.9,
+    "published": false,
+    "params": 27000000.0,
+    "flops": 3010000000000.0,
+    "fit_s": 25560.0
+   }
+  },
+  {
+   "name": "TRM",
+   "line": 272,
+   "sudoku": {
+    "solved": 85.73,
+    "sd": 0.74,
+    "published": false,
+    "params": 5000000.0,
+    "flops": 411000000000.0,
+    "fit_s": 9000.0
+   },
+   "unique": {
+    "solved": 92.23,
+    "sd": 13.37,
+    "published": false,
+    "params": 6800000.0,
+    "flops": 3840000000000.0,
+    "fit_s": 56160.0
+   }
+  },
+  {
+   "name": "GRAM",
+   "line": 273,
+   "sudoku": {
+    "solved": 96.1,
+    "sd": null,
+    "published": true,
+    "params": 9100000.0,
+    "flops": 8510000000000.0,
+    "fit_s": 11520.0
+   },
+   "unique": {
+    "solved": 98.63,
+    "sd": 1.31,
+    "published": false,
+    "params": 10900000.0,
+    "flops": 80000000000000.0,
+    "fit_s": 83520.0
+   }
+  },
+  {
+   "name": "EqR",
+   "line": 274,
+   "sudoku": {
+    "solved": 99.49,
+    "sd": 0.14,
+    "published": false,
+    "params": 5000000.0,
+    "flops": 211000000000000.0,
+    "fit_s": 7200.0
+   },
+   "unique": {
+    "solved": 93.0,
+    "sd": null,
+    "published": true,
+    "params": 263800.0,
+    "flops": 116000000000000.0,
+    "fit_s": 25920.0
+   }
+  },
+  {
+   "name": "FRM",
+   "line": 275,
+   "sudoku": {
+    "solved": 99.13,
+    "sd": 0.29,
+    "published": false,
+    "params": 7000000.0,
+    "flops": 3910000000000.0,
+    "fit_s": 10440.0
+   },
+   "unique": {
+    "solved": 97.27,
+    "sd": 2.8,
+    "published": false,
+    "params": 8000000.0,
+    "flops": 4700000000000.0,
+    "fit_s": 34920.0
+   }
+  },
+  {
+   "name": "TRMP",
+   "line": 276,
+   "sudoku": {
+    "solved": 99.87,
+    "sd": 0.08,
+    "published": false,
+    "params": 32800.0,
+    "flops": 4570000000000.0,
+    "fit_s": 32400.0
+   },
+   "unique": {
+    "solved": 99.23,
+    "sd": 0.31,
+    "published": false,
+    "params": 60700.0,
+    "flops": 18000000000000.0,
+    "fit_s": 27360.0
+   }
+  },
+  {
+   "name": "EBR",
+   "line": 277,
+   "sudoku": {
+    "solved": 99.85,
+    "sd": 0.05,
+    "published": false,
+    "params": 1800000.0,
+    "flops": 337000000000.0,
+    "fit_s": 10080.0
+   },
+   "unique": {
+    "solved": 89.8,
+    "sd": 6.35,
+    "published": false,
+    "params": 1800000.0,
+    "flops": 19300000000000.0,
+    "fit_s": 7200.0
+   }
+  },
+  {
+   "name": "CRAM",
+   "line": 278,
+   "sudoku": {
+    "solved": 100.0,
+    "sd": 0.0,
+    "published": false,
+    "params": 7700.0,
+    "flops": 2020000000.0,
+    "fit_s": 0.04
+   },
+   "unique": {
+    "solved": 100.0,
+    "sd": 0.0,
+    "published": false,
+    "params": 18.0,
+    "flops": 837000.0,
+    "fit_s": 0.13
+   }
+  },
+  {
+   "name": "(hand-set)",
+   "line": 279,
+   "sudoku": {
+    "solved": 100.0,
+    "sd": 0.0,
+    "published": false,
+    "params": 1.0,
+    "flops": 108000000.0,
+    "fit_s": 0.0
+   },
+   "unique": {
+    "solved": 100.0,
+    "sd": 0.0,
+    "published": false,
+    "params": 3.0,
+    "flops": 837000.0,
+    "fit_s": 0.0
+   }
+  }
+ ],
+ "table8": [
+  {
+   "name": "HRM",
+   "line": 1308,
+   "solved": 74.5,
+   "sd": null,
+   "published": true,
+   "params": 27000000.0,
+   "flops": 3010000000000.0
+  },
+  {
+   "name": "TRM",
+   "line": 1309,
+   "solved": 85.3,
+   "sd": null,
+   "published": true,
+   "params": 6820000.0,
+   "flops": 3840000000000.0
+  },
+  {
+   "name": "FPRM",
+   "line": 1310,
+   "solved": 87.0,
+   "sd": null,
+   "published": true,
+   "params": 6830000.0,
+   "flops": 478000000000000.0
+  },
+  {
+   "name": "NCA",
+   "line": 1311,
+   "solved": 89.2,
+   "sd": null,
+   "published": true,
+   "params": 41000.0,
+   "flops": 2000000000000.0
+  },
+  {
+   "name": "EBR",
+   "line": 1312,
+   "solved": 88.3,
+   "sd": null,
+   "published": true,
+   "params": 1770000.0,
+   "flops": 19300000000000.0
+  },
+  {
+   "name": "CRAM+z",
+   "line": 1313,
+   "solved": 99.9,
+   "sd": 0.0,
+   "published": false,
+   "params": 29.0,
+   "flops": 14100000.0
+  }
+ ],
+ "ours": {
+  "sudoku": {
+   "solved": [
+    412786,
+    412786,
+    412786
+   ],
+   "n": 412786,
+   "wrong_stops": 0,
+   "params": 9,
+   "ops": 55558.7106927076,
+   "ops_cmp": 810236.6766484329,
+   "fit_s": [
+    0.02172829187475145,
+    0.01534725003875792,
+    0.01532729109749198
+   ],
+   "cold_only": 57207,
+   "moves_mean": 92.9700668142815,
+   "moves_median": 45.0,
+   "moves_max": 7279,
+   "wall_ms_mean": 0.7674868106842041
+  },
+  "unique": {
+   "solved": [
+    1000
+   ],
+   "n": 1000,
+   "params": 3,
+   "ops": 16196.719,
+   "ops_cmp": 66172.248,
+   "fit_s": [
+    0.023973000003024936
+   ]
+  },
+  "hard": {
+   "solved": [
+    1000
+   ],
+   "n": 1000,
+   "params": 7,
+   "ops": 1979.769,
+   "ops_cmp": 6240.849,
+   "fit_s": [
+    0.03269079211167991
+   ],
+   "fit_s_cold": 0.3340217499062419
+  }
+ },
+ "cram": {
+  "sudoku": {
+   "solved_pct": 99.99588164327278,
+   "per_seed": [
+    0.9999563938699472,
+    0.9999612389955086,
+    0.9999588164327279
+   ],
+   "n": 412786,
+   "params": 263169,
+   "params_nonzero": [
+    7716,
+    7750,
+    7761
+   ],
+   "flops": 2015770227.8755887,
+   "fit_s": 0.04275277815759182,
+   "budget_failures": [
+    18,
+    16,
+    17
+   ]
+  },
+  "unique": {
+   "solved_pct": 100.0,
+   "n": 1000,
+   "params": 18,
+   "flops": 836870.85,
+   "fit_s": 0.131769006329705
+  },
+  "hard": {
+   "solved_pct": 99.9,
+   "n": 1000,
+   "params": 29,
+   "flops": 14058028.200000001,
+   "fit_s": 25.58801945397863
+  }
+ },
+ "sizes": {
+  "ours": {
+   "side4": {
+    "side": 4,
+    "n": 1000,
+    "blank_frac_mean": 0.738875,
+    "solved_valid": 1000,
+    "equals_generated": 1000,
+    "budget_misses": 0,
+    "cold_only": 1000,
+    "moves_mean": 0.0,
+    "moves_median": 0.0,
+    "moves_max": 0,
+    "ops_mean": 262.305,
+    "ops_plus_cmp_mean": 1996.641,
+    "wall_ms_mean": 0.06466392450965941,
+    "wall_ms_max": 3.4027909860014915,
+    "gen_s_mean": 0.00035500084375962614,
+    "restarts_total": 0,
+    "wrong": 0
+   },
+   "side9": {
+    "side": 9,
+    "n": 200,
+    "blank_frac_mean": 0.7014197530864198,
+    "solved_valid": 200,
+    "equals_generated": 200,
+    "budget_misses": 0,
+    "cold_only": 130,
+    "moves_mean": 1.28,
+    "moves_median": 0.0,
+    "moves_max": 21,
+    "ops_mean": 4983.56,
+    "ops_plus_cmp_mean": 51540.375,
+    "wall_ms_mean": 0.33063144888728857,
+    "wall_ms_max": 0.5389170255511999,
+    "gen_s_mean": 0.001368868526769802,
+    "restarts_total": 0,
+    "wrong": 0
+   },
+   "side16": {
+    "side": 16,
+    "n": 1000,
+    "blank_frac_mean": 0.63462890625,
+    "solved_valid": 1000,
+    "equals_generated": 1000,
+    "budget_misses": 0,
+    "cold_only": 0,
+    "moves_mean": 1584.708,
+    "moves_median": 455.5,
+    "moves_max": 93234,
+    "ops_mean": 2775004.417,
+    "ops_plus_cmp_mean": 79509050.068,
+    "wall_ms_mean": 46.16814339836128,
+    "wall_ms_max": 2505.492707947269,
+    "gen_s_mean": 0.7450906867883168,
+    "restarts_total": 39,
+    "wrong": 0
+   },
+   "side25": {
+    "side": 25,
+    "n": 100,
+    "blank_frac_mean": 0.549968,
+    "solved_valid": 100,
+    "equals_generated": 100,
+    "budget_misses": 0,
+    "cold_only": 0,
+    "moves_mean": 46106.96,
+    "moves_median": 8334.0,
+    "moves_max": 1406441,
+    "ops_mean": 166943602.38,
+    "ops_plus_cmp_mean": 9055344044.09,
+    "wall_ms_mean": 17303.01059699,
+    "wall_ms_max": 369910.583557,
+    "gen_s_mean": 141.05897729884998,
+    "errors": [],
+    "wrong": 0,
+    "restarts_total": 233,
+    "budget": 10000000,
+    "cpu": "Modal CPU container, 1 core"
+   },
+   "unique_generated": {
+    "31_ring": {
+     "side": 31,
+     "ring": true,
+     "n": 200,
+     "exact": 200,
+     "mazes_with_edge_dead_end": 0,
+     "edge_dead_ends": 0,
+     "ops_mean": 13656.515
+    },
+    "29_noring": {
+     "side": 29,
+     "ring": false,
+     "n": 200,
+     "exact": 200,
+     "mazes_with_edge_dead_end": 200,
+     "edge_dead_ends": 3864,
+     "ops_mean": 13051.655
+    },
+    "61_ring": {
+     "side": 61,
+     "ring": true,
+     "n": 200,
+     "exact": 200,
+     "mazes_with_edge_dead_end": 0,
+     "edge_dead_ends": 0,
+     "ops_mean": 51360.02
+    },
+    "59_noring": {
+     "side": 59,
+     "ring": false,
+     "n": 200,
+     "exact": 200,
+     "mazes_with_edge_dead_end": 200,
+     "edge_dead_ends": 8088,
+     "ops_mean": 50199.86
+    },
+    "121_ring": {
+     "side": 121,
+     "ring": true,
+     "n": 200,
+     "exact": 200,
+     "mazes_with_edge_dead_end": 0,
+     "edge_dead_ends": 0,
+     "ops_mean": 198585.03
+    },
+    "119_noring": {
+     "side": 119,
+     "ring": false,
+     "n": 200,
+     "exact": 200,
+     "mazes_with_edge_dead_end": 200,
+     "edge_dead_ends": 15865,
+     "ops_mean": 196257.95
+    }
+   },
+   "hard_rooms": {
+    "n": 136,
+    "exact": 136,
+    "wrong": []
+   },
+   "hard_loops": {
+    "31": {
+     "n": 100,
+     "exact": 100,
+     "ops_mean": 947.74,
+     "sec_total": 0.13851116481237113
+    },
+    "61": {
+     "n": 100,
+     "exact": 100,
+     "ops_mean": 2921.59,
+     "sec_total": 0.48390049976296723
+    },
+    "121": {
+     "n": 100,
+     "exact": 100,
+     "ops_mean": 9400.47,
+     "sec_total": 1.783177415607497
+    }
+   }
+  }
+ },
+ "cram_generated": {
+  "edge": {
+   "31_ring": {
+    "side": 31,
+    "ring": true,
+    "n_per_seed": 200,
+    "solved_per_seed": [
+     200,
+     200,
+     200
+    ]
+   },
+   "29_noring": {
+    "side": 29,
+    "ring": false,
+    "n_per_seed": 200,
+    "solved_per_seed": [
+     0,
+     0,
+     0
+    ]
+   },
+   "61_ring": {
+    "side": 61,
+    "ring": true,
+    "n_per_seed": 200,
+    "solved_per_seed": [
+     200,
+     200,
+     200
+    ]
+   },
+   "59_noring": {
+    "side": 59,
+    "ring": false,
+    "n_per_seed": 200,
+    "solved_per_seed": [
+     0,
+     0,
+     0
+    ]
+   },
+   "121_ring": {
+    "side": 121,
+    "ring": true,
+    "n_per_seed": 200,
+    "solved_per_seed": [
+     200,
+     200,
+     200
+    ]
+   },
+   "119_noring": {
+    "side": 119,
+    "ring": false,
+    "n_per_seed": 200,
+    "solved_per_seed": [
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  "rooms": [
+   {
+    "seed": 0,
+    "n": 136,
+    "equals_label": 116,
+    "longer": 6,
+    "not_path": 0
+   },
+   {
+    "seed": 1,
+    "n": 136,
+    "equals_label": 116,
+    "longer": 5,
+    "not_path": 1
+   },
+   {
+    "seed": 2,
+    "n": 136,
+    "equals_label": 116,
+    "longer": 6,
+    "not_path": 0
+   }
+  ],
+  "loops": {
+   "31": {
+    "n": 100,
+    "exact": 100
+   },
+   "61": {
+    "n": 100,
+    "exact": 100
+   },
+   "121": {
+    "n": 100,
+    "exact": 100
+   }
+  },
+  "source": "released/run_released_pcd_*.json, run_released_pab_*.json, run_released_loops_*.json"
+ },
+ "bfs": {
+  "fit_ms": 4.439624957740307,
+  "top_gate": {
+   "16": [
+    1500,
+    1500,
+    1500,
+    6
+   ],
+   "64": [
+    6300,
+    6300,
+    6300,
+    7
+   ],
+   "256": [
+    5100,
+    5100,
+    5100,
+    8
+   ],
+   "1024": [
+    3069,
+    3069,
+    3069,
+    9
+   ]
+  },
+  "depth_at_answer_64": [
+   5374,
+   6300
+  ],
+  "order_top_no_gate_64": [
+   2410,
+   6300,
+   3123,
+   26
+  ]
+ },
+ "clrs": {
+  "rows": [
+   {
+    "key": "insertion_sort",
+    "task": "Insertion sort",
+    "tier": 1,
+    "tier_label": "Comparisons and counts only",
+    "supplied": null,
+    "fit_ms": 35.7,
+    "fit_from_run": false,
+    "fit_note": null,
+    "test64": 100.0,
+    "loops_max": 1,
+    "exact_to": 4096,
+    "heldout_sets": 5,
+    "heldout_all_exact": true,
+    "strings": false,
+    "paper_general": 100.0,
+    "paper_cold": 100.0,
+    "paper_best": 100.0,
+    "floydnet": 100.0
+   },
+   {
+    "key": "bubble_sort",
+    "task": "Bubble sort",
+    "tier": 1,
+    "tier_label": "Comparisons and counts only",
+    "supplied": null,
+    "fit_ms": 34.6,
+    "fit_from_run": false,
+    "fit_note": null,
+    "test64": 100.0,
+    "loops_max": 1,
+    "exact_to": 4096,
+    "heldout_sets": 5,
+    "heldout_all_exact": true,
+    "strings": false,
+    "paper_general": 100.0,
+    "paper_cold": 100.0,
+    "paper_best": 100.0,
+    "floydnet": 100.0
+   },
+   {
+    "key": "heapsort",
+    "task": "Heapsort",
+    "tier": 1,
+    "tier_label": "Comparisons and counts only",
+    "supplied": null,
+    "fit_ms": 34.5,
+    "fit_from_run": false,
+    "fit_note": null,
+    "test64": 100.0,
+    "loops_max": 1,
+    "exact_to": 4096,
+    "heldout_sets": 5,
+    "heldout_all_exact": true,
+    "strings": false,
+    "paper_general": 100.0,
+    "paper_cold": 100.0,
+    "paper_best": 100.0,
+    "floydnet": 100.0
+   },
+   {
+    "key": "quicksort",
+    "task": "Quicksort",
+    "tier": 1,
+    "tier_label": "Comparisons and counts only",
+    "supplied": null,
+    "fit_ms": 33.7,
+    "fit_from_run": false,
+    "fit_note": null,
+    "test64": 100.0,
+    "loops_max": 1,
+    "exact_to": 4096,
+    "heldout_sets": 5,
+    "heldout_all_exact": true,
+    "strings": false,
+    "paper_general": 99.98,
+    "paper_cold": 100.0,
+    "paper_best": 100.0,
+    "floydnet": 100.0
+   },
+   {
+    "key": "minimum",
+    "task": "Minimum",
+    "tier": 1,
+    "tier_label": "Comparisons and counts only",
+    "supplied": null,
+    "fit_ms": 17.7,
+    "fit_from_run": false,
+    "fit_note": null,
+    "test64": 100.0,
+    "loops_max": 1,
+    "exact_to": 4096,
+    "heldout_sets": 5,
+    "heldout_all_exact": true,
+    "strings": false,
+    "paper_general": 100.0,
+    "paper_cold": 100.0,
+    "paper_best": 100.0,
+    "floydnet": 100.0
+   },
+   {
+    "key": "binary_search",
+    "task": "Binary search",
+    "tier": 1,
+    "tier_label": "Comparisons and counts only",
+    "supplied": null,
+    "fit_ms": 215.6,
+    "fit_from_run": false,
+    "fit_note": null,
+    "test64": 100.0,
+    "loops_max": 1,
+    "exact_to": 4096,
+    "heldout_sets": 5,
+    "heldout_all_exact": true,
+    "strings": false,
+    "paper_general": 98.89,
+    "paper_cold": 100.0,
+    "paper_best": 100.0,
+    "floydnet": 94.47
+   },
+   {
+    "key": "quickselect",
+    "task": "Quickselect",
+    "tier": 1,
+    "tier_label": "Comparisons and counts only",
+    "supplied": null,
+    "fit_ms": 18.5,
+    "fit_from_run": false,
+    "fit_note": null,
+    "test64": 100.0,
+    "loops_max": 1,
+    "exact_to": 4096,
+    "heldout_sets": 5,
+    "heldout_all_exact": true,
+    "strings": false,
+    "paper_general": 99.77,
+    "paper_cold": 100.0,
+    "paper_best": 100.0,
+    "floydnet": 80.33
+   },
+   {
+    "key": "activity_selector",
+    "task": "Activity selection",
+    "tier": 1,
+    "tier_label": "Comparisons and counts only",
+    "supplied": null,
+    "fit_ms": 350.6,
+    "fit_from_run": false,
+    "fit_note": null,
+    "test64": 100.0,
+    "loops_max": 14,
+    "exact_to": 4096,
+    "heldout_sets": 5,
+    "heldout_all_exact": true,
+    "strings": false,
+    "paper_general": 99.4,
+    "paper_cold": 99.94,
+    "paper_best": 99.94,
+    "floydnet": 95.3
+   },
+   {
+    "key": "task_scheduling",
+    "task": "Task scheduling",
+    "tier": 1,
+    "tier_label": "Comparisons and counts only",
+    "supplied": "deadline \u00f7 n",
+    "fit_ms": 478.7,
+    "fit_from_run": false,
+    "fit_note": null,
+    "test64": 100.0,
+    "loops_max": 7,
+    "exact_to": 4096,
+    "heldout_sets": 5,
+    "heldout_all_exact": true,
+    "strings": false,
+    "paper_general": 89.0,
+    "paper_cold": 99.86,
+    "paper_best": 99.86,
+    "floydnet": 91.05
+   },
+   {
+    "key": "bfs",
+    "task": "Breadth-first search",
+    "tier": 1,
+    "tier_label": "Comparisons and counts only",
+    "supplied": null,
+    "fit_ms": 491.1,
+    "fit_from_run": false,
+    "fit_note": null,
+    "test64": 100.0,
+    "loops_max": 4,
+    "exact_to": 1024,
+    "heldout_sets": 5,
+    "heldout_all_exact": true,
+    "strings": false,
+    "paper_general": 100.0,
+    "paper_cold": null,
+    "paper_best": 100.0,
+    "floydnet": 100.0
+   },
+   {
+    "key": "mst_kruskal",
+    "task": "Kruskal",
+    "tier": 1,
+    "tier_label": "Comparisons and counts only",
+    "supplied": null,
+    "fit_ms": 94.0,
+    "fit_from_run": false,
+    "fit_note": null,
+    "test64": 100.0,
+    "loops_max": 1,
+    "exact_to": 1024,
+    "heldout_sets": 5,
+    "heldout_all_exact": true,
+    "strings": false,
+    "paper_general": 99.49,
+    "paper_cold": 100.0,
+    "paper_best": 100.0,
+    "floydnet": 99.63
+   },
+   {
+    "key": "mst_prim",
+    "task": "Prim",
+    "tier": 1,
+    "tier_label": "Comparisons and counts only",
+    "supplied": null,
+    "fit_ms": 4082.0,
+    "fit_from_run": false,
+    "fit_note": null,
+    "test64": 100.0,
+    "loops_max": 25,
+    "exact_to": 1024,
+    "heldout_sets": 5,
+    "heldout_all_exact": true,
+    "strings": false,
+    "paper_general": 98.93,
+    "paper_cold": 99.98,
+    "paper_best": 99.98,
+    "floydnet": 99.67
+   },
+   {
+    "key": "lcs_length",
+    "task": "LCS length",
+    "tier": 1,
+    "tier_label": "Comparisons and counts only",
+    "supplied": "index shift",
+    "fit_ms": 86.3,
+    "fit_from_run": false,
+    "fit_note": null,
+    "test64": 100.0,
+    "loops_max": 27,
+    "exact_to": 1024,
+    "heldout_sets": 4,
+    "heldout_all_exact": true,
+    "strings": false,
+    "paper_general": 95.66,
+    "paper_cold": null,
+    "paper_best": 95.66,
+    "floydnet": 95.7
+   },
+   {
+    "key": "naive_string_matcher",
+    "task": "Naive string matcher",
+    "tier": 1,
+    "tier_label": "Comparisons and counts only",
+    "supplied": null,
+    "fit_ms": 211.8,
+    "fit_from_run": false,
+    "fit_note": null,
+    "test64": 100.0,
+    "loops_max": 2,
+    "exact_to": 5120,
+    "heldout_sets": 5,
+    "heldout_all_exact": true,
+    "strings": true,
+    "paper_general": 99.07,
+    "paper_cold": null,
+    "paper_best": 99.07,
+    "floydnet": 100.0
+   },
+   {
+    "key": "kmp_matcher",
+    "task": "KMP matcher",
+    "tier": 1,
+    "tier_label": "Comparisons and counts only",
+    "supplied": null,
+    "fit_ms": 206.6,
+    "fit_from_run": false,
+    "fit_note": null,
+    "test64": 100.0,
+    "loops_max": 2,
+    "exact_to": 5120,
+    "heldout_sets": 5,
+    "heldout_all_exact": true,
+    "strings": true,
+    "paper_general": 99.15,
+    "paper_cold": null,
+    "paper_best": 99.15,
+    "floydnet": 99.43
+   },
+   {
+    "key": "bellman_ford",
+    "task": "Bellman\u2013Ford",
+    "tier": 2,
+    "tier_label": "One arithmetic primitive supplied",
+    "supplied": "sum",
+    "fit_ms": 3865.3,
+    "fit_from_run": false,
+    "fit_note": null,
+    "test64": 100.0,
+    "loops_max": 8,
+    "exact_to": 1024,
+    "heldout_sets": 5,
+    "heldout_all_exact": true,
+    "strings": false,
+    "paper_general": 99.67,
+    "paper_cold": 100.0,
+    "paper_best": 100.0,
+    "floydnet": 100.0
+   },
+   {
+    "key": "dijkstra",
+    "task": "Dijkstra",
+    "tier": 2,
+    "tier_label": "One arithmetic primitive supplied",
+    "supplied": "sum",
+    "fit_ms": 4123.8,
+    "fit_from_run": false,
+    "fit_note": null,
+    "test64": 100.0,
+    "loops_max": 8,
+    "exact_to": 1024,
+    "heldout_sets": 5,
+    "heldout_all_exact": true,
+    "strings": false,
+    "paper_general": 99.63,
+    "paper_cold": 100.0,
+    "paper_best": 100.0,
+    "floydnet": 97.67
+   },
+   {
+    "key": "dag_shortest_paths",
+    "task": "DAG shortest paths",
+    "tier": 2,
+    "tier_label": "One arithmetic primitive supplied",
+    "supplied": "sum",
+    "fit_ms": 4182.8,
+    "fit_from_run": false,
+    "fit_note": null,
+    "test64": 100.0,
+    "loops_max": 6,
+    "exact_to": 1024,
+    "heldout_sets": 5,
+    "heldout_all_exact": true,
+    "strings": false,
+    "paper_general": 99.84,
+    "paper_cold": 100.0,
+    "paper_best": 100.0,
+    "floydnet": 100.0
+   },
+   {
+    "key": "floyd_warshall",
+    "task": "Floyd\u2013Warshall",
+    "tier": 2,
+    "tier_label": "One arithmetic primitive supplied",
+    "supplied": "sum",
+    "fit_ms": 43330.8,
+    "fit_from_run": false,
+    "fit_note": null,
+    "test64": 100.0,
+    "loops_max": 8,
+    "exact_to": 256,
+    "heldout_sets": 3,
+    "heldout_all_exact": true,
+    "strings": false,
+    "paper_general": 99.71,
+    "paper_cold": 100.0,
+    "paper_best": 100.0,
+    "floydnet": 96.2
+   },
+   {
+    "key": "graham_scan",
+    "task": "Graham scan",
+    "tier": 2,
+    "tier_label": "One arithmetic primitive supplied",
+    "supplied": "orientation",
+    "fit_ms": 41.6,
+    "fit_from_run": false,
+    "fit_note": null,
+    "test64": 100.0,
+    "loops_max": 1,
+    "exact_to": 1024,
+    "heldout_sets": 4,
+    "heldout_all_exact": true,
+    "strings": false,
+    "paper_general": 99.8,
+    "paper_cold": null,
+    "paper_best": 99.8,
+    "floydnet": 99.63
+   },
+   {
+    "key": "jarvis_march",
+    "task": "Jarvis march",
+    "tier": 2,
+    "tier_label": "One arithmetic primitive supplied",
+    "supplied": "orientation",
+    "fit_ms": 42.5,
+    "fit_from_run": false,
+    "fit_note": null,
+    "test64": 100.0,
+    "loops_max": 1,
+    "exact_to": 1024,
+    "heldout_sets": 4,
+    "heldout_all_exact": true,
+    "strings": false,
+    "paper_general": 99.92,
+    "paper_cold": null,
+    "paper_best": 99.92,
+    "floydnet": 99.5
+   },
+   {
+    "key": "segments_intersect",
+    "task": "Segments intersect",
+    "tier": 2,
+    "tier_label": "One arithmetic primitive supplied",
+    "supplied": "orientation",
+    "fit_ms": 45.4,
+    "fit_from_run": false,
+    "fit_note": null,
+    "test64": 100.0,
+    "loops_max": 1,
+    "exact_to": "fixed size",
+    "heldout_sets": 2,
+    "heldout_all_exact": true,
+    "strings": false,
+    "paper_general": 99.33,
+    "paper_cold": null,
+    "paper_best": 99.33,
+    "floydnet": 99.9
+   },
+   {
+    "key": "matrix_chain_order",
+    "task": "Matrix chain order",
+    "tier": 2,
+    "tier_label": "One arithmetic primitive supplied",
+    "supplied": "products, sums",
+    "fit_ms": 60.8,
+    "fit_from_run": false,
+    "fit_note": null,
+    "test64": 100.0,
+    "loops_max": 16,
+    "exact_to": 128,
+    "heldout_sets": 3,
+    "heldout_all_exact": true,
+    "strings": false,
+    "paper_general": 99.8,
+    "paper_cold": null,
+    "paper_best": 99.8,
+    "floydnet": 91.5
+   },
+   {
+    "key": "optimal_bst",
+    "task": "Optimal BST",
+    "tier": 2,
+    "tier_label": "One arithmetic primitive supplied",
+    "supplied": "sums",
+    "fit_ms": 77.7,
+    "fit_from_run": false,
+    "fit_note": null,
+    "test64": 100.0,
+    "loops_max": 8,
+    "exact_to": 128,
+    "heldout_sets": 3,
+    "heldout_all_exact": true,
+    "strings": false,
+    "paper_general": 82.71,
+    "paper_cold": null,
+    "paper_best": 82.71,
+    "floydnet": 82.87
+   },
+   {
+    "key": "find_maximum_subarray_kadane",
+    "task": "Maximum subarray",
+    "tier": 3,
+    "tier_label": "Algorithmic structure supplied",
+    "supplied": "prefix sums",
+    "fit_ms": 458.4,
+    "fit_from_run": false,
+    "fit_note": null,
+    "test64": 100.0,
+    "loops_max": 1,
+    "exact_to": 4096,
+    "heldout_sets": 5,
+    "heldout_all_exact": true,
+    "strings": false,
+    "paper_general": 87.86,
+    "paper_cold": null,
+    "paper_best": 87.86,
+    "floydnet": 86.2
+   },
+   {
+    "key": "articulation_points",
+    "task": "Articulation points",
+    "tier": 3,
+    "tier_label": "Algorithmic structure supplied",
+    "supplied": "deletion closure",
+    "fit_ms": 23.3,
+    "fit_from_run": false,
+    "fit_note": null,
+    "test64": 100.0,
+    "loops_max": 1,
+    "exact_to": 1024,
+    "heldout_sets": 4,
+    "heldout_all_exact": true,
+    "strings": false,
+    "paper_general": 100.0,
+    "paper_cold": null,
+    "paper_best": 100.0,
+    "floydnet": 100.0
+   },
+   {
+    "key": "bridges",
+    "task": "Bridges",
+    "tier": 3,
+    "tier_label": "Algorithmic structure supplied",
+    "supplied": "deletion closure",
+    "fit_ms": 25.6,
+    "fit_from_run": false,
+    "fit_note": null,
+    "test64": 100.0,
+    "loops_max": 1,
+    "exact_to": 256,
+    "heldout_sets": 3,
+    "heldout_all_exact": true,
+    "strings": false,
+    "paper_general": 100.0,
+    "paper_cold": null,
+    "paper_best": 100.0,
+    "floydnet": 100.0
+   },
+   {
+    "key": "dfs",
+    "task": "Depth-first search",
+    "tier": 3,
+    "tier_label": "Algorithmic structure supplied",
+    "supplied": "\u201copen\u201d",
+    "fit_ms": 47508.4,
+    "fit_from_run": false,
+    "fit_note": null,
+    "test64": 100.0,
+    "loops_max": 65,
+    "exact_to": 256,
+    "heldout_sets": 3,
+    "heldout_all_exact": true,
+    "strings": false,
+    "paper_general": 72.97,
+    "paper_cold": 100.0,
+    "paper_best": 100.0,
+    "floydnet": 100.0
+   },
+   {
+    "key": "topological_sort",
+    "task": "Topological sort",
+    "tier": 3,
+    "tier_label": "Algorithmic structure supplied",
+    "supplied": "\u201copen\u201d, finish order",
+    "fit_ms": 47566.3,
+    "fit_from_run": false,
+    "fit_note": "the DFS fit + its read-out fit",
+    "test64": 100.0,
+    "loops_max": 65,
+    "exact_to": 256,
+    "heldout_sets": 3,
+    "heldout_all_exact": true,
+    "strings": false,
+    "paper_general": 99.99,
+    "paper_cold": 100.0,
+    "paper_best": 100.0,
+    "floydnet": 100.0
+   },
+   {
+    "key": "strongly_connected_components",
+    "task": "Strong components",
+    "tier": 3,
+    "tier_label": "Algorithmic structure supplied",
+    "supplied": "two passes",
+    "fit_ms": 47508.4,
+    "fit_from_run": false,
+    "fit_note": "the DFS fit only",
+    "test64": 100.0,
+    "loops_max": 65,
+    "exact_to": 256,
+    "heldout_sets": 3,
+    "heldout_all_exact": true,
+    "strings": false,
+    "paper_general": 90.61,
+    "paper_cold": 90.02,
+    "paper_best": 90.61,
+    "floydnet": 90.07
+   }
+  ],
+  "n_tasks_total": 30,
+  "tiers": {
+   "1": "Comparisons and counts only",
+   "2": "One arithmetic primitive supplied",
+   "3": "Algorithmic structure supplied"
+  },
+  "tier_counts": {
+   "1": 15,
+   "2": 9,
+   "3": 6
+  },
+  "avg": {
+   "test64": 100.0,
+   "paper_best": 98.45633333333333,
+   "floydnet": 96.63733333333333
+  },
+  "heldout": {
+   "first": {
+    "tasks": 19,
+    "sets": 92,
+    "all_exact": true
+   },
+   "other": {
+    "tasks": 11,
+    "sets": 37,
+    "all_exact": true
+   }
+  },
+  "source": "clrs/final/<task>.json (official test, val and held-out sizes, frozen code); fit times clrs/final/fit_times_m4.json; tiers, supplied primitives and comparison numbers from paper/gen/make_clrs_table.py (T, P; arXiv 2611.11937 v3, Supp. Table 4)"
+ }
+}

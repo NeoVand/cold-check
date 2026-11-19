@@ -1,0 +1,302 @@
+[
+ {
+  "seed": 0,
+  "w": 1,
+  "tie": true,
+  "n_corridor": 1,
+  "n_room": 36,
+  "margin": 0.033124013509223005,
+  "same": true,
+  "shortest": true
+ },
+ {
+  "seed": 0,
+  "w": 2,
+  "tie": true,
+  "n_corridor": 1,
+  "n_room": 36,
+  "margin": 0.033124013509223005,
+  "same": true,
+  "shortest": true
+ },
+ {
+  "seed": 0,
+  "w": 3,
+  "tie": true,
+  "n_corridor": 1,
+  "n_room": 36,
+  "margin": 0.033124013509223005,
+  "same": true,
+  "shortest": true
+ },
+ {
+  "seed": 0,
+  "w": 4,
+  "tie": true,
+  "n_corridor": 1,
+  "n_room": 36,
+  "margin": 0.033124013509223005,
+  "same": true,
+  "shortest": true
+ },
+ {
+  "seed": 0,
+  "w": 5,
+  "tie": true,
+  "n_corridor": 1,
+  "n_room": 36,
+  "margin": 0.033124013509223005,
+  "same": true,
+  "shortest": true
+ },
+ {
+  "seed": 0,
+  "w": 6,
+  "tie": true,
+  "n_corridor": 1,
+  "n_room": 36,
+  "margin": 0.033124013509223005,
+  "same": true,
+  "shortest": true
+ },
+ {
+  "seed": 0,
+  "w": 7,
+  "tie": true,
+  "n_corridor": 1,
+  "n_room": 36,
+  "margin": 0.033124013509223005,
+  "same": true,
+  "shortest": true
+ },
+ {
+  "seed": 0,
+  "w": 8,
+  "tie": true,
+  "n_corridor": 1,
+  "n_room": 36,
+  "margin": 0.033124013509223005,
+  "same": true,
+  "shortest": true
+ },
+ {
+  "seed": 0,
+  "w": 9,
+  "tie": true,
+  "n_corridor": 1,
+  "n_room": 36,
+  "margin": 0.033124013509223005,
+  "same": true,
+  "shortest": true
+ },
+ {
+  "seed": 0,
+  "w": 10,
+  "tie": true,
+  "n_corridor": 1,
+  "n_room": 36,
+  "margin": 0.033124013509223005,
+  "same": true,
+  "shortest": true
+ },
+ {
+  "seed": 1,
+  "w": 1,
+  "tie": true,
+  "n_corridor": 1,
+  "n_room": 36,
+  "margin": 0.01543681200928404,
+  "same": true,
+  "shortest": true
+ },
+ {
+  "seed": 1,
+  "w": 2,
+  "tie": true,
+  "n_corridor": 1,
+  "n_room": 36,
+  "margin": 0.01543681200928404,
+  "same": true,
+  "shortest": true
+ },
+ {
+  "seed": 1,
+  "w": 3,
+  "tie": true,
+  "n_corridor": 1,
+  "n_room": 36,
+  "margin": 0.01543681200928404,
+  "same": true,
+  "shortest": true
+ },
+ {
+  "seed": 1,
+  "w": 4,
+  "tie": true,
+  "n_corridor": 1,
+  "n_room": 36,
+  "margin": 0.01543681200928404,
+  "same": true,
+  "shortest": true
+ },
+ {
+  "seed": 1,
+  "w": 5,
+  "tie": true,
+  "n_corridor": 1,
+  "n_room": 36,
+  "margin": 0.01543681200928404,
+  "same": true,
+  "shortest": true
+ },
+ {
+  "seed": 1,
+  "w": 6,
+  "tie": true,
+  "n_corridor": 1,
+  "n_room": 36,
+  "margin": 0.01543681200928404,
+  "same": true,
+  "shortest": true
+ },
+ {
+  "seed": 1,
+  "w": 7,
+  "tie": true,
+  "n_corridor": 1,
+  "n_room": 36,
+  "margin": 0.01543681200928404,
+  "same": true,
+  "shortest": true
+ },
+ {
+  "seed": 1,
+  "w": 8,
+  "tie": true,
+  "n_corridor": 1,
+  "n_room": 36,
+  "margin": 0.01543681200928404,
+  "same": true,
+  "shortest": true
+ },
+ {
+  "seed": 1,
+  "w": 9,
+  "tie": true,
+  "n_corridor": 1,
+  "n_room": 36,
+  "margin": 0.01543681200928404,
+  "same": true,
+  "shortest": true
+ },
+ {
+  "seed": 1,
+  "w": 10,
+  "tie": true,
+  "n_corridor": 1,
+  "n_room": 36,
+  "margin": 0.01543681200928404,
+  "same": true,
+  "shortest": true
+ },
+ {
+  "seed": 2,
+  "w": 1,
+  "tie": true,
+  "n_corridor": 1,
+  "n_room": 36,
+  "margin": -0.05663819733672426,
+  "same": false,
+  "shortest": true
+ },
+ {
+  "seed": 2,
+  "w": 2,
+  "tie": true,
+  "n_corridor": 1,
+  "n_room": 36,
+  "margin": -0.05663819733672426,
+  "same": false,
+  "shortest": true
+ },
+ {
+  "seed": 2,
+  "w": 3,
+  "tie": true,
+  "n_corridor": 1,
+  "n_room": 36,
+  "margin": -0.05663819733672426,
+  "same": false,
+  "shortest": true
+ },
+ {
+  "seed": 2,
+  "w": 4,
+  "tie": true,
+  "n_corridor": 1,
+  "n_room": 36,
+  "margin": -0.05663819733672426,
+  "same": false,
+  "shortest": true
+ },
+ {
+  "seed": 2,
+  "w": 5,
+  "tie": true,
+  "n_corridor": 1,
+  "n_room": 36,
+  "margin": -0.05663819733672426,
+  "same": false,
+  "shortest": true
+ },
+ {
+  "seed": 2,
+  "w": 6,
+  "tie": true,
+  "n_corridor": 1,
+  "n_room": 36,
+  "margin": -0.05663819733672426,
+  "same": false,
+  "shortest": true
+ },
+ {
+  "seed": 2,
+  "w": 7,
+  "tie": true,
+  "n_corridor": 1,
+  "n_room": 36,
+  "margin": -0.05663819733672426,
+  "same": false,
+  "shortest": true
+ },
+ {
+  "seed": 2,
+  "w": 8,
+  "tie": true,
+  "n_corridor": 1,
+  "n_room": 36,
+  "margin": -0.05663819733672426,
+  "same": false,
+  "shortest": true
+ },
+ {
+  "seed": 2,
+  "w": 9,
+  "tie": true,
+  "n_corridor": 1,
+  "n_room": 36,
+  "margin": -0.05663819733672426,
+  "same": false,
+  "shortest": true
+ },
+ {
+  "seed": 2,
+  "w": 10,
+  "tie": true,
+  "n_corridor": 1,
+  "n_room": 36,
+  "margin": -0.05663819733672426,
+  "same": false,
+  "shortest": true
+ }
+]

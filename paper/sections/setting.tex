@@ -1,0 +1,88 @@
+\section{Fitting a check at the answer}\label{sec:setting}
+
+An example is an input $x$ on a set $V$ of $n$ items, together with its answer $y$. The input holds numbers on items
+(keys, times, weights), relations on pairs of items (an edge, two letters that are the same) and numbers on pairs (edge
+weights); numbers enter only through comparisons. The answer is a set of bits on items or on pairs. A pointer answer,
+such as the parent tree of a search, is the pair bit $\pi(u,v)$, ``$u$ is the parent of $v$'', with $\pi(v,v)$ for a
+root. Our state is the one of our cold layer\cite{mohsenvand2026zero}: bits and small whole numbers for every item and
+every ordered pair, the answer included.
+
+\subsection{Completing the answer from itself}
+
+An answer often hides what decided it. A parent tree does not show how deep each node lies, and the depth is what tells
+a breadth-first parent from any other neighbour. We therefore add registers computed from the answer alone, by two
+generic operations, closure and counting. For a pointer answer,
+\begin{equation}
+\mathrm{anc}_y = \pi^{+}, \qquad \mathrm{depth}_y(v) = \#\{u \neq v : \mathrm{anc}_y(u,v)\},
+\label{eq:completion}
+\end{equation}
+where $\pi^{+}$ is the transitive closure of the pointer. A node that the pointer does not connect to a root receives
+the value $\notyet$, read ``not yet'', which compares as later than every number and is not comparable with another
+$\notyet$. The other completions are of the same two kinds. One sums the weights along the pointer. One is the bottleneck
+closure of the edge weights: for each pair, the least possible largest weight on a path between them. For the string
+matchers, one closes ``the text and the pattern agree from here to the pattern's end'', and for the longest common
+subsequence, one counts the match arrows along the answer's own arrows. We write $y^{+} = (y, \kappa(y))$ for the
+completed answer. No step of any algorithm enters $\kappa$; it reads the final answer and the input, and the same few
+operations serve every task.
+
+\subsection{The check}
+
+For a target bit on a pair $(u,v)$, the check is a conjunction of conditions drawn from one fixed family $\Phi$, the
+same for every task:
+\begin{itemize}
+\setlength{\itemsep}{0pt}
+\item the pair's own comparisons, $r(u) < r(v)$, $r(u) = r(v)$ or $r(u) > r(v)$, for each item register $r$ of the
+input or the completion, and the input relations and item bits of $u$ and $v$;
+\item witness tests through a third item, $\exists k : A(u,k) \wedge B(k,v)$, where each leg test $A$ and $B$ is an input
+relation, a comparison or a bit of $k$, or the conjunction of two of these;
+\item comparisons of two counts, $\#\{k : A(i,k)\} < \#\{k : B(i,k)\}$ or $=$, for an item $i$.
+\end{itemize}
+With $C \subset \Phi$ the conditions the fit chooses,
+\begin{equation}
+R(u,v) = \bigwedge_{\varphi \in C} \varphi(x, y^{+})(u,v), \qquad
+\pi(v) = \operatorname*{arg\,max}_{u \,:\, R(u,v)} s(u,v),
+\label{eq:check}
+\end{equation}
+where a score $s$ breaks ties among the candidates that pass. These are the reads of the cold layer: a witness test is
+its existence read, a count comparison one of its verdict bits\cite{mohsenvand2026zero}. Nothing in $\Phi$ names a
+position or a size, so a rule fitted on graphs of 16 nodes applies, unchanged, to graphs of a thousand.
+
+\subsection{Fitting at the answer}
+
+As CRAM does, we predict each bit of a training answer from the rest of the completed answer and the input, with no
+loop. Because the answers are exact, we fit the rule of each bit as a conjunction, in two steps. We first keep every own
+comparison that held on all training positives,
+\begin{equation}
+K = \{\varphi \in \Phi_{\mathrm{own}} : \varphi(u,v) = 1 \text{ for every positive } (u,v) \text{ of every training answer}\},
+\label{eq:kept}
+\end{equation}
+where $\Phi_{\mathrm{own}}$ holds the pair's own comparisons. We then add conditions greedily, each true on every
+positive: at each step, the one that rejects the most training negatives that still pass, until none passes. This is the
+classical learner of a conjunction\cite{haussler1988quantifying}, and $C = K \cup G$, with $G$ the conditions it adds. A logistic regression with an $\ell_1$ penalty over all of $\Phi$, which is the pseudolikelihood of each bit
+given the rest, supplies the score $s$ that breaks ties. For breadth-first search, for example, the fit chooses among
+\nm{bfs.clrs.features} candidate conditions from \nm{clrs.train.inputs} training answers.
+
+The kept set $K$ is a safeguard. A condition true on every training positive cannot help to reject a negative that the
+other conditions already reject, so a sparse or greedy fit has no reason to include it. One such condition is that the
+parent lies below the child, $\mathrm{depth}(u) < \mathrm{depth}(v)$. It is true at every finished answer, and it is
+the condition that matters on the way to one (Section~\ref{sec:theory}).
+
+On puzzles, where every cell holds one of several values, we follow CRAM more closely (Methods). Pseudolikelihood with
+an $\ell_1$ penalty chooses which relations between cells carry a cost, from a vocabulary of coordinate relations such
+as ``same row'' and ``same block''. For each relation it keeps, we record, over all training answers, the range of the
+number of related cells that hold a value. The check passes a board when every such count lies in its range.
+
+\subsection{Running the check cold}
+
+The cold run starts from the empty answer, with no pointer, no selection and every register at $\notyet$, and applies
+the check until nothing changes:
+\begin{equation}
+s_0 = \varnothing, \qquad s_{t+1} = R\bigl(x,\, s_t,\, \kappa(s_t)\bigr), \qquad \text{until } s_{t+1} = s_t .
+\label{eq:run}
+\end{equation}
+Each loop recomputes the completion from the current partial answer by the same operations as at the answer, and writes
+a bit only where the check passes. On puzzles the cold run keeps, for each cell, the values not yet ruled out, and
+removes a value when some kept count range can no longer be met. This is the bounds propagation of constraint
+programming\cite{rossi2006handbook}, applied to fitted ranges. Where cells stay open, a depth-first search tries the
+open cell with the fewest values left, runs the cold stage after each choice and undoes it on a contradiction. The
+fitted check is the stopping test in both stages.

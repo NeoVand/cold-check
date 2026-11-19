@@ -1,0 +1,126 @@
+{
+ "task": "insertion_sort",
+ "kind": "pointer",
+ "train_inputs": 100,
+ "fit_ms": 166.2,
+ "rules": {
+  "off": {
+   "info": {
+    "features": 132,
+    "distinct": 20,
+    "rows": 11200,
+    "positives": 920,
+    "gate": 3,
+    "greedy": 1,
+    "gate_lets_through_negatives": 0,
+    "score_features": 4,
+    "train_wrong_score": 0,
+    "train_wrong_rule": 0
+   },
+   "exact_gate": true,
+   "gate": [
+    "('own', ('cmp', 'key', 'key', 'lt'))",
+    "not ('own', ('cmp', 'key', 'key', 'ge'))",
+    "not ('wit', (('cmp', 'key', 'key', 'lt'), None), (('cmp', 'key', 'key', 'lt'), None))"
+   ],
+   "gate_size": 3,
+   "score": [
+    [
+     "('wit', (('cmp', 'key', 'key', 'lt'), None), (('cmp', 'key', 'key', 'lt'), None))",
+     -7.953
+    ],
+    [
+     "('own', ('cmp', 'key', 'key', 'ge'))",
+     -3.904
+    ],
+    [
+     "('own', ('cmp', 'key', 'key', 'lt'))",
+     3.886
+    ],
+    [
+     "('wit', (('cmp', 'key', 'key', 'ge'), None), (('cmp', 'key', 'key', 'ge'), None))",
+     -0.951
+    ]
+   ]
+  },
+  "diag": {
+   "info": {
+    "features": 341,
+    "distinct": 56,
+    "rows": 1020,
+    "positives": 100,
+    "gate": 1,
+    "greedy": 1,
+    "gate_lets_through_negatives": 0,
+    "score_features": 5,
+    "train_wrong_score": 0,
+    "train_wrong_rule": 0
+   },
+   "exact_gate": true,
+   "gate": [
+    "not ('wit', (('cmp', 'key', 'key', 'ge'), None), (('cmp', 'key', 'key', 'lt'), None))"
+   ],
+   "gate_size": 1,
+   "score": [
+    [
+     "('wit', (('cmp', 'key', 'key', 'ge'), None), (('cmp', 'key', 'key', 'lt'), None))",
+     -4.11
+    ],
+    [
+     "('cnt', (('id',), None), (('cmp', 'key', 'key', 'le'), None), 'eq')",
+     4.034
+    ],
+    [
+     "('cnt', (('id',), None), (('cmp', 'key', 'key', 'lt'), None), 'lt')",
+     -0.96
+    ],
+    [
+     "('wit', (('cmp', 'pos', 'pos', 'lt'), None), (('cmp', 'key', 'key', 'lt'), None))",
+     -0.895
+    ],
+    [
+     "('wit', (('cmp', 'pos', 'pos', 'ge'), None), (('cmp', 'key', 'key', 'lt'), None))",
+     -0.875
+    ]
+   ]
+  }
+ },
+ "start": 0,
+ "test64": {
+  "score": 1.0,
+  "loops_max": 1,
+  "not_at_rest": 0,
+  "eval_s": 0.02
+ },
+ "val": {
+  "score": 1.0,
+  "loops_max": 1,
+  "not_at_rest": 0,
+  "eval_s": 0.01
+ },
+ "gen64": {
+  "score": 1.0,
+  "num": 32,
+  "loops_max": 1,
+  "not_at_rest": 0,
+  "eval_s": 0.02
+ },
+ "gen1024": {
+  "score": 1.0,
+  "num": 32,
+  "loops_max": 1,
+  "not_at_rest": 0,
+  "eval_s": 4.74
+ },
+ "paper": {
+  "floydnet": 100.0
+ },
+ "log": [
+  "{\"task\": \"insertion_sort\", \"fit_ms\": 166.2, \"train_inputs\": 100, \"off\": {\"exact_gate\": true, \"features\": 132, \"distinct\": 20, \"rows\": 11200, \"positives\": 920, \"gate\": 3, \"greedy\": 1, \"gate_lets_through_negatives\": 0, \"score_features\": 4, \"train_wrong_score\": 0, \"train_wrong_rule\": 0}, \"diag\": {\"exact_gate\": true, \"features\": 341, \"distinct\": 56, \"rows\": 1020, \"positives\": 100, \"gate\": 1, \"greedy\": 1, \"gate_lets_through_negatives\": 0, \"score_features\": 5, \"train_wrong_score\": 0, \"train_wrong_rule\": 0}}",
+  "official test 64: {'score': 1.0, 'loops_max': 1, 'not_at_rest': 0, 'eval_s': 0.02}",
+  "official val: {'score': 1.0, 'loops_max': 1, 'not_at_rest': 0, 'eval_s': 0.01}",
+  "generated gen64: {'score': 1.0, 'num': 32, 'loops_max': 1, 'not_at_rest': 0, 'eval_s': 0.02}",
+  "generated gen1024: {'score': 1.0, 'num': 32, 'loops_max': 1, 'not_at_rest': 0, 'eval_s': 4.74}"
+ ],
+ "where": "modal cpu=2, one BLAS thread"
+}

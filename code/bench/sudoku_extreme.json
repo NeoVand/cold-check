@@ -1,0 +1,209 @@
+{
+ "full_all_hash_ok": true,
+ "fits": [
+  {
+   "split": "train-s0",
+   "steps": 4,
+   "lr": 8.0,
+   "fit_ms_cold": 21.826792042702436,
+   "fit_ms_warm_median7": 21.374915959313512,
+   "kept": [
+    "type agree={r//b,c//b} w=1.3792",
+    "type agree={r,r//b,r%b} w=1.6254",
+    "type agree={r,r//b,c//b,r%b} w=2.1218",
+    "type agree={c,c//b,c%b} w=1.6272",
+    "type agree={c,r//b,c//b,c%b} w=2.1218",
+    "type agree={r,r//b,r%b,c%b} w=1.6293",
+    "type agree={c,c//b,r%b,c%b} w=1.6258",
+    "type agree={r//b,c//b,r-c} w=1.3792",
+    "type agree={r//b,c//b,r+c} w=1.3792"
+   ],
+   "n_kept_types": 9,
+   "n_types": 25,
+   "relations": [
+    [
+     "r"
+    ],
+    [
+     "c"
+    ],
+    [
+     "r//b",
+     "c//b"
+    ]
+   ],
+   "conditions": [
+    [
+     true,
+     true
+    ],
+    [
+     true,
+     true
+    ],
+    [
+     true,
+     true
+    ]
+   ],
+   "tau": 0.001,
+   "wmin": 1.3791977167129517,
+   "ref32_kept_types": 9,
+   "n_test": 412786,
+   "solved": 412786,
+   "correct": 412786,
+   "wrong_stops": 0,
+   "budget_misses": 0,
+   "no_solution": 0,
+   "cold_only": 46211,
+   "cold_only_frac": 0.11194904865959601,
+   "moves_mean": 108.9225215971472,
+   "moves_median": 54.0,
+   "moves_max": 5947,
+   "ops_mean": 62662.41340307084,
+   "ops_median": 35914.5,
+   "ops_max": 2748051,
+   "ops_plus_cmp_mean": 463870.1835478916,
+   "ops_plus_cmp_max": 20242926,
+   "wall_ms_mean": 0.4287615120410919,
+   "wall_ms_max": 23.534791946411133,
+   "wall_total_s": 182.86240666615777
+  },
+  {
+   "split": "train-s1",
+   "steps": 2,
+   "lr": 16.0,
+   "fit_ms_cold": 18.323875032365322,
+   "fit_ms_warm_median7": 19.79225012473762,
+   "kept": [
+    "type agree={r//b,c//b} w=1.8170",
+    "type agree={r,r//b,r%b} w=1.9306",
+    "type agree={r,r//b,c//b,r%b} w=2.1604",
+    "type agree={c,c//b,c%b} w=1.9315",
+    "type agree={c,r//b,c//b,c%b} w=2.1604",
+    "type agree={r,r//b,r%b,c%b} w=1.9331",
+    "type agree={c,c//b,r%b,c%b} w=1.9314",
+    "type agree={r//b,c//b,r-c} w=1.8170",
+    "type agree={r//b,c//b,r+c} w=1.8170"
+   ],
+   "n_kept_types": 9,
+   "n_types": 25,
+   "relations": [
+    [
+     "r"
+    ],
+    [
+     "c"
+    ],
+    [
+     "r//b",
+     "c//b"
+    ]
+   ],
+   "conditions": [
+    [
+     true,
+     true
+    ],
+    [
+     true,
+     true
+    ],
+    [
+     true,
+     true
+    ]
+   ],
+   "tau": 0.001,
+   "wmin": 1.8169941902160645,
+   "ref32_kept_types": 9,
+   "n_test": 412786,
+   "solved": 412786,
+   "correct": 412786,
+   "wrong_stops": 0,
+   "budget_misses": 0,
+   "no_solution": 0,
+   "cold_only": 46211,
+   "cold_only_frac": 0.11194904865959601,
+   "moves_mean": 108.68754754279458,
+   "moves_median": 54.0,
+   "moves_max": 10316,
+   "ops_mean": 62559.70908170335,
+   "ops_median": 35956.5,
+   "ops_max": 4460739,
+   "ops_plus_cmp_mean": 463066.9674116855,
+   "ops_plus_cmp_max": 33485001,
+   "wall_ms_mean": 0.42627114057540894,
+   "wall_ms_max": 22.35296058654785,
+   "wall_total_s": 181.73010066710413
+  },
+  {
+   "split": "train-s2",
+   "steps": 2,
+   "lr": 16.0,
+   "fit_ms_cold": 15.675417147576809,
+   "fit_ms_warm_median7": 15.496209030970931,
+   "kept": [
+    "type agree={r//b,c//b} w=1.8170",
+    "type agree={r,r//b,r%b} w=1.9309",
+    "type agree={r,r//b,c//b,r%b} w=2.1604",
+    "type agree={c,c//b,c%b} w=1.9311",
+    "type agree={c,r//b,c//b,c%b} w=2.1604",
+    "type agree={r,r//b,r%b,c%b} w=1.9326",
+    "type agree={c,c//b,r%b,c%b} w=1.9321",
+    "type agree={r//b,c//b,r-c} w=1.8170",
+    "type agree={r//b,c//b,r+c} w=1.8170"
+   ],
+   "n_kept_types": 9,
+   "n_types": 25,
+   "relations": [
+    [
+     "r"
+    ],
+    [
+     "c"
+    ],
+    [
+     "r//b",
+     "c//b"
+    ]
+   ],
+   "conditions": [
+    [
+     true,
+     true
+    ],
+    [
+     true,
+     true
+    ],
+    [
+     true,
+     true
+    ]
+   ],
+   "tau": 0.001,
+   "wmin": 1.8169951438903809,
+   "ref32_kept_types": 9,
+   "n_test": 412786,
+   "solved": 412786,
+   "correct": 412786,
+   "wrong_stops": 0,
+   "budget_misses": 0,
+   "no_solution": 0,
+   "cold_only": 46211,
+   "cold_only_frac": 0.11194904865959601,
+   "moves_mean": 108.57641732035486,
+   "moves_median": 54.0,
+   "moves_max": 5931,
+   "ops_mean": 62495.87423265324,
+   "ops_median": 35716.0,
+   "ops_max": 2672624,
+   "ops_plus_cmp_mean": 462605.2491944979,
+   "ops_plus_cmp_max": 19719801,
+   "wall_ms_mean": 0.4130805730819702,
+   "wall_ms_max": 23.145042419433594,
+   "wall_total_s": 176.14405945781618
+  }
+ ]
+}

@@ -1,0 +1,35 @@
+{
+ "frozen_sha256": {
+  "cold.py": "dc88565ba5336add58ca6cff23f5561526cb8257ad8f1d0f2239bb3245376ef8",
+  "complete.py": "a3e06b22f3fd7bd052a1988227860e9064495f70a4be3b23eb5055b1c7b4a067",
+  "tasks.py": "08f7e2e273f7bf7348130ff443a78481ba75957bf075ecb776c8fd4fc170d468",
+  "run.py": "bab251fc6e845b9f8a7780a0fc6fdb0cd1c51be4f743d94899f32d686cb9f205",
+  "gen.py": "25b810b0aeedb6404c7c4d0b8cadfa1087115aa9deb90fee6d6dcc63c3efcf8f",
+  "extra.py": "3aae7d997a1809cab8f9011ece97f1c0508b55111d29dd166e2736c7992e67ee",
+  "dp_extra.py": "a5f15924318ef7b9fa2ad41bbae785717ce5af5d8e78ad803e05f85460fc1673",
+  "gen_extra.py": "023b61f7840c44a8f6e55419aa9c69ada24a0c9bbd432f7659326e2869cdbbca",
+  "dfs2.py": "ca82e63c2466f403c09d9f8d8198e0365f4c38fc0015ec6128a8845f858aeed1",
+  "final_run.py": "91a2fc23b6b5b037d5325c0729635c5c5181a9462c714801845592b300be379b",
+  "modal_final.py": "7d02e6cea43bb34832589f9215bd408101328bc644edfd670296ca35f297d4d8",
+  "witness_clrs/scoring.py": "be2cdc53fc5133dfd813e33c348aabbf523faddbe819c2fe292b499d52f8366d",
+  "witness_clrs/tasks.py": "5f23787637ee647889f2992cef17ca195fc28810ee55361d734a227b565b771c"
+ },
+ "seed": "9000 + n (sparse: 9000 + n + 7); official test and val splits",
+ "note": "final battery: every number in the paper is read from final/",
+ "release_sha256": {
+  "cold.py": "1d40fb0c96c614d764cfd1e565e8d7c302da28304139ae90bd06d0c27b199962",
+  "complete.py": "a3e06b22f3fd7bd052a1988227860e9064495f70a4be3b23eb5055b1c7b4a067",
+  "tasks.py": "20e57fdb317167f23c52522582c9f8e2133a82fc8694ee2629edd10e0b7b7f9c",
+  "run.py": "bab251fc6e845b9f8a7780a0fc6fdb0cd1c51be4f743d94899f32d686cb9f205",
+  "gen.py": "a058e57dd1b195ec9b1128d45c4a764db4f371337a77b96f78ac5134071adb0b",
+  "extra.py": "3aae7d997a1809cab8f9011ece97f1c0508b55111d29dd166e2736c7992e67ee",
+  "dp_extra.py": "9bbbe40a46e63010823ea132943d11ae8362e2ce7eb64b2ae5c1f38a35b1ff31",
+  "gen_extra.py": "023b61f7840c44a8f6e55419aa9c69ada24a0c9bbd432f7659326e2869cdbbca",
+  "dfs2.py": "a57f6aab18b2f69607f3e0a1d375c16fa8a8275f0f7f55bf203ab11860407c36",
+  "final_run.py": "91a2fc23b6b5b037d5325c0729635c5c5181a9462c714801845592b300be379b",
+  "modal_final.py": "fdee121d957ec4343fc51285dec56141651366ff569e19919c7ba35fe439dbc2",
+  "witness_clrs/scoring.py": "be2cdc53fc5133dfd813e33c348aabbf523faddbe819c2fe292b499d52f8366d",
+  "witness_clrs/tasks.py": "5f23787637ee647889f2992cef17ca195fc28810ee55361d734a227b565b771c"
+ },
+ "release_note": "frozen_sha256: the files as they ran. release_sha256: the copies in this repository, which differ only in comments, path constants and Modal app names."
+}

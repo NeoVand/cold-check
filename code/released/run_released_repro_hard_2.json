@@ -1,0 +1,37 @@
+{
+ "kind": "repro_hard",
+ "args": [
+  2
+ ],
+ "seconds": 15.703177213668823,
+ "result": {
+  "seed": 2,
+  "got": {
+   "solved": 999,
+   "n": 1000,
+   "wrong_stops": 1,
+   "budget_failures": 0,
+   "flop_mean": 6006976.2,
+   "flop_p99": 8967150.0,
+   "flop_max": 10368900.0,
+   "corr_G_rank_corr": 0.9998496246585404,
+   "corr_G_all_cells": 0.9998496246585404,
+   "psi_steps_median": 128.0,
+   "psi_steps_max": 160,
+   "ptr_acc_path": 1.0,
+   "ptr_acc_ties": 1.0,
+   "wrong_stop_indices": [
+    106
+   ]
+  },
+  "recorded": {
+   "record": "experiments/runs/CRAM-HE/final-triton/CHE8-mu/test-scores.json",
+   "n": 1000,
+   "solved": 999,
+   "wrong_stops": 1,
+   "budget_failures": 0,
+   "flop_mean": 6006976.2
+  }
+ },
+ "error": null
+}

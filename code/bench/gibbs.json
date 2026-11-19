@@ -1,0 +1,26 @@
+{
+ "no_cold": {
+  "n": 2000,
+  "budget": 2097152,
+  "solved": 1778,
+  "wrong_stops": 0,
+  "cold_stage_solved": 0,
+  "moves_mean": 630614.579,
+  "moves_median": 301954.5,
+  "moves_median_solved": 225195.5,
+  "ops_mean": 35942343.83,
+  "wall_s": 172.7988305829931
+ },
+ "cold": {
+  "n": 2000,
+  "budget": 2097152,
+  "solved": 1828,
+  "wrong_stops": 0,
+  "cold_stage_solved": 232,
+  "moves_mean": 529554.168,
+  "moves_median": 178126.5,
+  "moves_median_solved": 133946.5,
+  "ops_mean": 21396758.74,
+  "wall_s": 99.88500979100354
+ }
+}

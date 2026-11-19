@@ -1,0 +1,113 @@
+% Supplementary Information. Every number is a \nm{} key.
+\section*{Supplementary Note 1: proofs}
+
+\paragraph{Proposition~\ref{prop:invisible}.} Let $R$ be exact on the completed training answers: it accepts every
+positive and rejects every negative. Let $c$ hold on every positive. Then $R\wedge c$ accepts every positive, since both
+conjuncts do, and rejects every negative, since $R$ does. So $R$ and $R \wedge c$ have the same training error, and
+any fit that prefers fewer conditions, as the $\ell_1$ penalty and the greedy conjunction do, returns $R$.\hfill$\square$
+
+\paragraph{Proposition~\ref{prop:stratified}.} Let the levels be $0, 1, \ldots, L$, and let the run settle level $\lambda$
+at loop $\lambda + 1$. Suppose that after loop $\lambda$ every item of level below $\lambda$ holds its value in $y$ and
+every completion register of those items equals its value in $y^{+}$. An item $v$ of level $\lambda$ reads only the input
+and items of level below $\lambda$, so it reads exactly what it reads at the completed answer, where its check is exact;
+it therefore takes its value in $y$ at loop $\lambda+1$. The registers of $v$ are computed from items of level at most
+$\lambda$, which now all hold their values in $y$, so they too equal their values in $y^{+}$. Induction on $\lambda$
+gives the claim, in $L+1$ loops.\hfill$\square$
+
+\paragraph{Proposition~\ref{prop:finite}.} Let $(u,v)$ be a pair of an input $x$ of any size, and let $E_1,\ldots,E_W$ be
+the witness tests of the rule and of the definition. For each $E_j$ that holds at $(u,v)$, pick one witness $k_j$, and let
+$x'$ be the input restricted to $\{u,v,k_1,\ldots\}$, at most $2+W$ items, which is in the class because the class is
+closed under deleting items. Own comparisons of $(u,v)$ are the same in $x$ and $x'$. A test that holds in $x$ holds in
+$x'$, through its kept witness. A test that fails in $x$ fails in $x'$, since $x'$ has fewer candidate witnesses and the
+legs of each are unchanged. So the rule and the definition take the same values at $(u,v)$ in $x$ as in $x'$, where they
+agree by hypothesis.\hfill$\square$
+
+\paragraph{The cold run of breadth-first search.} The CLRS-30 rule (Supplementary Note~2) names $u$ as the parent of $v$
+when $\mathrm{depth}_u < \mathrm{depth}_v$, there is an edge $u \to v$, $u$ is reached, $v$ is not the source, and no
+neighbour $k$ of $v$ with a lower number than $u$ has $\mathrm{depth}_k < \mathrm{depth}_v$. We show that loop $t$ sets
+exactly the parents of the nodes at distance $t$ from the source. Before loop $t$, suppose the reached nodes are exactly
+those at distance below $t$, with their depths right. A node $v$ at distance at least $t$ is unreached, so its depth is
+$\notyet$, which is later than every number; its candidates are its reached neighbours. If $v$ is at distance $t$, these
+are its neighbours at distance $t-1$ (a neighbour cannot be nearer than $t-1$), and the witness test leaves the
+lowest-numbered of them, which is the library's parent. If $v$ is at distance above $t$, it has no reached neighbour, so
+no candidate passes and nothing is written. A reached node $v$ at distance $d < t$ has candidates of depth below $d$ among
+its neighbours, which lie at distance $d-1$, and the rule names the same parent as before. So after loop $t$ the reached
+nodes are those at distance at most $t$, and the run comes to rest one loop after the eccentricity of the source.
+The run reads every node at every loop; what keeps the far nodes from being written early is that they have no reached
+candidate, which is the kept condition ``$u$ reached'' together with the level condition.
+
+\paragraph{The greedy tasks.} For activity selection and task scheduling the answer is read only downward along one
+order (finish time; weight), so the rule of item $i$ reads only items earlier in that order. The rule is then stratified
+by that order, item by item, and the synchronous run fixes the first $t$ items of the order by loop $t$; it settles at
+its unique fixed point, which is the greedy answer at the training answers and, by the same induction, at every input.
+
+\paragraph{Sudoku: the kept types at every size.} A pair of cells has a type, the pattern of which of eight relations hold:
+same row, same column, same band $\lfloor r/b\rfloor$, same stack $\lfloor c/b\rfloor$, same offset in the band and in
+the stack, and the two diagonals. Each pattern that some board realises is realised within one box and one other box, by
+offsets of at most $b-1$, so the set of realised types is the same for every $b \geq 3$ (\nm{sudoku.types} types; $b=2$
+realises 23 of them). The kept types are exactly those with same row, same column, or same band and same stack, so on
+every board the kept pairs are the row, column and box pairs; the script checks this for $b$ from \nm{proof.b.lo} to
+\nm{proof.b.hi} on all three fits.
+
+\paragraph{Sudoku: the stop is sound.} The energy of a full board is the sum of the kept costs over pairs of cells that
+hold the same value. Every kept cost is at least \nm{sudoku.wmin.lo}, and none is negative. The threshold is
+\nm{sudoku.tau}, below the smallest cost, so a board passes exactly when no kept pair holds the same value twice, that is,
+when no row, column or box repeats a value. A unit of $n$ cells that repeats none of $n$ values holds each once. So a
+board that passes is a valid Sudoku, at every size.
+
+\paragraph{Sudoku: the cold stage never removes a solution.} The kept count conditions say that each value occurs at
+least once and at most once in each unit. Both hold on every valid board of every size. Each removal of the cold stage
+(and of the pair rule over overlapping units) follows from one of them, so it never removes the value that a solution
+of the puzzle puts in a cell. With the complete depth-first search, every puzzle that has a solution is solved given
+enough moves, and a puzzle without one is reported as such when the search is exhausted.
+
+\paragraph{Maze-Unique.} On a tree maze of the room lattice (rooms at odd--odd cells, corridors between, walls at
+even--even cells), the true answer meets every kept range: a path cell has two path side-neighbours, the start and the
+goal one; an off cell has at most one, since two would close a cycle; corner counts are at most two for corridors and
+zero for rooms. So no removal is wrong. From the start in which every open cell may be on the path, the cold stage removes
+a cell with fewer than two possible path neighbours until none is left. What remains is a subtree whose only leaves are
+the start and the goal, which is the path. No size and no edge term enters the argument, and counts run only over cells
+that exist, so the edge needs no special case.
+
+\paragraph{Maze-Hard.} The reach clock assigns each open cell the loop at which the cold reach run from the goal first
+arrives, which is its side-step distance to the goal, since each loop adds exactly the cells one step further. The fitted
+rule steps to an open neighbour whose clock is one less, the only ``nearer'' a grid allows, and breaks ties by the learned
+order of directions, which is the order the labels use. It therefore returns the label on every maze of any size or shape.
+
+\paragraph{CRAM's Sudoku stop.} A full board that is not a valid Sudoku has at least two clashing pairs: if exactly one
+pair of cells in one unit held the same digit, counting that digit by rows and by columns would give different totals.
+So a wrong board pays at least the sum of the two smallest conflict costs, at least \nm{rel.stop.pay.lo} on every seed.
+Each cell holds one digit, so the most a board can collect from negative costs is half the sum over cells of the most
+one digit can collect at that cell, at most \nm{rel.stop.earn.hi}, and the input costs add less than 0.001. Every wrong
+board therefore has energy at least \nm{rel.stop.bound.lo}, above the stop threshold on all three seeds.
+
+\paragraph{CRAM's maze model inside the board.} The released Maze-Unique weights prefer a cell on exactly when at least
+two of its four side neighbours are on, for all \nm{rel.cert.interior} patterns of its eight neighbours, on every seed.
+On a tree maze with no open cell on the outer edge, cells only switch off in the descent from the all-on start, a cell
+that has switched off never regains its second neighbour, and any order of moves ends at the path after as many moves as
+there are open cells off it. No board size enters.
+
+\section*{Supplementary Note 2: the fitted rules of all thirty tasks}
+
+Each rule is printed from its fitted table. For a pointer, $u$ is the candidate and $v$ the target; for an item mask,
+$i$; $k$ ranges over third items. ``Kept'' counts the own conditions kept because they held on every training positive,
+``added'' those added by the greedy conjunction. Values $\notyet$ compare false with each other. Registers: key, the
+input number; $\mathrm{pos}$, the item's index; depth, dist and $B$ (bottleneck), completions; $S$, the supplied sum;
+$\mathrm{sel}$, the item mask of the partial answer; $\mathrm{run}$, the closure of agreeing text; $U_c$ and $L_c$, the
+counts one cell up and one cell left; $N$, the supplied split cost; $\mathrm{sep}$ and $\mathrm{reach\_without}$, the
+supplied deletion closures; $M$, $m$ and $P'$, the supplied prefix quantities; d and f, discovery and finish times; open
+and unplaced, the supplied depth-first bits; left, right and noleft, the supplied orientation relations.
+
+{\small
+\input{gen/rules.tex}
+}
+
+\section*{Supplementary Table S1: the held-out battery with frozen code}
+
+{\small Score of the library's scorer on each held-out set, in percent, with the number of inputs in brackets. Val: the
+official validation split. Other columns: fresh inputs from our generator at seed $9000+n$, by size in nodes or items.
+$^\dagger$Text and pattern together: 80, 320, 1,280 and 5,120 items. $^\ddagger$Always four points.
+$^\S$128 items. Dashes: not run, because the run or the supplied closure is too slow at that size.\par}
+\begin{center}\scriptsize
+\input{gen/heldout_table.tex}
+\end{center}

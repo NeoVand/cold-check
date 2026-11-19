@@ -1,0 +1,1 @@
+{"seed": 3, "num": 32, "length": 64, "task": "matrix_chain_order", "split": "test", "sha256": "37ecffeba2eea559c722dbb29f5c4910ba8f84fa19d61db455e76807ac44c331", "shapes": {"n": [32], "x_pos": [32, 64], "x_p": [32, 64], "s": [32, 64, 64]}, "seconds": 56.6, "clrs_version": "2.0.3", "numpy": "2.5.4"}

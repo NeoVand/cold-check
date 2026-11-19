@@ -1,0 +1,347 @@
+[
+ {
+  "which": "stage1",
+  "wall_s": 23.449734926223755,
+  "jobs": [
+   {
+    "kind": "data",
+    "args": [],
+    "seconds": 9.789023637771606,
+    "error": false
+   },
+   {
+    "kind": "repro_hard",
+    "args": [
+     0
+    ],
+    "seconds": 15.463640451431274,
+    "error": false
+   },
+   {
+    "kind": "repro_hard",
+    "args": [
+     1
+    ],
+    "seconds": 13.150662899017334,
+    "error": false
+   },
+   {
+    "kind": "repro_hard",
+    "args": [
+     2
+    ],
+    "seconds": 15.703177213668823,
+    "error": false
+   },
+   {
+    "kind": "repro_unique",
+    "args": [
+     0
+    ],
+    "seconds": 7.696241617202759,
+    "error": false
+   },
+   {
+    "kind": "repro_unique",
+    "args": [
+     1
+    ],
+    "seconds": 5.917823553085327,
+    "error": false
+   },
+   {
+    "kind": "repro_unique",
+    "args": [
+     2
+    ],
+    "seconds": 6.813645839691162,
+    "error": false
+   }
+  ],
+  "container_s": 74.53421521186829,
+  "cpu": 8,
+  "memory_gib": 8
+ },
+ {
+  "which": "stage3",
+  "wall_s": 7.070453882217407,
+  "jobs": [
+   {
+    "kind": "hard_wrong",
+    "args": [
+     0
+    ],
+    "error": "DeserializationError(\"Deserialization failed because the 'numpy' module is not available in the local environment.\")"
+   },
+   {
+    "kind": "hard_wrong",
+    "args": [
+     1
+    ],
+    "error": "DeserializationError(\"Deserialization failed because the 'numpy' module is not available in the local environment.\")"
+   },
+   {
+    "kind": "hard_wrong",
+    "args": [
+     2
+    ],
+    "error": "DeserializationError(\"Deserialization failed because the 'numpy' module is not available in the local environment.\")"
+   }
+  ],
+  "container_s": 0,
+  "cpu": 8,
+  "memory_gib": 8
+ },
+ {
+  "which": "stage3",
+  "wall_s": 6.542557239532471,
+  "jobs": [
+   {
+    "kind": "hard_wrong",
+    "args": [
+     0
+    ],
+    "seconds": 0.5201761722564697,
+    "error": false
+   },
+   {
+    "kind": "hard_wrong",
+    "args": [
+     1
+    ],
+    "seconds": 0.6393599510192871,
+    "error": false
+   },
+   {
+    "kind": "hard_wrong",
+    "args": [
+     2
+    ],
+    "seconds": 0.635427713394165,
+    "error": false
+   }
+  ],
+  "container_s": 1.7949638366699219,
+  "cpu": 8,
+  "memory_gib": 8
+ },
+ {
+  "which": "stage2",
+  "wall_s": 729.7190778255463,
+  "jobs": [
+   {
+    "kind": "pab",
+    "args": [
+     0
+    ],
+    "seconds": 9.735848426818848,
+    "error": false
+   },
+   {
+    "kind": "pab",
+    "args": [
+     1
+    ],
+    "seconds": 18.602184772491455,
+    "error": false
+   },
+   {
+    "kind": "pab",
+    "args": [
+     2
+    ],
+    "seconds": 23.81740665435791,
+    "error": false
+   },
+   {
+    "kind": "pcd",
+    "args": [
+     0,
+     15
+    ],
+    "error": "DeserializationError(\"Deserialization failed because the 'numpy' module is not available in the local environment.\")"
+   },
+   {
+    "kind": "pcd",
+    "args": [
+     0,
+     30
+    ],
+    "error": "DeserializationError(\"Deserialization failed because the 'numpy' module is not available in the local environment.\")"
+   },
+   {
+    "kind": "pcd",
+    "args": [
+     0,
+     60
+    ],
+    "error": "DeserializationError(\"Deserialization failed because the 'numpy' module is not available in the local environment.\")"
+   },
+   {
+    "kind": "pcd",
+    "args": [
+     1,
+     15
+    ],
+    "error": "DeserializationError(\"Deserialization failed because the 'numpy' module is not available in the local environment.\")"
+   },
+   {
+    "kind": "pcd",
+    "args": [
+     1,
+     30
+    ],
+    "error": "DeserializationError(\"Deserialization failed because the 'numpy' module is not available in the local environment.\")"
+   },
+   {
+    "kind": "pcd",
+    "args": [
+     1,
+     60
+    ],
+    "error": "DeserializationError(\"Deserialization failed because the 'numpy' module is not available in the local environment.\")"
+   },
+   {
+    "kind": "pcd",
+    "args": [
+     2,
+     15
+    ],
+    "error": "DeserializationError(\"Deserialization failed because the 'numpy' module is not available in the local environment.\")"
+   },
+   {
+    "kind": "pcd",
+    "args": [
+     2,
+     30
+    ],
+    "error": "DeserializationError(\"Deserialization failed because the 'numpy' module is not available in the local environment.\")"
+   },
+   {
+    "kind": "pcd",
+    "args": [
+     2,
+     60
+    ],
+    "error": "DeserializationError(\"Deserialization failed because the 'numpy' module is not available in the local environment.\")"
+   },
+   {
+    "kind": "loops",
+    "args": [
+     15
+    ],
+    "seconds": 4.7158801555633545,
+    "error": false
+   },
+   {
+    "kind": "loops",
+    "args": [
+     30
+    ],
+    "seconds": 16.347801685333252,
+    "error": false
+   },
+   {
+    "kind": "loops",
+    "args": [
+     60
+    ],
+    "seconds": 53.21519160270691,
+    "error": false
+   }
+  ],
+  "container_s": 126.43431329727173,
+  "cpu": 8,
+  "memory_gib": 8
+ },
+ {
+  "which": "pcd",
+  "wall_s": 702.9362499713898,
+  "jobs": [
+   {
+    "kind": "pcd",
+    "args": [
+     0,
+     15
+    ],
+    "seconds": 3.1145219802856445,
+    "error": false
+   },
+   {
+    "kind": "pcd",
+    "args": [
+     0,
+     30
+    ],
+    "seconds": 14.665846586227417,
+    "error": false
+   },
+   {
+    "kind": "pcd",
+    "args": [
+     0,
+     60
+    ],
+    "seconds": 202.20749640464783,
+    "error": false
+   },
+   {
+    "kind": "pcd",
+    "args": [
+     1,
+     15
+    ],
+    "seconds": 5.169836759567261,
+    "error": false
+   },
+   {
+    "kind": "pcd",
+    "args": [
+     1,
+     30
+    ],
+    "seconds": 52.29279065132141,
+    "error": false
+   },
+   {
+    "kind": "pcd",
+    "args": [
+     1,
+     60
+    ],
+    "seconds": 696.4060995578766,
+    "error": false
+   },
+   {
+    "kind": "pcd",
+    "args": [
+     2,
+     15
+    ],
+    "seconds": 4.2259321212768555,
+    "error": false
+   },
+   {
+    "kind": "pcd",
+    "args": [
+     2,
+     30
+    ],
+    "seconds": 48.70830583572388,
+    "error": false
+   },
+   {
+    "kind": "pcd",
+    "args": [
+     2,
+     60
+    ],
+    "seconds": 679.0187201499939,
+    "error": false
+   }
+  ],
+  "container_s": 1705.8095500469208,
+  "cpu": 8,
+  "memory_gib": 8
+ }
+]

@@ -1,0 +1,70 @@
+\section{When a check is an algorithm}\label{sec:theory}
+
+A rule fitted at the answer is exact at the answer: on every training example, the completed answer $y^{+}$ is a fixed
+point of the cold step~\eqref{eq:run}. In logic programming such a fixed point is a supported model, a model of the
+rules' Clark completion\cite{clark1978negation}. Run from nothing, a rule computes something else, for rules without
+negation its least model, and the two can differ, because at a finished answer facts can support one another in a
+circle with nothing to start them. Fages showed that they coincide when the rules are tight: when a level mapping ranks
+every fact above the facts that support it\cite{fages1994consistency}. Our rules contain negation (``no better
+candidate''), and the matching condition for them is local stratification, under which each negated condition refers
+only to facts of lower rank\cite{apt1988towards}. The completion supplies the ranks. What decides the run is whether the
+fitted rule uses them, and here a fit at the answer is blind.
+
+\begin{proposition}[the level condition is invisible at the answer]\label{prop:invisible}
+Let $c(u,v)$ be a condition that holds on every positive pair of every completed training answer, such as
+$\mathrm{depth}(u) < \mathrm{depth}(v)$ for a parent $u$ of $v$. If a rule $R$ is exact at those answers, so is
+$R \wedge c$.
+\end{proposition}
+
+The proof is one line: $R \wedge c$ accepts every positive, because $c$ does, and rejects every negative that $R$
+rejects. So once other conditions reject the same negatives, nothing in the training answers rewards $c$, and a fit that
+prefers fewer conditions can drop it. Kept, the condition does the work of the level mapping.
+
+\begin{proposition}[a stratified check produces the answer]\label{prop:stratified}
+Let $\ell$ be a level mapping on the items given by the completion, and suppose that the check of every item $v$ reads,
+besides the input, only items $u$ with $\ell(u) < \ell(v)$, and is exact at the completed answer. Then the cold run from
+$\notyet$, in which an item is settled once every item below it is, reproduces the answer in at most as many loops as
+there are levels.
+\end{proposition}
+
+The proof is by induction on the level: once the items below level $L$ are settled correctly, an item at level $L$ reads
+exactly what it reads at the completed answer, where its check is exact. The level condition ``the support lies below'' is what
+makes a fitted check of this kind, since it restricts each item's rule to lower levels; keeping every condition that held
+on all training positives guarantees that the rule contains it. In our runs every item is evaluated at every loop, so an item could
+in principle be written before its level. The check prevents this in the tasks we ran, because an item has no candidate
+that passes until its support is placed; Supplementary Note~1 argues it task by task.
+
+\begin{proposition}[a finite certificate for every size]\label{prop:finite}
+Suppose a rule and the definition of the answer are both conjunctions of a pair's own comparisons and of witness tests
+$\exists k : A(u,k) \wedge B(k,v)$, with $W$ witness tests in all, on a class of inputs closed under deleting items.
+If the two agree on every input of at most $2 + W$ items, they agree on every input of every size.
+\end{proposition}
+
+For a pair $(u,v)$ in any input, delete every item except $u$, $v$ and one witness for each witness test that holds. A
+test that holds still holds, and a test that fails still fails, since deleting items never creates a witness; the own
+comparisons do not change. So the pair keeps every truth value, and a disagreement at any size would already show on
+at most $2 + W$ items. This is the classical preservation of existential conditions under substructures, applied to a fitted table. Count
+comparisons are not preserved under deletion, so the certificate covers the rules that use none. Section~\ref{sec:proofs} applies it.
+
+On breadth-first search the three parts of the method separate cleanly (Fig.~\ref{fig:theory}). Here we use the
+textbook's queue-order search, in which a node's parent is the neighbour that discovered it, and fit on 30 connected
+random graphs of 8 to 16 nodes. With the depth as the completion, the fitted rule always names a valid shortest-path
+parent, but it names the label's own parent only \nm{bfs.depth.64}\% of the time at 64 nodes. The label breaks ties by
+the order of discovery, which depth does not hold. With the place of each node in the order of discovery as the
+completion, computed from the parent tree alone, the rule is exact at the answer. Run cold from $\notyet$ as fitted, it
+names only \nm{bfs.asfitted.64}\% of the parents right, because the fit dropped the condition that the parent is placed
+before the child. With that condition kept, it is exact at 64, 256 and 1,024 nodes and settles one level of the search
+per loop. The CLRS-30 library's breadth-first search, used in Section~\ref{sec:clrs}, labels each node differently, with
+its lowest-numbered neighbour one level up, and there the depth alone is enough. On that task, and on Prim and Dijkstra,
+the fitted rule already contains its level condition, and it is exact from nothing with or without the kept set. Keeping every condition is the safeguard for labellings
+like the queue order, where the fit can drop it.
+
+A completion of this kind is what distributed computing calls a proof labelling scheme: labels on the nodes that let a
+verifier looking only at each node's neighbourhood confirm a global property, as a distance from the root certifies a
+breadth-first tree\cite{korman2010proof,goos2016locally}. The fitted check is the verifier, and the cold run computes the
+labels. Seen this way, the hints of algorithmic reasoning, which supervise a network on the steps of an algorithm, are
+certificates computed from the trace, and completions are certificates computed from the answer. Where the answer
+carries no such label, the method needs help. Depth-first search is the clear case. Completed with its discovery and
+finish times, its answer is checkable: the fitted check is exact at the finished answer (\nm{dfs.answer}\%). Run cold,
+it names \nm{dfs.cold}\% of the parents right, because the state that decides each step of the search, which visited
+nodes are still open, is never visible in a finished answer, where every node is closed.

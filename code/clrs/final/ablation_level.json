@@ -1,0 +1,248 @@
+{
+ "bfs": {
+  "a": {
+   "official64": {
+    "right": 1.0,
+    "at_rest": "32/32",
+    "loops_max": 4
+   },
+   "fresh1024": {
+    "right": 1.0,
+    "at_rest": "8/8",
+    "loops_max": 3
+   }
+  },
+  "a_at_answer": {
+   "official64": 1.0,
+   "fresh1024": 1.0
+  },
+  "c": {
+   "official64": {
+    "right": 1.0,
+    "at_rest": "32/32",
+    "loops_max": 4
+   },
+   "fresh1024": {
+    "right": 1.0,
+    "at_rest": "8/8",
+    "loops_max": 3
+   }
+  },
+  "b": {
+   "official64": {
+    "right": 1.0,
+    "at_rest": "32/32",
+    "loops_max": 4
+   },
+   "fresh1024": {
+    "right": 1.0,
+    "at_rest": "8/8",
+    "loops_max": 3
+   }
+  },
+  "conditions": {
+   "off": [
+    [
+     "('own', ('cmp', 'depth', 'depth', 'lt'))",
+     true
+    ],
+    [
+     "('own', ('rel', 'edge', 0))",
+     true
+    ],
+    [
+     "('bitA', ('bit', 'has_depth'))",
+     true
+    ],
+    [
+     "('bitB', ('bit', 'source'))",
+     false
+    ],
+    [
+     "('wit', (('cmp', 'pos', 'pos', 'ge'), None), (('and', ('rel', 'edge', 0), ('cmp', 'depth', 'depth', 'lt')), None))",
+     false
+    ]
+   ],
+   "diag": [
+    [
+     "('wit', (('cmp', 'depth', 'depth', 'gt'), None), (('rel', 'edge', 0), None))",
+     false
+    ]
+   ]
+  }
+ },
+ "mst_prim": {
+  "a": {
+   "official64": {
+    "right": 1.0,
+    "at_rest": "32/32",
+    "loops_max": 25
+   },
+   "fresh1024": {
+    "right": 1.0,
+    "at_rest": "8/8",
+    "loops_max": 66
+   }
+  },
+  "a_at_answer": {
+   "official64": 1.0,
+   "fresh1024": 1.0
+  },
+  "c": {
+   "official64": {
+    "right": 1.0,
+    "at_rest": "32/32",
+    "loops_max": 25
+   },
+   "fresh1024": {
+    "right": 1.0,
+    "at_rest": "8/8",
+    "loops_max": 66
+   }
+  },
+  "b": {
+   "official64": {
+    "right": 1.0,
+    "at_rest": "32/32",
+    "loops_max": 25
+   },
+   "fresh1024": {
+    "right": 1.0,
+    "at_rest": "8/8",
+    "loops_max": 66
+   }
+  },
+  "conditions": {
+   "off": [
+    [
+     "('own', ('cmp', 'depth', 'depth', 'lt'))",
+     true
+    ],
+    [
+     "('own', ('rel', 'edge', 0))",
+     true
+    ],
+    [
+     "('own', ('pcmp', 'w', 'B', 'eq'))",
+     true
+    ],
+    [
+     "('own', ('pcmp', 'w', 'B', 'gt'))",
+     false
+    ],
+    [
+     "('bitA', ('bit', 'has_depth'))",
+     true
+    ],
+    [
+     "('bitB', ('bit', 'source'))",
+     false
+    ]
+   ],
+   "diag": [
+    [
+     "('wit', (('cmp', 'depth', 'depth', 'gt'), None), (('rel', 'edge', 0), None))",
+     false
+    ]
+   ]
+  }
+ },
+ "dijkstra": {
+  "a": {
+   "official64": {
+    "right": 1.0,
+    "at_rest": "32/32",
+    "loops_max": 8
+   },
+   "fresh1024": {
+    "right": 1.0,
+    "at_rest": "8/8",
+    "loops_max": 7
+   }
+  },
+  "a_at_answer": {
+   "official64": 1.0,
+   "fresh1024": 1.0
+  },
+  "c": {
+   "official64": {
+    "right": 1.0,
+    "at_rest": "32/32",
+    "loops_max": 8
+   },
+   "fresh1024": {
+    "right": 1.0,
+    "at_rest": "8/8",
+    "loops_max": 7
+   }
+  },
+  "b": {
+   "official64": {
+    "right": 1.0,
+    "at_rest": "32/32",
+    "loops_max": 8
+   },
+   "fresh1024": {
+    "right": 1.0,
+    "at_rest": "8/8",
+    "loops_max": 7
+   }
+  },
+  "conditions": {
+   "off": [
+    [
+     "('own', ('cmp', 'dist', 'dist', 'lt'))",
+     true
+    ],
+    [
+     "('own', ('rel', 'edge', 0))",
+     true
+    ],
+    [
+     "('bitA', ('bit', 'has_dist'))",
+     true
+    ],
+    [
+     "('bitB', ('bit', 'source'))",
+     false
+    ],
+    [
+     "('tri', (('cmp', 'dist', 'dist', 'lt'), None), 'S', 'S', 'lt')",
+     false
+    ]
+   ],
+   "diag": [
+    [
+     "('wit', (('cmp', 'dist', 'dist', 'gt'), None), (('rel', 'edge', 0), None))",
+     false
+    ]
+   ]
+  }
+ },
+ "activity_selector": {
+  "no_level": {
+   "official64": {
+    "score": 1.0,
+    "at_rest": "32/32",
+    "loops_max": 14
+   },
+   "fresh1024": {
+    "score": 1.0,
+    "at_rest": "8/8",
+    "loops_max": 23
+   }
+  },
+  "level": {
+   "official64": {
+    "score": 1.0,
+    "at_rest": "32/32",
+    "loops_max": 14
+   },
+   "fresh1024": {
+    "score": 1.0,
+    "at_rest": "8/8",
+    "loops_max": 23
+   }
+  }
+ }
+}

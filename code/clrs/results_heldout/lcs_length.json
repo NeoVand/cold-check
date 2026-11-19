@@ -1,0 +1,221 @@
+{
+ "task": "lcs_length",
+ "kind": "ecat_loop",
+ "train_inputs": 100,
+ "fit_ms": 366.8,
+ "rules": {
+  "cat0": {
+   "info": {
+    "features": 800,
+    "distinct": 65,
+    "rows": 3040,
+    "positives": 762,
+    "gate": 1,
+    "greedy": 0,
+    "gate_lets_through_negatives": 0,
+    "score_features": 3,
+    "train_wrong_score": 0,
+    "train_wrong_rule": 0
+   },
+   "exact_gate": true,
+   "gate": [
+    "('own', ('rel', 'same_key', 0))"
+   ],
+   "gate_size": 1,
+   "score": [
+    [
+     "('own', ('rel', 'same_key', 0))",
+     8.254
+    ],
+    [
+     "('wit', (('rel', 'same_key', 0), None), (('rel', 'same_key', 0), None))",
+     2.181
+    ],
+    [
+     "('wit', (('rel', 'same_key', 0), None), (('rel', 'same_key', 0), ('bit', 'string')))",
+     0.368
+    ]
+   ]
+  },
+  "cat1": {
+   "info": {
+    "features": 800,
+    "distinct": 65,
+    "rows": 3040,
+    "positives": 1892,
+    "gate": 2,
+    "greedy": 0,
+    "gate_lets_through_negatives": 0,
+    "score_features": 12,
+    "train_wrong_score": 0,
+    "train_wrong_rule": 0
+   },
+   "exact_gate": true,
+   "gate": [
+    "not ('own', ('rel', 'same_key', 0))",
+    "not ('own', ('pcmp', 'Uc', 'Lc', 'lt'))"
+   ],
+   "gate_size": 2,
+   "score": [
+    [
+     "('own', ('rel', 'same_key', 0))",
+     -7.221
+    ],
+    [
+     "('own', ('pcmp', 'Uc', 'Lc', 'lt'))",
+     -6.97
+    ],
+    [
+     "('wit', (('rel', 'same_key', 0), None), (('rel', 'same_key', 0), None))",
+     -2.139
+    ],
+    [
+     "('own', ('pcmp', 'Uc', 'Lc', 'eq'))",
+     1.318
+    ],
+    [
+     "('wit', (('pcmp', 'Uc', 'Lc', 'eq'), None), (('cmp', 'pos', 'pos', 'ge'), None))",
+     0.781
+    ],
+    [
+     "('own', ('pcmp', 'Uc', 'Lc', 'gt'))",
+     0.651
+    ],
+    [
+     "('wit', (('pcmp', 'Uc', 'Lc', 'lt'), None), (('cmp', 'pos', 'pos', 'ge'), None))",
+     -0.265
+    ],
+    [
+     "('wit', (('cmp', 'pos', 'pos', 'ge'), None), (('rel', 'same_key', 0), None))",
+     0.243
+    ],
+    [
+     "('wit', (('rel', 'same_key', 0), None), (('cmp', 'pos', 'pos', 'lt'), ('bit', 'string')))",
+     -0.157
+    ],
+    [
+     "('wit', (('cmp', 'pos', 'pos', 'gt'), None), (('rel', 'same_key', 0), None))",
+     0.154
+    ],
+    [
+     "('wit', (('rel', 'same_key', 0), None), (('rel', 'same_key', 0), ('bit', 'string')))",
+     -0.153
+    ],
+    [
+     "('wit', (('pcmp', 'Uc', 'Lc', 'lt'), None), (('cmp', 'pos', 'pos', 'lt'), None))",
+     -0.018
+    ]
+   ]
+  },
+  "cat2": {
+   "info": {
+    "features": 800,
+    "distinct": 65,
+    "rows": 3040,
+    "positives": 386,
+    "gate": 4,
+    "greedy": 0,
+    "gate_lets_through_negatives": 0,
+    "score_features": 13,
+    "train_wrong_score": 0,
+    "train_wrong_rule": 0
+   },
+   "exact_gate": true,
+   "gate": [
+    "not ('own', ('rel', 'same_key', 0))",
+    "('own', ('pcmp', 'Uc', 'Lc', 'lt'))",
+    "not ('own', ('pcmp', 'Uc', 'Lc', 'eq'))",
+    "not ('own', ('pcmp', 'Uc', 'Lc', 'gt'))"
+   ],
+   "gate_size": 4,
+   "score": [
+    [
+     "('own', ('pcmp', 'Uc', 'Lc', 'lt'))",
+     7.018
+    ],
+    [
+     "('own', ('rel', 'same_key', 0))",
+     -2.344
+    ],
+    [
+     "('wit', (('rel', 'same_key', 0), None), (('rel', 'same_key', 0), ('bit', 'string')))",
+     -2.34
+    ],
+    [
+     "('wit', (('rel', 'same_key', 0), None), (('rel', 'same_key', 0), None))",
+     -2.329
+    ],
+    [
+     "('own', ('pcmp', 'Uc', 'Lc', 'eq'))",
+     -1.58
+    ],
+    [
+     "('wit', (('rel', 'same_key', 0), None), (('cmp', 'pos', 'pos', 'lt'), ('bit', 'string')))",
+     0.803
+    ],
+    [
+     "('own', ('pcmp', 'Uc', 'Lc', 'gt'))",
+     -0.421
+    ],
+    [
+     "('wit', (('pcmp', 'Uc', 'Lc', 'eq'), None), (('cmp', 'pos', 'pos', 'ge'), None))",
+     -0.393
+    ],
+    [
+     "('wit', (('cmp', 'pos', 'pos', 'ge'), None), (('rel', 'same_key', 0), None))",
+     -0.173
+    ],
+    [
+     "('wit', (('pcmp', 'Uc', 'Lc', 'eq'), None), (('rel', 'same_key', 0), None))",
+     -0.078
+    ],
+    [
+     "('wit', (('cmp', 'pos', 'pos', 'lt'), None), (('cmp', 'pos', 'pos', 'le'), None))",
+     0.074
+    ],
+    [
+     "('wit', (('cmp', 'pos', 'pos', 'gt'), None), (('rel', 'same_key', 0), None))",
+     -0.047
+    ]
+   ]
+  }
+ },
+ "start": 0,
+ "test64": {
+  "score": 1.0,
+  "loops_max": 27,
+  "not_at_rest": 0,
+  "eval_s": 0.83
+ },
+ "val": {
+  "score": 1.0,
+  "loops_max": 7,
+  "not_at_rest": 0,
+  "eval_s": 0.14
+ },
+ "gen64": {
+  "score": 1.0,
+  "num": 32,
+  "loops_max": 22,
+  "not_at_rest": 0,
+  "eval_s": 0.87
+ },
+ "gen1024": {
+  "score": 1.0,
+  "num": 8,
+  "loops_max": 203,
+  "not_at_rest": 0,
+  "eval_s": 385.72
+ },
+ "paper": {
+  "floydnet": 95.7
+ },
+ "log": [
+  "{\"task\": \"lcs_length\", \"fit_ms\": 366.8, \"train_inputs\": 100, \"cat0\": {\"exact_gate\": true, \"features\": 800, \"distinct\": 65, \"rows\": 3040, \"positives\": 762, \"gate\": 1, \"greedy\": 0, \"gate_lets_through_negatives\": 0, \"score_features\": 3, \"train_wrong_score\": 0, \"train_wrong_rule\": 0}, \"cat1\": {\"exact_gate\": true, \"features\": 800, \"distinct\": 65, \"rows\": 3040, \"positives\": 1892, \"gate\": 2, \"greedy\": 0, \"gate_lets_through_negatives\": 0, \"score_features\": 12, \"train_wrong_score\": 0, \"train_wrong_rule\": 0}, \"cat2\": {\"exact_gate\": true, \"features\": 800, \"distinct\": 65, \"rows\": 3040, \"positives\": 386, \"gate\": 4, \"greedy\": 0, \"gate_lets_through_negatives\": 0, \"score_features\": 13, \"train_wrong_score\": 0, \"train_wrong_rule\": 0}}",
+  "official test 64: {'score': 1.0, 'loops_max': 27, 'not_at_rest': 0, 'eval_s': 0.83}",
+  "official val: {'score': 1.0, 'loops_max': 7, 'not_at_rest': 0, 'eval_s': 0.14}",
+  "generated gen64: {'score': 1.0, 'num': 32, 'loops_max': 22, 'not_at_rest': 0, 'eval_s': 0.87}",
+  "generated gen1024: {'score': 1.0, 'num': 8, 'loops_max': 203, 'not_at_rest': 0, 'eval_s': 385.72}"
+ ],
+ "where": "modal cpu=2, one BLAS thread"
+}

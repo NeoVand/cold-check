@@ -1,0 +1,1 @@
+{"seed": 3, "num": 2048, "length": 80, "task": "naive_string_matcher", "split": "test", "sha256": "ee5938fbac4947eb04afde313772dc19de92b3db641e1709c7c605f98e94c59e", "shapes": {"n": [2048], "x_string": [2048, 80], "x_pos": [2048, 80], "x_key": [2048, 80, 4], "match": [2048]}, "seconds": 5.7, "clrs_version": "2.0.3", "numpy": "2.5.4"}

@@ -1,0 +1,1 @@
+{"seed": 3, "num": 2048, "length": 64, "task": "segments_intersect", "split": "test", "sha256": "beb706beb05ac7ee458151017140ea5b15f6004d2bd1c54e462252a999fd4861", "shapes": {"n": [2048], "x_pos": [2048, 4], "x_x": [2048, 4], "x_y": [2048, 4], "intersect": [2048]}, "seconds": 1.4, "clrs_version": "2.0.3", "numpy": "2.5.4"}

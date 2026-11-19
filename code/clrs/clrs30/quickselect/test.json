@@ -1,0 +1,1 @@
+{"seed": 3, "num": 2048, "length": 64, "task": "quickselect", "split": "test", "sha256": "3e5ee11c012dd2a343ef3256308c60c0b1019f0a0e8e8e29d33eeb34f89daff7", "shapes": {"n": [2048], "x_pos": [2048, 64], "x_key": [2048, 64], "median": [2048]}, "seconds": 14.4, "clrs_version": "2.0.3", "numpy": "2.5.4"}

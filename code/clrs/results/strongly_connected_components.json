@@ -1,0 +1,10 @@
+{
+ "task": "strongly_connected_components",
+ "fit_ms": 45787.5,
+ "rules": {},
+ "test64": {
+  "score": 1.0,
+  "loops_max": 65,
+  "not_at_rest": 0
+ }
+}

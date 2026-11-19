@@ -1,0 +1,83 @@
+== P-a / P-b: Maze-Hard model on room-and-corridor mazes (own size; emb30 = embedded in a 30x30 wall board)
+-- seed 0, extra 0
+   corridor  down room  left label  down | 3:L 4:L 5:L 6:L 7:L 8:Sp 9:Sp 10:Sp 12:Sp 14:Sp
+   corridor right room  down label  down | 3:L 4:L 5:L 6:L 7:L 8:L 9:L 10:L 12:L 14:L
+   corridor    up room right label right | 3:L 4:L 5:L 6:L 7:L 8:L 9:L 10:L 12:L 14:L
+   corridor  left room    up label  left | 3:L 4:L 5:L 6:L 7:L 8:L 9:L 10:L 12:Sp 14:Sp
+   corridor right room    up label right | 3:L 4:L 5:L 6:L 7:L 8:Sp 9:Sp 10:Sp 12:Sp 14:Sp
+   corridor  down room right label  down | 3:L 4:L 5:L 6:L 7:L 8:L 9:L 10:L 12:Sp 14:Sp
+   corridor  left room  down label  down | 3:L 4:L 5:L 6:L 7:L 8:L 9:L 10:L 12:L 14:L
+   corridor    up room  left label  left | 3:L 4:L 5:L 6:L 7:L 8:L 9:L 10:L 12:L 14:L
+-- seed 0, extra 2
+   corridor  down room  left label  down | 12:L 16:L 18:L 20:L 22:L 24:L 26:L
+   corridor right room  down label right | 12:L 16:L 18:L 20:L 22:L 24:+2p 26:+2p
+   corridor    up room right label    up | 12:L 16:L 18:L 20:L 22:L 24:L 26:+2p
+   corridor  left room    up label  left | 12:L 16:L 18:L 20:L 22:L 24:L 26:L
+   corridor right room    up label right | 12:L 16:L 18:L 20:L 22:L 24:L 26:L
+   corridor  down room right label  down | 12:L 16:L 18:L 20:L 22:L 24:L 26:L
+   corridor  left room  down label  left | 12:L 16:L 18:L 20:L 22:L 24:L 26:+2p
+   corridor    up room  left label    up | 12:L 16:L 18:L 20:L 22:L 24:+2p 26:+2p
+-- seed 1, extra 0
+   corridor  down room  left label  down | 3:L 4:L 5:L 6:L 7:L 8:Sp 9:Sp 10:Sp 12:Sp 14:Sp
+   corridor right room  down label  down | 3:L 4:L 5:L 6:L 7:L 8:L 9:L 10:L 12:L 14:L
+   corridor    up room right label right | 3:L 4:L 5:L 6:L 7:L 8:L 9:L 10:L 12:L 14:L
+   corridor  left room    up label  left | 3:L 4:L 5:L 6:L 7:L 8:L 9:L 10:L 12:Sp 14:Sp
+   corridor right room    up label right | 3:L 4:L 5:L 6:L 7:L 8:Sp 9:Sp 10:Sp 12:Sp 14:Sp
+   corridor  down room right label  down | 3:L 4:L 5:L 6:L 7:L 8:L 9:L 10:L 12:Sp 14:Sp
+   corridor  left room  down label  down | 3:L 4:L 5:L 6:L 7:L 8:L 9:L 10:L 12:L 14:L
+   corridor    up room  left label  left | 3:L 4:L 5:L 6:L 7:L 8:L 9:L 10:L 12:L 14:L
+-- seed 1, extra 2
+   corridor  down room  left label  down | 12:L 16:L 18:L 20:L 22:L 24:L 26:L
+   corridor right room  down label right | 12:L 16:L 18:L 20:L 22:L 24:+2p 26:+2p
+   corridor    up room right label    up | 12:L 16:L 18:L 20:L 22:L 24:L 26:Xp
+   corridor  left room    up label  left | 12:L 16:L 18:L 20:L 22:L 24:L 26:L
+   corridor right room    up label right | 12:L 16:L 18:L 20:L 22:L 24:L 26:L
+   corridor  down room right label  down | 12:L 16:L 18:L 20:L 22:L 24:L 26:L
+   corridor  left room  down label  left | 12:L 16:L 18:L 20:L 22:L 24:L 26:+2p
+   corridor    up room  left label    up | 12:L 16:L 18:L 20:L 22:L 24:+2p 26:+2p
+-- seed 2, extra 0
+   corridor  down room  left label  down | 3:L 4:L 5:L 6:L 7:L 8:Sp 9:Sp 10:Sp 12:Sp 14:Sp
+   corridor right room  down label  down | 3:L 4:L 5:L 6:L 7:L 8:L 9:L 10:L 12:L 14:L
+   corridor    up room right label right | 3:L 4:L 5:L 6:L 7:L 8:L 9:L 10:L 12:L 14:L
+   corridor  left room    up label  left | 3:L 4:L 5:L 6:L 7:L 8:L 9:L 10:L 12:Sp 14:Sp
+   corridor right room    up label right | 3:L 4:L 5:L 6:L 7:L 8:Sp 9:Sp 10:Sp 12:Sp 14:Sp
+   corridor  down room right label  down | 3:L 4:L 5:L 6:L 7:L 8:L 9:L 10:L 12:Sp 14:Sp
+   corridor  left room  down label  down | 3:L 4:L 5:L 6:L 7:L 8:L 9:L 10:L 12:L 14:L
+   corridor    up room  left label  left | 3:L 4:L 5:L 6:L 7:L 8:L 9:L 10:L 12:L 14:L
+-- seed 2, extra 2
+   corridor  down room  left label  down | 12:L 16:L 18:L 20:L 22:L 24:L 26:L
+   corridor right room  down label right | 12:L 16:L 18:L 20:L 22:L 24:+2p 26:+2p
+   corridor    up room right label    up | 12:L 16:L 18:L 20:L 22:L 24:L 26:+2p
+   corridor  left room    up label  left | 12:L 16:L 18:L 20:L 22:L 24:L 26:L
+   corridor right room    up label right | 12:L 16:L 18:L 20:L 22:L 24:L 26:L
+   corridor  down room right label  down | 12:L 16:L 18:L 20:L 22:L 24:L 26:L
+   corridor  left room  down label  left | 12:L 16:L 18:L 20:L 22:L 24:L 26:+2p
+   corridor    up room  left label    up | 12:L 16:L 18:L 20:L 22:L 24:+2p 26:+2p
+legend: L = returned the label; S = another shortest path; +k = valid path k longer; X = not a path; ! = did not stop; p = the hidden layer pointer path differs from the label
+own-size vs embedded-30x30 runs agree on 384 of 384
+model pointer (first step, equals label) agrees with pointer_L.json on 384 of 384
+
+== P-c / P-d: Maze-Unique model on spanning-tree mazes
+h 15 side  31 seed 0 ring  : solved 200/200, stopped 200, mazes with edge tip 0 (solved 0), without 200 (solved 200); failures with all wrong cells on the edge 0/0; wrong cells left on 0 (on edge 0), wrongly off 0; mean moves 397, max moves 447 of budget 20000, 1 s
+h 15 side  29 seed 0 noring: solved 0/200, stopped 200, mazes with edge tip 200 (solved 0), without 0 (solved 0); failures with all wrong cells on the edge 0/200; wrong cells left on 12000 (on edge 6158), wrongly off 0; mean moves 178, max moves 248 of budget 20000, 0 s
+h 15 side  31 seed 1 ring  : solved 200/200, stopped 200, mazes with edge tip 0 (solved 0), without 200 (solved 200); failures with all wrong cells on the edge 0/0; wrong cells left on 0 (on edge 0), wrongly off 0; mean moves 397, max moves 447 of budget 20000, 2 s
+h 15 side  29 seed 1 noring: solved 0/200, stopped 200, mazes with edge tip 200 (solved 0), without 0 (solved 0); failures with all wrong cells on the edge 0/200; wrong cells left on 12000 (on edge 6158), wrongly off 0; mean moves 178, max moves 248 of budget 20000, 1 s
+h 15 side  31 seed 2 ring  : solved 200/200, stopped 200, mazes with edge tip 0 (solved 0), without 200 (solved 200); failures with all wrong cells on the edge 0/0; wrong cells left on 0 (on edge 0), wrongly off 0; mean moves 397, max moves 447 of budget 20000, 1 s
+h 15 side  29 seed 2 noring: solved 0/200, stopped 200, mazes with edge tip 200 (solved 0), without 0 (solved 0); failures with all wrong cells on the edge 0/200; wrong cells left on 12000 (on edge 6158), wrongly off 0; mean moves 178, max moves 248 of budget 20000, 1 s
+h 30 side  61 seed 0 ring  : solved 200/200, stopped 200, mazes with edge tip 0 (solved 0), without 200 (solved 200); failures with all wrong cells on the edge 0/0; wrong cells left on 0 (on edge 0), wrongly off 0; mean moves 1684, max moves 1797 of budget 20000, 7 s
+h 30 side  59 seed 0 noring: solved 0/200, stopped 200, mazes with edge tip 200 (solved 0), without 0 (solved 0); failures with all wrong cells on the edge 0/200; wrong cells left on 12000 (on edge 9734), wrongly off 0; mean moves 1035, max moves 1173 of budget 20000, 4 s
+h 30 side  61 seed 1 ring  : solved 200/200, stopped 200, mazes with edge tip 0 (solved 0), without 200 (solved 200); failures with all wrong cells on the edge 0/0; wrong cells left on 0 (on edge 0), wrongly off 0; mean moves 1684, max moves 1797 of budget 20000, 31 s
+h 30 side  59 seed 1 noring: solved 0/200, stopped 200, mazes with edge tip 200 (solved 0), without 0 (solved 0); failures with all wrong cells on the edge 0/200; wrong cells left on 12000 (on edge 9734), wrongly off 0; mean moves 1035, max moves 1173 of budget 20000, 15 s
+h 30 side  61 seed 2 ring  : solved 200/200, stopped 200, mazes with edge tip 0 (solved 0), without 200 (solved 200); failures with all wrong cells on the edge 0/0; wrong cells left on 0 (on edge 0), wrongly off 0; mean moves 1684, max moves 1797 of budget 20000, 27 s
+h 30 side  59 seed 2 noring: solved 0/200, stopped 200, mazes with edge tip 200 (solved 0), without 0 (solved 0); failures with all wrong cells on the edge 0/200; wrong cells left on 12000 (on edge 9734), wrongly off 0; mean moves 1035, max moves 1173 of budget 20000, 16 s
+h 60 side 121 seed 0 ring  : solved 200/200, stopped 200, mazes with edge tip 0 (solved 0), without 200 (solved 200); failures with all wrong cells on the edge 0/0; wrong cells left on 0 (on edge 0), wrongly off 0; mean moves 6931, max moves 7189 of budget 21591, 106 s
+h 60 side 119 seed 0 noring: solved 0/200, stopped 200, mazes with edge tip 200 (solved 0), without 0 (solved 0); failures with all wrong cells on the edge 0/200; wrong cells left on 12000 (on edge 12000), wrongly off 0; mean moves 5151, max moves 5581 of budget 21591, 86 s
+h 60 side 121 seed 1 ring  : solved 200/200, stopped 200, mazes with edge tip 0 (solved 0), without 200 (solved 200); failures with all wrong cells on the edge 0/0; wrong cells left on 0 (on edge 0), wrongly off 0; mean moves 6931, max moves 7189 of budget 21591, 396 s
+h 60 side 119 seed 1 noring: solved 0/200, stopped 200, mazes with edge tip 200 (solved 0), without 0 (solved 0); failures with all wrong cells on the edge 0/200; wrong cells left on 12000 (on edge 12000), wrongly off 0; mean moves 5151, max moves 5581 of budget 21591, 279 s
+h 60 side 121 seed 2 ring  : solved 200/200, stopped 200, mazes with edge tip 0 (solved 0), without 200 (solved 200); failures with all wrong cells on the edge 0/0; wrong cells left on 0 (on edge 0), wrongly off 0; mean moves 6931, max moves 7189 of budget 21591, 397 s
+h 60 side 119 seed 2 noring: solved 0/200, stopped 200, mazes with edge tip 200 (solved 0), without 0 (solved 0); failures with all wrong cells on the edge 0/200; wrong cells left on 12000 (on edge 12000), wrongly off 0; mean moves 5151, max moves 5581 of budget 21591, 262 s
+
+== Looped mazes, Maze-Hard seed 0 (not their training distribution)
+side 31: exact 100; other: not stopped 0, not a path 0, longer path 0; settle cap hit 0; caps settle 4134 descend 2128; 4 s
+side 61: exact 100; other: not stopped 0, not a path 0, longer path 0; settle cap hit 0; caps settle 8134 descend 4176; 14 s
+side 121: exact 100; other: not stopped 0, not a path 0, longer path 0; settle cap hit 0; caps settle 16134 descend 8272; 44 s

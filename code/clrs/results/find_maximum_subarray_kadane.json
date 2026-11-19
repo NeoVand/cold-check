@@ -1,0 +1,158 @@
+{
+ "task": "find_maximum_subarray_kadane",
+ "fit_ms": 464.5,
+ "train_inputs": 100,
+ "rules": {
+  "end": {
+   "info": {
+    "features": 3816,
+    "distinct": 733,
+    "rows": 1020,
+    "positives": 100,
+    "gate": 1,
+    "greedy": 1,
+    "gate_lets_through_negatives": 0,
+    "score_features": 15,
+    "train_wrong_score": 0,
+    "train_wrong_rule": 0
+   },
+   "exact_gate": true,
+   "gate": [
+    "not ('wit', (('cmp', 'M', 'M', 'lt'), None), (('cmp', 'M', 'M', 'ge'), None))"
+   ],
+   "gate_size": 1,
+   "score": [
+    [
+     "('cnt', (('id',), None), (('cmp', 'M', 'M', 'ge'), None), 'eq')",
+     2.593
+    ],
+    [
+     "('wit', (('cmp', 'M', 'M', 'lt'), None), (('cmp', 'M', 'M', 'ge'), None))",
+     -2.569
+    ],
+    [
+     "('wit', (('cmp', 'key', 'key', 'lt'), None), (('cmp', 'M', 'M', 'ge'), None))",
+     -1.133
+    ],
+    [
+     "('wit', (('cmp', 'M', 'M', 'lt'), None), (('cmp', 'm', 'Pp', 'le'), None))",
+     -0.944
+    ],
+    [
+     "('wit', (('cmp', 'M', 'M', 'lt'), None), (('cmp', 'm', 'm', 'le'), None))",
+     -0.923
+    ],
+    [
+     "('wit', (('cmp', 'M', 'M', 'lt'), None), (('cmp', 'Pp', 'm', 'ge'), None))",
+     -0.883
+    ],
+    [
+     "('wit', (('cmp', 'M', 'M', 'lt'), None), (('cmp', 'Pp', 'm', 'gt'), None))",
+     -0.647
+    ],
+    [
+     "('wit', (('cmp', 'M', 'M', 'lt'), None), (('cmp', 'm', 'm', 'ge'), None))",
+     -0.432
+    ],
+    [
+     "('cnt', (('cmp', 'm', 'Pp', 'eq'), None), (('cmp', 'M', 'M', 'gt'), None), 'lt')",
+     -0.367
+    ],
+    [
+     "('cnt', (('id',), None), (('cmp', 'M', 'M', 'gt'), None), 'lt')",
+     -0.366
+    ],
+    [
+     "('wit', (('cmp', 'M', 'M', 'lt'), None), (('cmp', 'm', 'Pp', 'lt'), None))",
+     -0.231
+    ],
+    [
+     "('wit', (('cmp', 'pos', 'pos', 'lt'), None), (('cmp', 'M', 'M', 'ge'), None))",
+     -0.185
+    ]
+   ]
+  },
+  "start": {
+   "info": {
+    "features": 15409,
+    "distinct": 2196,
+    "rows": 1020,
+    "positives": 100,
+    "gate": 1,
+    "greedy": 1,
+    "gate_lets_through_negatives": 0,
+    "score_features": 27,
+    "train_wrong_score": 0,
+    "train_wrong_rule": 0
+   },
+   "exact_gate": true,
+   "gate": [
+    "('cnt', (('id',), None), (('cmp', 'm', 'Pp', 'eq'), ('bit', 'end')), 'eq')"
+   ],
+   "gate_size": 1,
+   "score": [
+    [
+     "('cnt', (('cmp', 'M', 'M', 'lt'), ('bit', 'end')), (('cmp', 'm', 'Pp', 'eq'), ('bit', 'end')), 'eq')",
+     -1.79
+    ],
+    [
+     "('cnt', (('id',), None), (('cmp', 'm', 'Pp', 'eq'), ('bit', 'end')), 'eq')",
+     1.749
+    ],
+    [
+     "('cnt', (('cmp', 'm', 'Pp', 'lt'), ('bit', 'end')), (('cmp', 'm', 'm', 'le'), ('bit', 'end')), 'eq')",
+     -1.275
+    ],
+    [
+     "('cnt', (('cmp', 'm', 'Pp', 'lt'), ('bit', 'end')), (('cmp', 'm', 'm', 'gt'), ('bit', 'end')), 'eq')",
+     1.235
+    ],
+    [
+     "('cnt', (('cmp', 'm', 'Pp', 'eq'), ('bit', 'end')), (('cmp', 'M', 'M', 'gt'), ('bit', 'end')), 'lt')",
+     -1.035
+    ],
+    [
+     "('cnt', (('cmp', 'm', 'Pp', 'eq'), ('bit', 'end')), (('cmp', 'key', 'key', 'ge'), ('bit', 'end')), 'lt')",
+     -0.674
+    ],
+    [
+     "('cnt', (('id',), None), (('cmp', 'm', 'Pp', 'lt'), ('bit', 'end')), 'eq')",
+     -0.474
+    ],
+    [
+     "('cnt', (('id',), None), (('cmp', 'm', 'Pp', 'ge'), ('bit', 'end')), 'eq')",
+     0.434
+    ],
+    [
+     "('cnt', (('cmp', 'key', 'key', 'gt'), ('bit', 'end')), (('cmp', 'm', 'Pp', 'eq'), None), 'lt')",
+     0.427
+    ],
+    [
+     "('cnt', (('cmp', 'Pp', 'm', 'lt'), ('bit', 'end')), (('cmp', 'm', 'Pp', 'eq'), ('bit', 'end')), 'eq')",
+     -0.358
+    ],
+    [
+     "('cnt', (('cmp', 'Pp', 'm', 'ge'), ('bit', 'end')), (('cmp', 'm', 'Pp', 'eq'), ('bit', 'end')), 'eq')",
+     0.318
+    ],
+    [
+     "('cnt', (('cmp', 'm', 'Pp', 'eq'), None), (('cmp', 'key', 'key', 'ge'), None), 'lt')",
+     -0.273
+    ]
+   ]
+  }
+ },
+ "test64": {
+  "score": 1.0,
+  "loops_max": 1,
+  "not_at_rest": 0,
+  "eval_s": 0.77
+ },
+ "gen256": {
+  "score": 1.0,
+  "num": 4,
+  "loops_max": 1,
+  "not_at_rest": 0,
+  "eval_s": 0.03
+ }
+}

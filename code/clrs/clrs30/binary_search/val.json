@@ -1,0 +1,1 @@
+{"seed": 2, "num": 2048, "length": 16, "task": "binary_search", "split": "val", "sha256": "c69b1c56a3f2814fca4a3cbb788cb9dd473a10c60ba422438530bfd488ba1c2a", "shapes": {"n": [2048], "x_pos": [2048, 16], "x_key": [2048, 16], "x_target": [2048], "return": [2048]}, "seconds": 3.1, "clrs_version": "2.0.3", "numpy": "2.5.4"}

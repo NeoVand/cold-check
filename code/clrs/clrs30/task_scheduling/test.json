@@ -1,0 +1,1 @@
+{"seed": 3, "num": 32, "length": 64, "task": "task_scheduling", "split": "test", "sha256": "24dc0b2b1e09660e7576cc02d527f54696299fc9dbeafcda69b37676176ab5d7", "shapes": {"n": [32], "x_pos": [32, 64], "x_d": [32, 64], "x_w": [32, 64], "selected": [32, 64]}, "seconds": 2.7, "clrs_version": "2.0.3", "numpy": "2.5.4"}

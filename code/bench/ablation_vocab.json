@@ -1,0 +1,83 @@
+{
+ "n_functions": 20,
+ "n_types_realised_9x9": 339,
+ "n_rcb_types": 59,
+ "steps": 32,
+ "vocabulary_build_s": 0.03418729198165238,
+ "A1": {
+  "n_kept": 109,
+  "kept_equals_rcb": false,
+  "distractor_only_kept": 50,
+  "rcb_dropped": 0,
+  "relations": [
+   [
+    "r"
+   ],
+   [
+    "c"
+   ],
+   [
+    "r//b",
+    "c//b"
+   ]
+  ],
+  "conditions": [
+   [
+    true,
+    true
+   ],
+   [
+    true,
+    true
+   ],
+   [
+    true,
+    true
+   ]
+  ],
+  "fit_ms_cold": 114.55008410848677,
+  "fit_ms_warm_median7": 114.32074988260865,
+  "wmin": 0.0007709474302828312,
+  "tau": 0.8971122035980225,
+  "test_first_10000_solved": 9991,
+  "side16_first_100_solved": 100
+ },
+ "A1b": {
+  "n_kept": 59,
+  "kept_equals_rcb": true,
+  "distractor_only_kept": 0,
+  "rcb_dropped": 0,
+  "relations": [
+   [
+    "r"
+   ],
+   [
+    "c"
+   ],
+   [
+    "r//b",
+    "c//b"
+   ]
+  ],
+  "conditions": [
+   [
+    true,
+    true
+   ],
+   [
+    true,
+    true
+   ],
+   [
+    true,
+    true
+   ]
+  ],
+  "fit_ms_cold": 139.5947909913957,
+  "fit_ms_warm_median7": 123.16066701896489,
+  "wmin": 1.2450530529022217,
+  "tau": 0.001,
+  "test_first_10000_solved": 10000,
+  "side16_first_100_solved": 100
+ }
+}

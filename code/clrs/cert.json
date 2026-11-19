@@ -1,0 +1,63 @@
+[
+ {
+  "task": "insertion_sort",
+  "max_items": 5,
+  "needed": 4,
+  "pairs_checked": 3447,
+  "conditions": {
+   "off": 3,
+   "diag": 1
+  }
+ },
+ {
+  "task": "bubble_sort",
+  "max_items": 5,
+  "needed": 4,
+  "pairs_checked": 3447,
+  "conditions": {
+   "off": 3,
+   "diag": 1
+  }
+ },
+ {
+  "task": "heapsort",
+  "max_items": 5,
+  "needed": 4,
+  "pairs_checked": 3447,
+  "conditions": {
+   "off": 3,
+   "diag": 1
+  }
+ },
+ {
+  "task": "quicksort",
+  "max_items": 5,
+  "needed": 4,
+  "pairs_checked": 3447,
+  "conditions": {
+   "off": 3,
+   "diag": 1
+  }
+ },
+ {
+  "task": "minimum",
+  "max_items": 4,
+  "items_checked": 119,
+  "conditions": 1
+ },
+ {
+  "task": "mst_kruskal",
+  "atom_cases": 3,
+  "random_graphs_vs_library": 2000,
+  "conditions": 3
+ },
+ {
+  "task": "bfs",
+  "max_items": 4,
+  "pair_cases": 274688,
+  "conditions": {
+   "off": 5,
+   "diag": 1
+  }
+ }
+]

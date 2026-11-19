@@ -1,0 +1,131 @@
+{
+ "task": "activity_selector",
+ "kind": "mask",
+ "train_inputs": 100,
+ "fit_ms": 894.5,
+ "rules": {
+  "mask": {
+   "info": {
+    "features": 2133,
+    "distinct": 251,
+    "rows": 1020,
+    "positives": 312,
+    "gate": 1,
+    "greedy": 1,
+    "gate_lets_through_negatives": 0,
+    "score_features": 7,
+    "train_wrong_score": 0,
+    "train_wrong_rule": 0,
+    "level": [
+     "f",
+     "lt"
+    ]
+   },
+   "exact_gate": true,
+   "gate": [
+    "not ('wit', (('cmp', 's', 'f', 'lt'), None), (('cmp', 'f', 'f', 'lt'), ('bit', 'sel')))"
+   ],
+   "gate_size": 1,
+   "score": [
+    [
+     "('wit', (('cmp', 's', 'f', 'lt'), None), (('cmp', 'f', 'f', 'lt'), ('bit', 'sel')))",
+     -8.485
+    ],
+    [
+     "('cnt', (('cmp', 'f', 's', 'lt'), None), (('cmp', 'f', 'f', 'lt'), ('bit', 'sel')), 'lt')",
+     -0.933
+    ],
+    [
+     "('wit', (('cmp', 'f', 'f', 'ge'), None), (('cmp', 's', 's', 'ge'), None))",
+     -0.897
+    ],
+    [
+     "('cnt', (('cmp', 'f', 'f', 'lt'), None), (('cmp', 'f', 's', 'lt'), None), 'eq')",
+     0.787
+    ],
+    [
+     "('wit', (('cmp', 's', 's', 'lt'), None), (('cmp', 'f', 'f', 'lt'), ('bit', 'sel')))",
+     -0.511
+    ],
+    [
+     "('cnt', (('cmp', 'f', 'f', 'lt'), None), (('cmp', 's', 's', 'le'), None), 'lt')",
+     0.228
+    ],
+    [
+     "('wit', (('cmp', 'f', 'f', 'ge'), None), (('cmp', 'f', 's', 'ge'), None))",
+     -0.0
+    ]
+   ]
+  },
+  "levels": {
+   "f_lt": {
+    "train_wrong": 0,
+    "gate": 1,
+    "score": 7
+   },
+   "f_gt": {
+    "train_wrong": 29,
+    "gate": 2,
+    "score": 67
+   },
+   "pos_lt": {
+    "train_wrong": 25,
+    "gate": 1,
+    "score": 72
+   },
+   "pos_gt": {
+    "train_wrong": 28,
+    "gate": 1,
+    "score": 66
+   },
+   "s_lt": {
+    "train_wrong": 0,
+    "gate": 2,
+    "score": 14
+   },
+   "s_gt": {
+    "train_wrong": 31,
+    "gate": 2,
+    "score": 68
+   }
+  }
+ },
+ "start": 0,
+ "test64": {
+  "score": 1.0,
+  "loops_max": 14,
+  "not_at_rest": 0,
+  "eval_s": 0.02
+ },
+ "val": {
+  "score": 1.0,
+  "loops_max": 7,
+  "not_at_rest": 0,
+  "eval_s": 0.0
+ },
+ "gen64": {
+  "score": 1.0,
+  "num": 32,
+  "loops_max": 16,
+  "not_at_rest": 0,
+  "eval_s": 0.02
+ },
+ "gen1024": {
+  "score": 1.0,
+  "num": 32,
+  "loops_max": 38,
+  "not_at_rest": 0,
+  "eval_s": 12.31
+ },
+ "paper": {
+  "floydnet": 95.3
+ },
+ "log": [
+  "{\"task\": \"activity_selector\", \"fit_ms\": 894.5, \"train_inputs\": 100, \"mask\": {\"exact_gate\": true, \"features\": 2133, \"distinct\": 251, \"rows\": 1020, \"positives\": 312, \"gate\": 1, \"greedy\": 1, \"gate_lets_through_negatives\": 0, \"score_features\": 7, \"train_wrong_score\": 0, \"train_wrong_rule\": 0, \"level\": [\"f\", \"lt\"]}, \"levels\": {\"f_lt\": {\"train_wrong\": 0, \"gate\": 1, \"score\": 7}, \"f_gt\": {\"train_wrong\": 29, \"gate\": 2, \"score\": 67}, \"pos_lt\": {\"train_wrong\": 25, \"gate\": 1, \"score\": 72}, \"pos_gt\": {\"train_wrong\": 28, \"gate\": 1, \"score\": 66}, \"s_lt\": {\"train_wrong\": 0, \"gate\": 2, \"score\": 14}, \"s_gt\": {\"train_wrong\": 31, \"gate\": 2, \"score\": 68}}}",
+  "official test 64: {'score': 1.0, 'loops_max': 14, 'not_at_rest': 0, 'eval_s': 0.02}",
+  "official val: {'score': 1.0, 'loops_max': 7, 'not_at_rest': 0, 'eval_s': 0.0}",
+  "generated gen64: {'score': 1.0, 'num': 32, 'loops_max': 16, 'not_at_rest': 0, 'eval_s': 0.02}",
+  "generated gen1024: {'score': 1.0, 'num': 32, 'loops_max': 38, 'not_at_rest': 0, 'eval_s': 12.31}"
+ ],
+ "where": "modal cpu=2, one BLAS thread"
+}

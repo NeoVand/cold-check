@@ -1,0 +1,26 @@
+# Fig. 3 caption. File: out/fig3.pdf (183 x 196 mm). Script: fig3.py; data: data/puzzle_boards.json
+# (data/puzzle_boards.py), data/released_boards.json (data/modal_released_boards.py), code/bench/final/summary.json,
+# code/ext/cram.txt (CRAM's Tables 2 and 8)
+
+\textbf{Fig. 3 | One fitted rule on CRAM's benchmarks.} Cobalt: our fitted check, run cold; rose: our search where the
+cold stage forces nothing, and CRAM; pale rose: the looped models. \textbf{a}, The rule fitted in \nm{sudoku.fit.hi} ms on
+\nm{sudoku.trainboards} solved 9\,$\times$\,9 boards, unchanged, on boards of four sizes: digits given (navy), set by
+the cold stage before any search (cobalt, tinted cells), and set during the search (rose), whose stopping test is the
+same check; one engine for every size (the cold stage with its deduction over pairs of units, and a restarted search). 4\,$\times$\,4: 11 of 11 blanks set cold. 9\,$\times$\,9: a Sudoku-Extreme test puzzle (the first that
+needed at least the median number of search moves), 1 set cold and 55 by the search in 246 moves. 16\,$\times$\,16: 19
+cold, 142 by the search. 25\,$\times$\,25: 51 cold, 293 by the search in 1,514 moves. The 4\,$\times$\,4,
+16\,$\times$\,16 and 25\,$\times$\,25 puzzles are generated with one solution each. \textbf{b}, A tree maze of
+29\,$\times$\,29 cells whose dead ends reach the board's edge (the first of the 200 at this size): the path, which our
+rule returns, and in rose the 159 further cells that CRAM's released Maze-Unique model leaves on (its training mazes never
+touch the edge); over all \nm{edge.n} such mazes ours is right on \nm{edge.exact} and CRAM's on \nm{rel.noring.solved}.
+\textbf{c}, A room-and-corridor maze: ours returns the label's shortest path (cobalt, 49 steps); CRAM's released
+Maze-Hard model returns a valid path two steps longer (rose band, 51 steps), the smallest room at which it leaves the
+shortest path in this orientation. \textbf{d}, N-Queens on a 100\,$\times$\,100 board from 12 given queens (navy), with
+the rule fitted on the 92 solutions of 8\,$\times$\,8: the cold stage forces none here and the search places the other
+88 (rose) in 81 moves. \textbf{e}, Operations per puzzle against puzzles solved on CRAM's test sets (CRAM's convention,
+comparisons free; open cobalt mark: every comparison counted too). Sudoku-Extreme: ours \nm{sudoku.ops}
+(\nm{sudoku.opscmp}) on all \nm{sudoku.ntest}; CRAM \nm{cram.sudoku.ops} at \nm{cram.sudoku.pct}\%; CRAM with hand-set
+weights \nm{cram.handset.ops}; seven looped models from CRAM's Table 2. Maze-Unique: ours \nm{unique.ops}, CRAM
+\nm{cram.unique.ops}. Maze-Hard: ours \nm{hard.ops}, CRAM with its hand-built distance layer \nm{cram.hard.ops} at
+\nm{cram.hard.pct}\%, and five looped models from CRAM's Table 8. Released models: seed 0. Schematic: none; every cell and
+mark is data (the operation axis is logarithmic).

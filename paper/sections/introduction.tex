@@ -1,0 +1,52 @@
+\section{Introduction}
+
+Neural networks that apply one block again and again, in a loop, have learned to solve Sudoku, mazes and the textbook
+algorithms of the CLRS-30 benchmark\cite{wang2025hrm,jolicoeur2025trm,velickovic2022clrs,bansal2022end}. They are
+trained through their loops, and that is slow. On Sudoku-Extreme the strongest of them train for \nm{looped.fit.lo} to
+\nm{looped.fit.hi} hours on a GPU\cite{hoover2026classical}. The looped attention blocks of our earlier paper needed
+about an hour of GPU time for each CLRS-30 task\cite{mohsenvand2026zero}.
+
+Hoover, Blayney and Whittington showed that much of this cost can be avoided\cite{hoover2026classical}. Their model,
+CRAM, is the pairwise energy that Hopfield and Tank proposed for puzzles\cite{hopfield1985neural}, with its tables fitted
+by pseudolikelihood\cite{besag1975statistical}: each cell of a solved board is predicted from the others, so training
+needs no loop and no search. CRAM trains in \nm{cram.sudoku.fit} milliseconds and solves \nm{cram.sudoku.pct}\% of
+Sudoku-Extreme. Its authors name its two limits. Its costs belong to particular cells, so a model fitted at one board
+size says nothing at another. And it has no place for a quantity the answer does not show: on Maze-Hard it needs a
+hidden distance layer designed for the task, and learning such quantities in general is left open.
+
+What a fit at a solved example learns is a check, a rule that each part of the answer satisfies given the rest. A check
+is not yet an algorithm. At a finished answer every fact is in place, so facts may hold one another up in a circle, and
+nothing in the fit asks whether the rule, started from nothing, would put them there. Logic programming names the gap
+exactly: a finished answer the rules accept is a supported model; what the rules derive from nothing is their least
+model; and the two coincide when the support has a direction\cite{clark1978negation,fages1994consistency}.
+
+We give the check that direction, and it becomes the algorithm. We start from the cold layer of our earlier
+paper\cite{mohsenvand2026zero}. Its state lives on pairs of items. It judges each pair $(a,b)$ through every third item
+$k$, by the legs $(a,k)$ and $(k,b)$, and reads these witnesses at zero temperature: whether one exists, and how two
+counts compare. Its rules attach to relations, never to positions, so they have no size in them. We fit its check at
+finished answers, CRAM's way, in three steps.
+\begin{itemize}
+\setlength{\itemsep}{0pt}
+\item \emph{Complete the answer from itself.} Closures and counts of the answer's own relations add what the answer
+hides; a parent pointer, for instance, gives each node its depth.
+\item \emph{Fit the check and keep every condition that held on all training answers.} Among them is the level
+condition, that every part rests on parts placed before it. A finished answer never contradicts it, so a fit alone can
+drop it.
+\item \emph{Run the check cold.} From an empty state, apply the check and recompute the completion until nothing changes.
+Where nothing is forced, as on hard puzzles, a search uses the check as its stop.
+\end{itemize}
+
+The check then trains like CRAM and runs like our looped layer (Fig.~\ref{fig:idea}). All thirty CLRS-30 algorithms are
+exact on the official test and on every held-out input, up to \nm{held.max.nodes} nodes and \nm{held.max.items} items.
+Fifteen of them, among them breadth-first search, the minimum spanning trees of Kruskal and Prim, longest common
+subsequence and both string matchers, are learned from their final answers with comparisons and counts alone, each
+fitted in \nm{clrs.g1.fit.lo} to \nm{clrs.g1.fit.hi} on one laptop core; the other fifteen read one quantity we supply,
+such as the sum of a distance and an edge weight. The fitted rules read like the textbook: a node's breadth-first parent
+is its lowest-numbered neighbour one level up. On CRAM's benchmarks, one rule fitted in about 20 milliseconds keeps
+exactly the row, column and box relations of Sudoku. It solves all \nm{sudoku.ntest} Sudoku-Extreme puzzles with no
+wrong answer, with \nm{sudoku.ops.ratio} times fewer operations than CRAM, and solves larger boards unchanged. A maze
+rule that reads the cold run's own clock, in place of a distance layer built for the task, solves every Maze-Hard maze,
+and every maze we built on which CRAM's released model leaves the shortest path. The fitted rules are small tables with
+no size in them, so finite checks prove the puzzle rules, and the checks of several algorithms, correct at every size
+(Fig.~\ref{fig:cost} sets cost against reach). Read the same way, CRAM's released weights show its hidden distance
+layer cooling, as it trains, towards the hard minimum that our cold layer reads.

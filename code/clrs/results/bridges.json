@@ -1,0 +1,50 @@
+{
+ "task": "bridges",
+ "fit_ms": 28.9,
+ "train_inputs": 100,
+ "rules": {
+  "emask": {
+   "info": {
+    "features": 110,
+    "distinct": 20,
+    "rows": 11200,
+    "positives": 560,
+    "gate": 2,
+    "greedy": 0,
+    "gate_lets_through_negatives": 0,
+    "score_features": 2,
+    "train_wrong_score": 0,
+    "train_wrong_rule": 0
+   },
+   "exact_gate": true,
+   "gate": [
+    "('own', ('rel', 'edge', 0))",
+    "not ('own', ('rel', 'reach_without', 0))"
+   ],
+   "gate_size": 2,
+   "score": [
+    [
+     "('own', ('rel', 'edge', 0))",
+     7.861
+    ],
+    [
+     "('own', ('rel', 'reach_without', 0))",
+     -5.262
+    ]
+   ]
+  }
+ },
+ "test64": {
+  "score": 1.0,
+  "loops_max": 1,
+  "not_at_rest": 0,
+  "eval_s": 0.11
+ },
+ "gen256": {
+  "score": 1.0,
+  "num": 4,
+  "loops_max": 1,
+  "not_at_rest": 0,
+  "eval_s": 1.56
+ }
+}

@@ -1,0 +1,85 @@
+{
+ "task": "quickselect",
+ "kind": "one",
+ "train_inputs": 100,
+ "fit_ms": 69.0,
+ "rules": {
+  "one": {
+   "info": {
+    "features": 341,
+    "distinct": 56,
+    "rows": 1020,
+    "positives": 100,
+    "gate": 2,
+    "greedy": 2,
+    "gate_lets_through_negatives": 0,
+    "score_features": 6,
+    "train_wrong_score": 0,
+    "train_wrong_rule": 0
+   },
+   "exact_gate": true,
+   "gate": [
+    "not ('cnt', (('cmp', 'key', 'key', 'lt'), None), (('cmp', 'key', 'key', 'gt'), None), 'lt')",
+    "not ('cnt', (('cmp', 'key', 'key', 'ge'), None), (('cmp', 'key', 'key', 'lt'), None), 'lt')"
+   ],
+   "gate_size": 2,
+   "score": [
+    [
+     "('cnt', (('cmp', 'key', 'key', 'ge'), None), (('cmp', 'key', 'key', 'lt'), None), 'lt')",
+     -5.0
+    ],
+    [
+     "('cnt', (('cmp', 'key', 'key', 'lt'), None), (('cmp', 'key', 'key', 'gt'), None), 'eq')",
+     3.838
+    ],
+    [
+     "('cnt', (('cmp', 'key', 'key', 'lt'), None), (('cmp', 'key', 'key', 'ge'), None), 'eq')",
+     3.461
+    ],
+    [
+     "('cnt', (('cmp', 'key', 'key', 'lt'), None), (('cmp', 'key', 'key', 'gt'), None), 'lt')",
+     -2.299
+    ],
+    [
+     "('cnt', (('cmp', 'key', 'key', 'gt'), None), (('cmp', 'key', 'key', 'le'), None), 'lt')",
+     2.295
+    ],
+    [
+     "('cnt', (('cmp', 'key', 'key', 'le'), None), (('cmp', 'key', 'key', 'gt'), None), 'lt')",
+     -0.936
+    ]
+   ]
+  }
+ },
+ "start": 0,
+ "test64": {
+  "score": 1.0,
+  "loops_max": 1,
+  "not_at_rest": 0,
+  "eval_s": 0.43
+ },
+ "gen256": {
+  "score": 1.0,
+  "num": 256,
+  "loops_max": 1,
+  "not_at_rest": 0,
+  "eval_s": 0.26
+ },
+ "gen4096": {
+  "score": 1.0,
+  "num": 64,
+  "loops_max": 1,
+  "not_at_rest": 0,
+  "eval_s": 14.25
+ },
+ "paper": {
+  "floydnet": 80.33
+ },
+ "log": [
+  "{\"task\": \"quickselect\", \"fit_ms\": 69.0, \"train_inputs\": 100, \"one\": {\"exact_gate\": true, \"features\": 341, \"distinct\": 56, \"rows\": 1020, \"positives\": 100, \"gate\": 2, \"greedy\": 2, \"gate_lets_through_negatives\": 0, \"score_features\": 6, \"train_wrong_score\": 0, \"train_wrong_rule\": 0}}",
+  "official test 64: {'score': 1.0, 'loops_max': 1, 'not_at_rest': 0, 'eval_s': 0.43}",
+  "generated gen256: {'score': 1.0, 'num': 256, 'loops_max': 1, 'not_at_rest': 0, 'eval_s': 0.26}",
+  "generated gen4096: {'score': 1.0, 'num': 64, 'loops_max': 1, 'not_at_rest': 0, 'eval_s': 14.25}"
+ ],
+ "where": "modal cpu=2, one BLAS thread"
+}

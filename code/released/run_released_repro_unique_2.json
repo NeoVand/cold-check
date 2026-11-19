@@ -1,0 +1,59 @@
+{
+ "kind": "repro_unique",
+ "args": [
+  2
+ ],
+ "seconds": 6.813645839691162,
+ "result": {
+  "seed": 2,
+  "got": {
+   "n": 1000,
+   "solved": 1000,
+   "stopped": 1000,
+   "wrong_stops": 0,
+   "budget_failures": 0,
+   "budget_failures_right": 0,
+   "mean_flop": 560511.72,
+   "p99_flop": 596080.0,
+   "p999_flop": 596080.0,
+   "max_flop": 596080.0,
+   "mean_steps": 270.585,
+   "max_steps": 290,
+   "split": "test",
+   "search": {
+    "search": "gibbs",
+    "T": 0.0,
+    "focus": "random",
+    "max_moves": 20000,
+    "eta": 0.5,
+    "tol": 0.001,
+    "margin": 3.0,
+    "max_steps": 6000,
+    "seed": 0
+   },
+   "params": 18,
+   "stored": 18,
+   "seconds": 4.956632892999999
+  },
+  "recorded": {
+   "record": "experiments/runs/CU13/final/fg-s2/score-test-gibbs.json",
+   "search": {
+    "search": "gibbs",
+    "T": 0.0,
+    "focus": "random",
+    "max_moves": 20000,
+    "eta": 0.5,
+    "tol": 0.001,
+    "margin": 3.0,
+    "max_steps": 6000,
+    "seed": 0
+   },
+   "n": 1000,
+   "solved": 1000,
+   "wrong_stops": 0,
+   "budget_failures": 0,
+   "mean_flop": 560511.72
+  }
+ },
+ "error": null
+}

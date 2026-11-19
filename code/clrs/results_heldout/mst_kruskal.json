@@ -1,0 +1,85 @@
+{
+ "task": "mst_kruskal",
+ "kind": "emask",
+ "train_inputs": 100,
+ "fit_ms": 446.4,
+ "rules": {
+  "emask": {
+   "info": {
+    "features": 2930,
+    "distinct": 126,
+    "rows": 11200,
+    "positives": 660,
+    "gate": 3,
+    "greedy": 0,
+    "gate_lets_through_negatives": 0,
+    "score_features": 2,
+    "train_wrong_score": 0,
+    "train_wrong_rule": 0
+   },
+   "exact_gate": true,
+   "gate": [
+    "('own', ('rel', 'edge', 0))",
+    "('own', ('pcmp', 'w', 'B', 'eq'))",
+    "not ('own', ('pcmp', 'w', 'B', 'gt'))"
+   ],
+   "gate_size": 3,
+   "score": [
+    [
+     "('own', ('pcmp', 'w', 'B', 'eq'))",
+     6.185
+    ],
+    [
+     "('own', ('rel', 'edge', 0))",
+     3.37
+    ]
+   ]
+  }
+ },
+ "start": 0,
+ "test64": {
+  "score": 1.0,
+  "loops_max": 1,
+  "not_at_rest": 0,
+  "eval_s": 0.09
+ },
+ "val": {
+  "score": 1.0,
+  "loops_max": 1,
+  "not_at_rest": 0,
+  "eval_s": 0.01
+ },
+ "gen64": {
+  "score": 1.0,
+  "num": 32,
+  "loops_max": 1,
+  "not_at_rest": 0,
+  "eval_s": 0.09
+ },
+ "gen1024": {
+  "score": 1.0,
+  "num": 16,
+  "loops_max": 1,
+  "not_at_rest": 0,
+  "eval_s": 1.12
+ },
+ "gen1024_sparse4": {
+  "score": 1.0,
+  "num": 8,
+  "loops_max": 1,
+  "not_at_rest": 0,
+  "eval_s": 0.45
+ },
+ "paper": {
+  "floydnet": 99.63
+ },
+ "log": [
+  "{\"task\": \"mst_kruskal\", \"fit_ms\": 446.4, \"train_inputs\": 100, \"emask\": {\"exact_gate\": true, \"features\": 2930, \"distinct\": 126, \"rows\": 11200, \"positives\": 660, \"gate\": 3, \"greedy\": 0, \"gate_lets_through_negatives\": 0, \"score_features\": 2, \"train_wrong_score\": 0, \"train_wrong_rule\": 0}}",
+  "official test 64: {'score': 1.0, 'loops_max': 1, 'not_at_rest': 0, 'eval_s': 0.09}",
+  "official val: {'score': 1.0, 'loops_max': 1, 'not_at_rest': 0, 'eval_s': 0.01}",
+  "generated gen64: {'score': 1.0, 'num': 32, 'loops_max': 1, 'not_at_rest': 0, 'eval_s': 0.09}",
+  "generated gen1024: {'score': 1.0, 'num': 16, 'loops_max': 1, 'not_at_rest': 0, 'eval_s': 1.12}",
+  "generated gen1024_sparse4: {'score': 1.0, 'num': 8, 'loops_max': 1, 'not_at_rest': 0, 'eval_s': 0.45}"
+ ],
+ "where": "modal cpu=2, one BLAS thread"
+}

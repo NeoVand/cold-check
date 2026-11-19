@@ -1,0 +1,122 @@
+{
+ "task": "quicksort",
+ "kind": "pointer",
+ "train_inputs": 100,
+ "fit_ms": 126.2,
+ "rules": {
+  "off": {
+   "info": {
+    "features": 132,
+    "distinct": 20,
+    "rows": 11200,
+    "positives": 920,
+    "gate": 2,
+    "gate_lets_through_negatives": 4680,
+    "score_features": 4,
+    "train_wrong_score": 0,
+    "train_wrong_rule": 0
+   },
+   "exact_gate": false,
+   "gate": [
+    "('own', ('cmp', 'key', 'key', 'lt'))",
+    "not ('own', ('cmp', 'key', 'key', 'ge'))"
+   ],
+   "gate_size": 2,
+   "score": [
+    [
+     "('wit', (('cmp', 'key', 'key', 'lt'), None), (('cmp', 'key', 'key', 'lt'), None))",
+     -7.96
+    ],
+    [
+     "('own', ('cmp', 'key', 'key', 'lt'))",
+     3.904
+    ],
+    [
+     "('own', ('cmp', 'key', 'key', 'ge'))",
+     -3.903
+    ],
+    [
+     "('wit', (('cmp', 'key', 'key', 'ge'), None), (('cmp', 'key', 'key', 'ge'), None))",
+     -0.936
+    ]
+   ]
+  },
+  "diag": {
+   "info": {
+    "features": 341,
+    "distinct": 56,
+    "rows": 1020,
+    "positives": 100,
+    "gate": 0,
+    "gate_lets_through_negatives": 920,
+    "score_features": 5,
+    "train_wrong_score": 0,
+    "train_wrong_rule": 0
+   },
+   "exact_gate": false,
+   "gate": [],
+   "gate_size": 0,
+   "score": [
+    [
+     "('wit', (('cmp', 'key', 'key', 'ge'), None), (('cmp', 'key', 'key', 'lt'), None))",
+     -4.072
+    ],
+    [
+     "('cnt', (('id',), None), (('cmp', 'key', 'key', 'le'), None), 'eq')",
+     4.009
+    ],
+    [
+     "('wit', (('cmp', 'pos', 'pos', 'ge'), None), (('cmp', 'key', 'key', 'lt'), None))",
+     -0.985
+    ],
+    [
+     "('cnt', (('id',), None), (('cmp', 'key', 'key', 'lt'), None), 'lt')",
+     -0.93
+    ],
+    [
+     "('wit', (('cmp', 'pos', 'pos', 'lt'), None), (('cmp', 'key', 'key', 'lt'), None))",
+     -0.878
+    ]
+   ]
+  }
+ },
+ "start": 0,
+ "test64": {
+  "score": 1.0,
+  "loops_max": 1,
+  "not_at_rest": 0,
+  "eval_s": 0.02
+ },
+ "gen256": {
+  "score": 1.0,
+  "num": 32,
+  "loops_max": 1,
+  "not_at_rest": 0,
+  "eval_s": 0.13
+ },
+ "gen1024": {
+  "score": 1.0,
+  "num": 32,
+  "loops_max": 1,
+  "not_at_rest": 0,
+  "eval_s": 4.61
+ },
+ "gen4096": {
+  "score": 1.0,
+  "num": 4,
+  "loops_max": 1,
+  "not_at_rest": 0,
+  "eval_s": 20.49
+ },
+ "paper": {
+  "floydnet": 100.0
+ },
+ "log": [
+  "{\"task\": \"quicksort\", \"fit_ms\": 126.2, \"train_inputs\": 100, \"off\": {\"exact_gate\": false, \"features\": 132, \"distinct\": 20, \"rows\": 11200, \"positives\": 920, \"gate\": 2, \"gate_lets_through_negatives\": 4680, \"score_features\": 4, \"train_wrong_score\": 0, \"train_wrong_rule\": 0}, \"diag\": {\"exact_gate\": false, \"features\": 341, \"distinct\": 56, \"rows\": 1020, \"positives\": 100, \"gate\": 0, \"gate_lets_through_negatives\": 920, \"score_features\": 5, \"train_wrong_score\": 0, \"train_wrong_rule\": 0}}",
+  "official test 64: {'score': 1.0, 'loops_max': 1, 'not_at_rest': 0, 'eval_s': 0.02}",
+  "generated gen256: {'score': 1.0, 'num': 32, 'loops_max': 1, 'not_at_rest': 0, 'eval_s': 0.13}",
+  "generated gen1024: {'score': 1.0, 'num': 32, 'loops_max': 1, 'not_at_rest': 0, 'eval_s': 4.61}",
+  "generated gen4096: {'score': 1.0, 'num': 4, 'loops_max': 1, 'not_at_rest': 0, 'eval_s': 20.49}"
+ ],
+ "where": "modal cpu=2, one BLAS thread"
+}

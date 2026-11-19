@@ -1,0 +1,257 @@
+{
+ "queens_fit": {
+  "rels": [
+   "r",
+   "c",
+   "r-c",
+   "r+c"
+  ],
+  "kept_types": [
+   [
+    1,
+    1
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    8,
+    1
+   ]
+  ],
+  "conds": [
+   [
+    [
+     true,
+     true
+    ],
+    [
+     false,
+     true
+    ]
+   ],
+   [
+    [
+     true,
+     true
+    ],
+    [
+     false,
+     true
+    ]
+   ],
+   [
+    [
+     false,
+     false
+    ],
+    [
+     false,
+     true
+    ]
+   ],
+   [
+    [
+     false,
+     false
+    ],
+    [
+     false,
+     true
+    ]
+   ]
+  ],
+  "w": [
+   0.0,
+   0.5111,
+   0.5111,
+   0.0,
+   0.4635,
+   0.0,
+   0.0,
+   0.0,
+   0.4635,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "bias": [
+   -0.42872135145370477,
+   0.4287213514537046
+  ],
+  "fit_ms_cold": 494.0892078448087,
+  "fit_ms_warm_median7": 424.3928750511259
+ },
+ "queens": {
+  "8_k5-7": {
+   "N": 8,
+   "input": "k5-7",
+   "n": 100,
+   "solved": 100,
+   "cold_only": 5,
+   "moves_mean": 4.13,
+   "moves_max": 14,
+   "ops_mean": 1617.87,
+   "wall_ms_mean": 0.04122544312849641
+  },
+  "10_k7-9": {
+   "N": 10,
+   "input": "k7-9",
+   "n": 100,
+   "solved": 100,
+   "cold_only": 0,
+   "moves_mean": 9.82,
+   "moves_max": 57,
+   "ops_mean": 4048.87,
+   "wall_ms_mean": 0.02432704670354724
+  },
+  "80_k9": {
+   "N": 80,
+   "input": "k9",
+   "n": 100,
+   "solved": 100,
+   "cold_only": 59,
+   "moves_mean": 0.67,
+   "moves_max": 7,
+   "ops_mean": 45255.41,
+   "wall_ms_mean": 1.7514091287739575
+  },
+  "80_7/8": {
+   "N": 80,
+   "input": "7/8",
+   "n": 100,
+   "solved": 100,
+   "cold_only": 0,
+   "moves_mean": 68.0,
+   "moves_max": 182,
+   "ops_mean": 789569.92,
+   "wall_ms_mean": 6.547996182925999
+  },
+  "80_empty": {
+   "N": 80,
+   "input": "empty",
+   "n": 100,
+   "solved": 100,
+   "cold_only": 0,
+   "moves_mean": 85.17,
+   "moves_max": 472,
+   "ops_mean": 1167381.86,
+   "wall_ms_mean": 6.965270857326686
+  },
+  "100_k9": {
+   "N": 100,
+   "input": "k9",
+   "n": 100,
+   "solved": 100,
+   "cold_only": 62,
+   "moves_mean": 0.57,
+   "moves_max": 4,
+   "ops_mean": 68040.75,
+   "wall_ms_mean": 4.341107502114028
+  },
+  "100_7/8": {
+   "N": 100,
+   "input": "7/8",
+   "n": 100,
+   "solved": 100,
+   "cold_only": 0,
+   "moves_mean": 84.9,
+   "moves_max": 303,
+   "ops_mean": 1509398.53,
+   "wall_ms_mean": 15.915111969225109
+  },
+  "100_empty": {
+   "N": 100,
+   "input": "empty",
+   "n": 100,
+   "solved": 100,
+   "cold_only": 0,
+   "moves_mean": 97.97,
+   "moves_max": 222,
+   "ops_mean": 2194084.73,
+   "wall_ms_mean": 14.248506247531623
+  }
+ },
+ "colour_fit": {
+  "w": [
+   [
+    0.0,
+    0.0,
+    0.0
+   ],
+   [
+    1.4333,
+    1.4333,
+    1.4333
+   ]
+  ],
+  "kept": "edge",
+  "conds": [
+   [
+    [
+     false,
+     false,
+     false
+    ],
+    [
+     true,
+     true,
+     true
+    ]
+   ]
+  ],
+  "fit_ms_cold": 60.39425008930266,
+  "fit_ms_warm_median7": 57.95683292672038
+ },
+ "colour": {
+  "10_train-like": {
+   "n_vertices": 10,
+   "avg_degree": "train-like",
+   "n": 100,
+   "solved": 100,
+   "cold_only": 0,
+   "moves_mean": 5.86,
+   "moves_max": 10,
+   "ops_mean": 326.88
+  },
+  "100_3.0": {
+   "n_vertices": 100,
+   "avg_degree": 3.0,
+   "n": 100,
+   "solved": 99,
+   "cold_only": 0,
+   "moves_mean": 10899.14,
+   "moves_max": 1000000,
+   "ops_mean": 485704.65
+  },
+  "100_4.5": {
+   "n_vertices": 100,
+   "avg_degree": 4.5,
+   "n": 100,
+   "solved": 100,
+   "cold_only": 0,
+   "moves_mean": 198.84,
+   "moves_max": 3381,
+   "ops_mean": 54147.4
+  },
+  "100_6.0": {
+   "n_vertices": 100,
+   "avg_degree": 6.0,
+   "n": 100,
+   "solved": 100,
+   "cold_only": 0,
+   "moves_mean": 42.61,
+   "moves_max": 526,
+   "ops_mean": 18903.48
+  }
+ }
+}

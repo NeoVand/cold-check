@@ -1,0 +1,101 @@
+{
+ "task": "segments_intersect",
+ "fit_ms": 175.1,
+ "train_inputs": 100,
+ "rules": {
+  "all": {
+   "info": {
+    "features": 1408,
+    "distinct": 195,
+    "rows": 400,
+    "positives": 196,
+    "gate": 2,
+    "greedy": 2,
+    "gate_lets_through_negatives": 18,
+    "score_features": 46,
+    "train_wrong_score": 18,
+    "train_wrong_rule": 18
+   },
+   "exact_gate": false,
+   "gate": [
+    "('cnt', (('id',), None), (('rel', 'left', 1), None), 'eq')",
+    "not ('wit', (('rel', 'left', 0), None), (('rel', 'left', 0), None))"
+   ],
+   "gate_size": 2,
+   "score": [
+    [
+     "('cnt', (('id',), None), (('rel', 'left', 1), None), 'eq')",
+     3.777
+    ],
+    [
+     "('wit', (('rel', 'left', 0), None), (('rel', 'right', 0), None))",
+     2.141
+    ],
+    [
+     "('wit', (('rel', 'left', 1), None), (('rel', 'right', 1), None))",
+     2.117
+    ],
+    [
+     "('wit', (('rel', 'right', 0), None), (('rel', 'right', 0), None))",
+     -2.111
+    ],
+    [
+     "('wit', (('rel', 'left', 0), None), (('rel', 'left', 0), None))",
+     -2.087
+    ],
+    [
+     "('cnt', (('cmp', 'pos', 'pos', 'ge'), None), (('cmp', 'y', 'y', 'gt'), None), 'lt')",
+     -0.961
+    ],
+    [
+     "('wit', (('cmp', 'x', 'x', 'ge'), None), (('rel', 'right', 1), None))",
+     0.729
+    ],
+    [
+     "('wit', (('cmp', 'y', 'y', 'lt'), None), (('rel', 'other', 0), None))",
+     0.681
+    ],
+    [
+     "('wit', (('cmp', 'y', 'y', 'ge'), None), (('rel', 'other', 0), None))",
+     0.536
+    ],
+    [
+     "('cnt', (('cmp', 'y', 'y', 'lt'), None), (('rel', 'left', 1), None), 'eq')",
+     0.53
+    ],
+    [
+     "('wit', (('cmp', 'y', 'y', 'ge'), None), (('rel', 'right', 1), None))",
+     0.53
+    ],
+    [
+     "('wit', (('cmp', 'y', 'y', 'lt'), None), (('rel', 'left', 1), None))",
+     0.506
+    ]
+   ]
+  }
+ },
+ "test64": {
+  "score": 1.0,
+  "loops_max": 1,
+  "not_at_rest": 0,
+  "eval_s": 0.22
+ },
+ "val": {
+  "score": 1.0,
+  "eval_s": 0.22
+ },
+ "gen4": {
+  "score": 1.0,
+  "num": 2048,
+  "loops_max": 1,
+  "not_at_rest": 0,
+  "eval_s": 0.23
+ },
+ "log": [
+  "{\"task\": \"segments_intersect\", \"fit_ms\": 175.1, \"all\": {\"exact\": false, \"features\": 1408, \"distinct\": 195, \"rows\": 400, \"positives\": 196, \"gate\": 2, \"greedy\": 2, \"gate_lets_through_negatives\": 18, \"score_features\": 46, \"train_wrong_score\": 18, \"train_wrong_rule\": 18}}",
+  "official test: {'score': 1.0, 'loops_max': 1, 'not_at_rest': 0, 'eval_s': 0.22}",
+  "val: {'score': 1.0, 'eval_s': 0.22}",
+  "generated 4: {'score': 1.0, 'num': 2048, 'loops_max': 1, 'not_at_rest': 0, 'eval_s': 0.23}"
+ ],
+ "where": "modal cpu=2, one BLAS thread"
+}

@@ -1,0 +1,76 @@
+{
+ "fit": [
+  "type agree={r//b,c//b} w=1.3792",
+  "type agree={r,r//b,r%b} w=1.6254",
+  "type agree={r,r//b,c//b,r%b} w=2.1218",
+  "type agree={c,c//b,c%b} w=1.6272",
+  "type agree={c,r//b,c//b,c%b} w=2.1218",
+  "type agree={r,r//b,r%b,c%b} w=1.6293",
+  "type agree={c,c//b,r%b,c%b} w=1.6258",
+  "type agree={r//b,c//b,r-c} w=1.3792",
+  "type agree={r//b,c//b,r+c} w=1.3792"
+ ],
+ "relations": [
+  [
+   "r"
+  ],
+  [
+   "c"
+  ],
+  [
+   "r//b",
+   "c//b"
+  ]
+ ],
+ "side4": {
+  "side": 4,
+  "n": 1000,
+  "blank_frac_mean": 0.738875,
+  "solved_valid": 1000,
+  "equals_generated": 1000,
+  "budget_misses": 0,
+  "cold_only": 1000,
+  "moves_mean": 0.0,
+  "moves_median": 0.0,
+  "moves_max": 0,
+  "ops_mean": 262.305,
+  "ops_plus_cmp_mean": 1452.641,
+  "wall_ms_mean": 0.005055006127804518,
+  "wall_ms_max": 0.0070410314947366714,
+  "gen_s_mean": 0.0002767360438592732
+ },
+ "side9": {
+  "side": 9,
+  "n": 200,
+  "blank_frac_mean": 0.7014197530864198,
+  "solved_valid": 200,
+  "equals_generated": 200,
+  "budget_misses": 0,
+  "cold_only": 105,
+  "moves_mean": 1.895,
+  "moves_median": 0.0,
+  "moves_max": 20,
+  "ops_mean": 5166.665,
+  "ops_plus_cmp_mean": 35188.97,
+  "wall_ms_mean": 0.0264896044973284,
+  "wall_ms_max": 0.0933338887989521,
+  "gen_s_mean": 0.0013591187552083285
+ },
+ "side16": {
+  "side": 16,
+  "n": 1000,
+  "blank_frac_mean": 0.63462890625,
+  "solved_valid": 1000,
+  "equals_generated": 1000,
+  "budget_misses": 0,
+  "cold_only": 0,
+  "moves_mean": 4095.348,
+  "moves_median": 1580.0,
+  "moves_max": 96776,
+  "ops_mean": 6317893.746,
+  "ops_plus_cmp_mean": 60610766.871,
+  "wall_ms_mean": 31.05021842592396,
+  "wall_ms_max": 753.3689581323415,
+  "gen_s_mean": 0.7399818321301136
+ }
+}

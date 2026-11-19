@@ -1,0 +1,184 @@
+{
+ "task": "bfs",
+ "kind": "pointer_loop",
+ "train_inputs": 100,
+ "fit_ms": 989.5,
+ "rules": {
+  "off": {
+   "info": {
+    "features": 6249,
+    "distinct": 180,
+    "rows": 11200,
+    "positives": 628,
+    "gate": 4,
+    "gate_lets_through_negatives": 412,
+    "score_features": 16,
+    "train_wrong_score": 0,
+    "train_wrong_rule": 0
+   },
+   "exact_gate": false,
+   "gate": [
+    "('own', ('cmp', 'depth', 'depth', 'lt'))",
+    "('own', ('rel', 'edge', 0))",
+    "('bitA', ('bit', 'has_depth'))",
+    "not ('bitB', ('bit', 'source'))"
+   ],
+   "gate_size": 4,
+   "score": [
+    [
+     "('own', ('rel', 'edge', 0))",
+     5.586
+    ],
+    [
+     "('own', ('cmp', 'depth', 'depth', 'lt'))",
+     4.937
+    ],
+    [
+     "('wit', (('cmp', 'pos', 'pos', 'ge'), None), (('and', ('rel', 'edge', 0), ('cmp', 'depth', 'depth', 'lt')), None))",
+     -3.969
+    ],
+    [
+     "('wit', (('cmp', 'depth', 'depth', 'lt'), None), (('rel', 'edge', 0), ('bit', 'has_depth')))",
+     0.693
+    ],
+    [
+     "('wit', (('and', ('rel', 'edge', 0), ('cmp', 'pos', 'pos', 'ge')), None), (('and', ('rel', 'edge', 0), ('cmp', 'depth', 'depth', 'lt')), None))",
+     -0.567
+    ],
+    [
+     "('wit', (('cmp', 'depth', 'depth', 'ge'), None), (('rel', 'edge', 0), None))",
+     -0.437
+    ],
+    [
+     "('wit', (('cmp', 'depth', 'depth', 'lt'), None), (('cmp', 'depth', 'depth', 'lt'), None))",
+     -0.437
+    ],
+    [
+     "('wit', (('cmp', 'depth', 'depth', 'gt'), None), (('rel', 'edge', 0), None))",
+     -0.418
+    ],
+    [
+     "('wit', (('cmp', 'depth', 'depth', 'ge'), None), (('and', ('rel', 'edge', 0), ('cmp', 'pos', 'pos', 'lt')), None))",
+     -0.415
+    ],
+    [
+     "('wit', (('cmp', 'depth', 'depth', 'gt'), None), (('and', ('rel', 'edge', 0), ('cmp', 'depth', 'depth', 'lt')), None))",
+     -0.393
+    ],
+    [
+     "('bitA', ('bit', 'source'))",
+     0.255
+    ],
+    [
+     "('wit', (('and', ('rel', 'edge', 0), ('cmp', 'depth', 'depth', 'ge')), None), (('rel', 'edge', 0), None))",
+     -0.197
+    ]
+   ]
+  },
+  "diag": {
+   "info": {
+    "features": 11782,
+    "distinct": 543,
+    "rows": 1020,
+    "positives": 392,
+    "gate": 0,
+    "gate_lets_through_negatives": 628,
+    "score_features": 24,
+    "train_wrong_score": 0,
+    "train_wrong_rule": 0
+   },
+   "exact_gate": false,
+   "gate": [],
+   "gate_size": 0,
+   "score": [
+    [
+     "('wit', (('cmp', 'depth', 'depth', 'gt'), None), (('rel', 'edge', 0), None))",
+     -3.163
+    ],
+    [
+     "('cnt', (('and', ('rel', 'edge', 0), ('cmp', 'pos', 'pos', 'eq')), None), (('and', ('rel', 'edge', 0), ('cmp', 'depth', 'depth', 'lt')), None), 'eq')",
+     3.153
+    ],
+    [
+     "('cnt', (('id',), None), (('and', ('rel', 'edge', 0), ('cmp', 'depth', 'depth', 'lt')), None), 'eq')",
+     -1.045
+    ],
+    [
+     "('cnt', (('and', ('rel', 'edge', 0), ('cmp', 'depth', 'depth', 'lt')), None), (('cmp', 'pos', 'pos', 'ge'), ('bit', 'source')), 'lt')",
+     0.723
+    ],
+    [
+     "('cnt', (('and', ('rel', 'edge', 0), ('cmp', 'depth', 'depth', 'lt')), None), (('cmp', 'pos', 'pos', 'le'), ('bit', 'source')), 'lt')",
+     0.671
+    ],
+    [
+     "('cnt', (('and', ('rel', 'edge', 0), ('cmp', 'pos', 'pos', 'lt')), ('bit', 'source')), (('and', ('rel', 'edge', 0), ('cmp', 'depth', 'depth', 'lt')), None), 'lt')",
+     -0.637
+    ],
+    [
+     "('cnt', (('and', ('rel', 'edge', 0), ('cmp', 'depth', 'depth', 'lt')), None), (('and', ('rel', 'edge', 0), ('cmp', 'pos', 'pos', 'lt')), ('bit', 'source')), 'eq')",
+     0.628
+    ],
+    [
+     "('cnt', (('and', ('rel', 'edge', 0), ('cmp', 'pos', 'pos', 'ge')), ('bit', 'source')), (('and', ('rel', 'edge', 0), ('cmp', 'depth', 'depth', 'lt')), None), 'lt')",
+     -0.592
+    ],
+    [
+     "('cnt', (('and', ('rel', 'edge', 0), ('cmp', 'depth', 'depth', 'lt')), None), (('and', ('rel', 'edge', 0), ('cmp', 'pos', 'pos', 'ge')), ('bit', 'source')), 'eq')",
+     0.583
+    ],
+    [
+     "('cnt', (('id',), ('bit', 'source')), (('rel', 'edge', 0), ('bit', 'has_depth')), 'lt')",
+     -0.516
+    ],
+    [
+     "('cnt', (('rel', 'edge', 0), ('bit', 'has_depth')), (('id',), ('bit', 'source')), 'eq')",
+     0.24
+    ],
+    [
+     "('wit', (('rel', 'edge', 0), None), (('rel', 'edge', 0), ('bit', 'has_depth')))",
+     -0.225
+    ]
+   ]
+  }
+ },
+ "start": 0,
+ "test64": {
+  "score": 1.0,
+  "loops_max": 4,
+  "not_at_rest": 0,
+  "eval_s": 0.09
+ },
+ "gen256": {
+  "score": 1.0,
+  "num": 32,
+  "loops_max": 3,
+  "not_at_rest": 0,
+  "eval_s": 0.87
+ },
+ "gen1024": {
+  "score": 1.0,
+  "num": 16,
+  "loops_max": 3,
+  "not_at_rest": 0,
+  "eval_s": 12.87
+ },
+ "gen1024_sparse4": {
+  "score": 1.0,
+  "num": 8,
+  "loops_max": 2,
+  "not_at_rest": 0,
+  "eval_s": 4.1
+ },
+ "paper": {
+  "floydnet": 100.0
+ },
+ "log": [
+  "{\"task\": \"bfs\", \"fit_ms\": 989.5, \"train_inputs\": 100, \"off\": {\"exact_gate\": false, \"features\": 6249, \"distinct\": 180, \"rows\": 11200, \"positives\": 628, \"gate\": 4, \"gate_lets_through_negatives\": 412, \"score_features\": 16, \"train_wrong_score\": 0, \"train_wrong_rule\": 0}, \"diag\": {\"exact_gate\": false, \"features\": 11782, \"distinct\": 543, \"rows\": 1020, \"positives\": 392, \"gate\": 0, \"gate_lets_through_negatives\": 628, \"score_features\": 24, \"train_wrong_score\": 0, \"train_wrong_rule\": 0}}",
+  "official test 64: {'score': 1.0, 'loops_max': 4, 'not_at_rest': 0, 'eval_s': 0.09}",
+  "generated gen256: {'score': 1.0, 'num': 32, 'loops_max': 3, 'not_at_rest': 0, 'eval_s': 0.87}",
+  "generated gen1024: {'score': 1.0, 'num': 16, 'loops_max': 3, 'not_at_rest': 0, 'eval_s': 12.87}",
+  "generated gen1024_sparse4: {'score': 1.0, 'num': 8, 'loops_max': 2, 'not_at_rest': 0, 'eval_s': 4.1}"
+ ],
+ "where": "modal cpu=2, one BLAS thread"
+}

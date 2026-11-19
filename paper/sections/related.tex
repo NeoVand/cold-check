@@ -1,0 +1,37 @@
+\section{Related work}\label{sec:related}
+
+Much of the skeleton of this setting is classical. Markov logic networks tie rules by role across all their groundings, fit them by pseudolikelihood, and solve them by
+local search that stops when every hard clause holds\cite{richardson2006markov}. Their authors also noted that pseudolikelihood can do badly when long chains of
+inference are needed\cite{lowd2007efficient}. One conditional model per relation, with counts over related objects as
+features, is a relational dependency network\cite{neville2007relational}, and counting the third objects that pass a test
+on both legs is one of the complex aggregates of relational decision trees\cite{vens2006refining}. Asking that each
+solved example be a model of the learned rules is learning from interpretations\cite{deraedt1994first}. Programs with
+recursion are learned exactly from examples by inductive logic programming: ILASP learns answer set programs whose
+examples must be answer sets\cite{law2014inductive}; Popper searches for recursive programs\cite{cropper2021learning};
+differentiable forward chaining learns rules by unrolling inference\cite{evans2018learning}. ``Derive what is forced,
+then guess and check'' is how answer set solvers work, starting from the well-founded model\cite{vangelder1991well}.
+Constraint acquisition learns count constraints from solutions, and COUNT-CP transfers them from $4\times4$ to $9\times9$
+Sudoku\cite{kumar2022learning}. Every symbolic learner here searches the space of rules; we fit a fixed family of
+conditions in one step.
+
+On the neural side, CRAM is the immediate starting point\cite{hoover2026classical}, and energies for reasoning are an
+active line\cite{du2022learning,chen2026energy}. Looped networks trained on small mazes and run on far larger ones go
+back to Deep Thinking\cite{bansal2022end}. Recurrent and message-passing reasoners now transfer across sizes on
+constraint problems\cite{toenshoff2023one,salvatori2026tiny}, and lattice deduction transformers, which project a
+recurrent state onto a lattice at every step, solve all of Sudoku-Extreme\cite{davis2026lattice}. In algorithmic reasoning, hints supervise a network
+on an algorithm's trace\cite{velickovic2022clrs}, and a no-hint mode trains on answers alone, through the
+loop\cite{rodionov2023neural}. Discrete neural algorithmic reasoning proves its learned executions correct on any input
+but trains on hints\cite{rodionov2025discrete}. Dual algorithmic reasoning adds an optimality certificate as extra
+supervision\cite{numeroso2023dual}, and a sparsity regulariser lets a network trained on a few shortest-path instances
+provably approximate Bellman--Ford at every size\cite{nerem2025graph}. Proof labelling schemes and locally checkable
+proofs study, in distributed computing, which global properties have labels that a local verifier can
+check\cite{korman2010proof,korman2007distributed,goos2016locally}.
+
+Against this background, our contributions are four. The first is the cold pair read with comparisons of counts,
+fitted at the answer in one step with no search over rules. The second is the answer completed from itself, by
+closures and counts, as the training target. It links the hints of algorithmic reasoning to the labels of proof
+labelling schemes: a completion is a certificate computed from the answer instead of from the trace. The third is the
+level condition, kept as a safeguard, which turns a check fitted at a supported model into a procedure that computes it
+wherever the fit alone would drop it. The
+fourth is proofs from the fitted table at every size. Our searches, whose scope Methods describes, found none of these
+four in a learned system.

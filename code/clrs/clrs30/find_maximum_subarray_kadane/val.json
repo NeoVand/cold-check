@@ -1,0 +1,1 @@
+{"seed": 2, "num": 1024, "length": 16, "task": "find_maximum_subarray_kadane", "split": "val", "sha256": "ec3193582199eae48cde23f10f5d14ac89cb83a480db5186fcf930a2f86c76a9", "shapes": {"n": [1024], "x_pos": [1024, 16], "x_key": [1024, 16], "start": [1024], "end": [1024]}, "seconds": 3.1, "clrs_version": "2.0.3", "numpy": "2.5.4"}

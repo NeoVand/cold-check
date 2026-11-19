@@ -1,0 +1,1 @@
+{"seed": 2, "num": 32, "length": 16, "task": "graham_scan", "split": "val", "sha256": "d5fdf9659ad4061b6a9e67a46d38886cf441e720d120e1c8ee85b51a2b79d7db", "shapes": {"n": [32], "x_pos": [32, 16], "x_x": [32, 16], "x_y": [32, 16], "in_hull": [32, 16]}, "seconds": 2.5, "clrs_version": "2.0.3", "numpy": "2.5.4"}

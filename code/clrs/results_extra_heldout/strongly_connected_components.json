@@ -1,0 +1,37 @@
+{
+ "task": "strongly_connected_components",
+ "fit_ms": 99256.7,
+ "rules": {},
+ "test64": {
+  "score": 1.0,
+  "loops_max": 65,
+  "not_at_rest": 0
+ },
+ "val": {
+  "score": 1.0,
+  "loops_max": 17
+ },
+ "gen64": {
+  "score": 1.0,
+  "num": 32,
+  "loops_max": 65,
+  "not_at_rest": 0
+ },
+ "gen256": {
+  "score": 1.0,
+  "num": 4,
+  "loops_max": 257,
+  "not_at_rest": 0
+ },
+ "log": [
+  "topological_sort official test: {'score': 1.0, 'loops_max': 65, 'not_at_rest': 0}",
+  "topological_sort val: {'score': 1.0, 'loops_max': 17}",
+  "topological_sort generated 64: {'score': 1.0, 'num': 32, 'loops_max': 65, 'not_at_rest': 0}",
+  "topological_sort generated 256: {'score': 1.0, 'num': 4, 'loops_max': 257, 'not_at_rest': 0}",
+  "strongly_connected_components official test: {'score': 1.0, 'loops_max': 65, 'not_at_rest': 0}",
+  "strongly_connected_components val: {'score': 1.0, 'loops_max': 17}",
+  "strongly_connected_components generated 64: {'score': 1.0, 'num': 32, 'loops_max': 65, 'not_at_rest': 0}",
+  "strongly_connected_components generated 256: {'score': 1.0, 'num': 4, 'loops_max': 257, 'not_at_rest': 0}"
+ ],
+ "where": "modal cpu=2, one BLAS thread"
+}

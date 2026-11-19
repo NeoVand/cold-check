@@ -1,0 +1,106 @@
+% "When the Check Is the Algorithm" (19 Nov 2026). Preamble, captions and number macros follow "Attention at Absolute
+% Zero" (arXiv 2611.11937). Every number is a \nm{} key from gen/make_numbers.py; a missing key prints as a red bracket.
+\documentclass[10pt]{article}
+\usepackage[a4paper,margin=22mm]{geometry}
+\usepackage{iftex}
+\ifXeTeX\usepackage{fontspec}\else\usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage{lmodern}\fi
+\usepackage{textcomp}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx,booktabs,array,xcolor,longtable}
+\usepackage[font=small,labelformat=empty,justification=justified,singlelinecheck=false]{caption}
+\usepackage{microtype}
+\usepackage[numbers,super,sort&compress]{natbib}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+\setlength{\parskip}{0.35em}
+\setlength{\parindent}{0pt}
+\renewcommand{\bibnumfmt}[1]{#1.}
+\makeatletter\setlength{\@fptop}{0pt}\setlength{\@fpsep}{12pt}\setlength{\@fpbot}{0pt plus 1fil}\makeatother
+\renewcommand{\topfraction}{0.92}\renewcommand{\textfraction}{0.06}\renewcommand{\floatpagefraction}{0.8}
+\newcommand{\nmdef}[2]{\expandafter\def\csname nm@#1\endcsname{#2}}
+\newcommand{\nm}[1]{\ifcsname nm@#1\endcsname\csname nm@#1\endcsname\else\textcolor{red}{\textbf{[#1]}}\fi}
+\newcommand{\pend}[1]{\textcolor{red}{[#1]}}
+\input{numbers.tex}
+\newcommand{\figat}[2]{\IfFileExists{figures/#1/out/#2.pdf}{\includegraphics[width=\linewidth]{figures/#1/out/#2.pdf}}{\fbox{\parbox[c][40mm][c]{0.95\linewidth}{\centering\color{red} figure #2 being built}}}}
+\newcommand{\fig}[1]{\figat{v1}{#1}}
+\newcommand{\figw}[2]{\includegraphics[width=#1\linewidth]{figures/v1/out/#2.pdf}}
+\newcommand{\figlabel}[2]{\textbf{#1 $|$ #2}}
+\newtheorem{proposition}{Proposition}
+\newcommand{\notyet}{\bot}
+
+\title{When the Check Is the Algorithm}
+\author{Mostafa `Neo' Mohsenvand\\ {\small MIT Media Lab}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent Looped neural networks learn algorithms and puzzles, but they train through their loops, for hours. CRAM, a
+classical energy recently revived, fits to solved puzzles in milliseconds; what it learns, though, is a check tied to one
+board size, with no place for quantities the answer does not show. We show that a check fitted at the answer can be the
+algorithm itself. We complete each training answer from itself with closures and counts, fit the zero-temperature
+pair-attention check of our earlier work to it in one step, and keep the one condition a finished answer never
+contradicts: every part rests on parts placed before it. Run cold from nothing, the check rebuilds the answer at any
+size, and a search runs only where nothing is forced. One rule, fitted in about 20 milliseconds, solves all
+\nm{sudoku.ntest} Sudoku-Extreme puzzles and, unchanged, boards of $16\times16$ and $25\times25$. A maze rule that reads the cold run's own clock, in place of CRAM's hand-built distance layer, solves all \nm{hard.n}
+Maze-Hard mazes. All thirty CLRS-30 algorithms are exact on the
+official test and on held-out inputs of up to \nm{held.max.nodes} nodes, fifteen of them learned from comparisons and
+counts alone, each fitted in milliseconds to seconds on one CPU core. The fitted rules are small tables with no size in
+them, so finite checks prove the puzzle rules, and the checks of several algorithms, correct at every size. In the language of logic programming, the kept condition
+turns an answer the check merely supports into the least model the check computes.
+\end{abstract}
+
+\input{sections/introduction.tex}
+
+\begin{figure}[tbp]
+\centering
+\fig{fig1}
+\caption[]{\input{sections/cap_fig1.tex}}
+\label{fig:idea}
+\end{figure}
+
+\input{sections/setting.tex}
+\input{sections/theory.tex}
+
+\begin{figure}[tbp]
+\centering
+\fig{fig2}
+\caption[]{\input{sections/cap_fig2.tex}}
+\label{fig:theory}
+\end{figure}
+
+\input{sections/results.tex}
+
+\begin{figure}[tbp]
+\centering
+\figw{0.92}{fig3}
+\caption[]{\input{sections/cap_fig3.tex}}
+\label{fig:puzzles}
+\end{figure}
+
+\begin{figure}[tbp]
+\centering
+\fig{fig4}
+\caption[]{\input{sections/cap_fig4.tex}}
+\label{fig:clrs}
+\end{figure}
+
+\begin{figure}[tbp]
+\centering
+\fig{fig5}
+\caption[]{\input{sections/cap_fig5.tex}}
+\label{fig:cost}
+\end{figure}
+
+\input{sections/related.tex}
+\input{sections/discussion.tex}
+\input{sections/methods.tex}
+
+\clearpage
+\section*{Supplementary Information}
+\input{sections/supplement.tex}
+
+\bibliographystyle{unsrtnat}
+\bibliography{refs}
+\end{document}

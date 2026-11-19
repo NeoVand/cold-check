@@ -1,0 +1,192 @@
+{
+ "task": "dfs",
+ "fit_ms": 109359.0,
+ "train_states": 1020,
+ "rules": {
+  "off": {
+   "info": {
+    "features": 48421,
+    "distinct": 444,
+    "rows": 79800,
+    "positives": 848,
+    "gate": 7,
+    "greedy": 3,
+    "gate_lets_through_negatives": 0,
+    "score_features": 16,
+    "train_wrong_score": 85,
+    "train_wrong_rule": 0
+   },
+   "exact_gate": true,
+   "gate": [
+    "('own', ('cmp', 'd', 'd', 'lt'))",
+    "('own', ('rel', 'edge', 0))",
+    "('bitA', ('bit', 'open'))",
+    "not ('bitA', ('bit', 'unplaced'))",
+    "not ('wit', (('and', ('rel', 'edge', 0), ('cmp', 'd', 'd', 'lt')), None), (('and', ('rel', 'edge', 0), ('cmp', 'pos', 'pos', 'lt')), None))",
+    "not ('wit', (('cmp', 'd', 'd', 'lt'), None), (('cmp', 'd', 'd', 'lt'), ('bit', 'open')))",
+    "not ('wit', (('rel', 'edge', 0), None), (('cmp', 'pos', 'pos', 'lt'), ('bit', 'unplaced')))"
+   ],
+   "gate_size": 7,
+   "score": [
+    [
+     "('own', ('rel', 'edge', 0))",
+     2.656
+    ],
+    [
+     "('bitA', ('bit', 'open'))",
+     2.376
+    ],
+    [
+     "('wit', (('rel', 'edge', 0), None), (('cmp', 'pos', 'pos', 'lt'), ('bit', 'unplaced')))",
+     -1.899
+    ],
+    [
+     "('wit', (('cmp', 'd', 'd', 'lt'), None), (('cmp', 'd', 'd', 'lt'), ('bit', 'open')))",
+     -1.446
+    ],
+    [
+     "('bitA', ('bit', 'unplaced'))",
+     -1.289
+    ],
+    [
+     "('own', ('cmp', 'd', 'd', 'lt'))",
+     1.287
+    ],
+    [
+     "('wit', (('and', ('rel', 'edge', 0), ('cmp', 'd', 'd', 'lt')), None), (('cmp', 'pos', 'pos', 'lt'), None))",
+     -1.122
+    ],
+    [
+     "('wit', (('and', ('rel', 'edge', 0), ('cmp', 'd', 'd', 'lt')), None), (('and', ('rel', 'edge', 0), ('cmp', 'pos', 'pos', 'lt')), None))",
+     -0.715
+    ],
+    [
+     "('wit', (('and', ('rel', 'edge', 0), ('cmp', 'd', 'd', 'lt')), None), (('cmp', 'd', 'd', 'lt'), ('bit', 'open')))",
+     -0.641
+    ],
+    [
+     "('wit', (('cmp', 'd', 'd', 'lt'), None), (('cmp', 'pos', 'pos', 'lt'), ('bit', 'open')))",
+     -0.45
+    ],
+    [
+     "('wit', (('rel', 'edge', 0), None), (('and', ('rel', 'edge', 1), ('cmp', 'pos', 'pos', 'lt')), ('bit', 'unplaced')))",
+     -0.151
+    ],
+    [
+     "('wit', (('and', ('rel', 'edge', 0), ('cmp', 'd', 'd', 'lt')), None), (('and', ('rel', 'edge', 1), ('cmp', 'pos', 'pos', 'lt')), None))",
+     -0.147
+    ]
+   ]
+  },
+  "diag": {
+   "info": {
+    "features": 144763,
+    "distinct": 1697,
+    "rows": 6620,
+    "positives": 172,
+    "gate": 2,
+    "greedy": 2,
+    "gate_lets_through_negatives": 0,
+    "score_features": 33,
+    "train_wrong_score": 0,
+    "train_wrong_rule": 0
+   },
+   "exact_gate": true,
+   "gate": [
+    "('cnt', (('cmp', 'd', 'd', 'lt'), ('bit', 'open')), (('cmp', 'pos', 'pos', 'lt'), ('bit', 'unplaced')), 'eq')",
+    "not ('wit', (('cmp', 'pos', 'pos', 'ge'), None), (('cmp', 'pos', 'pos', 'lt'), ('bit', 'unplaced')))"
+   ],
+   "gate_size": 2,
+   "score": [
+    [
+     "('cnt', (('cmp', 'd', 'd', 'lt'), ('bit', 'open')), (('cmp', 'pos', 'pos', 'lt'), ('bit', 'unplaced')), 'eq')",
+     1.43
+    ],
+    [
+     "('cnt', (('cmp', 'pos', 'pos', 'lt'), ('bit', 'open')), (('cmp', 'pos', 'pos', 'lt'), ('bit', 'unplaced')), 'eq')",
+     1.022
+    ],
+    [
+     "('cnt', (('cmp', 'pos', 'pos', 'ge'), ('bit', 'open')), (('cmp', 'pos', 'pos', 'lt'), ('bit', 'unplaced')), 'eq')",
+     1.003
+    ],
+    [
+     "('cnt', (('cmp', 'd', 'd', 'lt'), ('bit', 'open')), (('and', ('rel', 'edge', 1), ('cmp', 'pos', 'pos', 'lt')), ('bit', 'unplaced')), 'eq')",
+     0.625
+    ],
+    [
+     "('cnt', (('cmp', 'd', 'd', 'eq'), None), (('cmp', 'd', 'd', 'lt'), ('bit', 'open')), 'eq')",
+     0.608
+    ],
+    [
+     "('wit', (('cmp', 'd', 'd', 'ge'), None), (('cmp', 'd', 'd', 'lt'), ('bit', 'open')))",
+     -0.591
+    ],
+    [
+     "('cnt', (('cmp', 'd', 'd', 'lt'), ('bit', 'open')), (('and', ('rel', 'edge', 0), ('cmp', 'pos', 'pos', 'lt')), ('bit', 'unplaced')), 'eq')",
+     0.541
+    ],
+    [
+     "('cnt', (('id',), None), (('cmp', 'pos', 'pos', 'le'), ('bit', 'unplaced')), 'eq')",
+     0.476
+    ],
+    [
+     "('wit', (('cmp', 'pos', 'pos', 'ge'), None), (('cmp', 'pos', 'pos', 'lt'), ('bit', 'unplaced')))",
+     -0.472
+    ],
+    [
+     "('cnt', (('and', ('rel', 'edge', 1), ('cmp', 'pos', 'pos', 'ge')), ('bit', 'open')), (('cmp', 'pos', 'pos', 'lt'), ('bit', 'unplaced')), 'eq')",
+     0.436
+    ],
+    [
+     "('cnt', (('and', ('rel', 'edge', 0), ('cmp', 'pos', 'pos', 'ge')), ('bit', 'open')), (('cmp', 'pos', 'pos', 'lt'), ('bit', 'unplaced')), 'eq')",
+     0.423
+    ],
+    [
+     "('cnt', (('and', ('rel', 'edge', 1), ('cmp', 'pos', 'pos', 'lt')), ('bit', 'open')), (('cmp', 'pos', 'pos', 'lt'), ('bit', 'unplaced')), 'eq')",
+     0.406
+    ]
+   ]
+  }
+ },
+ "test64": {
+  "score": 1.0,
+  "loops_max": 65,
+  "not_at_rest": 0,
+  "eval_s": 2.72
+ },
+ "val": {
+  "score": 1.0,
+  "loops_max": 17
+ },
+ "gen64": {
+  "score": 1.0,
+  "num": 32,
+  "loops_max": 65,
+  "not_at_rest": 0,
+  "eval_s": 2.59
+ },
+ "gen256": {
+  "score": 1.0,
+  "num": 4,
+  "loops_max": 257,
+  "not_at_rest": 0,
+  "eval_s": 10.31
+ },
+ "log": [
+  "{\"fit_ms\": 109359.0, \"off\": {\"exact\": true, \"features\": 48421, \"distinct\": 444, \"rows\": 79800, \"positives\": 848, \"gate\": 7, \"greedy\": 3, \"gate_lets_through_negatives\": 0, \"score_features\": 16, \"train_wrong_score\": 85, \"train_wrong_rule\": 0}, \"diag\": {\"exact\": true, \"features\": 144763, \"distinct\": 1697, \"rows\": 6620, \"positives\": 172, \"gate\": 2, \"greedy\": 2, \"gate_lets_through_negatives\": 0, \"score_features\": 33, \"train_wrong_score\": 0, \"train_wrong_rule\": 0}}",
+  "official test: {'score': 1.0, 'loops_max': 65, 'not_at_rest': 0, 'eval_s': 2.72}",
+  "val: {'score': 1.0, 'loops_max': 17}",
+  "generated 64: {'score': 1.0, 'num': 32, 'loops_max': 65, 'not_at_rest': 0, 'eval_s': 2.59}",
+  "generated 256: {'score': 1.0, 'num': 4, 'loops_max': 257, 'not_at_rest': 0, 'eval_s': 10.31}",
+  "topological_sort official test: {'score': 1.0, 'loops_max': 65, 'not_at_rest': 0}",
+  "topological_sort val: {'score': 1.0, 'loops_max': 17}",
+  "topological_sort generated 64: {'score': 1.0, 'num': 32, 'loops_max': 65, 'not_at_rest': 0}",
+  "topological_sort generated 256: {'score': 1.0, 'num': 4, 'loops_max': 257, 'not_at_rest': 0}",
+  "strongly_connected_components official test: {'score': 1.0, 'loops_max': 65, 'not_at_rest': 0}",
+  "strongly_connected_components val: {'score': 1.0, 'loops_max': 17}",
+  "strongly_connected_components generated 64: {'score': 1.0, 'num': 32, 'loops_max': 65, 'not_at_rest': 0}",
+  "strongly_connected_components generated 256: {'score': 1.0, 'num': 4, 'loops_max': 257, 'not_at_rest': 0}"
+ ],
+ "where": "modal cpu=2, one BLAS thread"
+}

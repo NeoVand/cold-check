@@ -1,0 +1,37 @@
+{
+ "graham_scan": {
+  "best_ms": 41.6
+ },
+ "jarvis_march": {
+  "best_ms": 42.5
+ },
+ "segments_intersect": {
+  "best_ms": 45.4
+ },
+ "find_maximum_subarray_kadane": {
+  "best_ms": 458.4
+ },
+ "articulation_points": {
+  "best_ms": 23.3
+ },
+ "bridges": {
+  "best_ms": 25.6
+ },
+ "matrix_chain_order": {
+  "best_ms": 60.8
+ },
+ "optimal_bst": {
+  "best_ms": 77.7
+ },
+ "dfs": {
+  "best_ms": 47508.4
+ },
+ "strongly_connected_components": {
+  "best_ms": 47508.4,
+  "note": "the DFS fit only"
+ },
+ "topological_sort": {
+  "best_ms": 47566.3,
+  "note": "the DFS fit + its read-out fit"
+ }
+}

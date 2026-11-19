@@ -1,0 +1,5346 @@
+{
+ "kind": "pab",
+ "args": [
+  1
+ ],
+ "seconds": 18.602184772491455,
+ "result": [
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 0,
+   "n": 3,
+   "grid": [
+    7,
+    7
+   ],
+   "corridor": "down",
+   "room": "left",
+   "shortest": 8,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 8,
+    "stopped": true,
+    "descent_steps": 32,
+    "settle_steps": 16,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 8,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 8,
+    "stopped": true,
+    "descent_steps": 32,
+    "settle_steps": 16,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 8,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 0,
+   "n": 4,
+   "grid": [
+    8,
+    8
+   ],
+   "corridor": "down",
+   "room": "left",
+   "shortest": 10,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 10,
+    "stopped": true,
+    "descent_steps": 48,
+    "settle_steps": 16,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 10,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 10,
+    "stopped": true,
+    "descent_steps": 48,
+    "settle_steps": 16,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 10,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 0,
+   "n": 5,
+   "grid": [
+    9,
+    9
+   ],
+   "corridor": "down",
+   "room": "left",
+   "shortest": 12,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 12,
+    "stopped": true,
+    "descent_steps": 48,
+    "settle_steps": 16,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 12,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 12,
+    "stopped": true,
+    "descent_steps": 48,
+    "settle_steps": 16,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 12,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 0,
+   "n": 6,
+   "grid": [
+    10,
+    10
+   ],
+   "corridor": "down",
+   "room": "left",
+   "shortest": 14,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 14,
+    "stopped": true,
+    "descent_steps": 64,
+    "settle_steps": 16,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 14,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 14,
+    "stopped": true,
+    "descent_steps": 64,
+    "settle_steps": 16,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 14,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 0,
+   "n": 7,
+   "grid": [
+    11,
+    11
+   ],
+   "corridor": "down",
+   "room": "left",
+   "shortest": 16,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 16,
+    "stopped": true,
+    "descent_steps": 80,
+    "settle_steps": 24,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 16,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 16,
+    "stopped": true,
+    "descent_steps": 80,
+    "settle_steps": 24,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 16,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 0,
+   "n": 8,
+   "grid": [
+    12,
+    12
+   ],
+   "corridor": "down",
+   "room": "left",
+   "shortest": 18,
+   "label_first": "down",
+   "own": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 18,
+    "stopped": true,
+    "descent_steps": 96,
+    "settle_steps": 24,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": false,
+    "pointer_len": 18,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 18,
+    "stopped": true,
+    "descent_steps": 96,
+    "settle_steps": 24,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": false,
+    "pointer_len": 18,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 0,
+   "n": 9,
+   "grid": [
+    13,
+    13
+   ],
+   "corridor": "down",
+   "room": "left",
+   "shortest": 20,
+   "label_first": "down",
+   "own": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 20,
+    "stopped": true,
+    "descent_steps": 96,
+    "settle_steps": 24,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": false,
+    "pointer_len": 20,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 20,
+    "stopped": true,
+    "descent_steps": 96,
+    "settle_steps": 24,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": false,
+    "pointer_len": 20,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 0,
+   "n": 10,
+   "grid": [
+    14,
+    14
+   ],
+   "corridor": "down",
+   "room": "left",
+   "shortest": 22,
+   "label_first": "down",
+   "own": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 22,
+    "stopped": true,
+    "descent_steps": 96,
+    "settle_steps": 24,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": false,
+    "pointer_len": 22,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 22,
+    "stopped": true,
+    "descent_steps": 96,
+    "settle_steps": 24,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": false,
+    "pointer_len": 22,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 0,
+   "n": 12,
+   "grid": [
+    16,
+    16
+   ],
+   "corridor": "down",
+   "room": "left",
+   "shortest": 26,
+   "label_first": "down",
+   "own": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 26,
+    "stopped": true,
+    "descent_steps": 112,
+    "settle_steps": 32,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": false,
+    "pointer_len": 26,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 26,
+    "stopped": true,
+    "descent_steps": 112,
+    "settle_steps": 32,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": false,
+    "pointer_len": 26,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 0,
+   "n": 14,
+   "grid": [
+    18,
+    18
+   ],
+   "corridor": "down",
+   "room": "left",
+   "shortest": 30,
+   "label_first": "down",
+   "own": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 30,
+    "stopped": true,
+    "descent_steps": 128,
+    "settle_steps": 32,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": false,
+    "pointer_len": 30,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 30,
+    "stopped": true,
+    "descent_steps": 128,
+    "settle_steps": 32,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": false,
+    "pointer_len": 30,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 1,
+   "n": 3,
+   "grid": [
+    7,
+    7
+   ],
+   "corridor": "right",
+   "room": "down",
+   "shortest": 8,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 8,
+    "stopped": true,
+    "descent_steps": 32,
+    "settle_steps": 16,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 8,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 8,
+    "stopped": true,
+    "descent_steps": 32,
+    "settle_steps": 16,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 8,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 1,
+   "n": 4,
+   "grid": [
+    8,
+    8
+   ],
+   "corridor": "right",
+   "room": "down",
+   "shortest": 10,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 10,
+    "stopped": true,
+    "descent_steps": 48,
+    "settle_steps": 16,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 10,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 10,
+    "stopped": true,
+    "descent_steps": 48,
+    "settle_steps": 16,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 10,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 1,
+   "n": 5,
+   "grid": [
+    9,
+    9
+   ],
+   "corridor": "right",
+   "room": "down",
+   "shortest": 12,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 12,
+    "stopped": true,
+    "descent_steps": 48,
+    "settle_steps": 16,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 12,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 12,
+    "stopped": true,
+    "descent_steps": 48,
+    "settle_steps": 16,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 12,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 1,
+   "n": 6,
+   "grid": [
+    10,
+    10
+   ],
+   "corridor": "right",
+   "room": "down",
+   "shortest": 14,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 14,
+    "stopped": true,
+    "descent_steps": 64,
+    "settle_steps": 16,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 14,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 14,
+    "stopped": true,
+    "descent_steps": 64,
+    "settle_steps": 16,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 14,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 1,
+   "n": 7,
+   "grid": [
+    11,
+    11
+   ],
+   "corridor": "right",
+   "room": "down",
+   "shortest": 16,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 16,
+    "stopped": true,
+    "descent_steps": 64,
+    "settle_steps": 24,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 16,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 16,
+    "stopped": true,
+    "descent_steps": 64,
+    "settle_steps": 24,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 16,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 1,
+   "n": 8,
+   "grid": [
+    12,
+    12
+   ],
+   "corridor": "right",
+   "room": "down",
+   "shortest": 18,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 18,
+    "stopped": true,
+    "descent_steps": 80,
+    "settle_steps": 24,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 18,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 18,
+    "stopped": true,
+    "descent_steps": 80,
+    "settle_steps": 24,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 18,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 1,
+   "n": 9,
+   "grid": [
+    13,
+    13
+   ],
+   "corridor": "right",
+   "room": "down",
+   "shortest": 20,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 20,
+    "stopped": true,
+    "descent_steps": 96,
+    "settle_steps": 24,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 20,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 20,
+    "stopped": true,
+    "descent_steps": 96,
+    "settle_steps": 24,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 20,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 1,
+   "n": 10,
+   "grid": [
+    14,
+    14
+   ],
+   "corridor": "right",
+   "room": "down",
+   "shortest": 22,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 22,
+    "stopped": true,
+    "descent_steps": 96,
+    "settle_steps": 24,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 22,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 22,
+    "stopped": true,
+    "descent_steps": 96,
+    "settle_steps": 24,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 22,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 1,
+   "n": 12,
+   "grid": [
+    16,
+    16
+   ],
+   "corridor": "right",
+   "room": "down",
+   "shortest": 26,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 26,
+    "stopped": true,
+    "descent_steps": 112,
+    "settle_steps": 32,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 26,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 26,
+    "stopped": true,
+    "descent_steps": 112,
+    "settle_steps": 32,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 26,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 1,
+   "n": 14,
+   "grid": [
+    18,
+    18
+   ],
+   "corridor": "right",
+   "room": "down",
+   "shortest": 30,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 30,
+    "stopped": true,
+    "descent_steps": 128,
+    "settle_steps": 32,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 30,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 30,
+    "stopped": true,
+    "descent_steps": 128,
+    "settle_steps": 32,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 30,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 2,
+   "n": 3,
+   "grid": [
+    7,
+    7
+   ],
+   "corridor": "up",
+   "room": "right",
+   "shortest": 8,
+   "label_first": "right",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 8,
+    "stopped": true,
+    "descent_steps": 32,
+    "settle_steps": 16,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 8,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 8,
+    "stopped": true,
+    "descent_steps": 32,
+    "settle_steps": 16,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 8,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 2,
+   "n": 4,
+   "grid": [
+    8,
+    8
+   ],
+   "corridor": "up",
+   "room": "right",
+   "shortest": 10,
+   "label_first": "right",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 10,
+    "stopped": true,
+    "descent_steps": 48,
+    "settle_steps": 16,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 10,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 10,
+    "stopped": true,
+    "descent_steps": 48,
+    "settle_steps": 16,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 10,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 2,
+   "n": 5,
+   "grid": [
+    9,
+    9
+   ],
+   "corridor": "up",
+   "room": "right",
+   "shortest": 12,
+   "label_first": "right",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 12,
+    "stopped": true,
+    "descent_steps": 48,
+    "settle_steps": 16,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 12,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 12,
+    "stopped": true,
+    "descent_steps": 48,
+    "settle_steps": 16,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 12,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 2,
+   "n": 6,
+   "grid": [
+    10,
+    10
+   ],
+   "corridor": "up",
+   "room": "right",
+   "shortest": 14,
+   "label_first": "right",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 14,
+    "stopped": true,
+    "descent_steps": 64,
+    "settle_steps": 16,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 14,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 14,
+    "stopped": true,
+    "descent_steps": 64,
+    "settle_steps": 16,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 14,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 2,
+   "n": 7,
+   "grid": [
+    11,
+    11
+   ],
+   "corridor": "up",
+   "room": "right",
+   "shortest": 16,
+   "label_first": "right",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 16,
+    "stopped": true,
+    "descent_steps": 80,
+    "settle_steps": 24,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 16,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 16,
+    "stopped": true,
+    "descent_steps": 80,
+    "settle_steps": 24,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 16,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 2,
+   "n": 8,
+   "grid": [
+    12,
+    12
+   ],
+   "corridor": "up",
+   "room": "right",
+   "shortest": 18,
+   "label_first": "right",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 18,
+    "stopped": true,
+    "descent_steps": 80,
+    "settle_steps": 24,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 18,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 18,
+    "stopped": true,
+    "descent_steps": 80,
+    "settle_steps": 24,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 18,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 2,
+   "n": 9,
+   "grid": [
+    13,
+    13
+   ],
+   "corridor": "up",
+   "room": "right",
+   "shortest": 20,
+   "label_first": "right",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 20,
+    "stopped": true,
+    "descent_steps": 96,
+    "settle_steps": 24,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 20,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 20,
+    "stopped": true,
+    "descent_steps": 96,
+    "settle_steps": 24,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 20,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 2,
+   "n": 10,
+   "grid": [
+    14,
+    14
+   ],
+   "corridor": "up",
+   "room": "right",
+   "shortest": 22,
+   "label_first": "right",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 22,
+    "stopped": true,
+    "descent_steps": 96,
+    "settle_steps": 24,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 22,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 22,
+    "stopped": true,
+    "descent_steps": 96,
+    "settle_steps": 24,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 22,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 2,
+   "n": 12,
+   "grid": [
+    16,
+    16
+   ],
+   "corridor": "up",
+   "room": "right",
+   "shortest": 26,
+   "label_first": "right",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 26,
+    "stopped": true,
+    "descent_steps": 128,
+    "settle_steps": 32,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 26,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 26,
+    "stopped": true,
+    "descent_steps": 128,
+    "settle_steps": 32,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 26,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 2,
+   "n": 14,
+   "grid": [
+    18,
+    18
+   ],
+   "corridor": "up",
+   "room": "right",
+   "shortest": 30,
+   "label_first": "right",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 30,
+    "stopped": true,
+    "descent_steps": 144,
+    "settle_steps": 32,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 30,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 30,
+    "stopped": true,
+    "descent_steps": 144,
+    "settle_steps": 32,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 30,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 3,
+   "n": 3,
+   "grid": [
+    7,
+    7
+   ],
+   "corridor": "left",
+   "room": "up",
+   "shortest": 8,
+   "label_first": "left",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 8,
+    "stopped": true,
+    "descent_steps": 32,
+    "settle_steps": 16,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 8,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 8,
+    "stopped": true,
+    "descent_steps": 32,
+    "settle_steps": 16,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 8,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 3,
+   "n": 4,
+   "grid": [
+    8,
+    8
+   ],
+   "corridor": "left",
+   "room": "up",
+   "shortest": 10,
+   "label_first": "left",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 10,
+    "stopped": true,
+    "descent_steps": 48,
+    "settle_steps": 16,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 10,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 10,
+    "stopped": true,
+    "descent_steps": 48,
+    "settle_steps": 16,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 10,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 3,
+   "n": 5,
+   "grid": [
+    9,
+    9
+   ],
+   "corridor": "left",
+   "room": "up",
+   "shortest": 12,
+   "label_first": "left",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 12,
+    "stopped": true,
+    "descent_steps": 48,
+    "settle_steps": 16,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 12,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 12,
+    "stopped": true,
+    "descent_steps": 48,
+    "settle_steps": 16,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 12,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 3,
+   "n": 6,
+   "grid": [
+    10,
+    10
+   ],
+   "corridor": "left",
+   "room": "up",
+   "shortest": 14,
+   "label_first": "left",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 14,
+    "stopped": true,
+    "descent_steps": 64,
+    "settle_steps": 16,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 14,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 14,
+    "stopped": true,
+    "descent_steps": 64,
+    "settle_steps": 16,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 14,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 3,
+   "n": 7,
+   "grid": [
+    11,
+    11
+   ],
+   "corridor": "left",
+   "room": "up",
+   "shortest": 16,
+   "label_first": "left",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 16,
+    "stopped": true,
+    "descent_steps": 80,
+    "settle_steps": 24,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 16,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 16,
+    "stopped": true,
+    "descent_steps": 80,
+    "settle_steps": 24,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 16,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 3,
+   "n": 8,
+   "grid": [
+    12,
+    12
+   ],
+   "corridor": "left",
+   "room": "up",
+   "shortest": 18,
+   "label_first": "left",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 18,
+    "stopped": true,
+    "descent_steps": 80,
+    "settle_steps": 24,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 18,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 18,
+    "stopped": true,
+    "descent_steps": 80,
+    "settle_steps": 24,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 18,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 3,
+   "n": 9,
+   "grid": [
+    13,
+    13
+   ],
+   "corridor": "left",
+   "room": "up",
+   "shortest": 20,
+   "label_first": "left",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 20,
+    "stopped": true,
+    "descent_steps": 96,
+    "settle_steps": 24,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 20,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 20,
+    "stopped": true,
+    "descent_steps": 96,
+    "settle_steps": 24,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 20,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 3,
+   "n": 10,
+   "grid": [
+    14,
+    14
+   ],
+   "corridor": "left",
+   "room": "up",
+   "shortest": 22,
+   "label_first": "left",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 22,
+    "stopped": true,
+    "descent_steps": 112,
+    "settle_steps": 24,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 22,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 22,
+    "stopped": true,
+    "descent_steps": 112,
+    "settle_steps": 24,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 22,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 3,
+   "n": 12,
+   "grid": [
+    16,
+    16
+   ],
+   "corridor": "left",
+   "room": "up",
+   "shortest": 26,
+   "label_first": "left",
+   "own": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 26,
+    "stopped": true,
+    "descent_steps": 128,
+    "settle_steps": 32,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": false,
+    "pointer_len": 26,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 26,
+    "stopped": true,
+    "descent_steps": 128,
+    "settle_steps": 32,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": false,
+    "pointer_len": 26,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 3,
+   "n": 14,
+   "grid": [
+    18,
+    18
+   ],
+   "corridor": "left",
+   "room": "up",
+   "shortest": 30,
+   "label_first": "left",
+   "own": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 30,
+    "stopped": true,
+    "descent_steps": 144,
+    "settle_steps": 32,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": false,
+    "pointer_len": 30,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 30,
+    "stopped": true,
+    "descent_steps": 144,
+    "settle_steps": 32,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": false,
+    "pointer_len": 30,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 4,
+   "n": 3,
+   "grid": [
+    7,
+    7
+   ],
+   "corridor": "right",
+   "room": "up",
+   "shortest": 8,
+   "label_first": "right",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 8,
+    "stopped": true,
+    "descent_steps": 32,
+    "settle_steps": 16,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 8,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 8,
+    "stopped": true,
+    "descent_steps": 32,
+    "settle_steps": 16,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 8,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 4,
+   "n": 4,
+   "grid": [
+    8,
+    8
+   ],
+   "corridor": "right",
+   "room": "up",
+   "shortest": 10,
+   "label_first": "right",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 10,
+    "stopped": true,
+    "descent_steps": 48,
+    "settle_steps": 16,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 10,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 10,
+    "stopped": true,
+    "descent_steps": 48,
+    "settle_steps": 16,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 10,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 4,
+   "n": 5,
+   "grid": [
+    9,
+    9
+   ],
+   "corridor": "right",
+   "room": "up",
+   "shortest": 12,
+   "label_first": "right",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 12,
+    "stopped": true,
+    "descent_steps": 48,
+    "settle_steps": 16,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 12,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 12,
+    "stopped": true,
+    "descent_steps": 48,
+    "settle_steps": 16,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 12,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 4,
+   "n": 6,
+   "grid": [
+    10,
+    10
+   ],
+   "corridor": "right",
+   "room": "up",
+   "shortest": 14,
+   "label_first": "right",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 14,
+    "stopped": true,
+    "descent_steps": 64,
+    "settle_steps": 16,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 14,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 14,
+    "stopped": true,
+    "descent_steps": 64,
+    "settle_steps": 16,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 14,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 4,
+   "n": 7,
+   "grid": [
+    11,
+    11
+   ],
+   "corridor": "right",
+   "room": "up",
+   "shortest": 16,
+   "label_first": "right",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 16,
+    "stopped": true,
+    "descent_steps": 80,
+    "settle_steps": 24,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 16,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 16,
+    "stopped": true,
+    "descent_steps": 80,
+    "settle_steps": 24,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 16,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 4,
+   "n": 8,
+   "grid": [
+    12,
+    12
+   ],
+   "corridor": "right",
+   "room": "up",
+   "shortest": 18,
+   "label_first": "right",
+   "own": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 18,
+    "stopped": true,
+    "descent_steps": 96,
+    "settle_steps": 24,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": false,
+    "pointer_len": 18,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 18,
+    "stopped": true,
+    "descent_steps": 96,
+    "settle_steps": 24,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": false,
+    "pointer_len": 18,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 4,
+   "n": 9,
+   "grid": [
+    13,
+    13
+   ],
+   "corridor": "right",
+   "room": "up",
+   "shortest": 20,
+   "label_first": "right",
+   "own": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 20,
+    "stopped": true,
+    "descent_steps": 96,
+    "settle_steps": 24,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": false,
+    "pointer_len": 20,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 20,
+    "stopped": true,
+    "descent_steps": 96,
+    "settle_steps": 24,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": false,
+    "pointer_len": 20,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 4,
+   "n": 10,
+   "grid": [
+    14,
+    14
+   ],
+   "corridor": "right",
+   "room": "up",
+   "shortest": 22,
+   "label_first": "right",
+   "own": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 22,
+    "stopped": true,
+    "descent_steps": 96,
+    "settle_steps": 24,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": false,
+    "pointer_len": 22,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 22,
+    "stopped": true,
+    "descent_steps": 96,
+    "settle_steps": 24,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": false,
+    "pointer_len": 22,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 4,
+   "n": 12,
+   "grid": [
+    16,
+    16
+   ],
+   "corridor": "right",
+   "room": "up",
+   "shortest": 26,
+   "label_first": "right",
+   "own": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 26,
+    "stopped": true,
+    "descent_steps": 128,
+    "settle_steps": 32,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": false,
+    "pointer_len": 26,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 26,
+    "stopped": true,
+    "descent_steps": 128,
+    "settle_steps": 32,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": false,
+    "pointer_len": 26,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 4,
+   "n": 14,
+   "grid": [
+    18,
+    18
+   ],
+   "corridor": "right",
+   "room": "up",
+   "shortest": 30,
+   "label_first": "right",
+   "own": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 30,
+    "stopped": true,
+    "descent_steps": 144,
+    "settle_steps": 32,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": false,
+    "pointer_len": 30,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 30,
+    "stopped": true,
+    "descent_steps": 144,
+    "settle_steps": 32,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": false,
+    "pointer_len": 30,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 5,
+   "n": 3,
+   "grid": [
+    7,
+    7
+   ],
+   "corridor": "down",
+   "room": "right",
+   "shortest": 8,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 8,
+    "stopped": true,
+    "descent_steps": 32,
+    "settle_steps": 16,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 8,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 8,
+    "stopped": true,
+    "descent_steps": 32,
+    "settle_steps": 16,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 8,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 5,
+   "n": 4,
+   "grid": [
+    8,
+    8
+   ],
+   "corridor": "down",
+   "room": "right",
+   "shortest": 10,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 10,
+    "stopped": true,
+    "descent_steps": 48,
+    "settle_steps": 16,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 10,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 10,
+    "stopped": true,
+    "descent_steps": 48,
+    "settle_steps": 16,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 10,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 5,
+   "n": 5,
+   "grid": [
+    9,
+    9
+   ],
+   "corridor": "down",
+   "room": "right",
+   "shortest": 12,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 12,
+    "stopped": true,
+    "descent_steps": 48,
+    "settle_steps": 16,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 12,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 12,
+    "stopped": true,
+    "descent_steps": 48,
+    "settle_steps": 16,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 12,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 5,
+   "n": 6,
+   "grid": [
+    10,
+    10
+   ],
+   "corridor": "down",
+   "room": "right",
+   "shortest": 14,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 14,
+    "stopped": true,
+    "descent_steps": 64,
+    "settle_steps": 16,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 14,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 14,
+    "stopped": true,
+    "descent_steps": 64,
+    "settle_steps": 16,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 14,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 5,
+   "n": 7,
+   "grid": [
+    11,
+    11
+   ],
+   "corridor": "down",
+   "room": "right",
+   "shortest": 16,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 16,
+    "stopped": true,
+    "descent_steps": 80,
+    "settle_steps": 24,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 16,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 16,
+    "stopped": true,
+    "descent_steps": 80,
+    "settle_steps": 24,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 16,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 5,
+   "n": 8,
+   "grid": [
+    12,
+    12
+   ],
+   "corridor": "down",
+   "room": "right",
+   "shortest": 18,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 18,
+    "stopped": true,
+    "descent_steps": 80,
+    "settle_steps": 24,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 18,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 18,
+    "stopped": true,
+    "descent_steps": 80,
+    "settle_steps": 24,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 18,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 5,
+   "n": 9,
+   "grid": [
+    13,
+    13
+   ],
+   "corridor": "down",
+   "room": "right",
+   "shortest": 20,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 20,
+    "stopped": true,
+    "descent_steps": 96,
+    "settle_steps": 24,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 20,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 20,
+    "stopped": true,
+    "descent_steps": 96,
+    "settle_steps": 24,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 20,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 5,
+   "n": 10,
+   "grid": [
+    14,
+    14
+   ],
+   "corridor": "down",
+   "room": "right",
+   "shortest": 22,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 22,
+    "stopped": true,
+    "descent_steps": 112,
+    "settle_steps": 24,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 22,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 22,
+    "stopped": true,
+    "descent_steps": 112,
+    "settle_steps": 24,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 22,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 5,
+   "n": 12,
+   "grid": [
+    16,
+    16
+   ],
+   "corridor": "down",
+   "room": "right",
+   "shortest": 26,
+   "label_first": "down",
+   "own": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 26,
+    "stopped": true,
+    "descent_steps": 112,
+    "settle_steps": 32,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": false,
+    "pointer_len": 26,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 26,
+    "stopped": true,
+    "descent_steps": 112,
+    "settle_steps": 32,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": false,
+    "pointer_len": 26,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 5,
+   "n": 14,
+   "grid": [
+    18,
+    18
+   ],
+   "corridor": "down",
+   "room": "right",
+   "shortest": 30,
+   "label_first": "down",
+   "own": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 30,
+    "stopped": true,
+    "descent_steps": 128,
+    "settle_steps": 32,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": false,
+    "pointer_len": 30,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 30,
+    "stopped": true,
+    "descent_steps": 128,
+    "settle_steps": 32,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": false,
+    "pointer_len": 30,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 6,
+   "n": 3,
+   "grid": [
+    7,
+    7
+   ],
+   "corridor": "left",
+   "room": "down",
+   "shortest": 8,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 8,
+    "stopped": true,
+    "descent_steps": 32,
+    "settle_steps": 16,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 8,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 8,
+    "stopped": true,
+    "descent_steps": 32,
+    "settle_steps": 16,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 8,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 6,
+   "n": 4,
+   "grid": [
+    8,
+    8
+   ],
+   "corridor": "left",
+   "room": "down",
+   "shortest": 10,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 10,
+    "stopped": true,
+    "descent_steps": 48,
+    "settle_steps": 16,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 10,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 10,
+    "stopped": true,
+    "descent_steps": 48,
+    "settle_steps": 16,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 10,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 6,
+   "n": 5,
+   "grid": [
+    9,
+    9
+   ],
+   "corridor": "left",
+   "room": "down",
+   "shortest": 12,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 12,
+    "stopped": true,
+    "descent_steps": 48,
+    "settle_steps": 16,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 12,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 12,
+    "stopped": true,
+    "descent_steps": 48,
+    "settle_steps": 16,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 12,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 6,
+   "n": 6,
+   "grid": [
+    10,
+    10
+   ],
+   "corridor": "left",
+   "room": "down",
+   "shortest": 14,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 14,
+    "stopped": true,
+    "descent_steps": 64,
+    "settle_steps": 16,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 14,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 14,
+    "stopped": true,
+    "descent_steps": 64,
+    "settle_steps": 16,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 14,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 6,
+   "n": 7,
+   "grid": [
+    11,
+    11
+   ],
+   "corridor": "left",
+   "room": "down",
+   "shortest": 16,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 16,
+    "stopped": true,
+    "descent_steps": 64,
+    "settle_steps": 24,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 16,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 16,
+    "stopped": true,
+    "descent_steps": 64,
+    "settle_steps": 24,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 16,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 6,
+   "n": 8,
+   "grid": [
+    12,
+    12
+   ],
+   "corridor": "left",
+   "room": "down",
+   "shortest": 18,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 18,
+    "stopped": true,
+    "descent_steps": 80,
+    "settle_steps": 24,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 18,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 18,
+    "stopped": true,
+    "descent_steps": 80,
+    "settle_steps": 24,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 18,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 6,
+   "n": 9,
+   "grid": [
+    13,
+    13
+   ],
+   "corridor": "left",
+   "room": "down",
+   "shortest": 20,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 20,
+    "stopped": true,
+    "descent_steps": 80,
+    "settle_steps": 24,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 20,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 20,
+    "stopped": true,
+    "descent_steps": 80,
+    "settle_steps": 24,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 20,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 6,
+   "n": 10,
+   "grid": [
+    14,
+    14
+   ],
+   "corridor": "left",
+   "room": "down",
+   "shortest": 22,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 22,
+    "stopped": true,
+    "descent_steps": 96,
+    "settle_steps": 24,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 22,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 22,
+    "stopped": true,
+    "descent_steps": 96,
+    "settle_steps": 24,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 22,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 6,
+   "n": 12,
+   "grid": [
+    16,
+    16
+   ],
+   "corridor": "left",
+   "room": "down",
+   "shortest": 26,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 26,
+    "stopped": true,
+    "descent_steps": 112,
+    "settle_steps": 32,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 26,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 26,
+    "stopped": true,
+    "descent_steps": 112,
+    "settle_steps": 32,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 26,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 6,
+   "n": 14,
+   "grid": [
+    18,
+    18
+   ],
+   "corridor": "left",
+   "room": "down",
+   "shortest": 30,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 30,
+    "stopped": true,
+    "descent_steps": 128,
+    "settle_steps": 32,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 30,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 30,
+    "stopped": true,
+    "descent_steps": 128,
+    "settle_steps": 32,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 30,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 7,
+   "n": 3,
+   "grid": [
+    7,
+    7
+   ],
+   "corridor": "up",
+   "room": "left",
+   "shortest": 8,
+   "label_first": "left",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 8,
+    "stopped": true,
+    "descent_steps": 32,
+    "settle_steps": 16,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 8,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 8,
+    "stopped": true,
+    "descent_steps": 32,
+    "settle_steps": 16,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 8,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 7,
+   "n": 4,
+   "grid": [
+    8,
+    8
+   ],
+   "corridor": "up",
+   "room": "left",
+   "shortest": 10,
+   "label_first": "left",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 10,
+    "stopped": true,
+    "descent_steps": 48,
+    "settle_steps": 16,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 10,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 10,
+    "stopped": true,
+    "descent_steps": 48,
+    "settle_steps": 16,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 10,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 7,
+   "n": 5,
+   "grid": [
+    9,
+    9
+   ],
+   "corridor": "up",
+   "room": "left",
+   "shortest": 12,
+   "label_first": "left",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 12,
+    "stopped": true,
+    "descent_steps": 48,
+    "settle_steps": 16,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 12,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 12,
+    "stopped": true,
+    "descent_steps": 48,
+    "settle_steps": 16,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 12,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 7,
+   "n": 6,
+   "grid": [
+    10,
+    10
+   ],
+   "corridor": "up",
+   "room": "left",
+   "shortest": 14,
+   "label_first": "left",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 14,
+    "stopped": true,
+    "descent_steps": 64,
+    "settle_steps": 16,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 14,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 14,
+    "stopped": true,
+    "descent_steps": 64,
+    "settle_steps": 16,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 14,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 7,
+   "n": 7,
+   "grid": [
+    11,
+    11
+   ],
+   "corridor": "up",
+   "room": "left",
+   "shortest": 16,
+   "label_first": "left",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 16,
+    "stopped": true,
+    "descent_steps": 80,
+    "settle_steps": 24,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 16,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 16,
+    "stopped": true,
+    "descent_steps": 80,
+    "settle_steps": 24,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 16,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 7,
+   "n": 8,
+   "grid": [
+    12,
+    12
+   ],
+   "corridor": "up",
+   "room": "left",
+   "shortest": 18,
+   "label_first": "left",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 18,
+    "stopped": true,
+    "descent_steps": 80,
+    "settle_steps": 24,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 18,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 18,
+    "stopped": true,
+    "descent_steps": 80,
+    "settle_steps": 24,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 18,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 7,
+   "n": 9,
+   "grid": [
+    13,
+    13
+   ],
+   "corridor": "up",
+   "room": "left",
+   "shortest": 20,
+   "label_first": "left",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 20,
+    "stopped": true,
+    "descent_steps": 96,
+    "settle_steps": 24,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 20,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 20,
+    "stopped": true,
+    "descent_steps": 96,
+    "settle_steps": 24,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 20,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 7,
+   "n": 10,
+   "grid": [
+    14,
+    14
+   ],
+   "corridor": "up",
+   "room": "left",
+   "shortest": 22,
+   "label_first": "left",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 22,
+    "stopped": true,
+    "descent_steps": 96,
+    "settle_steps": 24,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 22,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 22,
+    "stopped": true,
+    "descent_steps": 96,
+    "settle_steps": 24,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 22,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 7,
+   "n": 12,
+   "grid": [
+    16,
+    16
+   ],
+   "corridor": "up",
+   "room": "left",
+   "shortest": 26,
+   "label_first": "left",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 26,
+    "stopped": true,
+    "descent_steps": 112,
+    "settle_steps": 32,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 26,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 26,
+    "stopped": true,
+    "descent_steps": 112,
+    "settle_steps": 32,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 26,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 0,
+   "sym": 7,
+   "n": 14,
+   "grid": [
+    18,
+    18
+   ],
+   "corridor": "up",
+   "room": "left",
+   "shortest": 30,
+   "label_first": "left",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 30,
+    "stopped": true,
+    "descent_steps": 144,
+    "settle_steps": 32,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 30,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 30,
+    "stopped": true,
+    "descent_steps": 144,
+    "settle_steps": 32,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 30,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 0,
+   "n": 12,
+   "grid": [
+    16,
+    17
+   ],
+   "corridor": "down",
+   "room": "left",
+   "shortest": 25,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 25,
+    "stopped": true,
+    "descent_steps": 128,
+    "settle_steps": 32,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 25,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 25,
+    "stopped": true,
+    "descent_steps": 128,
+    "settle_steps": 32,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 25,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 0,
+   "n": 16,
+   "grid": [
+    20,
+    21
+   ],
+   "corridor": "down",
+   "room": "left",
+   "shortest": 33,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 33,
+    "stopped": true,
+    "descent_steps": 176,
+    "settle_steps": 40,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 33,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 33,
+    "stopped": true,
+    "descent_steps": 176,
+    "settle_steps": 40,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 33,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 0,
+   "n": 18,
+   "grid": [
+    22,
+    23
+   ],
+   "corridor": "down",
+   "room": "left",
+   "shortest": 37,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 37,
+    "stopped": true,
+    "descent_steps": 192,
+    "settle_steps": 40,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 37,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 37,
+    "stopped": true,
+    "descent_steps": 192,
+    "settle_steps": 40,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 37,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 0,
+   "n": 20,
+   "grid": [
+    24,
+    25
+   ],
+   "corridor": "down",
+   "room": "left",
+   "shortest": 41,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 41,
+    "stopped": true,
+    "descent_steps": 208,
+    "settle_steps": 48,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 41,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 41,
+    "stopped": true,
+    "descent_steps": 208,
+    "settle_steps": 48,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 41,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 0,
+   "n": 22,
+   "grid": [
+    26,
+    27
+   ],
+   "corridor": "down",
+   "room": "left",
+   "shortest": 45,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 45,
+    "stopped": true,
+    "descent_steps": 224,
+    "settle_steps": 48,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 45,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 45,
+    "stopped": true,
+    "descent_steps": 224,
+    "settle_steps": 48,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 45,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 0,
+   "n": 24,
+   "grid": [
+    28,
+    29
+   ],
+   "corridor": "down",
+   "room": "left",
+   "shortest": 49,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 49,
+    "stopped": true,
+    "descent_steps": 256,
+    "settle_steps": 56,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 49,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 49,
+    "stopped": true,
+    "descent_steps": 256,
+    "settle_steps": 56,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 49,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 0,
+   "n": 26,
+   "grid": [
+    30,
+    31
+   ],
+   "corridor": "down",
+   "room": "left",
+   "shortest": 53,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 53,
+    "stopped": true,
+    "descent_steps": 272,
+    "settle_steps": 56,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 53,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 1,
+   "n": 12,
+   "grid": [
+    17,
+    16
+   ],
+   "corridor": "right",
+   "room": "down",
+   "shortest": 25,
+   "label_first": "right",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 25,
+    "stopped": true,
+    "descent_steps": 128,
+    "settle_steps": 32,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 25,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 25,
+    "stopped": true,
+    "descent_steps": 128,
+    "settle_steps": 32,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 25,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 1,
+   "n": 16,
+   "grid": [
+    21,
+    20
+   ],
+   "corridor": "right",
+   "room": "down",
+   "shortest": 33,
+   "label_first": "right",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 33,
+    "stopped": true,
+    "descent_steps": 176,
+    "settle_steps": 40,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 33,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 33,
+    "stopped": true,
+    "descent_steps": 176,
+    "settle_steps": 40,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 33,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 1,
+   "n": 18,
+   "grid": [
+    23,
+    22
+   ],
+   "corridor": "right",
+   "room": "down",
+   "shortest": 37,
+   "label_first": "right",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 37,
+    "stopped": true,
+    "descent_steps": 192,
+    "settle_steps": 40,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 37,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 37,
+    "stopped": true,
+    "descent_steps": 192,
+    "settle_steps": 40,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 37,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 1,
+   "n": 20,
+   "grid": [
+    25,
+    24
+   ],
+   "corridor": "right",
+   "room": "down",
+   "shortest": 41,
+   "label_first": "right",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 41,
+    "stopped": true,
+    "descent_steps": 208,
+    "settle_steps": 48,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 41,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 41,
+    "stopped": true,
+    "descent_steps": 208,
+    "settle_steps": 48,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 41,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 1,
+   "n": 22,
+   "grid": [
+    27,
+    26
+   ],
+   "corridor": "right",
+   "room": "down",
+   "shortest": 45,
+   "label_first": "right",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 45,
+    "stopped": true,
+    "descent_steps": 240,
+    "settle_steps": 48,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 45,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 45,
+    "stopped": true,
+    "descent_steps": 240,
+    "settle_steps": 48,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 45,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 1,
+   "n": 24,
+   "grid": [
+    29,
+    28
+   ],
+   "corridor": "right",
+   "room": "down",
+   "shortest": 49,
+   "label_first": "right",
+   "own": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 51,
+    "stopped": true,
+    "descent_steps": 224,
+    "settle_steps": 56,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": false,
+    "pointer_len": 51,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 51,
+    "stopped": true,
+    "descent_steps": 224,
+    "settle_steps": 56,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": false,
+    "pointer_len": 51,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 1,
+   "n": 26,
+   "grid": [
+    31,
+    30
+   ],
+   "corridor": "right",
+   "room": "down",
+   "shortest": 53,
+   "label_first": "right",
+   "own": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 55,
+    "stopped": true,
+    "descent_steps": 240,
+    "settle_steps": 56,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": false,
+    "pointer_len": 55,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 2,
+   "n": 12,
+   "grid": [
+    16,
+    17
+   ],
+   "corridor": "up",
+   "room": "right",
+   "shortest": 25,
+   "label_first": "up",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 25,
+    "stopped": true,
+    "descent_steps": 128,
+    "settle_steps": 32,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": true,
+    "pointer_len": 25,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 25,
+    "stopped": true,
+    "descent_steps": 128,
+    "settle_steps": 32,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": true,
+    "pointer_len": 25,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 2,
+   "n": 16,
+   "grid": [
+    20,
+    21
+   ],
+   "corridor": "up",
+   "room": "right",
+   "shortest": 33,
+   "label_first": "up",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 33,
+    "stopped": true,
+    "descent_steps": 176,
+    "settle_steps": 40,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": true,
+    "pointer_len": 33,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 33,
+    "stopped": true,
+    "descent_steps": 176,
+    "settle_steps": 40,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": true,
+    "pointer_len": 33,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 2,
+   "n": 18,
+   "grid": [
+    22,
+    23
+   ],
+   "corridor": "up",
+   "room": "right",
+   "shortest": 37,
+   "label_first": "up",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 37,
+    "stopped": true,
+    "descent_steps": 192,
+    "settle_steps": 40,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": true,
+    "pointer_len": 37,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 37,
+    "stopped": true,
+    "descent_steps": 192,
+    "settle_steps": 40,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": true,
+    "pointer_len": 37,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 2,
+   "n": 20,
+   "grid": [
+    24,
+    25
+   ],
+   "corridor": "up",
+   "room": "right",
+   "shortest": 41,
+   "label_first": "up",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 41,
+    "stopped": true,
+    "descent_steps": 224,
+    "settle_steps": 48,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": true,
+    "pointer_len": 41,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 41,
+    "stopped": true,
+    "descent_steps": 224,
+    "settle_steps": 48,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": true,
+    "pointer_len": 41,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 2,
+   "n": 22,
+   "grid": [
+    26,
+    27
+   ],
+   "corridor": "up",
+   "room": "right",
+   "shortest": 45,
+   "label_first": "up",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 45,
+    "stopped": true,
+    "descent_steps": 240,
+    "settle_steps": 48,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": true,
+    "pointer_len": 45,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 45,
+    "stopped": true,
+    "descent_steps": 240,
+    "settle_steps": 48,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": true,
+    "pointer_len": 45,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 2,
+   "n": 24,
+   "grid": [
+    28,
+    29
+   ],
+   "corridor": "up",
+   "room": "right",
+   "shortest": 49,
+   "label_first": "up",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 49,
+    "stopped": true,
+    "descent_steps": 256,
+    "settle_steps": 56,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": true,
+    "pointer_len": 49,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 49,
+    "stopped": true,
+    "descent_steps": 256,
+    "settle_steps": 56,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": true,
+    "pointer_len": 49,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 2,
+   "n": 26,
+   "grid": [
+    30,
+    31
+   ],
+   "corridor": "up",
+   "room": "right",
+   "shortest": 53,
+   "label_first": "up",
+   "own": {
+    "equals_label": false,
+    "valid_path": false,
+    "length": null,
+    "stopped": true,
+    "descent_steps": 160,
+    "settle_steps": 56,
+    "returned_first": "up+right",
+    "pointer_first": "right",
+    "pointer_equals_label": false,
+    "pointer_len": 55,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 3,
+   "n": 12,
+   "grid": [
+    17,
+    16
+   ],
+   "corridor": "left",
+   "room": "up",
+   "shortest": 25,
+   "label_first": "left",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 25,
+    "stopped": true,
+    "descent_steps": 128,
+    "settle_steps": 32,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 25,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 25,
+    "stopped": true,
+    "descent_steps": 128,
+    "settle_steps": 32,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 25,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 3,
+   "n": 16,
+   "grid": [
+    21,
+    20
+   ],
+   "corridor": "left",
+   "room": "up",
+   "shortest": 33,
+   "label_first": "left",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 33,
+    "stopped": true,
+    "descent_steps": 176,
+    "settle_steps": 40,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 33,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 33,
+    "stopped": true,
+    "descent_steps": 176,
+    "settle_steps": 40,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 33,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 3,
+   "n": 18,
+   "grid": [
+    23,
+    22
+   ],
+   "corridor": "left",
+   "room": "up",
+   "shortest": 37,
+   "label_first": "left",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 37,
+    "stopped": true,
+    "descent_steps": 192,
+    "settle_steps": 40,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 37,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 37,
+    "stopped": true,
+    "descent_steps": 192,
+    "settle_steps": 40,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 37,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 3,
+   "n": 20,
+   "grid": [
+    25,
+    24
+   ],
+   "corridor": "left",
+   "room": "up",
+   "shortest": 41,
+   "label_first": "left",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 41,
+    "stopped": true,
+    "descent_steps": 208,
+    "settle_steps": 48,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 41,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 41,
+    "stopped": true,
+    "descent_steps": 208,
+    "settle_steps": 48,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 41,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 3,
+   "n": 22,
+   "grid": [
+    27,
+    26
+   ],
+   "corridor": "left",
+   "room": "up",
+   "shortest": 45,
+   "label_first": "left",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 45,
+    "stopped": true,
+    "descent_steps": 240,
+    "settle_steps": 48,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 45,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 45,
+    "stopped": true,
+    "descent_steps": 240,
+    "settle_steps": 48,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 45,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 3,
+   "n": 24,
+   "grid": [
+    29,
+    28
+   ],
+   "corridor": "left",
+   "room": "up",
+   "shortest": 49,
+   "label_first": "left",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 49,
+    "stopped": true,
+    "descent_steps": 256,
+    "settle_steps": 56,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 49,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 49,
+    "stopped": true,
+    "descent_steps": 256,
+    "settle_steps": 56,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 49,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 3,
+   "n": 26,
+   "grid": [
+    31,
+    30
+   ],
+   "corridor": "left",
+   "room": "up",
+   "shortest": 53,
+   "label_first": "left",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 53,
+    "stopped": true,
+    "descent_steps": 272,
+    "settle_steps": 56,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 53,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 4,
+   "n": 12,
+   "grid": [
+    17,
+    16
+   ],
+   "corridor": "right",
+   "room": "up",
+   "shortest": 25,
+   "label_first": "right",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 25,
+    "stopped": true,
+    "descent_steps": 128,
+    "settle_steps": 32,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 25,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 25,
+    "stopped": true,
+    "descent_steps": 128,
+    "settle_steps": 32,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 25,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 4,
+   "n": 16,
+   "grid": [
+    21,
+    20
+   ],
+   "corridor": "right",
+   "room": "up",
+   "shortest": 33,
+   "label_first": "right",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 33,
+    "stopped": true,
+    "descent_steps": 176,
+    "settle_steps": 40,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 33,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 33,
+    "stopped": true,
+    "descent_steps": 176,
+    "settle_steps": 40,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 33,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 4,
+   "n": 18,
+   "grid": [
+    23,
+    22
+   ],
+   "corridor": "right",
+   "room": "up",
+   "shortest": 37,
+   "label_first": "right",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 37,
+    "stopped": true,
+    "descent_steps": 192,
+    "settle_steps": 40,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 37,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 37,
+    "stopped": true,
+    "descent_steps": 192,
+    "settle_steps": 40,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 37,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 4,
+   "n": 20,
+   "grid": [
+    25,
+    24
+   ],
+   "corridor": "right",
+   "room": "up",
+   "shortest": 41,
+   "label_first": "right",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 41,
+    "stopped": true,
+    "descent_steps": 224,
+    "settle_steps": 48,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 41,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 41,
+    "stopped": true,
+    "descent_steps": 224,
+    "settle_steps": 48,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 41,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 4,
+   "n": 22,
+   "grid": [
+    27,
+    26
+   ],
+   "corridor": "right",
+   "room": "up",
+   "shortest": 45,
+   "label_first": "right",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 45,
+    "stopped": true,
+    "descent_steps": 240,
+    "settle_steps": 48,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 45,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 45,
+    "stopped": true,
+    "descent_steps": 240,
+    "settle_steps": 48,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 45,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 4,
+   "n": 24,
+   "grid": [
+    29,
+    28
+   ],
+   "corridor": "right",
+   "room": "up",
+   "shortest": 49,
+   "label_first": "right",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 49,
+    "stopped": true,
+    "descent_steps": 256,
+    "settle_steps": 56,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 49,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 49,
+    "stopped": true,
+    "descent_steps": 256,
+    "settle_steps": 56,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 49,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 4,
+   "n": 26,
+   "grid": [
+    31,
+    30
+   ],
+   "corridor": "right",
+   "room": "up",
+   "shortest": 53,
+   "label_first": "right",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 53,
+    "stopped": true,
+    "descent_steps": 272,
+    "settle_steps": 56,
+    "returned_first": "right",
+    "pointer_first": "right",
+    "pointer_equals_label": true,
+    "pointer_len": 53,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 5,
+   "n": 12,
+   "grid": [
+    16,
+    17
+   ],
+   "corridor": "down",
+   "room": "right",
+   "shortest": 25,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 25,
+    "stopped": true,
+    "descent_steps": 128,
+    "settle_steps": 32,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 25,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 25,
+    "stopped": true,
+    "descent_steps": 128,
+    "settle_steps": 32,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 25,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 5,
+   "n": 16,
+   "grid": [
+    20,
+    21
+   ],
+   "corridor": "down",
+   "room": "right",
+   "shortest": 33,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 33,
+    "stopped": true,
+    "descent_steps": 176,
+    "settle_steps": 40,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 33,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 33,
+    "stopped": true,
+    "descent_steps": 176,
+    "settle_steps": 40,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 33,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 5,
+   "n": 18,
+   "grid": [
+    22,
+    23
+   ],
+   "corridor": "down",
+   "room": "right",
+   "shortest": 37,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 37,
+    "stopped": true,
+    "descent_steps": 192,
+    "settle_steps": 40,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 37,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 37,
+    "stopped": true,
+    "descent_steps": 192,
+    "settle_steps": 40,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 37,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 5,
+   "n": 20,
+   "grid": [
+    24,
+    25
+   ],
+   "corridor": "down",
+   "room": "right",
+   "shortest": 41,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 41,
+    "stopped": true,
+    "descent_steps": 208,
+    "settle_steps": 48,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 41,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 41,
+    "stopped": true,
+    "descent_steps": 208,
+    "settle_steps": 48,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 41,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 5,
+   "n": 22,
+   "grid": [
+    26,
+    27
+   ],
+   "corridor": "down",
+   "room": "right",
+   "shortest": 45,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 45,
+    "stopped": true,
+    "descent_steps": 240,
+    "settle_steps": 48,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 45,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 45,
+    "stopped": true,
+    "descent_steps": 240,
+    "settle_steps": 48,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 45,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 5,
+   "n": 24,
+   "grid": [
+    28,
+    29
+   ],
+   "corridor": "down",
+   "room": "right",
+   "shortest": 49,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 49,
+    "stopped": true,
+    "descent_steps": 256,
+    "settle_steps": 56,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 49,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 49,
+    "stopped": true,
+    "descent_steps": 256,
+    "settle_steps": 56,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 49,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 5,
+   "n": 26,
+   "grid": [
+    30,
+    31
+   ],
+   "corridor": "down",
+   "room": "right",
+   "shortest": 53,
+   "label_first": "down",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 53,
+    "stopped": true,
+    "descent_steps": 272,
+    "settle_steps": 56,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": true,
+    "pointer_len": 53,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 6,
+   "n": 12,
+   "grid": [
+    17,
+    16
+   ],
+   "corridor": "left",
+   "room": "down",
+   "shortest": 25,
+   "label_first": "left",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 25,
+    "stopped": true,
+    "descent_steps": 128,
+    "settle_steps": 32,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 25,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 25,
+    "stopped": true,
+    "descent_steps": 128,
+    "settle_steps": 32,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 25,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 6,
+   "n": 16,
+   "grid": [
+    21,
+    20
+   ],
+   "corridor": "left",
+   "room": "down",
+   "shortest": 33,
+   "label_first": "left",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 33,
+    "stopped": true,
+    "descent_steps": 176,
+    "settle_steps": 40,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 33,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 33,
+    "stopped": true,
+    "descent_steps": 176,
+    "settle_steps": 40,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 33,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 6,
+   "n": 18,
+   "grid": [
+    23,
+    22
+   ],
+   "corridor": "left",
+   "room": "down",
+   "shortest": 37,
+   "label_first": "left",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 37,
+    "stopped": true,
+    "descent_steps": 192,
+    "settle_steps": 40,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 37,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 37,
+    "stopped": true,
+    "descent_steps": 192,
+    "settle_steps": 40,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 37,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 6,
+   "n": 20,
+   "grid": [
+    25,
+    24
+   ],
+   "corridor": "left",
+   "room": "down",
+   "shortest": 41,
+   "label_first": "left",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 41,
+    "stopped": true,
+    "descent_steps": 208,
+    "settle_steps": 48,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 41,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 41,
+    "stopped": true,
+    "descent_steps": 208,
+    "settle_steps": 48,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 41,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 6,
+   "n": 22,
+   "grid": [
+    27,
+    26
+   ],
+   "corridor": "left",
+   "room": "down",
+   "shortest": 45,
+   "label_first": "left",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 45,
+    "stopped": true,
+    "descent_steps": 240,
+    "settle_steps": 48,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 45,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 45,
+    "stopped": true,
+    "descent_steps": 240,
+    "settle_steps": 48,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 45,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 6,
+   "n": 24,
+   "grid": [
+    29,
+    28
+   ],
+   "corridor": "left",
+   "room": "down",
+   "shortest": 49,
+   "label_first": "left",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 49,
+    "stopped": true,
+    "descent_steps": 256,
+    "settle_steps": 56,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 49,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 49,
+    "stopped": true,
+    "descent_steps": 256,
+    "settle_steps": 56,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": true,
+    "pointer_len": 49,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 6,
+   "n": 26,
+   "grid": [
+    31,
+    30
+   ],
+   "corridor": "left",
+   "room": "down",
+   "shortest": 53,
+   "label_first": "left",
+   "own": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 55,
+    "stopped": true,
+    "descent_steps": 256,
+    "settle_steps": 56,
+    "returned_first": "down",
+    "pointer_first": "down",
+    "pointer_equals_label": false,
+    "pointer_len": 55,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 7,
+   "n": 12,
+   "grid": [
+    16,
+    17
+   ],
+   "corridor": "up",
+   "room": "left",
+   "shortest": 25,
+   "label_first": "up",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 25,
+    "stopped": true,
+    "descent_steps": 128,
+    "settle_steps": 32,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": true,
+    "pointer_len": 25,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 25,
+    "stopped": true,
+    "descent_steps": 128,
+    "settle_steps": 32,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": true,
+    "pointer_len": 25,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 7,
+   "n": 16,
+   "grid": [
+    20,
+    21
+   ],
+   "corridor": "up",
+   "room": "left",
+   "shortest": 33,
+   "label_first": "up",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 33,
+    "stopped": true,
+    "descent_steps": 176,
+    "settle_steps": 40,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": true,
+    "pointer_len": 33,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 33,
+    "stopped": true,
+    "descent_steps": 176,
+    "settle_steps": 40,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": true,
+    "pointer_len": 33,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 7,
+   "n": 18,
+   "grid": [
+    22,
+    23
+   ],
+   "corridor": "up",
+   "room": "left",
+   "shortest": 37,
+   "label_first": "up",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 37,
+    "stopped": true,
+    "descent_steps": 192,
+    "settle_steps": 40,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": true,
+    "pointer_len": 37,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 37,
+    "stopped": true,
+    "descent_steps": 192,
+    "settle_steps": 40,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": true,
+    "pointer_len": 37,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 7,
+   "n": 20,
+   "grid": [
+    24,
+    25
+   ],
+   "corridor": "up",
+   "room": "left",
+   "shortest": 41,
+   "label_first": "up",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 41,
+    "stopped": true,
+    "descent_steps": 224,
+    "settle_steps": 48,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": true,
+    "pointer_len": 41,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 41,
+    "stopped": true,
+    "descent_steps": 224,
+    "settle_steps": 48,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": true,
+    "pointer_len": 41,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 7,
+   "n": 22,
+   "grid": [
+    26,
+    27
+   ],
+   "corridor": "up",
+   "room": "left",
+   "shortest": 45,
+   "label_first": "up",
+   "own": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 45,
+    "stopped": true,
+    "descent_steps": 240,
+    "settle_steps": 48,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": true,
+    "pointer_len": 45,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": true,
+    "valid_path": true,
+    "length": 45,
+    "stopped": true,
+    "descent_steps": 240,
+    "settle_steps": 48,
+    "returned_first": "up",
+    "pointer_first": "up",
+    "pointer_equals_label": true,
+    "pointer_len": 45,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 7,
+   "n": 24,
+   "grid": [
+    28,
+    29
+   ],
+   "corridor": "up",
+   "room": "left",
+   "shortest": 49,
+   "label_first": "up",
+   "own": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 51,
+    "stopped": true,
+    "descent_steps": 240,
+    "settle_steps": 56,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": false,
+    "pointer_len": 51,
+    "pointer_reaches_G": true
+   },
+   "emb30": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 51,
+    "stopped": true,
+    "descent_steps": 240,
+    "settle_steps": 56,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": false,
+    "pointer_len": 51,
+    "pointer_reaches_G": true
+   }
+  },
+  {
+   "seed": 1,
+   "extra": 2,
+   "sym": 7,
+   "n": 26,
+   "grid": [
+    30,
+    31
+   ],
+   "corridor": "up",
+   "room": "left",
+   "shortest": 53,
+   "label_first": "up",
+   "own": {
+    "equals_label": false,
+    "valid_path": true,
+    "length": 55,
+    "stopped": true,
+    "descent_steps": 256,
+    "settle_steps": 56,
+    "returned_first": "left",
+    "pointer_first": "left",
+    "pointer_equals_label": false,
+    "pointer_len": 55,
+    "pointer_reaches_G": true
+   }
+  }
+ ],
+ "error": null
+}

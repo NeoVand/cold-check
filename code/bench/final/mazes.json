@@ -1,0 +1,181 @@
+{
+ "unique_fit": {
+  "theta": [
+   2.1208867705311065,
+   0.34566916521890567,
+   -2.179199997057776
+  ],
+  "kept": [
+   "side",
+   "corner"
+  ],
+  "ranges": {
+   "open/off/side": [
+    0,
+    1
+   ],
+   "open/off/corner": [
+    0,
+    2
+   ],
+   "open/on/side": [
+    2,
+    2
+   ],
+   "open/on/corner": [
+    0,
+    2
+   ],
+   "S/on/side": [
+    1,
+    1
+   ],
+   "S/on/corner": [
+    0,
+    1
+   ],
+   "G/on/side": [
+    1,
+    1
+   ],
+   "G/on/corner": [
+    0,
+    1
+   ]
+  },
+  "fit_ms_cold": 27.44887489825487,
+  "fit_ms_warm_median7": 23.973000003024936
+ },
+ "unique_test": {
+  "n": 1000,
+  "exact": 1000,
+  "undecided_mazes": 0,
+  "ops_mean": 16196.719,
+  "ops_plus_cmp_mean": 66172.248
+ },
+ "unique_generated": {
+  "31_ring": {
+   "side": 31,
+   "ring": true,
+   "n": 200,
+   "exact": 200,
+   "mazes_with_edge_dead_end": 0,
+   "edge_dead_ends": 0,
+   "ops_mean": 13656.515
+  },
+  "29_noring": {
+   "side": 29,
+   "ring": false,
+   "n": 200,
+   "exact": 200,
+   "mazes_with_edge_dead_end": 200,
+   "edge_dead_ends": 3864,
+   "ops_mean": 13051.655
+  },
+  "61_ring": {
+   "side": 61,
+   "ring": true,
+   "n": 200,
+   "exact": 200,
+   "mazes_with_edge_dead_end": 0,
+   "edge_dead_ends": 0,
+   "ops_mean": 51360.02
+  },
+  "59_noring": {
+   "side": 59,
+   "ring": false,
+   "n": 200,
+   "exact": 200,
+   "mazes_with_edge_dead_end": 200,
+   "edge_dead_ends": 8088,
+   "ops_mean": 50199.86
+  },
+  "121_ring": {
+   "side": 121,
+   "ring": true,
+   "n": 200,
+   "exact": 200,
+   "mazes_with_edge_dead_end": 0,
+   "edge_dead_ends": 0,
+   "ops_mean": 198585.03
+  },
+  "119_noring": {
+   "side": 119,
+   "ring": false,
+   "n": 200,
+   "exact": 200,
+   "mazes_with_edge_dead_end": 200,
+   "edge_dead_ends": 15865,
+   "ops_mean": 196257.95
+  }
+ },
+ "hard_fit": {
+  "w": {
+   "open": 1.9791,
+   "nearer": 4.263,
+   "level": 0.0,
+   "farther": -2.2839,
+   "unreached": 0.0,
+   "dir:down": 1.4026,
+   "dir:left": 0.0142,
+   "dir:right": -0.0098,
+   "dir:up": -1.4069
+  },
+  "required": [
+   "open",
+   "nearer"
+  ],
+  "forbidden": [
+   "level",
+   "farther",
+   "unreached"
+  ],
+  "n_steps": 114064,
+  "direction_order": [
+   "down",
+   "left",
+   "right",
+   "up"
+  ],
+  "n_patterns": 62,
+  "fit_ms_cold": 334.0217499062419,
+  "fit_ms_warm_median7": 32.69079211167991
+ },
+ "hard_test": {
+  "n": 1000,
+  "exact": 1000,
+  "wrong": [],
+  "maze106_exact": true,
+  "ops_mean": 1979.769,
+  "ops_plus_cmp_mean": 6240.849
+ },
+ "hard_rule_on_unique_test": {
+  "n": 1000,
+  "exact": 1000
+ },
+ "hard_rooms": {
+  "n": 136,
+  "exact": 136,
+  "wrong": []
+ },
+ "hard_loops": {
+  "31": {
+   "n": 100,
+   "exact": 100,
+   "ops_mean": 947.74,
+   "sec_total": 0.13851116481237113
+  },
+  "61": {
+   "n": 100,
+   "exact": 100,
+   "ops_mean": 2921.59,
+   "sec_total": 0.48390049976296723
+  },
+  "121": {
+   "n": 100,
+   "exact": 100,
+   "ops_mean": 9400.47,
+   "sec_total": 1.783177415607497
+  }
+ }
+}

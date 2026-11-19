@@ -1,0 +1,186 @@
+{
+ "task": "mst_prim",
+ "kind": "pointer_loop",
+ "train_inputs": 100,
+ "fit_ms": 9490.9,
+ "rules": {
+  "off": {
+   "info": {
+    "features": 56151,
+    "distinct": 695,
+    "rows": 11200,
+    "positives": 595,
+    "gate": 6,
+    "gate_lets_through_negatives": 0,
+    "score_features": 14,
+    "train_wrong_score": 0,
+    "train_wrong_rule": 0
+   },
+   "exact_gate": true,
+   "gate": [
+    "('own', ('cmp', 'depth', 'depth', 'lt'))",
+    "('own', ('rel', 'edge', 0))",
+    "('own', ('pcmp', 'w', 'B', 'eq'))",
+    "not ('own', ('pcmp', 'w', 'B', 'gt'))",
+    "('bitA', ('bit', 'has_depth'))",
+    "not ('bitB', ('bit', 'source'))"
+   ],
+   "gate_size": 6,
+   "score": [
+    [
+     "('own', ('pcmp', 'w', 'B', 'eq'))",
+     5.079
+    ],
+    [
+     "('own', ('cmp', 'depth', 'depth', 'lt'))",
+     4.738
+    ],
+    [
+     "('wit', (('cmp', 'depth', 'depth', 'le'), None), (('and', ('pcmp', 'w', 'B', 'eq'), ('cmp', 'depth', 'depth', 'lt')), None))",
+     -1.264
+    ],
+    [
+     "('wit', (('cmp', 'depth', 'depth', 'ge'), None), (('pcmp', 'w', 'B', 'eq'), None))",
+     -1.085
+    ],
+    [
+     "('own', ('rel', 'edge', 0))",
+     0.95
+    ],
+    [
+     "('wit', (('cmp', 'depth', 'depth', 'lt'), None), (('cmp', 'depth', 'depth', 'lt'), None))",
+     -0.762
+    ],
+    [
+     "('wit', (('and', ('pcmp', 'w', 'B', 'eq'), ('cmp', 'depth', 'depth', 'ge')), None), (('cmp', 'depth', 'depth', 'lt'), None))",
+     0.666
+    ],
+    [
+     "('wit', (('cmp', 'depth', 'depth', 'lt'), None), (('rel', 'edge', 0), ('bit', 'has_depth')))",
+     0.318
+    ],
+    [
+     "('wit', (('and', ('rel', 'edge', 0), ('cmp', 'depth', 'depth', 'lt')), None), (('cmp', 'depth', 'depth', 'lt'), None))",
+     -0.174
+    ],
+    [
+     "('wit', (('cmp', 'depth', 'depth', 'ge'), None), (('and', ('pcmp', 'w', 'B', 'eq'), ('cmp', 'depth', 'depth', 'lt')), None))",
+     -0.112
+    ],
+    [
+     "('wit', (('cmp', 'pos', 'pos', 'lt'), None), (('and', ('pcmp', 'w', 'B', 'eq'), ('cmp', 'depth', 'depth', 'lt')), None))",
+     -0.053
+    ],
+    [
+     "('wit', (('rel', 'edge', 0), None), (('and', ('pcmp', 'w', 'B', 'eq'), ('cmp', 'depth', 'depth', 'lt')), None))",
+     -0.047
+    ]
+   ]
+  },
+  "diag": {
+   "info": {
+    "features": 106786,
+    "distinct": 1785,
+    "rows": 1020,
+    "positives": 425,
+    "gate": 0,
+    "gate_lets_through_negatives": 595,
+    "score_features": 24,
+    "train_wrong_score": 0,
+    "train_wrong_rule": 0
+   },
+   "exact_gate": false,
+   "gate": [],
+   "gate_size": 0,
+   "score": [
+    [
+     "('wit', (('cmp', 'depth', 'depth', 'gt'), None), (('rel', 'edge', 0), None))",
+     -2.057
+    ],
+    [
+     "('cnt', (('pcmp', 'w', 'B', 'lt'), None), (('and', ('rel', 'edge', 0), ('cmp', 'depth', 'depth', 'lt')), None), 'eq')",
+     1.986
+    ],
+    [
+     "('cnt', (('and', ('rel', 'edge', 0), ('cmp', 'pos', 'pos', 'lt')), ('bit', 'source')), (('and', ('rel', 'edge', 0), ('cmp', 'depth', 'depth', 'lt')), None), 'lt')",
+     -0.876
+    ],
+    [
+     "('cnt', (('and', ('pcmp', 'w', 'B', 'gt'), ('cmp', 'depth', 'depth', 'lt')), None), (('pcmp', 'w', 'B', 'eq'), ('bit', 'source')), 'eq')",
+     0.819
+    ],
+    [
+     "('cnt', (('and', ('rel', 'edge', 0), ('cmp', 'depth', 'depth', 'lt')), None), (('and', ('rel', 'edge', 0), ('cmp', 'pos', 'pos', 'lt')), ('bit', 'source')), 'eq')",
+     0.806
+    ],
+    [
+     "('cnt', (('and', ('rel', 'edge', 0), ('cmp', 'pos', 'pos', 'ge')), ('bit', 'source')), (('and', ('rel', 'edge', 0), ('cmp', 'depth', 'depth', 'lt')), None), 'lt')",
+     -0.803
+    ],
+    [
+     "('cnt', (('and', ('pcmp', 'w', 'B', 'gt'), ('cmp', 'pos', 'pos', 'lt')), ('bit', 'source')), (('and', ('pcmp', 'w', 'B', 'eq'), ('cmp', 'depth', 'depth', 'lt')), None), 'lt')",
+     -0.798
+    ],
+    [
+     "('cnt', (('and', ('rel', 'edge', 0), ('cmp', 'depth', 'depth', 'lt')), None), (('and', ('rel', 'edge', 0), ('cmp', 'pos', 'pos', 'ge')), ('bit', 'source')), 'eq')",
+     0.733
+    ],
+    [
+     "('cnt', (('and', ('pcmp', 'w', 'B', 'eq'), ('cmp', 'depth', 'depth', 'lt')), None), (('and', ('pcmp', 'w', 'B', 'gt'), ('cmp', 'pos', 'pos', 'lt')), ('bit', 'source')), 'eq')",
+     0.728
+    ],
+    [
+     "('cnt', (('and', ('pcmp', 'w', 'B', 'eq'), ('cmp', 'depth', 'depth', 'lt')), None), (('and', ('pcmp', 'w', 'B', 'gt'), ('cmp', 'depth', 'depth', 'lt')), None), 'eq')",
+     0.698
+    ],
+    [
+     "('cnt', (('and', ('pcmp', 'w', 'B', 'gt'), ('cmp', 'pos', 'pos', 'ge')), ('bit', 'source')), (('and', ('pcmp', 'w', 'B', 'eq'), ('cmp', 'depth', 'depth', 'lt')), None), 'lt')",
+     -0.656
+    ],
+    [
+     "('cnt', (('id',), ('bit', 'source')), (('pcmp', 'w', 'B', 'eq'), ('bit', 'has_depth')), 'lt')",
+     -0.619
+    ]
+   ]
+  }
+ },
+ "start": 0,
+ "test64": {
+  "score": 1.0,
+  "loops_max": 25,
+  "not_at_rest": 0,
+  "eval_s": 0.76
+ },
+ "gen256": {
+  "score": 1.0,
+  "num": 32,
+  "loops_max": 46,
+  "not_at_rest": 0,
+  "eval_s": 16.99
+ },
+ "gen1024": {
+  "score": 1.0,
+  "num": 8,
+  "loops_max": 67,
+  "not_at_rest": 0,
+  "eval_s": 108.16
+ },
+ "gen1024_sparse4": {
+  "score": 1.0,
+  "num": 4,
+  "loops_max": 2,
+  "not_at_rest": 0,
+  "eval_s": 1.92
+ },
+ "paper": {
+  "floydnet": 99.67
+ },
+ "log": [
+  "{\"task\": \"mst_prim\", \"fit_ms\": 9490.9, \"train_inputs\": 100, \"off\": {\"exact_gate\": true, \"features\": 56151, \"distinct\": 695, \"rows\": 11200, \"positives\": 595, \"gate\": 6, \"gate_lets_through_negatives\": 0, \"score_features\": 14, \"train_wrong_score\": 0, \"train_wrong_rule\": 0}, \"diag\": {\"exact_gate\": false, \"features\": 106786, \"distinct\": 1785, \"rows\": 1020, \"positives\": 425, \"gate\": 0, \"gate_lets_through_negatives\": 595, \"score_features\": 24, \"train_wrong_score\": 0, \"train_wrong_rule\": 0}}",
+  "official test 64: {'score': 1.0, 'loops_max': 25, 'not_at_rest': 0, 'eval_s': 0.76}",
+  "generated gen256: {'score': 1.0, 'num': 32, 'loops_max': 46, 'not_at_rest': 0, 'eval_s': 16.99}",
+  "generated gen1024: {'score': 1.0, 'num': 8, 'loops_max': 67, 'not_at_rest': 0, 'eval_s': 108.16}",
+  "generated gen1024_sparse4: {'score': 1.0, 'num': 4, 'loops_max': 2, 'not_at_rest': 0, 'eval_s': 1.92}"
+ ],
+ "where": "modal cpu=2, one BLAS thread"
+}

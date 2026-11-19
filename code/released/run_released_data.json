@@ -1,0 +1,129 @@
+{
+ "kind": "data",
+ "args": [],
+ "seconds": 9.789023637771606,
+ "result": {
+  "files": {
+   "eqr/maze-30x30-unique-1k/identifiers.json": {
+    "bytes": 11,
+    "sha256": "55b844f3f061906c654510cc0c4a5834e4d336540c74a68576211b20fa5f0bea"
+   },
+   "eqr/maze-30x30-unique-1k/test/all__group_indices.npy": {
+    "bytes": 4132,
+    "sha256": "8e1237f248ecff97e22387e835f3845a3cd4c6a4af7a125a57724a0fea1e8b0a"
+   },
+   "eqr/maze-30x30-unique-1k/test/all__inputs.npy": {
+    "bytes": 900128,
+    "sha256": "c501b3f75ec018e27fd6d00534b6738ebcc555da50536909e530787d16b1ce0f"
+   },
+   "eqr/maze-30x30-unique-1k/test/all__labels.npy": {
+    "bytes": 900128,
+    "sha256": "20b21168459847fb260d986394098addf7cca94becc7e682dcb358967d5993dc"
+   },
+   "eqr/maze-30x30-unique-1k/test/all__maze_shortest_path_specs.npz": {
+    "bytes": 879885,
+    "sha256": "a0d93c00df134caffc3c2aa748757c92b05f4cd098a7fee60929331af15bd067"
+   },
+   "eqr/maze-30x30-unique-1k/test/all__puzzle_identifiers.npy": {
+    "bytes": 4128,
+    "sha256": "ab73033e922426e7ab6bc1277db2bf5399476f6e97aed84417e22d9876380837"
+   },
+   "eqr/maze-30x30-unique-1k/test/all__puzzle_indices.npy": {
+    "bytes": 4132,
+    "sha256": "8e1237f248ecff97e22387e835f3845a3cd4c6a4af7a125a57724a0fea1e8b0a"
+   },
+   "eqr/maze-30x30-unique-1k/test/dataset.json": {
+    "bytes": 214,
+    "sha256": "3115a68652b6113a119e6d516d086c23482c89b151f4271499fb620ce7d5828c"
+   },
+   "eqr/maze-30x30-unique-1k/train/all__group_indices.npy": {
+    "bytes": 4132,
+    "sha256": "8e1237f248ecff97e22387e835f3845a3cd4c6a4af7a125a57724a0fea1e8b0a"
+   },
+   "eqr/maze-30x30-unique-1k/train/all__inputs.npy": {
+    "bytes": 900128,
+    "sha256": "2922455815232dcb636ee45f335e7ce834aa45d4fab743b96ac97c17284ca7e2"
+   },
+   "eqr/maze-30x30-unique-1k/train/all__labels.npy": {
+    "bytes": 900128,
+    "sha256": "6b1a99761606b78f85fe43085b158457f22a3d6274b1e09f12f7b16814fdb5e4"
+   },
+   "eqr/maze-30x30-unique-1k/train/all__puzzle_identifiers.npy": {
+    "bytes": 4128,
+    "sha256": "ab73033e922426e7ab6bc1277db2bf5399476f6e97aed84417e22d9876380837"
+   },
+   "eqr/maze-30x30-unique-1k/train/all__puzzle_indices.npy": {
+    "bytes": 4132,
+    "sha256": "8e1237f248ecff97e22387e835f3845a3cd4c6a4af7a125a57724a0fea1e8b0a"
+   },
+   "eqr/maze-30x30-unique-1k/train/dataset.json": {
+    "bytes": 214,
+    "sha256": "3115a68652b6113a119e6d516d086c23482c89b151f4271499fb620ce7d5828c"
+   },
+   "maze-hard/test.csv": {
+    "bytes": 1807030,
+    "sha256": "5120d52088fb3f8036e62e90103808a79ba58847d8601f9451f40991b0903a62"
+   },
+   "maze-hard/train.csv": {
+    "bytes": 1807030,
+    "sha256": "25f9e39b5aee16967da41ba63b2d1d75cf608c2360d8a1419d827f9859dbafa0"
+   }
+  },
+  "revisions": {
+   "maze_hard": {
+    "repo": "sapientinc/maze-30x30-hard-1k",
+    "revision": "549754de3d67eebe57b6b22c7d226b9412d55b07"
+   },
+   "maze_unique": {
+    "repo": "locuslab/EqR-data",
+    "revision": "bcb7d45c157c06a054b715933557d266f5bd9d7f",
+    "folder": "maze-30x30-unique-1k"
+   }
+  },
+  "maze_hard_test_shape": [
+   1000,
+   30,
+   30
+  ],
+  "label_rule": {
+   "ours_down_left_right_up_agree_of_200": 200,
+   "mismatch_indices": [],
+   "best_alternatives": [
+    [
+     "greedy_from_S:down,left,right,up",
+     200
+    ],
+    [
+     "bfs_parent_from_S:down,left,right,up",
+     200
+    ],
+    [
+     "greedy_from_S:down,right,left,up",
+     186
+    ],
+    [
+     "bfs_parent_from_S:down,right,left,up",
+     186
+    ],
+    [
+     "greedy_from_S:right,down,left,up",
+     17
+    ],
+    [
+     "bfs_parent_from_S:right,down,left,up",
+     17
+    ]
+   ]
+  },
+  "maze_unique_test": {
+   "open_cells_on_edge_total": 0,
+   "mazes_with_open_edge_cell": 0,
+   "edge_dead_end_tips_total": 0,
+   "mazes_with_edge_tip": 0,
+   "mean_open_cells": 391.0,
+   "open_at_odd_odd_fraction": 0.8711111111111111
+  },
+  "maze_hard_test_open_edge_total": 74678
+ },
+ "error": null
+}

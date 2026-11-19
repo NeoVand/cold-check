@@ -1,0 +1,30 @@
+# third-party code and data, fetched by code/fetch.py, not redistributed
+code/ext/
+code/bench/data/
+# Python
+__pycache__/
+*.pyc
+.venv/
+# site
+site/node_modules/
+site/.svelte-kit/
+site/build/
+site/static/paper/
+# editors and OS
+.DS_Store
+# paper build leftovers
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.bak*
+site/shots/
+MORNING.md
+# old draft figures (the paper uses paper/figures/v1/)
+paper/figures/*
+!paper/figures/v1/
+paper/arxiv/verify/
+paper/*.bbl
+paper/*.blg
+# check renders
+paper/figures/v1/out/zoom/
+paper/figures/v1/candidates/

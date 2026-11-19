@@ -1,0 +1,8 @@
+# Python 3.12. The versions we checked this release with; the CLRS-30 runs of the paper used numpy 2.3.4
+# (Modal) and the puzzle runs numpy 2.2.6 with numba 0.61.2.
+numpy==2.2.6
+scipy==1.15.3
+numba==0.61.2
+huggingface_hub>=0.30    # fetch.py: the puzzle datasets at pinned revisions
+# optional: the runs we made on Modal CPU containers (clrs/modal_*.py, bench/modal_bench.py, released/)
+# modal>=1.0
