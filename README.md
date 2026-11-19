@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://neovand.github.io/cold-check">
-    <img src="cold-check.png" alt="The page: a rule fitted once in 21 milliseconds at solved 9×9 Sudoku boards, run unchanged on boards from 4×4 to 25×25" width="100%">
+    <img src="cold-check.gif" alt="The page, animated: a rule fitted once in 22 milliseconds at solved 9×9 Sudoku boards, then run unchanged on boards from 4×4 to 25×25" width="100%">
   </a>
 </p>
 
@@ -16,13 +16,19 @@ Paper, code and page for *When the Check Is the Algorithm*. The page runs the fi
 from 4×4 to 25×25, on mazes, and on breadth-first search, at
 [neovand.github.io/cold-check](https://neovand.github.io/cold-check).
 
-We fit the *check* of our cold attention layer ([Attention at Absolute Zero](https://github.com/NeoVand/cold-attention))
-at solved examples, the way CRAM fits its energy ([Hoover, Blayney and Whittington](https://github.com/Prefrontal-AI/CRAM)):
-each part of a solved answer is predicted from the rest, with no loop, in milliseconds. Before fitting, we complete each
-answer with closures and counts, such as each node's place in the order a breadth-first search discovered
-it. We keep every condition that held on all training answers, including the one a finished answer cannot show: that
-every fact rests on earlier facts. Then we run the check cold, from nothing, and search only where it forces nothing.
-The check's weights attach to relations, not positions, so one fitted rule serves every size.
+**Where it comes from.** Our earlier paper, [Attention at Absolute Zero](https://arxiv.org/abs/2611.11937)
+([code](https://github.com/NeoVand/cold-attention)), built a *cold attention* layer: it judges every pair of items
+through every third item and reads the result at zero temperature, so once trained it is exact at every size. But it
+learns by training through its loops, for about an hour per task on a GPU.
+[CRAM](https://arxiv.org/abs/2611.17309) (Hoover, Blayney and Whittington; [code](https://github.com/Prefrontal-AI/CRAM))
+fits a puzzle's rules at solved boards in milliseconds, with no loop, but its rules are tied to one board size.
+
+**What this paper does.** We fit the *check* of our cold layer at solved examples, the way CRAM fits its energy: each
+part of a solved answer is predicted from the rest, with no loop, in milliseconds. Before fitting, we complete each
+answer with closures and counts, such as each node's depth in a search tree. We keep every condition that held on all
+training answers, including the one a fit would otherwise drop: that every part rests on parts placed before it. Then
+we run the check cold, from nothing, and search only where it forces nothing. The check's weights attach to relations,
+not positions, so one fitted rule serves every board, every maze and every graph.
 
 ## Results
 

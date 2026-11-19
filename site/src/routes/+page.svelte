@@ -90,9 +90,12 @@
 	<div class="grid lead">
 		<div class="main">
 			<p class="abstract">
-				We fit our <Gloss term="cold">cold attention</Gloss> layer at solved examples, the way <Gloss term="cram">CRAM</Gloss> fits its
-				energy: in milliseconds, with no loop. Then we run it cold. Nothing in the rule names a position or a size, so one fit serves
-				every board, every maze and every graph.
+				Our earlier paper, <a href="https://arxiv.org/abs/2611.11937">Attention at Absolute Zero</a>, built a
+				<Gloss term="cold">cold attention</Gloss> layer that stays exact at every size, but it learns by training through its loops,
+				for about an hour per task on a GPU. <a href="https://arxiv.org/abs/2611.17309">CRAM</a> fits a puzzle's rules at solved
+				boards in milliseconds, with no loop, but its rules are tied to one board size. We fit our layer at solved answers the way
+				CRAM does, keep the one condition such a fit would drop (every part rests on parts placed before it), and run it cold from
+				nothing. One fit then serves every board, every maze and every graph.
 			</p>
 		</div>
 		<aside class="margin nums" aria-label="Results at a glance">
@@ -509,6 +512,15 @@
 	.main .abstract {
 		font-size: 19.5px;
 		line-height: 1.5;
+	}
+	.main .abstract a {
+		color: var(--color-cobalt);
+		text-decoration: underline;
+		text-decoration-thickness: 1px;
+		text-underline-offset: 3px;
+	}
+	.main .abstract a:hover {
+		color: var(--color-ink);
 	}
 	.main b {
 		font-weight: 600;
